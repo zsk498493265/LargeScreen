@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.organOld.dao.repository.ProductTypeDao">
+
+   <select id="getByParent" resultType="com.organOld.dao.entity.product.ProductType">
+       SELECT * from product_type WHERE parent=#{parent}
+   </select>
+
+    <resultMap id="productType" type="com.organOld.dao.entity.product.ProductType">
+        <id property="id" column="id" />
+        <result property="name" column="name"/>
+        <result property="type" column="type"/>
+        <result property="parent" column="parent"/>
+        <result property="grand" column="grand"/>
+        <association property="productType" javaType="com.organOld.dao.entity.product.ProductType">
+            <id property="id" column="pid" />
+            <result property="name" column="parentName" />
+            <association property="productType" javaType="com.organOld.dao.entity.product.ProductType">
+                <id property="id" column="gid" />
+                <result property="name" column="grandName" />
+            </association>
+        </association>
+    </resultMap>
+
+    <select id="getByPage" parameterType="com.organOld.dao.util.Page" resultMap="productType">
+        <if test="entity.type!=null and entity.type==1">
+          select pt.id,pt.name,p.id pid,p.name parentName,g.id gid,g.name grandName
+          from product_type pt,product_type p,product_type g
+          WHERE pt.parent=p.id and p.parent=g.id
+        </if>
+        <if test="entity.type!=null and entity.type==2">
+            select pt.id,pt.name,p.id pid,p.name parentName
+            from product_type pt,product_type p
+            WHERE pt.parent=p.id
+        </if>
+        <if test="entity.type!=null and entity.type==3">
+            select pt.id,pt.name
+            from product_type pt where 1=1
+        </if>
+        and pt.type=#{entity.type}
+        <if test="sortType!=null and sortType!=''">
+            ORDER BY pt.id desc
+        </if>
+        <if test="length!=null and length!=0">
+            limit #{start},#{length}
+        </if>
+    </select>
+
+    <select id="getSizeByPage" parameterType="com.organOld.dao.util.Page" resultType="java.lang.Long">
+        SELECT count(1)
+        FROM product_type
+        WHERE `type`=#{entity.type}
+    </select>
+
+
+    <delete id="delByIds">
+        DELETE from product_type where id in
+        <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+
+    <insert id="save" parameterType="com.organOld.dao.entity.product.Product">
+        INSERT into product_type(name,parent,type)
+        VALUES (#{name},#{parent},#{type})
+    </insert>
+
+    <update id="updateById" parameterType="com.organOld.dao.entity.product.Product">
+        UPDATE product_type
+        set name=#{name},parent=#{parent}
+        where id=#{id}
+    </update>
+
+    <select id="getById" parameterType="com.organOld.dao.util.Page" resultMap="productType">
+            select pt.id,pt.name,pt.type,p.id parent,g.id grand
+            from product_type pt left join product_type p on pt.parent=p.id
+            left join product_type g on p.parent=g.id
+            WHERE pt.id=#{id}
+    </select>
+
+    <select id="getByType" resultType="com.organOld.dao.entity.product.ProductType">
+        SELECT * from product_type where type=#{type}
+    </select>
+</mapper>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.organOld.dao.repository.visual.VisualViewDao">
+    <select id="getVisualSizeByView"  resultType="java.lang.Long">
+        SELECT count(1)
+        FROM view_test o
+        WHERE    o.oldman_id
+        <if test="birthdayStart!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') >= DATE_FORMAT(#{birthdayStart},'%Y')
+            ]]>
+        </if>
+        <if test="birthdayEnd!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') <= DATE_FORMAT(#{birthdayEnd},'%Y')
+            ]]>
+        </if>
+        <if test="id!=null and id!=0">
+            and o.id=#{id}
+        </if>
+        <if test="xqIds!=null">
+            and o.xq_id in
+            <foreach collection="xqIds" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="organIdArray!=null and organIdArray.length > 0">
+            and o.organ_id in
+            <foreach collection="organIdArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="secTypeArray!=null and secTypeArray.length > 0">
+            and o.chx_id IN
+            <foreach collection="secTypeArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="zhucan != null and zhucan != 0">
+            and o.zhucan_id = 7
+        </if>
+        <if test="zhujie != null and zhujie != 0">
+            and o.zhujie_id = 8
+        </if>
+        <if test="zhuji != null and zhuji!= 0">
+            and o.zhuji_id = 9
+        </if>
+        <if test="zhuyu != null and zhuyu != 0">
+            and o.zhuyu_id = 10
+        </if>
+        <if test="zhuxing != null and zhuxing != 0">
+            and o.zhuxing_id = 11
+        </if>
+        <if test="zhuyi != null and zhuyi != 0">
+            and o.zhuyi_id = 12
+        </if>
+        <if test="kangfu != null and kangfu != 0">
+            and o.kangfu_id = 13
+        </if>
+        <if test="xiangtan != null and xiangtan != 0">
+            and o.xiangtan_id = 14
+        </if>
+        <if test="xidi != null and xidi != 0">
+            and o.xidi_id = 15
+        </if>
+        <if test="shenghuo != null and shenghuo != 0">
+            and o.shenghuo_id = 16
+        </if>
+        <if test="sex!=null and sex!=0">
+            and o.sex=#{sex}
+        </if>
+        <if test="isVolunteer!=null and isVolunteer!=''">
+            and o.is_volunteer=#{isVolunteer}
+        </if>
+        <if test="isMb != null and isMb != 0">
+            and o.is_mb =1
+        </if>
+        <if test="isSn != null and isSn != 0">
+            and o.is_sn = 1
+        </if>
+        <if test="isYwfy != null and isYwfy != 0">
+            and o.is_ywfy = 1
+        </if>
+        <if test="isExzl != null and isExzl != 0">
+            and o.is_exzl = 1
+        </if>
+        <if test="isGz != null and isGz != 0">
+            and o.is_gz = 1
+        </if>
+        <if test="isCj != null and isCj != 0">
+            and o.is_cj =1
+        </if>
+
+        <if test="familyArray!=null and familyArray.length > 0">
+            and
+            <foreach collection="familyArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="familyTypeArray!=null and familyTypeArray.length > 0">
+            and
+            <foreach collection="familyTypeArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family_type like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="intelligence!=null and intelligence.length > 0">
+            and o.intelligence in
+            <foreach collection="intelligence" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="eyesight!=null and eyesight.length > 0">
+            and o.eyesight in
+            <foreach collection="eyesight" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="economicArray!=null and economicArray.length > 0">
+            and
+            <foreach collection="economicArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.economic like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="censusArray!=null and censusArray.length > 0">
+            and o.census in
+            <foreach collection="censusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="politicalStatusArray!=null and politicalStatusArray.length > 0">
+            and o.political_status in
+            <foreach collection="politicalStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+    </select>
+    <select id="getSizeByPage" parameterType="com.organOld.dao.util.Page" resultType="java.lang.Long">
+        SELECT count(1)
+        FROM view_test o
+        WHERE 1=1
+        <if test="entity.birthdayStart!=null">
+            <![CDATA[
+          and   DATE_FORMAT(o.birthday,'%Y') >= DATE_FORMAT(#{entity.birthdayStart},'%Y')
+            ]]>
+        </if>
+        <if test="entity.birthdayEnd!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') <= DATE_FORMAT(#{entity.birthdayEnd},'%Y')
+            ]]>
+        </if>
+        <if test="entity!=null and entity.id!=null and entity.id!=0">
+            and o.id=#{entity.id}
+        </if>
+        <if test="entity!=null and entity.xqIds!=null">
+            and o.xq_id in
+            <foreach collection="entity.xqIds" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.organList!=null">
+            and o.organ_id in
+            <foreach collection="entity.organList" index="index" item="item" open="(" separator="," close=")">
+                ${item.id}
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.homeList!=null">
+            and (o.chx_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.zhucan_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.zhujie_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.zhuji_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.zhuyu_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or zhuxing_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or zhuyi_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.kangfu_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.xiangtan_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.xidi_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.shenghuo_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.ankang_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+            or o.kangle_id IN
+            <foreach collection="entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>)
+        </if>
+        <if test="entity!=null and entity.sex!=null and entity.sex!=0">
+            and o.sex=#{entity.sex}
+        </if>
+        <if test="entity!=null and entity.isVolunteer!=null and entity.isVolunteer!=''">
+            and o.is_volunteer=#{entity.isVolunteer}
+        </if>
+        <if test="entity!=null and entity.isHealth!=null and entity.isHealth.length > 0">
+            and (o.is_mb in
+            <foreach collection="entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or o.is_sn in
+            <foreach collection="entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or o.is_ywfy in
+            <foreach collection="entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or o.is_exzl in
+            <foreach collection="entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or o.is_gz in
+            <foreach collection="entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or o.is_cj in
+            <foreach collection="entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            )
+        </if>
+        <if test="entity!=null and entity.familyArray!=null and entity.familyArray.length > 0">
+            and o.family in
+            <foreach collection="entity.familyArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.familyTypeArray!=null and entity.familyTypeArray.length > 0">
+            and
+            <foreach collection="entity.familyTypeArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family_type like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.intelligence!=null and entity.intelligence.length > 0">
+            and o.intelligence in
+            <foreach collection="entity.intelligence" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.eyesight!=null and entity.eyesight.length > 0">
+            and o.eyesight in
+            <foreach collection="entity.eyesight" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.economicArray!=null and entity.economicArray.length > 0">
+            and
+            <foreach collection="entity.economicArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.economic like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.censusArray!=null and entity.censusArray.length > 0">
+            and o.census in
+            <foreach collection="entity.censusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.oldStatusArray!=null and entity.oldStatusArray.length > 0">
+            and o.old_status in
+            <foreach collection="entity.oldStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.politicalStatusArray!=null and entity.politicalStatusArray.length > 0">
+            and o.political_status in
+            <foreach collection="entity.politicalStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="entity!=null and entity.search!=null and entity.search!=''">
+            and (o.pid LIKE  concat('%',#{entity.search},'%') OR o.address LIKE  concat('%',#{entity.search},'%') OR o.name LIKE  concat('%',#{entity.search},'%')
+            OR o.phone LIKE  concat('%',#{entity.search},'%'))
+        </if>
+
+    </select>
+
+</mapper>

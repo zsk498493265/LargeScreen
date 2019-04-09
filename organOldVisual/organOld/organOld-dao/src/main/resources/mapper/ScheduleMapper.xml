@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.organOld.dao.repository.ScheduleDao">
+
+    <select id="getSumNum" resultType="com.organOld.dao.entity.ScheduleModel">
+SELECT
+        (
+        SELECT count(1) from oldman_base o where
+       o.disable=0 and
+        <![CDATA[
+            DATE_FORMAT(o.birthday,'%Y%m%d') <= DATE_FORMAT(#{start60},'%Y%m%d')
+            ]]>
+        AND
+        <![CDATA[
+            DATE_FORMAT(o.birthday,'%Y%m%d') > DATE_FORMAT(#{start70},'%Y%m%d')
+            ]]>
+        ) as oldman60,
+        (
+        SELECT count(1) from oldman_base o where o.disable=0 and
+        <![CDATA[
+            DATE_FORMAT(o.birthday,'%Y%m%d') <= DATE_FORMAT(#{start70},'%Y%m%d')
+            ]]>
+        AND
+        <![CDATA[
+            DATE_FORMAT(o.birthday,'%Y%m%d') > DATE_FORMAT(#{start80},'%Y%m%d')
+            ]]>
+        ) as oldman70,(
+        SELECT count(1) from oldman_base o where o.disable=0 and
+        <![CDATA[
+            DATE_FORMAT(o.birthday,'%Y%m%d') <= DATE_FORMAT(#{start80},'%Y%m%d')
+            ]]>
+        AND
+        <![CDATA[
+            DATE_FORMAT(o.birthday,'%Y%m%d') > DATE_FORMAT(#{start90},'%Y%m%d')
+            ]]>
+        ) as oldman80,
+        (
+        SELECT count(1) from oldman_base o where o.disable=0 and
+        <![CDATA[
+            DATE_FORMAT(o.birthday,'%Y%m%d') <= DATE_FORMAT(#{start90},'%Y%m%d')
+            ]]>
+        ) as oldman90,
+        (
+        select count(1) from oldman_base o where o.disable=0
+        )as oldmanSum
+    </select>
+
+
+    <select id="getNum" resultType="com.organOld.dao.entity.ScheduleModel">
+select sum(o.sex=1) nv,sum(o.sex=2) nan,sum(o.census=12) hj,sum(o.census=13 or o.census=14) fhj,
+sum(o.family like '15') cl,sum(o.family like '16') dj,sum(o.family like '17') sd,sum(family like '18') ylyyl,
+sum(o.family like '19') gl,sum(o.family like '20') sz,sum(o.family like '21') qt,
+sum(ohb.is_sn=2) sn,sum(ohb.is_mb=1) mb,sum(ohb.is_exzl=4) zls,sum(ohb.is_gz=5) gzs,sum(ohb.intelligence=29 or ohb.intelligence=30) jkztSz,
+sum(o.economic=22) bk,sum(o.economic=23) db,sum(o.economic=24) ylbx,sum(o.economic=25) yljzj,sum(o.economic=26) czyb,
+sum(o.economic=27) jjtjQt,
+(
+select count(1)
+from oldman_base oo,home_oldman ho,home h
+where h.fir_type=2 and h.id=ho.home_id and oo.id=ho.oldman_id and oo.disable=0) chx
+from oldman_base o,oldman_health_base ohb where o.disable=0 and ohb.oldman_id=o.id
+    </select>
+
+    <insert id="saveAll" parameterType="java.util.List">
+        INSERT into oldman_number_history(`type`,num,tm)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.type},#{item.num},#{item.tm})
+        </foreach>
+    </insert>
+</mapper>

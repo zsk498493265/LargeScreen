@@ -1,0 +1,4539 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.organOld.dao.repository.VisualDataDao">
+
+	<select id="getVisualDataApartFinish" resultType="java.util.Map">
+-- 片区完成度
+         select
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and ob.is_handle=2 and ob.key_status between 2 and 3
+        )NumGuMeiFinish,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and ob.is_handle=2 and ob.key_status between 2 and 3
+        )NumGuLongFinish,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and ob.is_handle=2 and ob.key_status between 2 and 3
+        )NumDongLanFinish,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and ob.is_handle=2 and ob.key_status between 2 and 3
+        )NumPingJiFinish,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and ob.is_handle=2 and ob.key_status between 2 and 3
+        )NumPingYangFinish,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and ob.is_handle=2 and ob.key_status between 2 and 3
+        )NumPingNanFinish,
+--  具体小区完成度
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳一村'
+        )NumPingYang1Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳二村'
+        )NumPingYang2Finish,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳三村'
+        )NumPingYang3Finish,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳四村'
+        )NumPingYang4Finish,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳五村'
+        )NumPingYang5Finish,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳六村'
+        )NumPingYang6Finish,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平南一居'
+        )NumPingNan1Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平南二居'
+        )NumPingNan2Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平南三居'
+        )NumPingNan3Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='华一新城'
+        )NumHuaYiFinish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='华梅花苑'
+        )NumHuaMeiFinish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='梅莲苑'
+        )NumMeiLianFinish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='万源一居'
+        )NumWanYuan1Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='万源二居'
+        )NumWanYuan2Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='万源三居'
+        )NumWanYuan3Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='万源四居'
+        )NumWanYuan4Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉一村'
+        )NumPingJi1Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉二村'
+        )NumPingJi2Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉三村'
+    )NumPingJi3Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉四村'
+    )NumPingJi4Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉五村'
+    )NumPingJi5Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉六村'
+    )NumPingJi6Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美一村'
+    )NumGuMei1Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美三村'
+    )NumGuMei3Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美四村'
+    )NumGuMei4Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美七村'
+    )NumGuMei7Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美一八村'
+    )NumGuMei18Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美九村'
+    )NumGuMei9Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美十村'
+    )NumGuMei10Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='东兰一居'
+    )NumDongLan1Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='东兰二居'
+    )NumDongLan2Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='东兰三居'
+    )NumDongLan3Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='东兰四居'
+    )NumDongLan4Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙一村'
+    )NumGuLong1Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙二村'
+    )NumGuLong2Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙三村'
+    )NumGuLong3Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙四村'
+    )NumGuLong4Finish,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙五村'
+        )NumGuLong5Finish,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.is_handle=2 and ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙六村'
+        )NumGuLong6Finish,
+--         allfinish
+        (select count(1) from oldman_base ob
+	where xq_id in (89,90,88,104,110,117,118)
+	and  key_status in(2,4)
+
+	)NumGuMeiFinishAll,
+	(select count(1) from oldman_base ob
+	where xq_id in (87,84,85,86,98,122)
+	and  key_status in(2,4)
+
+	)NumGuLongFinishAll,
+	(select count(1) from oldman_base ob
+	where xq_id in (78,123,127,81,83)
+	and  key_status in(2,4)
+
+	)NumDongLanFinishAll,
+	(select count(1) from oldman_base ob
+	where xq_id in (101,109,115,116,119)
+	and  key_status in(2,4)
+
+	)NumPingJiFinishAll,
+	(select count(1) from oldman_base ob
+	where xq_id in (93,94,105,106,113,121)
+	and  key_status in(2,4)
+
+	)NumPingYangFinishAll,
+	(select count(1) from oldman_base ob
+	where xq_id in (91,92,95,96,107,111,112,114,120)
+	and  key_status in(2,4)
+
+	)NumPingNanFinishAll,
+
+	 (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳一村'
+        )NumPingYang1FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳二村'
+        )NumPingYang2FinishAll,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳三村'
+        )NumPingYang3FinishAll,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳四村'
+        )NumPingYang4FinishAll,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳五村'
+        )NumPingYang5FinishAll,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平阳六村'
+        )NumPingYang6FinishAll,
+	    (select count(1) from oldman_base ob,auto_value av
+		  where ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平南一居'
+        )NumPingNan1FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平南二居'
+        )NumPingNan2FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平南三居'
+        )NumPingNan3FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='华一新城'
+        )NumHuaYiFinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='华梅花苑'
+        )NumHuaMeiFinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='梅莲苑'
+        )NumMeiLianFinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='万源一居'
+        )NumWanYuan1FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='万源二居'
+        )NumWanYuan2FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='万源三居'
+        )NumWanYuan3FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='万源四居'
+        )NumWanYuan4FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉一村'
+        )NumPingJi1FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉二村'
+        )NumPingJi2FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉三村'
+    )NumPingJi3FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉四村'
+    )NumPingJi4FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉五村'
+    )NumPingJi5FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='平吉六村'
+    )NumPingJi6FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美一村'
+    )NumGuMei1FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美三村'
+    )NumGuMei3FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美四村'
+    )NumGuMei4FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美七村'
+    )NumGuMei7FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美一八村'
+    )NumGuMei18FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美九村'
+    )NumGuMei9FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古美十村'
+    )NumGuMei10FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='东兰一居'
+    )NumDongLan1FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='东兰二居'
+    )NumDongLan2FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='东兰三居'
+    )NumDongLan3FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='东兰四居'
+    )NumDongLan4FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙一村'
+    )NumGuLong1FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙二村'
+    )NumGuLong2FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙三村'
+    )NumGuLong3FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙四村'
+    )NumGuLong4FinishAll,
+	(select count(1) from oldman_base ob,auto_value av
+		  where ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙五村'
+        )NumGuLong5FinishAll,
+        (select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and   ob.xq_id=av.id
+		  and av.value='古龙六村'
+        )NumGuLong6FinishAll,
+
+--         WCD
+(select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平阳一村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平阳一村')NumPingYang1WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平阳二村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平阳二村')NumPingYang2WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平阳三村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平阳三村')NumPingYang3WCD,
+
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平阳四村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平阳四村')NumPingYang4WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平阳五村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平阳五村')NumPingYang5WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平阳六村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平阳六村')NumPingYang6WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平南一居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平南一居')NumPingNan1WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平南二居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平南二居')NumPingNan2WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平南三居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平南三居')NumPingNan3WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='华一新城')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='华一新城')NumHuaYiWCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='华梅花苑')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='华梅花苑')NumHuaMeiWCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='梅莲苑')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='梅莲苑')NumMeiLianWCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='万源一居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='万源一居')NumWanYuan1WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='万源二居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='万源二居')NumWanYuan2WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='万源三居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='万源三居')NumWanYuan3WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='万源四居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='万源四居')NumWanYuan4WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平吉一村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平吉一村')NumPingJi1WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平吉二村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平吉二村')NumPingJi2WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平吉一三村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平吉一三村')NumPingJi13WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平吉四村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平吉四村')NumPingJi4WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平吉五村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平吉五村')NumPingJi5WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='平吉六村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='平吉六村')NumPingJi6WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古美一村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古美一村')NumGuMei1WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古美二村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古美二村')NumGuMei2WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古美三村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古美三村')NumGuMei3WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古美四村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古美四村')NumGuMei4WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古美七村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古美七村')NumGuMei7WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古美一八村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古美一八村')NumGuMei18WCD,
+		    (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古美九村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古美九村')NumGuMei9WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古美十村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古美十村')NumGuMei10WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='东兰一居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='东兰一居')NumDongLan1WCD,
+		   (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='东兰二居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='东兰二居')NumDongLan2WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='东兰三居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='东兰三居')NumDongLan3WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='东兰四居')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='东兰四居')NumDongLan4WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古龙一村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古龙一村')NumGuLong1WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古龙二村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古龙二村')NumGuLong2WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古龙三村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古龙三村')NumGuLong3WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古龙四村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古龙四村')NumGuLong4WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古龙五村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古龙五村')NumGuLong5WCD,
+		  (select  100*count(1)/(select count(1) from oldman_base ob,auto_value av
+		  where  ob.key_status in(2,4) and  ob.xq_id=av.id
+		  and av.value='古龙六村')
+		  from oldman_base ob,auto_value av
+		  where ob.is_handle=2
+		  and ob.key_status in(2,4)
+		  and  ob.xq_id=av.id
+		  and av.value='古龙六村')NumGuLong6WCD
+
+	</select>
+
+	<select id="getVisualDataApartOldman" resultType="java.util.Map">
+-- oldman
+         select
+         (select count(1)
+            from oldman_base where disable=0
+        ) NumOld,
+        (select count(1)
+            from oldman_base
+        ) NumAll,
+		(select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=15 and o.disable=0
+        ) NumChunLao,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=15 and o.disable=0
+        ) NumDuJu,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=16 and o.disable=0
+        ) NumShiDu,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=17 and o.disable=0
+        ) NumYiLaoYYL,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=19 and o.disable=0
+        ) NumGuLao,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=20 and o.disable=0
+        ) NumSanZhiRY,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=21 and o.disable=0
+        ) NumQiTaFamily,
+
+        (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and ohb.is_sn=2 and ob.disable=0
+        ) NumSN,
+         (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and ohb.is_mb=1 and ob.disable=0
+        ) NumMB,
+        (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and ohb.is_exzl=4 and ob.disable=0
+        ) NumZLS,
+        (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and ohb.is_gz=5 and ob.disable=0
+        ) NumGZS,
+        (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30) and ob.disable=0
+        ) NumSZ,
+        (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id and home.id in(1,2,3,4,5,6) and ob.id=ho.oldman_id and ob.disable=0
+        and ho.ny='2018-10'
+        ) NumCHXPJ,
+        (select 0
+        ) NumQiTaHealth,
+
+
+        (select count(1)
+            from oldman_base where economic=22 and disable=0
+        ) NumBangKunF,
+         (select count(1)
+            from oldman_base where economic=23 and disable=0
+        ) NumDiBao,
+         (select count(1)
+            from oldman_base where economic=24 and disable=0
+        ) NumYangLaoBX,
+         (select count(1)
+            from oldman_base where economic=25 and disable=0
+        ) NumYiLiaoJZJ,
+         (select count(1)
+            from oldman_base where economic=26 and disable=0
+        ) NumChengZhenYB,
+         (select count(1)
+            from oldman_base where economic=27 and disable=0
+        ) NumQiTaEco,
+
+         (select sum(people_num)
+from organ where organ.disable=0)NumJieDaoPeople
+
+	</select>
+
+	<select id="getVisualDataApartTotal" resultType="java.util.Map">
+        select
+		(select count(1)
+            from oldman_base where disable=0
+        ) NumOld,
+        (select count(1)
+            from oldman_base
+        ) NumAll,
+      (select count(1)
+        from oldman_base where disable=0 and
+        #{param1}>=birthday and birthday>#{param3}
+        ) NumOld60,
+        (select count(1) from oldman_base where disable=0 and
+        <![CDATA[
+            DATE_FORMAT(birthday,'%Y-%m-%d') <= DATE_FORMAT(#{param3},'%Y-%m-%d')
+            ]]>
+        ) NumOld80,
+        (select count(1)
+            from oldman_base where old_status=1 and oldman_base.disable=0
+        ) NumOrganOld,
+        (select count(1)
+            from oldman_base where old_status in(2,4) and oldman_base.disable=0
+        ) NumCommunityOld,
+        (select count(1)
+            from oldman_base where old_status=3 and oldman_base.disable=0
+        ) NumFamilyOld,
+--         change
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and #{param3}>=birthday
+		  and ob.disable=0
+        )NumGuMeiAnd80Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and #{param1}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumGuMeiAnd60To80,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and #{param1}>=birthday
+		  and ob.disable=0
+        )NumGuMeiAnd60Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and birthday>#{param1}
+		  and ob.disable=0
+        )NumGuMeiAnd60Below,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and ob.old_status=1
+		  and ob.disable=0
+        )NumGuMeiAndOrganOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and ob.old_status in(2,4)
+		  and ob.disable=0
+        )NumGuMeiAndCommunityOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and ob.old_status=3
+		  and ob.disable=0
+        )NumGuMeiAndFamilyOld,
+
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2
+		  and #{param3}>=birthday
+		  and ob.disable=0
+        )NumGuLongAnd80Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2
+		  and #{param1}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumGuLongAnd60To80,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2
+		  and #{param1}>=birthday
+		  and ob.disable=0
+        )NumGuLongAnd60Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2
+		  and birthday>#{param1}
+		  and ob.disable=0
+        )NumGuLongAnd60Below,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2
+		  and ob.old_status=1
+		  and ob.disable=0
+        )NumGuLongAndOrganOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2
+		  and ob.old_status in(2,4)
+		  and ob.disable=0
+        )NumGuLongAndCommunityOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2
+		  and ob.old_status=3
+		  and ob.disable=0
+        )NumGuLongAndFamilyOld,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and #{param3}>=birthday
+		  and ob.disable=0
+        )NumDongLanAnd80Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and #{param1}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumDongLanAnd60To80,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and #{param1}>=birthday
+		  and ob.disable=0
+        )NumDongLanAnd60Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and birthday>#{param1}
+		  and ob.disable=0
+        )NumDongLanAnd60Below,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and ob.old_status=1
+		  and ob.disable=0
+        )NumDongLanAndOrganOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and ob.old_status in(2,4)
+		  and ob.disable=0
+        )NumDongLanAndCommunityOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and ob.old_status=3
+		  and ob.disable=0
+        )NumDongLanAndFamilyOld,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and #{param3}>=birthday
+		  and ob.disable=0
+        )NumPingJiAnd80Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and #{param1}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumPingJiAnd60To80,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and #{param1}>=birthday
+		  and ob.disable=0
+        )NumPingJiAnd60Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and birthday>#{param1}
+        )NumPingJiAnd60Below,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and ob.old_status=1
+		  and ob.disable=0
+        )NumPingJiAndOrganOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and ob.old_status in(2,4)
+		  and ob.disable=0
+        )NumPingJiAndCommunityOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and ob.old_status=3
+		  and ob.disable=0
+        )NumPingJiAndFamilyOld,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and #{param3}>=birthday
+		  and ob.disable=0
+        )NumPingYangAnd80Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and #{param1}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumPingYangAnd60To80,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and #{param1}>=birthday
+		  and ob.disable=0
+        )NumPingYangAnd60Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and birthday>#{param1}
+		  and ob.disable=0
+        )NumPingYangAnd60Below,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and ob.old_status=1
+		  and ob.disable=0
+        )NumPingYangAndOrganOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and ob.old_status in(2,4)
+		  and ob.disable=0
+        )NumPingYangAndCommunityOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and ob.old_status=3
+		  and ob.disable=0
+        )NumPingYangAndFamilyOld,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and #{param3}>=birthday
+		  and ob.disable=0
+        )NumPingNanAnd80Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and #{param1}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumPingNanAnd60To80,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and #{param1}>=birthday
+		  and ob.disable=0
+        )NumPingNanAnd60Above,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and birthday>#{param1}
+		  and ob.disable=0
+        )NumPingNanAnd60Below,
+
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and ob.old_status=1
+		  and ob.disable=0
+        )NumPingNanAndOrganOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and ob.old_status in(2,4)
+		  and ob.disable=0
+        )NumPingNanAndCommunityOld,
+		(select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and ob.old_status=3
+		  and ob.disable=0
+        )NumPingNanAndFamilyOld,
+
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1
+		  and ob.disable=0
+        )NumGuMei,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2
+		  and ob.disable=0
+        )NumGuLong,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3
+		  and ob.disable=0
+        )NumDongLan,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4
+		  and ob.disable=0
+        )NumPingJi,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5
+		  and ob.disable=0
+        )NumPingYang,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6
+		  and ob.disable=0
+        )NumPingNan,
+        (select sum(people_num)
+from organ where organ.disable=0)NumJieDaoPeople
+
+
+
+	</select>
+
+    <select id="getVisualDataApartOrgan" resultType="java.util.Map">
+        select
+		(select count(1)
+            from oldman_base where disable=0
+        ) NumOld,
+        (select count(1)
+            from oldman_base where disable=0
+        ) NumAll,
+       (select count(1)
+            from oldman_base where disable=0 and
+            <![CDATA[
+            DATE_FORMAT(birthday,'%Y') <= DATE_FORMAT(#{param1},'%Y')
+            ]]>
+            and
+             <![CDATA[
+            DATE_FORMAT(birthday,'%Y') > DATE_FORMAT(#{param3},'%Y')
+            ]]>
+        ) NumOld60,
+        (select count(1) from oldman_base where disable=0 and
+        <![CDATA[
+            DATE_FORMAT(birthday,'%Y-%m-%d') <= DATE_FORMAT(#{param3},'%Y-%m-%d')
+            ]]>
+        ) NumOld80,
+        (select count(1)
+            from oldman_base where old_status=1 and disable=0
+        ) NumOrganOld,
+         (select count(1)
+            from oldman_base where old_status=3 and disable=0
+        ) NumFamilyOld,
+         (select count(1)
+            from oldman_base where old_status=2 and disable=0
+        ) NumCommunityOld,
+         (select count(1)
+            from oldman_base where old_status in(2,3,4) and disable=0
+        ) NumSqJjOld,
+        (select count(1)
+            from oldman_base where old_status=4 and disable=0
+        ) NumSqJjOldOnly,
+         (select count(1) from organ,organ_oldman oo,oldman_base ob
+		where organ.id=115
+		and organ.id=oo.organ_id and oo.oldman_id=ob.id  and ob.disable in(0,2) and oo.ny="2018-10"
+        ) NumOrgGuMei,
+        (select count(1) from organ,organ_oldman oo,oldman_base ob
+		where organ.id=114 and oo.oldman_id=ob.id  and ob.disable in(0,2) and oo.ny="2018-10"
+		and organ.id=oo.organ_id) NumOrgPingYang,
+        (select count(1) from organ,organ_oldman oo,oldman_base ob
+		where organ.id=79 and oo.oldman_id=ob.id  and ob.disable in(0,2) and oo.ny="2018-10"
+		and organ.id=oo.organ_id
+        ) NumOrgDongLan,
+        (select sum(people_num)
+from organ where organ.disable=0)NumJieDaoPeople,
+
+(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=79 and organ.disable=0 and oo.ny="2018-10")NumLianHuaJLLive,
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=115 and organ.disable=0 and oo.ny="2018-10")NumGuMeiJLLive,
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=114 and organ.disable=0 and oo.ny="2018-10")NumPingYangJLLive,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=118 and organ.disable=0 and oo.ny="2018-10")NumZhiHuiZZLive,
+(select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id in(7,8,10,11,12,13,14,15,16)
+        )NumFuWu,
+ (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+        and home.fir_type=3 and (home.sec_type="安康通" or home.sec_type="康乐福") and ho.oldman_id=ob.id and ob.disable=0
+         and ho.ny='2018-10'
+        )NumZhiNeng,
+ (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.disable=0  and ho.ny='2018-10'
+        )NumYiSheng,
+(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuang,
+         (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id and home.id between 1 and 5 and ob.id=ho.oldman_id and ob.disable=0
+        and ho.ny='2018-10'
+        )NumChangHu
+
+	</select>
+
+    <select id="getVisualDataApartFamily" resultType="java.util.Map">
+         select
+         (select count(1)
+            from oldman_base where disable=0
+        ) NumOld,
+        (select count(1)
+            from oldman_base
+        ) NumAll,
+		(select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=15 and o.disable=0
+        ) NumChunLao,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=15 and o.disable=0
+        ) NumDuJu,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=16 and o.disable=0
+        ) NumShiDu,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=17 and o.disable=0
+        ) NumYiLaoYYL,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=19 and o.disable=0
+        ) NumGuLao,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=20 and o.disable=0
+        ) NumSanZhiRY,
+        (select count(1)
+            from oldman_base o,auto_value av where o.family=av.id and av.id=21 and o.disable=0
+        ) NumQiTaFamily,
+
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=12 and o.disable=0
+        ) NumHuJi,
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=13 and o.disable=0
+        ) NumFeiHuJi,
+        (select count(1)
+            from oldman_base where sex=2 and disable=0
+        ) NumMale,
+        (select count(1)
+            from oldman_base where sex=1 and disable=0
+        ) NumFemale,
+
+        (select count(1)
+            from oldman_base  where #{param4}>=birthday and disable=0
+        ) NumAbove90M,
+        (select count(1)
+            from oldman_base where #{param3}>=birthday and birthday > #{param4} and sex=2 and disable=0
+        ) Num80To90M,
+        (select count(1)
+            from oldman_base where #{param2}>=birthday and birthday > #{param3} and sex=2 and disable=0
+        ) Num70To80M,
+        (select count(1)
+            from oldman_base where #{param1}>=birthday and birthday > #{param2} and sex=2 and disable=0
+        ) Num60To70M,
+        (select count(1)
+            from oldman_base  where #{param4}>=birthday and sex=1 and disable=0
+        ) NumAbove90F,
+        (select count(1)
+            from oldman_base where #{param3}>=birthday and birthday > #{param4} and sex=1 and disable=0
+        ) Num80To90F,
+        (select count(1)
+            from oldman_base where #{param2}>=birthday and birthday > #{param3} and sex=1 and disable=0
+        ) Num70To80F,
+        (select count(1)
+            from oldman_base where #{param1}>=birthday and birthday > #{param2} and sex=1 and disable=0
+        ) Num60To70F,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and census=12 and ob.disable=0
+        )NumChunLaoAndHuJi,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and (census=13 or census=14) and ob.disable=0
+        )NumChunLaoAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=2 and ob.disable=0
+        )NumChunLaoAndMale,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=1 and ob.disable=0
+        )NumChunLaoAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumChunLaoAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		   and ob.disable=0
+        )NumChunLaoAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumChunLaoAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		   and ob.disable=0
+        )NumChunLaoAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumChunLaoAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumChunLaoAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumChunLaoAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumChunLaoAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and census=12
+		  and ob.disable=0
+        )NumDuJuAndHuJi,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and (census=13 or census=14)
+		   and ob.disable=0
+        )NumDuJuAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumDuJuAndMale,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=15
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumDuJuAndFemale,
+
+               (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and census=12
+		  and ob.disable=0
+        )NumDuJuAndHuJi,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumDuJuAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumDuJuAndMale,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where  ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumDuJuAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumDuJuAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumDuJuAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumDuJuAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumDuJuAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumDuJuAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumDuJuAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumDuJuAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=16
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumDuJuAnd90AboveF,
+
+               (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and census=12
+		  and ob.disable=0
+        )NumShiDuAndHuJi,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumShiDuAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumShiDuAndMale,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumShiDuAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumShiDuAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumShiDuAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumShiDuAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumShiDuAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumShiDuAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumShiDuAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumShiDuAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=18
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumShiDuAnd90AboveF,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and census=12
+		  and ob.disable=0
+        )NumYiLaoAndHuJi,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumYiLaoAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumYiLaoAndMale,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumYiLaoAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumYiLaoAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumYiLaoAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumYiLaoAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumYiLaoAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumYiLaoAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumYiLaoAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumYiLaoAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=17
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumYiLaoAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and census=12
+		  and ob.disable=0
+        )NumGuLaoAndHuJi,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumGuLaoAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumGuLaoAndMale,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumGuLaoAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumGuLaoAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumGuLaoAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumGuLaoAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumGuLaoAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumGuLaoAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumGuLaoAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumGuLaoAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=19
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumGuLaoAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and census=12
+		  and ob.disable=0
+        )NumSanZhiAndHuJi,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumSanZhiAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumSanZhiAndMale,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumSanZhiAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where  ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumSanZhiAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where  ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumSanZhiAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumSanZhiAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumSanZhiAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where  ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumSanZhiAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumSanZhiAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumSanZhiAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=20
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumSanZhiAnd90AboveF,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and census=12
+		  and ob.disable=0
+        )NumQiTaFamilyAndHuJi,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumQiTaFamilyAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumQiTaFamilyAndMale,
+       (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumQiTaFamilyAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumQiTaFamilyAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumQiTaFamilyAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumQiTaFamilyAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumQiTaFamilyAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumQiTaFamilyAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumQiTaFamilyAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumQiTaFamilyAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_family ofa
+		  where ob.id=ofa.oldman_id
+		  and family_index=21
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumQiTaFamilyAnd90AboveF
+	</select>
+
+    <select id="getVisualDataApartHealth" resultType="java.util.Map">
+         select
+         (select count(1)
+            from oldman_base where disable=0
+        ) NumOld,
+        (select count(1)
+            from oldman_base
+        ) NumAll,
+		(select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and ohb.is_sn=2 and ob.disable=0
+        ) NumSN,
+        (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and ohb.is_mb=1 and ob.disable=0
+        ) NumMB,
+        (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and ohb.is_exzl=4 and ob.disable=0
+        ) NumZLS,
+        (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and ohb.is_gz=5 and ob.disable=0
+        ) NumGZS,
+        (select count(1)
+            from oldman_base ob,oldman_health_base ohb where ob.id=ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30) and ob.disable=0
+        ) NumSZ,
+        (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id and home.id in(1,2,3,4,5,6) and ob.id=ho.oldman_id and ob.disable=0
+        and ho.ny='2018-10'
+        ) NumCHXPJ,
+        (select 0
+        ) NumQiTaHealth,
+
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=12 and o.disable=0
+        ) NumHuJi,
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=13 and o.disable=0
+        ) NumFeiHuJi,
+        (select count(1)
+            from oldman_base where sex=2 and disable=0
+        ) NumMale,
+        (select count(1)
+            from oldman_base where sex=1 and disable=0
+        ) NumFemale,
+
+        (select count(1)
+            from oldman_base  where #{param4}>=birthday and disable=0
+        ) NumAbove90M,
+        (select count(1)
+            from oldman_base where #{param3}>=birthday and birthday > #{param4} and sex=2 and disable=0
+        ) Num80To90M,
+        (select count(1)
+            from oldman_base where #{param2}>=birthday and birthday > #{param3} and sex=2 and disable=0
+        ) Num70To80M,
+        (select count(1)
+            from oldman_base where #{param1}>=birthday and birthday > #{param2} and sex=2 and disable=0
+        ) Num60To70M,
+        (select count(1)
+            from oldman_base  where #{param4}>=birthday and sex=1 and disable=0
+        ) NumAbove90F,
+        (select count(1)
+            from oldman_base where #{param3}>=birthday and birthday > #{param4} and sex=1 and disable=0
+        ) Num80To90F,
+        (select count(1)
+            from oldman_base where #{param2}>=birthday and birthday > #{param3} and sex=1 and disable=0
+        ) Num70To80F,
+        (select count(1)
+            from oldman_base where #{param1}>=birthday and birthday > #{param2} and sex=1 and disable=0
+        ) Num60To70F,
+
+            (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_sn=2
+		  and census=12
+		  and ob.disable=0
+        )NumShiNengAndHuJi,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_sn=2
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumShiNengAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_sn=2
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumShiNengAndMale,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumShiNengAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumShiNengAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumShiNengAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumShiNengAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumShiNengAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumShiNengAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumShiNengAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumShiNengAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_sn=2 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumShiNengAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_mb=1
+		  and census=12
+		  and ob.disable=0
+        )NumManBingAndHuJi,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_mb=1
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumManBingAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_mb=1
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumManBingAndMale,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumManBingAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumManBingAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumManBingAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumManBingAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumManBingAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumManBingAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumManBingAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumManBingAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_mb=1 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumManBingAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_exzl=4
+		  and census=12
+		  and ob.disable=0
+        )NumZhongLiuAndHuJi,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_exzl=4
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumZhongLiuAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_exzl=4
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumZhongLiuAndMale,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumZhongLiuAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumZhongLiuAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumZhongLiuAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumZhongLiuAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumZhongLiuAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumZhongLiuAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumZhongLiuAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumZhongLiuAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_exzl=4 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumZhongLiuAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_gz=5
+		  and census=12
+		  and ob.disable=0
+        )NumGuZheAndHuJi,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_gz=5
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumGuZheAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_gz=5
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumGuZheAndMale,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumGuZheAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumGuZheAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumGuZheAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumGuZheAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumGuZheAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumGuZheAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumGuZheAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumGuZheAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumGuZheAnd90AboveF,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and (intelligence=29 or intelligence=30)
+		  and census=12
+		  and ob.disable=0
+        )NumShiZhiAndHuJi,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and (intelligence=29 or intelligence=30)
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumShiZhiAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and (intelligence=29 or intelligence=30)
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumShiZhiAndMale,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumShiZhiAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumShiZhiAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumShiZhiAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumShiZhiAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumShiZhiAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumShiZhiAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumShiZhiAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumShiZhiAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where (intelligence=29 or intelligence=30) and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumShiZhiAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_gz=5
+		  and census=12
+		  and ob.disable=0
+        )NumQiTaHealthAndHuJi,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_gz=5
+		  and (census=13 or census=14)
+		  and ob.disable=0
+        )NumQiTaHealthAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ob.id=ohb.oldman_id
+		  and ohb.is_gz=5
+		  and ob.sex=2
+		  and ob.disable=0
+        )NumQiTaHealthAndMale,
+       (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and ob.disable=0
+        )NumQiTaHealthAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumQiTaHealthAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumQiTaHealthAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumQiTaHealthAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=2
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumQiTaHealthAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and ob.disable=0
+        )NumQiTaHealthAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and ob.disable=0
+        )NumQiTaHealthAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and ob.disable=0
+        )NumQiTaHealthAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_health_base ohb
+		  where ohb.is_gz=5 and ob.id=ohb.oldman_id
+		  and ob.sex=1
+		  and #{param4}>=birthday
+		  and ob.disable=0
+        )NumQiTaHealthAnd90AboveF
+
+	</select>
+
+    <select id="getVisualDataApartEconomic" resultType="java.util.Map">
+         select
+         (select count(1)
+            from oldman_base where disable=0
+        ) NumOld,
+        (select count(1)
+            from oldman_base
+        ) NumAll,
+		 (select count(1)
+            from oldman_base where economic=22 and disable=0
+        ) NumBangKunF,
+         (select count(1)
+            from oldman_base where economic=23 and disable=0
+        ) NumDiBao,
+         (select count(1)
+            from oldman_base where economic=24 and disable=0
+        ) NumYangLaoBX,
+         (select count(1)
+            from oldman_base where economic=25 and disable=0
+        ) NumYiLiaoJZJ,
+         (select count(1)
+            from oldman_base where economic=26 and disable=0
+        ) NumChengZhenYB,
+         (select count(1)
+            from oldman_base where economic=27 and disable=0
+        ) NumQiTaEco,
+
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=12 and o.disable=0
+        ) NumHuJi,
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=13 and o.disable=0
+        ) NumFeiHuJi,
+        (select count(1)
+            from oldman_base where sex=2 and disable=0
+        ) NumMale,
+        (select count(1)
+            from oldman_base where sex=1 and disable=0
+        ) NumFemale,
+
+        (select count(1)
+            from oldman_base  where #{param4}>birthday and disable=0
+        ) NumAbove90M,
+        (select count(1)
+            from oldman_base where #{param3}>birthday and birthday > #{param4} and sex=2 and disable=0
+        ) Num80To90M,
+        (select count(1)
+            from oldman_base where #{param2}>birthday and birthday > #{param3} and sex=2 and disable=0
+        ) Num70To80M,
+        (select count(1)
+            from oldman_base where #{param1}>birthday and birthday > #{param2} and sex=2 and disable=0
+        ) Num60To70M,
+        (select count(1)
+            from oldman_base  where #{param4}>birthday and sex=1 and disable=0
+        ) NumAbove90F,
+        (select count(1)
+            from oldman_base where #{param3}>birthday and birthday > #{param4} and sex=1 and disable=0
+        ) Num80To90F,
+        (select count(1)
+            from oldman_base where #{param2}>birthday and birthday > #{param3} and sex=1 and disable=0
+        ) Num70To80F,
+        (select count(1)
+            from oldman_base where #{param1}>birthday and birthday > #{param2} and sex=1 and disable=0
+        ) Num60To70F,
+
+                (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and census=12 and ob.disable=0
+        )NumBangKunAndHuJi,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and (census=13 or census=14) and ob.disable=0
+        )NumBangKunAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=2 and ob.disable=0
+        )NumBangKunAndMale,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=1 and ob.disable=0
+        )NumBangKunAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumBangKunAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumBangKunAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumBangKunAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=2
+		  and #{param4}>=birthday and ob.disable=0
+        )NumBangKunAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumBangKunAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumBangKunAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumBangKunAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=22
+		  and ob.sex=1
+		  and #{param4}>=birthday and ob.disable=0
+        )NumBangKunAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and census=12
+		  and ob.disable=0
+        )NumDiBaoAndHuJi,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and (census=13 or census=14) and ob.disable=0
+        )NumDiBaoAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=2 and ob.disable=0
+        )NumDiBaoAndMale,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=1 and ob.disable=0
+        )NumDiBaoAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumDiBaoAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumDiBaoAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumDiBaoAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=2
+		  and #{param4}>=birthday and ob.disable=0
+        )NumDiBaoAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumDiBaoAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumDiBaoAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumDiBaoAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=23
+		  and ob.sex=1
+		  and #{param4}>=birthday and ob.disable=0
+        )NumDiBaoAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and census=12 and ob.disable=0
+        )NumYangLaoAndHuJi,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and (census=13 or census=14) and ob.disable=0
+        )NumYangLaoAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=2 and ob.disable=0
+        )NumYangLaoAndMale,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=1 and ob.disable=0
+        )NumYangLaoAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumYangLaoAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumYangLaoAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumYangLaoAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=2
+		  and #{param4}>=birthday and ob.disable=0
+        )NumYangLaoAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumYangLaoAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumYangLaoAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumYangLaoAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=24
+		  and ob.sex=1
+		  and #{param4}>=birthday and ob.disable=0
+        )NumYangLaoAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and census=12 and ob.disable=0
+        )NumYiLiaoAndHuJi,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and (census=13 or census=14) and ob.disable=0
+        )NumYiLiaoAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=2 and ob.disable=0
+        )NumYiLiaoAndMale,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=1 and ob.disable=0
+        )NumYiLiaoAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumYiLiaoAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumYiLiaoAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumYiLiaoAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=2
+		  and #{param4}>=birthday and ob.disable=0
+        )NumYiLiaoAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumYiLiaoAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumYiLiaoAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumYiLiaoAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=25
+		  and ob.sex=1
+		  and #{param4}>=birthday and ob.disable=0
+        )NumYiLiaoAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and census=12 and ob.disable=0
+        )NumChenZhenAndHuJi,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and (census=13 or census=14) and ob.disable=0
+        )NumChenZhenAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=2 and ob.disable=0
+        )NumChenZhenAndMale,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=1 and ob.disable=0
+        )NumChenZhenAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumChenZhenAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumChenZhenAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumChenZhenAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=2
+		  and #{param4}>=birthday and ob.disable=0
+        )NumChenZhenAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumChenZhenAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumChenZhenAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumChenZhenAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=26
+		  and ob.sex=1
+		  and #{param4}>=birthday and ob.disable=0
+        )NumChenZhenAnd90AboveF,
+
+                (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and census=12 and ob.disable=0
+        )NumQiTaEconomicAndHuJi,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and (census=13 or census=14) and ob.disable=0
+        )NumQiTaEconomicAndFeiHuJi,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=2 and ob.disable=0
+        )NumQiTaEconomicAndMale,
+       (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=1 and ob.disable=0
+        )NumQiTaEconomicAndFemale,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=2
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumQiTaEconomicAnd60To70M,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=2
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumQiTaEconomicAnd70To80M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=2
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumQiTaEconomicAnd80To90M,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=2
+		  and #{param4}>=birthday and ob.disable=0
+        )NumQiTaEconomicAnd90AboveM,
+
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=1
+		  and #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+        )NumQiTaEconomicAnd60To70F,
+          (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=1
+		  and #{param2}>=birthday and birthday > #{param3} and ob.disable=0
+        )NumQiTaEconomicAnd70To80F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=1
+		  and #{param3}>=birthday and birthday > #{param4} and ob.disable=0
+        )NumQiTaEconomicAnd80To90F,
+        (select count(1) from oldman_base ob,oldman_economic oe
+		  where ob.id=oe.oldman_id
+		  and economic_index=27
+		  and ob.sex=1
+		  and #{param4}>=birthday and ob.disable=0
+        )NumQiTaEconomicAnd90AboveF
+
+
+
+	</select>
+
+    <select id="getVisualDataApartYLY" resultType="java.util.Map">
+        select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=114
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.id=114)NumPingYangJLRemain,
+
+		(select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=115
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=115 and organ.disable=0)NumGuMeiJLRemain,
+
+		(select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=79
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=79 and organ.disable=0)NumLianHuaJLRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=114 and organ.disable=0 and oo.ny="2018-10")NumPingYangJLLive,
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=115 and organ.disable=0 and oo.ny="2018-10")NumGuMeiJLLive,
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=79 and organ.disable=0 and oo.ny="2018-10")NumLianHuaJLLive,
+
+
+		(select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=114
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=114 and organ.disable=0)/organ.num *100 from organ
+		where organ.id=114 and organ.disable=0)NumPingYangJLFutureRemain,
+
+		(select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=115
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=115 and organ.disable=0)/organ.num *100 from organ
+		where organ.id=115 and organ.disable=0)NumGuMeiJLFutureRemain,
+
+
+		(select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=79
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=79 and organ.disable=0)/organ.num *100 from organ
+		where organ.id=79 and organ.disable=0)NumLianHuaJLFutureRemain,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and ob.sex =2)NumPingYangJLAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and ob.sex =2)NumGuMeiJLAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and ob.sex =2)NumLianHuaJLAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and ob.sex =1)NumPingYangJLAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and ob.sex =1)NumGuMeiJLAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and ob.sex =1)NumLianHuaJLAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=2)NumLianHuaJLAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=2)NumLianHuaJLAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=2)NumLianHuaJLAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and #{param4}>=birthday and ob.sex=2)NumLianHuaJLAnd90AboveM,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=2)NumGuMeiJLAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=2)NumGuMeiJLAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=2)NumGuMeiJLAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and #{param4}>=birthday and ob.sex=2)NumGuMeiJLAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=2)NumPingYangJLAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=2)NumPingYangJLAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=2)NumPingYangJLAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and #{param4}>=birthday and ob.sex=2)NumPingYangJLAnd90AboveM,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=1)NumLianHuaJLAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=1)NumLianHuaJLAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=1)NumLianHuaJLAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and #{param4}>=birthday and ob.sex=1)NumLianHuaJLAnd90AboveF,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=1)NumGuMeiJLAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=1)NumGuMeiJLAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=1)NumGuMeiJLAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and #{param4}>=birthday and ob.sex=1)NumGuMeiJLAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=1)NumPingYangJLAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=1)NumPingYangJLAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=1)NumPingYangJLAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and #{param4}>=birthday and ob.sex=1)NumPingYangJLAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumPingYangJLAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumPingYangJLAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=114 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumPingYangJLAndZiLi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumGuMeiJLAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumGuMeiJLAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=115 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumGuMeiJLAndZiLi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumLianHuaJLAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumLianHuaJLAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=79 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumLianHuaJLAndZiLi
+
+
+
+	</select>
+
+    <select id="getVisualDataApartRZ" resultType="java.util.Map">
+        select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=15
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.id=15)NumPingNanRZRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=15 and organ.disable=0 and oo.ny="2018-10")NumPingNanRZLive,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and ob.sex =2)NumPingNanRZAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and ob.sex =1)NumPingNanRZAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and #{param1}>birthday and birthday > #{param2} and ob.sex=2)NumPingNanRZAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and #{param2}>birthday and birthday > #{param3} and ob.sex=2)NumPingNanRZAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and #{param3}>birthday and birthday > #{param4} and ob.sex=2)NumPingNanRZAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and #{param4}>birthday and ob.sex=2)NumPingNanRZAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and #{param1}>birthday and birthday > #{param2} and ob.sex=1)NumPingNanRZAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and #{param2}>birthday and birthday > #{param3} and ob.sex=1)NumPingNanRZAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and #{param3}>birthday and birthday > #{param4} and ob.sex=1)NumPingNanRZAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and #{param4}>birthday and ob.sex=1)NumPingNanRZAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumPingNanRZAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumPingNanRZAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=15 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.intelligence!=29 and ohb.intelligence!=30  and ohb.is_sn!=2)NumPingNanRZAndZiLi,
+
+-- 	  RZ ADD
+(select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=147
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.id=147)NumPingJi1RZRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=147 and organ.disable=0 and oo.ny="2018-10")NumPingJi1RZLive,
+
+		(select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=147
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=147 and organ.disable=0)/organ.num from organ
+		where organ.id=147 and organ.disable=0)NumPingJi1RZFutureRemain,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10"
+		and ob.sex =2)NumPingJi1RZAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10"
+		and ob.sex =1)NumPingJi1RZAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10" and sex=2
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=2)NumPingJi1RZAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10" and sex=2
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=2)NumPingJi1RZAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10" and sex=2
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=2)NumPingJi1RZAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10" and sex=2
+		and #{param4}>=birthday and ob.sex=2)NumPingJi1RZAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10" and sex=1
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=1)NumPingJi1RZAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10" and sex=1
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=1)NumPingJi1RZAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10" and sex=1
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=1)NumPingJi1RZAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10" and sex=1
+		and #{param4}>=birthday and ob.sex=1)NumPingJi1RZAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumPingJi1RZAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumPingJi1RZAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=147 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumPingJi1RZAndZiLi,
+
+-- 		pingji2
+(select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=148
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.id=148)NumPingJi2RZRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=148 and organ.disable=0 and oo.ny="2018-10")NumPingJi2RZLive,
+
+		(select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=148
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=148 and organ.disable=0)/organ.num from organ
+		where organ.id=148 and organ.disable=0)NumPingJi2RZFutureRemain,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10"
+		and ob.sex =2)NumPingJi2RZAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10"
+		and ob.sex =1)NumPingJi2RZAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10" and sex=2
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=2)NumPingJi2RZAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10" and sex=2
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=2)NumPingJi2RZAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10" and sex=2
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=2)NumPingJi2RZAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10" and sex=2
+		and #{param4}>=birthday and ob.sex=2)NumPingJi2RZAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10" and sex=1
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=1)NumPingJi2RZAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10" and sex=1
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=1)NumPingJi2RZAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10" and sex=1
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=1)NumPingJi2RZAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10" and sex=1
+		and #{param4}>=birthday and ob.sex=1)NumPingJi2RZAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumPingJi2RZAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumPingJi2RZAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=148 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumPingJi2RZAndZiLi
+
+
+	</select>
+
+    <select id="getVisualDataApartFuWu" resultType="java.util.Map">
+        select (select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=7
+        )NumZhuCan,
+        (select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=8
+        )NumZhuJie,
+		(select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=10
+        )NumZhuYu,
+		(select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=11
+        )NumZhuXing,
+		(select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=12
+        )NumZhuYi,
+		(select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=15
+        )NumXiYi,
+		(select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=13
+        )NumKangFu,
+		(select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=14
+        )NumXiangTan,
+		(select count(1) from home_oldman ho,home,oldman_base ob
+		where ho.ny='2018-10' and ho.home_id=home.id and ob.id=ho.oldman_id
+		and home.fir_type=1 and ob.disable=0 and home.id=16
+        )NumShengHuo,
+		(select 0
+        )NumQiTa,
+         (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and census=12
+		and ob.disable=0
+        ) NumHuJi,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and (census=13 or census=14)
+		and ob.disable=0
+        ) NumFeiHuJi,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and disable=0 and sex=2
+        ) NumMale,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and disable=0 and sex=1
+        ) NumFemale,
+
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and #{param4}>=birthday and disable=0 and sex=2
+        ) NumAbove90M,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and disable=0 and sex=2
+        ) Num80To90M,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and disable=0 and sex=2
+        ) Num70To80M,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and disable=0 and sex=2
+        ) Num60To70M,
+
+         (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and #{param4}>=birthday and disable=0 and sex=1
+        ) NumAbove90F,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and #{param3}>=birthday and birthday > #{param4}
+		  and disable=0 and sex=1
+        ) Num80To90F,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and #{param2}>=birthday and birthday > #{param3}
+		  and disable=0 and sex=1
+        ) Num70To80F,
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		  and #{param1}>=birthday and birthday > #{param2}
+		  and disable=0 and sex=1
+        ) Num60To70F,
+
+        (select count(1) from oldman_base ob,home_oldman ho,home
+        where ho.ny='2018-10'
+		  and ho.home_id=home.id
+		  and ob.id=ho.oldman_id and home.fir_type=1
+		and ob.disable=0
+        )NumKeyAttend,
+        (select count(1) from oldman_base ob
+        where ob.disable=0
+        )NumKeyOld
+
+	</select>
+
+    <select id="getVisualDataApartBase" resultType="java.util.Map">
+        select
+        (select count(1)
+            from oldman_base where disable=0
+        ) NumOld,
+        (select count(1)
+            from oldman_base
+        ) NumAll,
+       (select count(1)
+            from oldman_base where disable=0 and
+            <![CDATA[
+            DATE_FORMAT(birthday,'%Y-%m-%d') <= DATE_FORMAT(#{param1},'%Y-%m-%d')
+            ]]>
+            and
+             <![CDATA[
+            DATE_FORMAT(birthday,'%Y-%m-%d') > DATE_FORMAT(#{param3},'%Y-%m-%d')
+            ]]>
+        ) NumOld60,
+        (select count(1) from oldman_base where disable=0 and
+        <![CDATA[
+            DATE_FORMAT(birthday,'%Y-%m-%d') <= DATE_FORMAT(#{param3},'%Y-%m-%d')
+            ]]>
+        ) NumOld80,
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=12 and o.disable=0
+        ) NumHuJi,
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=13 and o.disable=0
+        ) NumFeiHuJi,
+        (select count(1)
+            from oldman_base where sex=2 and disable=0
+        ) NumMale,
+        (select count(1)
+            from oldman_base where sex=1 and disable=0
+        ) NumFemale,
+
+        (select count(1)
+            from oldman_base  where #{param4}>=birthday and disable=0
+        ) NumAbove90M,
+        (select count(1)
+            from oldman_base where #{param3}>=birthday and birthday > #{param4} and sex=2 and disable=0
+        ) Num80To90M,
+        (select count(1)
+            from oldman_base where #{param2}>=birthday and birthday > #{param3} and sex=2 and disable=0
+        ) Num70To80M,
+        (select count(1)
+            from oldman_base where #{param1}>=birthday and birthday > #{param2} and sex=2 and disable=0
+        ) Num60To70M,
+        (select count(1)
+            from oldman_base  where #{param4}>birthday and sex=1 and disable=0
+        ) NumAbove90F,
+        (select count(1)
+            from oldman_base where #{param3}>birthday and birthday > #{param4} and sex=1 and disable=0
+        ) Num80To90F,
+        (select count(1)
+            from oldman_base where #{param2}>birthday and birthday > #{param3} and sex=1 and disable=0
+        ) Num70To80F,
+        (select count(1)
+            from oldman_base where #{param1}>birthday and birthday > #{param2} and sex=1 and disable=0
+        ) Num60To70F,
+          (select sum(people_num)
+from organ where organ.disable=0)NumJieDaoPeople
+
+
+	</select>
+
+    <select id="getVisualDataApartZZ" resultType="java.util.Map">
+        select
+       (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=118
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.id=118)NumZhiHuiZZRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=118 and organ.disable=0 and oo.ny="2018-10")NumZhiHuiZZLive,
+
+		(select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=118
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=118 and organ.disable=0)/organ.num from organ
+		where organ.id=118 and organ.disable=0)NumZhiHuiZZFutureRemain,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10"
+		and ob.sex =2)NumZhiHuiZZAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10"
+		and ob.sex =1)NumZhiHuiZZAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10" and sex=2
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=2)NumZhiHuiZZAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10" and sex=2
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=2)NumZhiHuiZZAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10" and sex=2
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=2)NumZhiHuiZZAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10" and sex=2
+		and #{param4}>=birthday and ob.sex=2)NumZhiHuiZZAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10" and sex=1
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=1)NumZhiHuiZZAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10" and sex=1
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=1)NumZhiHuiZZAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10" and sex=1
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=1)NumZhiHuiZZAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10" and sex=1
+		and #{param4}>=birthday and ob.sex=1)NumZhiHuiZZAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumZhiHuiZZAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumZhiHuiZZAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=118 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumZhiHuiZZAndZiLi,
+
+
+		(select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=14
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.id=14)NumAiWeiZZRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=14 and organ.disable=0 and oo.ny="2018-10")NumAiWeiZZLive,
+
+		(select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=14
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=14 and organ.disable=0)/organ.num from organ
+		where organ.id=14 and organ.disable=0)NumAiWeiZZFutureRemain,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10"
+		and ob.sex =2)NumAiWeiZZAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10"
+		and ob.sex =1)NumAiWeiZZAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10" and sex=2
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=2)NumAiWeiZZAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10" and sex=2
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=2)NumAiWeiZZAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10" and sex=2
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=2)NumAiWeiZZAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10" and sex=2
+		and #{param4}>=birthday and ob.sex=2)NumAiWeiZZAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10" and sex=1
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=1)NumAiWeiZZAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10" and sex=1
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=1)NumAiWeiZZAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10" and sex=1
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=1)NumAiWeiZZAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10" and sex=1
+		and #{param4}>=birthday and ob.sex=1)NumAiWeiZZAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumAiWeiZZAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumAiWeiZZAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=14 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumAiWeiZZAndZiLi,
+
+
+-- 		lejian
+(select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=145
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.id=145)NumLeJianZZRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.id=145 and organ.disable=0 and oo.ny="2018-10")NumLeJianZZLive,
+
+		(select (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.id=145
+		and organ.id=oo.organ_id and oo.ny="2018-10"
+		and organ.disable=0)
+		from organ where organ.id=145 and organ.disable=0)/organ.num from organ
+		where organ.id=145 and organ.disable=0)NumLeJianZZFutureRemain,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10"
+		and ob.sex =2)NumLeJianZZAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10"
+		and ob.sex =1)NumLeJianZZAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10" and sex=2
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=2)NumLeJianZZAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10" and sex=2
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=2)NumLeJianZZAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10" and sex=2
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=2)NumLeJianZZAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10" and sex=2
+		and #{param4}>=birthday and ob.sex=2)NumLeJianZZAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10" and sex=1
+		and #{param1}>=birthday and birthday > #{param2} and ob.sex=1)NumLeJianZZAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10" and sex=1
+		and #{param2}>=birthday and birthday > #{param3} and ob.sex=1)NumLeJianZZAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10" and sex=1
+		and #{param3}>=birthday and birthday > #{param4} and ob.sex=1)NumLeJianZZAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10" and sex=1
+		and #{param4}>=birthday and ob.sex=1)NumLeJianZZAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumLeJianZZAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumLeJianZZAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.id=145 and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumLeJianZZAndZiLi
+
+
+	</select>
+
+    <select id="getVisualDataApartZC" resultType="java.util.Map">
+        select
+       (select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.name="平吉助餐点"
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.name="平吉助餐点")NumPingJiZCRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.name="平吉助餐点" and organ.disable=0 and oo.ny="2018-10")NumPingJiZCLive,
+
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and ob.sex =2)NumPingJiZCAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and ob.sex =1)NumPingJiZCAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and #{param1}>birthday and birthday > #{param2} and ob.sex=2)NumPingJiZCAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and #{param2}>birthday and birthday > #{param3} and ob.sex=2)NumPingJiZCAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and #{param3}>birthday and birthday > #{param4} and ob.sex=2)NumPingJiZCAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and #{param4}>birthday and ob.sex=2)NumPingJiZCAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and #{param1}>birthday and birthday > #{param2} and ob.sex=1)NumPingJiZCAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and #{param2}>birthday and birthday > #{param3} and ob.sex=1)NumPingJiZCAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and #{param3}>birthday and birthday > #{param4} and ob.sex=1)NumPingJiZCAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and #{param4}>birthday and ob.sex=1)NumPingJiZCAnd90AboveF,
+
+
+		(select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.name="平南助餐点(平南邻里中心)"
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.name="平南助餐点(平南邻里中心)" and organ.disable=0)NumPingNanZCRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and organ.disable=0 and oo.ny="2018-10")NumPingNanZCLive,
+
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and ob.sex =2)NumPingNanZCAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and ob.sex =1)NumPingNanZCAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and #{param1}>birthday and birthday > #{param2} and ob.sex=2)NumPingNanZCAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and #{param2}>birthday and birthday > #{param3} and ob.sex=2)NumPingNanZCAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and #{param3}>birthday and birthday > #{param4} and ob.sex=2)NumPingNanZCAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and #{param4}>birthday and ob.sex=2)NumPingNanZCAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and #{param1}>birthday and birthday > #{param2} and ob.sex=1)NumPingNanZCAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and #{param2}>birthday and birthday > #{param3} and ob.sex=1)NumPingNanZCAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and #{param3}>birthday and birthday > #{param4} and ob.sex=1)NumPingNanZCAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and #{param4}>birthday and ob.sex=1)NumPingNanZCAnd90AboveF,
+
+		(select  organ.num-(select count(1) from organ,organ_oldman oo
+		where organ.name="古美助餐点"
+		and organ.id=oo.organ_id and oo.ny="2018-10")
+		from organ where organ.name="古美助餐点" 	and organ.disable=0)NumGuMeiZCRemain,
+
+		(select count(1) from organ_oldman oo,organ
+		where oo.organ_id=organ.id and organ.name="古美助餐点" and organ.disable=0 and oo.ny="2018-10")NumGuMeiZCLive,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and ob.sex =2)NumGuMeiZCAndMale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and ob.sex =1)NumGuMeiZCAndFemale,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and #{param1}>birthday and birthday > #{param2} and ob.sex=2)NumGuMeiZCAnd60To70M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and #{param2}>birthday and birthday > #{param3} and ob.sex=2)NumGuMeiZCAnd70To80M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and #{param3}>birthday and birthday > #{param4} and ob.sex=2)NumGuMeiZCAnd80To90M,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and #{param4}>birthday and ob.sex=2)NumGuMeiZCAnd90AboveM,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and #{param1}>birthday and birthday > #{param2} and ob.sex=1)NumGuMeiZCAnd60To70F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and #{param2}>birthday and birthday > #{param3} and ob.sex=1)NumGuMeiZCAnd70To80F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and #{param3}>birthday and birthday > #{param4} and ob.sex=1)NumGuMeiZCAnd80To90F,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and #{param4}>birthday and ob.sex=1)NumGuMeiZCAnd90AboveF,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumPingJiZCAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumPingJiZCAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平吉助餐点" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.intelligence!=29 and ohb.intelligence!=30  and ohb.is_sn!=2)NumPingJiZCAndZiLi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumPingNanZCAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumPingNanZCAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="平南助餐点(平南邻里中心)" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.intelligence!=29 and ohb.intelligence!=30  and ohb.is_sn!=2)NumPingNanZCAndZiLi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.is_sn=2)NumGuMeiZCAndShiNeng,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=29 or ohb.intelligence=30))NumGuMeiZCAndShiZhi,
+
+		(select count(1) from organ_oldman oo,organ,oldman_base ob,oldman_health_base ohb
+		where oo.oldman_id =ob.id and oo.organ_id=organ.id and organ.name="古美助餐点" and oo.ny="2018-10"
+		and oo.oldman_id =ohb.oldman_id and ohb.intelligence!=29 and ohb.intelligence!=30  and ohb.is_sn!=2)NumGuMeiZCAndZiLi
+
+
+	</select>
+
+    <select id="getVisualDataApartCHX" resultType="java.util.Map">
+        select
+        (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id and home.id=1 and ob.id=ho.oldman_id and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveled2,
+         (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id and home.id=2 and ob.id=ho.oldman_id and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveled3,
+         (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id and home.id=3 and ob.id=ho.oldman_id and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveled4,
+         (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id and home.id=4 and ob.id=ho.oldman_id and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveled5,
+         (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id and home.id=5 and ob.id=ho.oldman_id and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveled6,
+         (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+		and  #{param1}>=birthday and birthday>#{param2} and ob.disable=0
+		and ho.ny='2018-10'
+        )NumAllLeveled60To70,
+         (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+		and  #{param2}>=birthday and birthday>#{param3} and ob.disable=0
+		and ho.ny='2018-10'
+        )NumAllLeveled70To80,
+         (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+		and  #{param3}>=birthday and birthday>#{param4} and ob.disable=0
+		and ho.ny='2018-10'
+        )NumAllLeveled80To90,
+         (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+		and  #{param4}>=birthday and ob.disable=0
+		and ho.ny='2018-10'
+        )NumAllLeveled90Above,
+        (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+        and census=12 and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllHuJi,
+        (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+        and (census=13 or census=14) and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllFeiHuJi,
+        (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+        and ob.sex=2 and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveledMale,
+         (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+        and ob.sex=1 and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveledFemale,
+         (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+        and census=12 and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveledHuJi,
+         (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6)
+        and (census=13 or census=14) and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllLeveledFeiHuJi,
+         (select count(1)from oldman_base ob,home_oldman ho where ho.oldman_id=ob.id
+        and ho.is_service=1 and ob.sex=2 and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllServedMale,
+         (select count(1)from oldman_base ob,home_oldman ho where ho.oldman_id=ob.id
+        and ho.is_service=1 and ob.sex=1 and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllServedFemale,
+         (select count(1)from oldman_base ob,home_oldman ho where ho.oldman_id=ob.id
+        and ho.is_service=1 and census=12 and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllServedHuJi,
+         (select count(1)from oldman_base ob,home_oldman ho where ho.oldman_id=ob.id
+        and ho.is_service=1 and (census=13 or census=14) and ob.disable=0
+        and ho.ny='2018-10'
+        )NumAllServedFeiHuJi,
+        (select count(1)from home_oldman ho,home where
+       ho.is_service=1 and ho.home_id=home.id and home.fir_type=2 and home.sec_type=2
+       and ho.ny='2018-10'
+        )NumAllServedLeve2,
+        (select count(1)from home_oldman ho,home where
+       ho.is_service=1 and ho.home_id=home.id and home.fir_type=2 and home.sec_type=3
+       and ho.ny='2018-10'
+        )NumAllServedLeve3,
+        (select count(1)from home_oldman ho,home where
+       ho.is_service=1 and ho.home_id=home.id and home.fir_type=2 and home.sec_type=4
+       and ho.ny='2018-10'
+        )NumAllServedLeve4,
+        (select count(1)from home_oldman ho,home where
+       ho.is_service=1 and ho.home_id=home.id and home.fir_type=2 and home.sec_type=5
+       and ho.ny='2018-10'
+        )NumAllServedLeve5,
+        (select count(1)from home_oldman ho,home where
+       ho.is_service=1 and ho.home_id=home.id and home.fir_type=2 and home.sec_type=6
+       and ho.ny='2018-10'
+        )NumAllServedLeve6,
+        (select count(1)from home_oldman ho,oldman_base ob where
+       ho.is_service=1 and  ho.oldman_id=ob.id and #{param1}>=birthday and birthday>#{param2} and ob.disable=0
+       and ho.ny='2018-10'
+        )NumAllServed60To70,
+         (select count(1)from home_oldman ho,oldman_base ob where
+       ho.is_service=1 and  ho.oldman_id=ob.id and #{param2}>=birthday and birthday>#{param3} and ob.disable=0
+       and ho.ny='2018-10'
+        )NumAllServed70To80,
+        (select count(1)from home_oldman ho,oldman_base ob where
+       ho.is_service=1 and  ho.oldman_id=ob.id and #{param3}>=birthday and birthday>#{param4} and ob.disable=0
+       and ho.ny='2018-10'
+        )NumAllServed80To90,
+        (select count(1)from home_oldman ho,oldman_base ob where
+       ho.is_service=1 and ho.oldman_id=ob.id and  #{param4}>=birthday and ob.disable=0
+       and ho.ny='2018-10'
+        )NumAllServed90Above,
+
+
+        (select count(1) from home_oldman ho,oldman_base ob,home
+        where ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+        and(home.sec_type between 1 and 6) and ob.disable=0
+        and ho.ny='2018-10'
+        )NumLeveled,
+        (select count(1)from home_oldman ho,oldman_base ob where
+       ho.is_service=1 and ho.oldman_id=ob.id and  ob.disable=0
+       and ho.ny='2018-10'
+        )NumServed,
+         (select count(1)
+            from oldman_base where disable=0
+        ) NumOld,
+
+         (select count(1)
+            from oldman_base ob,home_oldman ho,home where ob.xq_id in(89,90,88,104,110,117,118) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+            and(home.sec_type between 1 and 6)
+            and ho.ny='2018-10'
+        ) NumGuMeiLeveled,
+        (select count(1)
+            from oldman_base ob,home_oldman ho,home where ob.xq_id in(87,84,85,86,98,122) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+            and(home.sec_type between 1 and 6)
+            and ho.ny='2018-10'
+        ) NumGuLongLeveled,
+        (select count(1)
+            from oldman_base ob,home_oldman ho,home where ob.xq_id in(78,123,127,81,83) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+            and(home.sec_type between 1 and 6)
+            and ho.ny='2018-10'
+        ) NumDongLanLeveled,
+        (select count(1)
+            from oldman_base ob,home_oldman ho,home where ob.xq_id in(101,109,115,116,119) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+            and(home.sec_type between 1 and 6)
+            and ho.ny='2018-10'
+        ) NumPingJiLeveled,
+        (select count(1)
+            from oldman_base ob,home_oldman ho,home where ob.xq_id in(93,94,105,106,113,121) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+            and(home.sec_type between 1 and 6)
+            and ho.ny='2018-10'
+        ) NumPingYangLeveled,
+        (select count(1)
+            from oldman_base ob,home_oldman ho,home where ob.xq_id in(91,92,95,96,107,111,112,114,120) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.home_id=home.id and home.fir_type=2
+            and(home.sec_type between 1 and 6)
+            and ho.ny='2018-10'
+        ) NumPingNanLeveled,
+
+         (select count(1)
+            from oldman_base ob,home_oldman ho where ob.xq_id in(89,90,88,104,110,117,118) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.is_service=1
+            and ho.ny='2018-10'
+        ) NumGuMeiServed,
+        (select count(1)
+            from oldman_base ob,home_oldman ho where ob.xq_id in(87,84,85,86,98,122) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.is_service=1
+            and ho.ny='2018-10'
+        ) NumGuLongServed,
+        (select count(1)
+            from oldman_base ob,home_oldman ho where ob.xq_id in(78,123,127,81,83) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.is_service=1
+            and ho.ny='2018-10'
+        ) NumDongLanServed,
+        (select count(1)
+            from oldman_base ob,home_oldman ho where ob.xq_id in(101,109,115,116,119) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.is_service=1
+            and ho.ny='2018-10'
+        ) NumPingJiServed,
+        (select count(1)
+            from oldman_base ob,home_oldman ho where ob.xq_id in(93,94,105,106,113,121) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.is_service=1
+            and ho.ny='2018-10'
+        ) NumPingYangServed,
+        (select count(1)
+            from oldman_base ob,home_oldman ho where ob.xq_id in(91,92,95,96,107,111,112,114,120) and ob.disable=0
+            and ho.oldman_id=ob.id  and ho.is_service=1
+            and ho.ny='2018-10'
+        ) NumPingNanServed
+
+
+
+
+
+
+	</select>
+
+    <select id="getVisualDataApartZNH" resultType="java.util.Map">
+        select
+         (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+        and home.fir_type=3 and home.sec_type="安康通" and ho.oldman_id=ob.id and ob.disable=0
+         and ho.ny='2018-10'
+        )NumAnKang,
+        (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+        and home.fir_type=3 and home.sec_type="康乐福" and ho.oldman_id=ob.id and ob.disable=0
+         and ho.ny='2018-10'
+        )NumKangLe,
+
+
+        (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and census=12 and ob.disable=0
+		 and ho.ny='2018-10'
+        )NumZhiNengAndHuJi,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and (census=13 or census=14) and ob.disable=0
+		 and ho.ny='2018-10'
+        )NumZhiNengAndFeiHuJi,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=2 and ob.disable=0
+		 and ho.ny='2018-10'
+        )NumZhiNengAndMale,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=1 and ob.disable=0
+		 and ho.ny='2018-10'
+        )NumZhiNengAndFemale,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=2
+		and  #{param1}>=birthday and birthday > #{param2} and ob.disable=0
+		 and ho.ny='2018-10'
+        )NumZhiNengAnd60To70M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=2
+		and  #{param2}>=birthday and birthday > #{param3} and ob.disable=0  and ho.ny='2018-10'
+        )NumZhiNengAnd70To80M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=2
+		and  #{param3}>=birthday and birthday > #{param4} and ob.disable=0  and ho.ny='2018-10'
+        )NumZhiNengAnd80To90M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=2
+		and  #{param4}>=birthday and ob.disable=0  and ho.ny='2018-10'
+        )NumZhiNengAnd90AboveM,
+
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=1
+		and  #{param1}>=birthday and birthday > #{param2} and ob.disable=0  and ho.ny='2018-10'
+        )NumZhiNengAnd60To70F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=1
+		and  #{param2}>=birthday and birthday > #{param3} and ob.disable=0  and ho.ny='2018-10'
+        )NumZhiNengAnd70To80F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=1
+		and  #{param3}>=birthday and birthday > #{param4} and ob.disable=0  and ho.ny='2018-10'
+        )NumZhiNengAnd80To90F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=3
+		and ob.sex=1
+		and  #{param4}>=birthday and ob.disable=0  and ho.ny='2018-10'
+        )NumZhiNengAnd90AboveF,
+         (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and census=12 and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAndHuJi,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and (census=13 or census=14) and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAndFeiHuJi,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=2 and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAndMale,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=1 and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAndFemale,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=2
+		and  #{param1}>=birthday and birthday > #{param2} and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAnd60To70M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=2
+		and  #{param2}>=birthday and birthday > #{param3} and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAnd70To80M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=2
+		and  #{param3}>=birthday and birthday > #{param4} and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAnd80To90M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=2
+		and  #{param4}>=birthday and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAnd90AboveM,
+
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=1
+		and  #{param1}>=birthday and birthday > #{param2} and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAnd60To70F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=1
+		and  #{param2}>=birthday and birthday > #{param3} and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAnd70To80F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=1
+		and  #{param3}>=birthday and birthday > #{param4} and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAnd80To90F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=4
+		and ob.sex=1
+		and  #{param4}>=birthday and ob.disable=0  and ho.ny='2018-10'
+        )NumYiShengAnd90AboveF,
+
+         (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and census=12 and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAndHuJi,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and (census=13 or census=14) and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAndFeiHuJi,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=2 and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAndMale,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=1 and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAndFemale,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=2
+		and  #{param1}>=birthday and birthday > #{param2} and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAnd60To70M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=2
+		and  #{param2}>=birthday and birthday > #{param3} and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAnd70To80M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=2
+		and  #{param3}>=birthday and birthday > #{param4} and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAnd80To90M,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=2
+		and  #{param4}>=birthday and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAnd90AboveM,
+
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=1
+		and  #{param1}>=birthday and birthday > #{param2} and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAnd60To70F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=1
+		and  #{param2}>=birthday and birthday > #{param3} and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAnd70To80F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=1
+		and  #{param3}>=birthday and birthday > #{param4} and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAnd80To90F,
+		(select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.home_id=home.id
+		and ob.id=ho.oldman_id
+        and home.fir_type=5
+		and ob.sex=1
+		and  #{param4}>=birthday and ob.disable=0  and ho.ny='2018-10'
+        )NumBingChuangAnd90AboveF,
+
+       (select count(1) from oldman_base ob
+        where
+       ob.disable=0
+        )NumZhiNengKeyOld,
+        (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.oldman_id=ob.id and ho.home_id=home.id
+        and home.fir_type=3  and ob.disable=0
+        and ho.ny='2018-10'
+        )NumKeyAttendZhiNeng,
+        (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.oldman_id=ob.id and ho.home_id=home.id
+        and home.fir_type=4 and ob.disable=0
+        and ho.ny='2018-10'
+        )NumKeyAttendYiSheng,
+        (select count(1) from home,home_oldman ho,oldman_base ob
+        where ho.oldman_id=ob.id and ho.home_id=home.id
+        and home.fir_type=5  and ob.disable=0
+        and ho.ny='2018-10'
+        )NumKeyAttendBingChuang
+
+
+
+	</select>
+
+    <select id="getVisualDataApartLabel" resultType="java.util.Map">
+        select
+         (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=12 and o.disable=0
+        ) NumHuJi,
+        (select count(1)
+            from oldman_base o,auto_value av where census=av.id and av.id=13 and o.disable=0
+        ) NumFeiHuJi,
+        (select count(1)
+            from oldman_base where sex=2 and disable=0
+        ) NumMale,
+        (select count(1)
+            from oldman_base where sex=1 and disable=0
+        ) NumFemale,
+
+        (select count(1)
+            from oldman_base  where #{param4}>=birthday and disable=0 and sex = 2
+        ) NumAbove90M,
+        (select count(1)
+            from oldman_base where #{param3}>=birthday and birthday > #{param4} and sex=2 and disable=0
+        ) Num80To90M,
+        (select count(1)
+            from oldman_base where #{param2}>=birthday and birthday > #{param3} and sex=2 and disable=0
+        ) Num70To80M,
+        (select count(1)
+            from oldman_base where #{param1}>=birthday and birthday > #{param2} and sex=2 and disable=0
+        ) Num60To70M,
+        (select count(1)
+            from oldman_base  where #{param4}>=birthday and sex=1  and disable=0
+        ) NumAbove90F,
+        (select count(1)
+            from oldman_base where #{param3}>=birthday and birthday > #{param4} and sex=1 and disable=0
+        ) Num80To90F,
+        (select count(1)
+            from oldman_base where #{param2}>=birthday and birthday > #{param3} and sex=1 and disable=0
+        ) Num70To80F,
+        (select count(1)
+            from oldman_base where #{param1}>=birthday and birthday > #{param2} and sex=1 and disable=0
+        ) Num60To70F,
+
+         (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=1 and ob.disable=0
+        )NumGuMei,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=2 and ob.disable=0
+        )NumGuLong,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=3 and ob.disable=0
+        )NumDongLan,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=4 and ob.disable=0
+        )NumPingJi,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=5 and ob.disable=0
+        )NumPingYang,
+        (select count(1) from oldman_base ob,auto_value av,organ org
+		  where ob.xq_id=av.id
+		  and av.parent_index=org.id
+		  and org.district_id=6 and ob.disable=0
+        )NumPingNan
+
+
+	</select>
+
+
+</mapper>

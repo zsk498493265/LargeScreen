@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.organOld.dao.repository.visual.VisualDistrictDao">
+    <select id="getXqIdsByDis" resultType="java.lang.Integer">
+        SELECT x.id FROM auto_value x,organ org
+        WHERE x.parent_index=org.id  and org.district_id = #{districtId}
+    </select>
+    <select id="getNumOfDistrict" parameterType="com.organOld.dao.util.Page" resultType="java.lang.Long">
+        SELECT count(1)
+        FROM oldman_base o
+        WHERE  o.disable=0
+        <if test="param1.entity.birthdayStart!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') >= DATE_FORMAT(#{param1.entity.birthdayStart},'%Y')
+            ]]>
+        </if>
+        <if test="param1.entity.birthdayEnd!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') <= DATE_FORMAT(#{param1.entity.birthdayEnd},'%Y')
+            ]]>
+        </if>
+        <if test="param1.entity!=null and param1.entity.id!=null and param1.entity.id!=0">
+            and o.id=#{param1.entity.id}
+        </if>
+        <if test="param2 != null">
+            and o.xq_id in
+            <foreach collection="param2" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.sex!=null and param1.entity.sex!=0">
+            and o.sex=#{param1.entity.sex}
+        </if>
+        <if test="param1.entity!=null and param1.entity.isVolunteer!=null and param1.entity.isVolunteer!=''">
+            and o.is_volunteer=#{param1.entity.isVolunteer}
+        </if>
+        <if test="param1.entity!=null and param1.entity.familyArray!=null and param1.entity.familyArray.length > 0">
+            and
+            <foreach collection="param1.entity.familyArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.familyTypeArray!=null and param1.entity.familyTypeArray.length > 0">
+            and
+            <foreach collection="param1.entity.familyTypeArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family_type like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.intelligence!=null and param1.entity.intelligence.length > 0">
+            and ohb.intelligence in
+            <foreach collection="param1.entity.intelligence" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.eyesight!=null and param1.entity.eyesight.length > 0">
+            and ohb.eyesight in
+            <foreach collection="param1.entity.eyesight" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.economicArray!=null and param1.entity.economicArray.length > 0">
+            and
+            <foreach collection="param1.entity.economicArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.economic like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.censusArray!=null and param1.entity.censusArray.length > 0">
+            and o.census in
+            <foreach collection="param1.entity.censusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.zcArray!=null and param1.entity.zcArray.length > 0">
+            and o.zc in
+            <foreach collection="param1.entity.zcArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.sqzwArray!=null and param1.entity.sqzwArray.length > 0">
+            and
+            <foreach collection="param1.entity.sqzwArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.sqzw like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.oldStatusArray!=null and param1.entity.oldStatusArray.length > 0">
+            and o.old_status in
+            <foreach collection="param1.entity.oldStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.politicalStatusArray!=null and param1.entity.politicalStatusArray.length > 0">
+            and o.political_status in
+            <foreach collection="param1.entity.politicalStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.search!=null and param1.entity.search!=''">
+            and (o.pid LIKE  concat('%',#{param1.entity.search},'%') OR o.address LIKE  concat('%',#{param1.entity.search},'%') OR o.name LIKE  concat('%',#{param1.entity.search},'%')
+            OR o.phone LIKE  concat('%',#{param1.entity.search},'%'))
+        </if>
+    </select>
+    <select id="getNumOfDistrictT" parameterType="com.organOld.dao.util.Page" resultType="java.lang.Long">
+        SELECT count(1)
+        FROM oldman_base o,oldman_health_base ohb
+        WHERE  o.disable=0 and o.id=ohb.oldman_id
+        <if test="param1.entity.birthdayStart!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') >= DATE_FORMAT(#{param1.entity.birthdayStart},'%Y')
+            ]]>
+        </if>
+        <if test="param1.entity.birthdayEnd!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') <= DATE_FORMAT(#{param1.entity.birthdayEnd},'%Y')
+            ]]>
+        </if>
+        <if test="param1.entity!=null and param1.entity.id!=null and param1.entity.id!=0">
+            and o.id=#{param1.entity.id}
+        </if>
+        <if test="param2 != null">
+            and o.xq_id in
+            <foreach collection="param2" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.sex!=null and param1.entity.sex!=0">
+            and o.sex=#{param1.entity.sex}
+        </if>
+        <if test="param1.entity!=null and param1.entity.isVolunteer!=null and param1.entity.isVolunteer!=''">
+            and o.is_volunteer=#{param1.entity.isVolunteer}
+        </if>
+        <if test="param1.entity!=null and param1.entity.isHealth!=null and param1.entity.isHealth.length > 0">
+            and (ohb.is_mb in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_sn in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_ywfy in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_exzl in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_gz in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_cj in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            )
+        </if>
+        <if test="param1.entity!=null and param1.entity.familyArray!=null and param1.entity.familyArray.length > 0">
+            and
+            <foreach collection="param1.entity.familyArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.familyTypeArray!=null and param1.entity.familyTypeArray.length > 0">
+            and
+            <foreach collection="param1.entity.familyTypeArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family_type like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.intelligence!=null and param1.entity.intelligence.length > 0">
+            and ohb.intelligence in
+            <foreach collection="param1.entity.intelligence" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.eyesight!=null and param1.entity.eyesight.length > 0">
+            and ohb.eyesight in
+            <foreach collection="param1.entity.eyesight" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.economicArray!=null and param1.entity.economicArray.length > 0">
+            and
+            <foreach collection="param1.entity.economicArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.economic like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.censusArray!=null and param1.entity.censusArray.length > 0">
+            and o.census in
+            <foreach collection="param1.entity.censusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.zcArray!=null and param1.entity.zcArray.length > 0">
+            and o.zc in
+            <foreach collection="param1.entity.zcArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.sqzwArray!=null and param1.entity.sqzwArray.length > 0">
+            and
+            <foreach collection="param1.entity.sqzwArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.sqzw like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.oldStatusArray!=null and param1.entity.oldStatusArray.length > 0">
+            and o.old_status in
+            <foreach collection="param1.entity.oldStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.politicalStatusArray!=null and param1.entity.politicalStatusArray.length > 0">
+            and o.political_status in
+            <foreach collection="param1.entity.politicalStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.search!=null and param1.entity.search!=''">
+            and (o.pid LIKE  concat('%',#{param1.entity.search},'%') OR o.address LIKE  concat('%',#{param1.entity.search},'%') OR o.name LIKE  concat('%',#{param1.entity.search},'%')
+            OR o.phone LIKE  concat('%',#{param1.entity.search},'%'))
+        </if>
+    </select>
+
+    <select id="getNumOfDistrictTh" parameterType="com.organOld.dao.util.Page" resultType="java.lang.Long">
+        SELECT count(1)
+        FROM oldman_base o,oldman_health_base ohb,home_oldman ho
+        WHERE  o.disable=0 and o.id=ho.oldman_id and ohb.oldman_id = o.id
+        <if test="param1.entity.birthdayStart!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') >= DATE_FORMAT(#{param1.entity.birthdayStart},'%Y')
+            ]]>
+        </if>
+        <if test="param1.entity.birthdayEnd!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') <= DATE_FORMAT(#{param1.entity.birthdayEnd},'%Y')
+            ]]>
+        </if>
+        <if test="param1.entity!=null and param1.entity.id!=null and param1.entity.id!=0">
+            and o.id=#{param1.entity.id}
+        </if>
+        <if test="param2 != null">
+            and o.xq_id in
+            <foreach collection="param2" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.homeList!=null">
+             and ho.home_id IN
+            <foreach collection="param1.entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.sex!=null and param1.entity.sex!=0">
+            and o.sex=#{param1.entity.sex}
+        </if>
+        <if test="param1.entity!=null and param1.entity.isVolunteer!=null and param1.entity.isVolunteer!=''">
+            and o.is_volunteer=#{param1.entity.isVolunteer}
+        </if>
+        <if test="param1.entity!=null and param1.entity.isHealth!=null and param1.entity.isHealth.length > 0">
+            and (ohb.is_mb in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_sn in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_ywfy in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_exzl in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_gz in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_cj in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            )
+        </if>
+        <if test="param1.entity!=null and param1.entity.familyArray!=null and param1.entity.familyArray.length > 0">
+            and
+            <foreach collection="param1.entity.familyArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.familyTypeArray!=null and param1.entity.familyTypeArray.length > 0">
+            and
+            <foreach collection="param1.entity.familyTypeArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family_type like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.intelligence!=null and param1.entity.intelligence.length > 0">
+            and ohb.intelligence in
+            <foreach collection="param1.entity.intelligence" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.eyesight!=null and param1.entity.eyesight.length > 0">
+            and ohb.eyesight in
+            <foreach collection="param1.entity.eyesight" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.economicArray!=null and param1.entity.economicArray.length > 0">
+            and
+            <foreach collection="param1.entity.economicArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.economic like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.censusArray!=null and param1.entity.censusArray.length > 0">
+            and o.census in
+            <foreach collection="param1.entity.censusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.zcArray!=null and param1.entity.zcArray.length > 0">
+            and o.zc in
+            <foreach collection="param1.entity.zcArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.sqzwArray!=null and param1.entity.sqzwArray.length > 0">
+            and
+            <foreach collection="param1.entity.sqzwArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.sqzw like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.oldStatusArray!=null and param1.entity.oldStatusArray.length > 0">
+            and o.old_status in
+            <foreach collection="param1.entity.oldStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.politicalStatusArray!=null and param1.entity.politicalStatusArray.length > 0">
+            and o.political_status in
+            <foreach collection="param1.entity.politicalStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.search!=null and param1.entity.search!=''">
+            and (o.pid LIKE  concat('%',#{param1.entity.search},'%') OR o.address LIKE  concat('%',#{param1.entity.search},'%') OR o.name LIKE  concat('%',#{param1.entity.search},'%')
+            OR o.phone LIKE  concat('%',#{param1.entity.search},'%'))
+        </if>
+    </select>
+    <select id="getNumOfDistrictF" parameterType="com.organOld.dao.util.Page" resultType="java.lang.Long">
+        SELECT count(1)
+        FROM oldman_base o,oldman_health_base ohb,home_oldman ho,organ_oldman oo
+        WHERE  o.disable=0 and o.id= ohb.oldman_id and o.id = oo.oldman_id and o.id = ho.oldman_id
+        <if test="param1.entity.birthdayStart!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') >= DATE_FORMAT(#{param1.entity.birthdayStart},'%Y')
+            ]]>
+        </if>
+        <if test="param1.entity.birthdayEnd!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y') <= DATE_FORMAT(#{param1.entity.birthdayEnd},'%Y')
+            ]]>
+        </if>
+        <if test="param1.entity!=null and param1.entity.id!=null and param1.entity.id!=0">
+            and o.id=#{param1.entity.id}
+        </if>
+        <if test="param2 != null">
+            and o.xq_id in
+            <foreach collection="param2" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.organList!=null">
+            and oo.organ_id in
+            <foreach collection="param1.entity.organList" index="index" item="item" open="(" separator="," close=")">
+                ${item.id}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.homeList!=null">
+             and ho.home_id IN
+            <foreach collection="param1.entity.homeList" index="index" item="item" open="(" separator="," close=")">
+                ${item.secType}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.sex!=null and param1.entity.sex!=0">
+            and o.sex=#{param1.entity.sex}
+        </if>
+        <if test="param1.entity!=null and param1.entity.isVolunteer!=null and param1.entity.isVolunteer!=''">
+            and o.is_volunteer=#{param1.entity.isVolunteer}
+        </if>
+        <if test="param1.entity!=null and param1.entity.isHealth!=null and param1.entity.isHealth.length > 0">
+            and (ohb.is_mb in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_sn in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_ywfy in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_exzl in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_gz in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            or ohb.is_cj in
+            <foreach collection="param1.entity.isHealth" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+            )
+        </if>
+        <if test="param1.entity!=null and param1.entity.familyArray!=null and param1.entity.familyArray.length > 0">
+            and
+            <foreach collection="param1.entity.familyArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.familyTypeArray!=null and param1.entity.familyTypeArray.length > 0">
+            and
+            <foreach collection="param1.entity.familyTypeArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.family_type like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.intelligence!=null and param1.entity.intelligence.length > 0">
+            and ohb.intelligence in
+            <foreach collection="param1.entity.intelligence" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.eyesight!=null and param1.entity.eyesight.length > 0">
+            and ohb.eyesight in
+            <foreach collection="param1.entity.eyesight" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.economicArray!=null and param1.entity.economicArray.length > 0">
+            and
+            <foreach collection="param1.entity.economicArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.economic like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.censusArray!=null and param1.entity.censusArray.length > 0">
+            and o.census in
+            <foreach collection="param1.entity.censusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.zcArray!=null and param1.entity.zcArray.length > 0">
+            and o.zc in
+            <foreach collection="param1.entity.zcArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.sqzwArray!=null and param1.entity.sqzwArray.length > 0">
+            and
+            <foreach collection="param1.entity.sqzwArray" index="index" item="item" open="(" separator="or" close=")">
+                (o.sqzw like concat('%',#{item},'%'))
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.oldStatusArray!=null and param1.entity.oldStatusArray.length > 0">
+            and o.old_status in
+            <foreach collection="param1.entity.oldStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.politicalStatusArray!=null and param1.entity.politicalStatusArray.length > 0">
+            and o.political_status in
+            <foreach collection="param1.entity.politicalStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="param1.entity!=null and param1.entity.search!=null and param1.entity.search!=''">
+            and (o.pid LIKE  concat('%',#{param1.entity.search},'%') OR o.address LIKE  concat('%',#{param1.entity.search},'%') OR o.name LIKE  concat('%',#{param1.entity.search},'%')
+            OR o.phone LIKE  concat('%',#{param1.entity.search},'%'))
+        </if>
+    </select>
+</mapper>

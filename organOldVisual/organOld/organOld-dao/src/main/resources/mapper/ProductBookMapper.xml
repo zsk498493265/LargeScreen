@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.organOld.dao.repository.ProductBookDao">
+
+    <resultMap id="productBook" type="com.organOld.dao.entity.product.ProductBook">
+        <id property="id" column="id" />
+        <result property="organId" column="organ_id" />
+        <result property="time" column="time" />
+        <result property="status" column="status" />
+        <association property="oldman" javaType="com.organOld.dao.entity.oldman.Oldman">
+            <id property="id" column="oid" />
+            <result property="name" column="oname"/>
+        </association>
+        <association property="product" javaType="com.organOld.dao.entity.product.Product">
+            <id property="id" column="pid" />
+            <association property="productType" javaType="com.organOld.dao.entity.product.ProductType">
+                <id property="id" column="ptid" />
+                <id property="name" column="name"/>
+            </association>
+        </association>
+    </resultMap>
+
+    <select id="getCardById" resultType="java.lang.Integer">
+        SELECT c.cid from product_book pb,card c where pb.oldman_id=c.oldman_id and pb.id=#{id}
+    </select>
+
+    <select id="getByPage" parameterType="com.organOld.dao.util.Page" resultMap="productBook">
+        SELECT pb.id,pb.time,pb.status,ob.id oid,ob.name oname,p.id pid,pt.name
+        FROM product_book pb,oldman_base ob,product p,product_type pt
+        WHERE pb.organ_id=#{entity.organId} and pb.oldman_id=ob.id and pb.product_id=p.id and p.type=pt.id
+        <if test="entity.search!=null and entity.search!=''">
+            and (ob.name LIKE  concat('%',#{entity.search},'%') OR pt.name LIKE  concat('%',#{entity.search},'%') )
+        </if>
+        <if test="sortType!=null and sortType!=''">
+            ORDER BY pb.status
+        </if>
+        <if test="sort!=null and sort!=''">
+            asc
+        </if>
+        <if test="length!=null and length!=0">
+            limit #{start},#{length}
+        </if>
+    </select>
+
+    <select id="getSizeByPage" parameterType="com.organOld.dao.util.Page" resultType="java.lang.Long">
+        SELECT count(1)
+        FROM product_book pb,oldman_base ob,product p,product_type pt
+        WHERE pb.organ_id=#{entity.organId} and pb.oldman_id=ob.id and pb.product_id=p.id and p.type=pt.id
+        <if test="entity.search!=null and entity.search!=''">
+            and (ob.name LIKE  concat('%',#{entity.search},'%') OR pt.name LIKE  concat('%',#{entity.search},'%') )
+        </if>
+    </select>
+
+    <update id="updateProp">
+        UPDATE product_book
+        SET ${prop}=#{value}
+        WHERE id=#{id}
+    </update>
+</mapper>

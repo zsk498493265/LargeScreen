@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.organOld.dao.repository.LabelManDao">
+
+    <resultMap id="bindOldman" type="com.organOld.dao.entity.label.LabelMan">
+        <id property="id" column="id" />
+        <result property="isImplement" column="is_implement"/>
+        <result property="remark" column="remark"/>
+        <association property="oldman" javaType="com.organOld.dao.entity.oldman.Oldman">
+            <id property="id" column="oid" />
+            <result property="name" column="name"/>
+            <result property="sex" column="sex" />
+            <result property="birthday" column="birthday" />
+            <result property="census" column="census" />
+            <result property="xqId" column="xq_id" />
+            <result property="politicalStatus" column="political_status" />
+            <result property="time" column="time" />
+            <result property="pid" column="pid" />
+        </association>
+    </resultMap>
+
+    <select id="getAll" parameterType="com.organOld.dao.util.Page" resultMap="bindOldman">
+        SELECT o.id oid,o.name,o.pid,o.sex,o.birthday,o.census,o.political_status,o.xq_id,lo.id,lo.is_implement,lo.remark,o.time
+        FROM oldman_base o ,label_oldman lo
+        WHERE lo.label_id=#{labelId} AND o.id=lo.oldman_id and o.disable=0
+        <if test="oldman!=null and oldman.birthdayStart!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y%m%d') > DATE_FORMAT(#{oldman.birthdayStart},'%Y%m%d')
+            ]]>
+        </if>
+        <if test="oldman!=null and oldman.birthdayEnd!=null">
+            <![CDATA[
+            and DATE_FORMAT(o.birthday,'%Y%m%d') <= DATE_FORMAT(#{oldman.birthdayEnd},'%Y%m%d')
+            ]]>
+        </if>
+        <if test="oldman!=null and oldman.louNumStart!=null and oldman.louNumStart!=0">
+            <![CDATA[
+                and o.lou_num>=#{oldman.louNumStart}
+                ]]>
+        </if>
+        <if test="oldman!=null and oldman.louNumEnd!=null and oldman.louNumEnd!=0">
+            <![CDATA[
+                and o.lou_num <= #{oldman.louNumEnd}
+                ]]>
+        </if>
+        <if test="oldman!=null and oldman.id!=null and oldman.id!=0">
+            and o.id=#{oldman.id}
+        </if>
+        <if test="oldman!=null and oldman.sex!=null and oldman.sex!=0">
+            and o.sex=#{oldman.sex}
+        </if>
+        <if test="oldman!=null and oldman.family!=null and oldman.family.length > 0">
+            and o.family in
+            <foreach collection="oldman.family" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="oldman!=null and oldman.economic!=null and oldman.economic.length > 0">
+            and o.economic in
+            <foreach collection="oldman.economic" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="oldman!=null and oldman.censusArray!=null and oldman.censusArray.length > 0">
+            and o.census in
+            <foreach collection="oldman.censusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="oldman!=null and oldman.politicalStatusArray!=null and oldman.politicalStatusArray.length > 0">
+            and o.political_status in
+            <foreach collection="oldman.politicalStatusArray" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+        </if>
+        <if test="xqIds!=null">
+            and o.xq_id in
+            <foreach collection="xqIds" index="index" item="item" open="(" separator="," close=")">
+                ${item}
+            </foreach>
+
+        </if>
+        <if test="oldman!=null and oldman.search!=null and oldman.search!=''">
+            and (o.pid LIKE  concat('%',#{oldman.search},'%') OR o.address LIKE  concat('%',#{oldman.search},'%') OR o.name LIKE  concat('%',#{oldman.search},'%')
+            OR o.phone LIKE  concat('%',#{oldman.search},'%'))
+        </if>
+    </select>
+
+
+    <insert id="saveAll">
+        INSERT into label_oldman(label_id,oldman_id)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.labelId}, #{item.oldmanId})
+        </foreach>
+    </insert>
+
+    <update id="implement" parameterType="com.organOld.dao.entity.label.LabelMan">
+        UPDATE label_oldman
+        SET is_implement=#{isImplement},remark=#{remark}
+        WHERE id=#{id}
+    </update>
+
+
+    <select id="getLabelManImplNum" resultType="com.organOld.dao.entity.label.LabelManImplNum">
+        select(
+          SELECT count(1) from
+      label_oldman lm,oldman_base o,auto_value x,organ org
+         where lm.label_id=#{labelId} and lm.oldman_id=o.id and o.xq_id=x.id and x.parent_index=org.id and org.id=#{organId} ) sum,
+(
+          SELECT count(1) from
+      label_oldman lm,oldman_base o,auto_value x,organ org
+         where lm.label_id=#{labelId} and lm.oldman_id=o.id and o.xq_id=x.id and x.parent_index=org.id and  org.id=#{organId} and is_implement=0) no,
+         (
+          SELECT count(1) from
+      label_oldman lm,oldman_base o,auto_value x,organ org
+         where lm.label_id=#{labelId} and lm.oldman_id=o.id and o.xq_id=x.id and x.parent_index=org.id and org.id=#{organId} and is_implement=2 ) impl,
+         (
+          SELECT count(1) from
+      label_oldman lm,oldman_base o,auto_value x,organ org
+         where lm.label_id=#{labelId} and lm.oldman_id=o.id and o.xq_id=x.id  and x.parent_index=org.id and org.id=#{organId} and is_implement=1) noImpl
+
+    </select>
+    
+    <delete id="delByLabelIds">
+        DELETE from label_oldman where label_id in
+        <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+
+    <delete id="delByOldmanIds">
+        DELETE from label_oldman where oldman_id in
+        <foreach collection="oldmanIds" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        and label_id=#{labelId}
+    </delete>
+
+    <delete id="delByIds">
+        DELETE from label_oldman where id in
+        <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+</mapper>
