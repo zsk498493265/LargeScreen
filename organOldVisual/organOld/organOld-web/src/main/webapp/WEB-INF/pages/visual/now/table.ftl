@@ -64,141 +64,85 @@
     var sixthTypeArray = new Array();
     var mapDistrict = new Array();
     $(document).ready(function(){
-        //$('#dt').dataTable().fnClearTable();//清空一下table
         //$("tr:odd").css("background-color", "#ccc");
         //$("tr").each(function(i){this.style.backgroundColor=['#ccc','#fff'][i%2]})
         table =$(".dataTables-example").dataTable(
-                {
-                    // "sPaginationType": "full_numbers",
-                    // bAutoWidth: false,
-                    // "bScrollInfinite":true,
-                    // "paging": true,
-                   // "bPaginate": false,
-                    "paging": false,
-                     "scrollY": '125px', //支持垂直滚动
-                    // "scrollCollapse": true,
+            {
+                "sPaginationType": "full_numbers",
+                // bAutoWidth: false,
+                "bPaginite": true,
+                "bInfo": true,
+                "bSort": false,
+                "bFilter": false, //搜索栏
+                "bStateSave": true,
+                "bProcessing": true, //加载数据时显示正在加载信息
+                "bServerSide": true, //指定从服务器端获取数据
+                "iDisplayLength":9,
+                "columns":[{
+                    data:"dName"
+                },{
+                    data:"jName"
+                },{
+                    data:"name"
+                },{
+                    data:"sex"
+                },{
+                    data:"age"
+                },{
+                    data:"census"
+                },{
+                    data:"phone"
+                },{
+                    data:"pid"
+                }
+                ],
+                "iDisplayLength" : iDisplayLength,
+                "columnDefs": [
+                    {
+                        "targets": [2], // 目标列位置，下标从0开始
+                        "data": "name", // 数据列名
+                        "render": function(data, type, full) { // 返回自定义内容
+                            //先拿到点击的行号
+                            var oid=data.split("*")[1];
+                            var name=data.split("*")[0];
 
-                    "bInfo": false,
-                    "bSort": false,
-                    "bFilter": false, //搜索栏
-                    "bStateSave": true,
-                    "bProcessing": false, //加载数据时显示正在加载信息
-                    "bServerSide": true, //指定从服务器端获取数据
-                    "iDisplayLength":2,
-                     // "paging": false,
-                    "columns":[{
-                        data:"dName"
-                    },{
-                        data:"jName"
-                    },{
-                        data:"name"
-                    },{
-                        data:"sex"
-                    },{
-                        data:"age"
-                    },{
-                        data:"census"
-                    },{
-                        data:"phone"
-                    },{
-                        data:"pid"
-                    }
-                    ],
-                    "iDisplayLength" : 2,
-                    "columnDefs": [
-                        {
-                            "targets": [2], // 目标列位置，下标从0开始
-                            "data": "name", // 数据列名
-                            "sWidth":"15%",
-                            "render": function(data, type, full) { // 返回自定义内容
-                                //先拿到点击的行号
-                               var oid=data.split("*")[1];
-                               var name=data.split("*")[0];
-
-                               //alert("id:"+oid+"name"+name);
-                                //alert(data);
-                                return "<span  onclick=look('"+oid+"') id='"+data+"'>"+name+"</span>";
-                                // return "<span  onclick=look(oid) id='"+data+"'>"+name+"</span>";
-                               // return "<span class='btn btn-primary' onclick=look(idx) id='"+data+"'>"+data+"</span>";
-                            }
-
-                        },
-                        {
-                            "targets": [7], // 目标列位置，下标从0开始
-                            "data": "name", // 数据列名
-                            "sWidth":"18%",
-                            "render": function(data, type, full) { // 返回自定义内容
-                                //alert(data);
-                                return data.substring(0,10)+"****"+data.substring(14);
-                            }
-
-                        },
-                        {
-                            // "targets": [6], // 目标列位置，下标从0开始
-                            // "visible": false
-                            "targets": [6], // 目标列位置，下标从0开始
-                            "data": "phone", // 数据列名
-                            "sWidth":"15%",
-
-
-                        },
-                        {
-                            // "targets": [6], // 目标列位置，下标从0开始
-                            // "visible": false
-                            "targets": [0], // 目标列位置，下标从0开始
-                            "data": "dName", // 数据列名
-                            "sWidth":"15%",
-
-
-                        },
-                        {
-                            // "targets": [6], // 目标列位置，下标从0开始
-                            // "visible": false
-                            "targets": [1], // 目标列位置，下标从0开始
-                            "data": "jName", // 数5列名
-                            "sWidth":"15%",
-
-
-                        },
-                        {
-                            // "targets": [6], // 目标列位置，下标从0开始
-                            // "visible": false
-                            "targets": [3], // 目标列位置，下标从0开始
-                            "data": "sex", // 数5列名
-                            "sWidth":"15%",
-
-
-                        },
-                        {
-                            // "targets": [6], // 目标列位置，下标从0开始
-                            // "visible": false
-                            "targets": [4], // 目标列位置，下标从0开始
-                            "data": "age", // 数5列名
-                            "sWidth":"15%",
-
-
-                        },{
-                            // "targets": [6], // 目标列位置，下标从0开始
-                            // "visible": false
-                            "targets": [5], // 目标列位置，下标从0开始
-                            "data": "census", // 数5列名
-                            "sWidth":"15%",
-
-
+                            //alert("id:"+oid+"name"+name);
+                            //alert(data);
+                            return "<span  onclick=look('"+oid+"') id='"+data+"'>"+name+"</span>";
+                            // return "<span  onclick=look(oid) id='"+data+"'>"+name+"</span>";
+                            // return "<span class='btn btn-primary' onclick=look(idx) id='"+data+"'>"+data+"</span>";
                         }
 
-                    ],
-                    "createdRow": function (row, data, dataIndex) {
-                        // row : tr dom
-                        // data: row data
-                        // dataIndex:row data's index
-                        if (dataIndex%2) {
-                            $(row).css("background-color", "#607B8B");
-                        }
                     },
-                    "sAjaxSource": "/VTabel/getOld",//这个是请求的地址
-                    "fnServerData": retrieveData
-                });
+                    {
+                        "targets": [7], // 目标列位置，下标从0开始
+                        "data": "name", // 数据列名
+                        sWidth:"8%",
+                        "render": function(data, type, full) { // 返回自定义内容
+                            //alert(data);
+                            return data.substring(0,10)+"****"+data.substring(14);
+                        }
+
+                    },
+                    {
+                        "targets": [6], // 目标列位置，下标从0开始
+                        "visible": false
+
+
+                    }
+
+                ],
+                "createdRow": function (row, data, dataIndex) {
+                    // row : tr dom
+                    // data: row data
+                    // dataIndex:row data's index
+                    if (dataIndex%2) {
+                        $(row).css("background-color", "#607B8B");
+                    }
+                },
+                "sAjaxSource": "/VTabel/getOld",//这个是请求的地址
+                "fnServerData": retrieveData
+            });
         function retrieveData(url, aoData, fnCallback) {
             $.ajax({
                 url: url,//这个就是请求地址对应sAjaxSource
@@ -243,7 +187,7 @@
         }
 
 
-        //alert(9);
+
         // $("#DataTables_Table_0").prev().css("display","none");
         // $("#dt_wrapper").find("div.row:first-child").hide();
         // var oTable=$("#editable").dataTable();
@@ -251,20 +195,6 @@
         //     "callback":function(sValue,y){var aPos=oTable.fnGetPosition(this);oTable.fnUpdate(sValue,aPos[0],aPos[1])},
         //     "submitdata":function(value,settings){return{"row_id":this.parentNode.getAttribute("id"),
         //         "column":oTable.fnGetPosition(this)[2]}},"width":"90%","height":"100%"});
-
-        //$(".dataTables_scrollHead").css("display","none");
-        var div = document.getElementById('dt_wrapper');
-
-        var div2=div.children[1];
-        //alert(div2.getAttribute("class"),);
-
-
-        var div_scroll_head=div2.children[0];
-
-        div_scroll_head.style.display="none";
-        //alert(div_scroll_head.getAttribute("class"));
-        //div_scroll_head.css("display","none");
-        //$(".dataTables_scrollHead").children().first().attr("disabled",true);
 
     });
 

@@ -1670,7 +1670,459 @@
                 },{
                     data:"census"
                 },{
-                    data:"phone"
+                    data:"pid"
+                }
+                ],
+                "iDisplayLength" : 2,
+                "columnDefs": [
+                    {
+                        "targets": [2], // 目标列位置，下标从0开始
+                        "data": "name", // 数据列名
+                        "sWidth":"15%",
+                        "render": function(data, type, full) { // 返回自定义内容
+                            //先拿到点击的行号
+                            var oid=data.split("*")[1];
+                            var name=data.split("*")[0];
+
+                            //alert("id:"+oid+"name"+name);
+                            //alert(data);
+                            return "<span  onclick=look('"+oid+"') id='"+data+"'>"+name+"</span>";
+                            // return "<span  onclick=look(oid) id='"+data+"'>"+name+"</span>";
+                            // return "<span class='btn btn-primary' onclick=look(idx) id='"+data+"'>"+data+"</span>";
+                        }
+
+                    },
+                    {
+                        "targets": [6], // 目标列位置，下标从0开始
+                        "data": "pid", // 数据列名
+                        "sWidth":"18%",
+                        "render": function(data, type, full) { // 返回自定义内容
+                            //alert(data);
+                            return data.substring(0,10)+"****"+data.substring(14);
+                        }
+
+                    },
+                    // {
+                    //     // "targets": [6], // 目标列位置，下标从0开始
+                    //     // "visible": false
+                    //     "targets": [6], // 目标列位置，下标从0开始
+                    //     "data": "phone", // 数据列名
+                    //     "sWidth":"15%",
+                    //
+                    //
+                    // },
+                    {
+                        // "targets": [6], // 目标列位置，下标从0开始
+                        // "visible": false
+                        "targets": [0], // 目标列位置，下标从0开始
+                        "data": "dName", // 数据列名
+                        "sWidth":"15%",
+
+
+                    },
+                    {
+                        // "targets": [6], // 目标列位置，下标从0开始
+                        // "visible": false
+                        "targets": [1], // 目标列位置，下标从0开始
+                        "data": "jName", // 数5列名
+                        "sWidth":"15%",
+
+
+                    },
+                    {
+                        // "targets": [6], // 目标列位置，下标从0开始
+                        // "visible": false
+                        "targets": [3], // 目标列位置，下标从0开始
+                        "data": "sex", // 数5列名
+                        "sWidth":"15%",
+
+
+                    },
+                    {
+                        // "targets": [6], // 目标列位置，下标从0开始
+                        // "visible": false
+                        "targets": [4], // 目标列位置，下标从0开始
+                        "data": "age", // 数5列名
+                        "sWidth":"15%",
+
+
+                    },{
+                        // "targets": [6], // 目标列位置，下标从0开始
+                        // "visible": false
+                        "targets": [5], // 目标列位置，下标从0开始
+                        "data": "census", // 数5列名
+                        "sWidth":"15%",
+
+
+                    }
+
+                ],
+                "createdRow": function (row, data, dataIndex) {
+                    // row : tr dom
+                    // data: row data
+                    // dataIndex:row data's index
+                    if (dataIndex%2) {
+                        $(row).css("background-color", "#607B8B");
+                    }
+                },
+                "sAjaxSource": "/VTabel/getOld",//这个是请求的地址
+                "fnServerData": retrieveData
+            });
+        function retrieveData(url,aoData,fnCallback) {
+            $.ajax({
+                url: url,//"/map/jwAndNum",//这个就是请求地址对应sAjaxSource
+                data : {
+                    "iDisplayStart" : aoData.iDisplayStart,
+                    "iDisplayLength" : aoData.iDisplayLength,
+                    "iSortCol_0" : aoData.iSortCol_0,
+                    "sEcho" : aoData.sEcho,
+                    "sSortDir_0" : aoData.sSortDir_0,
+                    "sex": sex,
+                    "isMb":isMb,
+                    "isSn":isSn,
+                    "isYwfy":isYwfy,
+                    "isExzl":isExzl,
+                    "isGz":isGz,
+                    "isCj":isCj,
+                    "zhucan":zhucan,
+                    "zhuji":zhuji,
+                    "zhujie" :zhujie,
+                    "zhuyu" : zhuyu,
+                    "zhuxing"  :zhuxing,
+                    "zhuyi"  :zhuyi,
+                    "kangfu"  :kangfu,
+                    "xiangtan" : xiangtan ,
+                    "xidi" : xidi,
+                    "shenghuo": shenghuo,
+                    "intelligence_array":intelligenceArray,
+                    "isHealth_array":health,
+                    "eyesight_array":eyesightArray,
+                    "familyType_array":familyType,
+                    "politicalStatus_array":politicalStatusArray,
+                    "organId_array":organIdArray,
+                    "secType_array":secTypeArray,
+                    "thirdType_array":thirdTypeArray,
+                    "forthType_array":forthTypeArray,
+                    "fifthType_array" :fifthTypeArray,
+                    "sixthType_array":sixthTypeArray,
+                    "census_array":census,
+                    "ageStart":ageStart,
+                    "ageEnd":ageEnd,
+                    "family_array":family,
+                    "economic_array":economic,
+                    "oldStatus_array":oldStatus,
+                    "isVolunteer":isVolunteer,
+                    "isService":isService,
+                    "district_array":mapDistrict
+                    //"jw_array":jw
+
+                },
+                type: 'POST',
+                dataType: 'json',
+                async: false,
+                success: function (result) {
+
+                    fnCallback(result);//把返回的数据传给这个方法就可以了,datatable会自动绑定数据的
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown) {
+//                    alert("status:"+XMLHttpRequest.status+",readyState:"+XMLHttpRequest.readyState+",textStatus:"+textStatus);
+                }
+            });
+        }
+
+        //add
+        // $("#DataTables_Table_0").prev().css("display","none");
+        // $("#dt_wrapper").find("div.row:first-child").hide();
+        // var oTable=$("#editable").dataTable();
+        // oTable.$("td").editable("",{
+        //     "callback":function(sValue,y){var aPos=oTable.fnGetPosition(this);oTable.fnUpdate(sValue,aPos[0],aPos[1])},
+        //     "submitdata":function(value,settings){return{"row_id":this.parentNode.getAttribute("id"),
+        //         "column":oTable.fnGetPosition(this)[2]}},"width":"90%","height":"100%"});
+       $(".dataTables_scrollHead").hide();
+        //
+        // if(flag==1){
+        //     $('#selectLabel').html('');
+        //     sex = 0;
+        //     census = 0;
+        //     ageStart = 0;
+        //     ageEnd = 0;
+        //     family = [];
+        //     economic = [];
+        //     health = [];
+        //     oldStatus = [];
+        // }
+
+        if(flag == 0) {
+            for (var index = 0; index < la.length; index++) {
+                if (la[index] == "男")
+                    sex = 2;
+                else if (la[index] == "女")
+                    sex = 1;
+                else if (la[index] == "60-70岁") {
+                    ageStart = 60;
+                    ageEnd = 70;
+                } else if (la[index] == "70-80岁") {
+                    ageStart = 70;
+                    ageEnd = 80;
+                }
+                else if (la[index] == "80-90岁") {
+                    ageStart = 80;
+                    ageEnd = 90;}
+                else if (la[index] == "90岁以上") {
+                    ageStart = 90;
+                    ageEnd = 200;
+                } else if (la[index] == "东兰")
+                {
+                    mapDistrict.push(3);
+                }
+
+                else if (la[index] == "平阳")
+                    mapDistrict.push(5);
+                else if (la[index] == "古美")
+                    mapDistrict.push(1);
+                else if (la[index] == "平吉")
+                    mapDistrict.push(4);
+                else if (la[index] == "平南")
+                    mapDistrict.push(6);
+                else if (la[index] == "古龙")
+                    mapDistrict.push(2);
+                else if (la[index] == "户籍")
+                    census.push(12);
+                else if (la[index] == "非户籍"){
+                    census.push(13);
+                }
+                else if (la[index] == "人户分离")
+                    census.push(14);
+                else if (la[index] == "群众")
+                    politicalStatusArray.push(10);
+                else if (la[index] == "党员")
+                    politicalStatusArray.push(11);
+                else if (la[index] == "智力正常")
+                    intelligenceArray.push(28);
+                else if (la[index] == "痴呆")
+                    intelligenceArray.push(29);
+                else if (la[index] == "智障")
+                    intelligenceArray.push(30);
+                else if (la[index] == "视力正常")
+                    eyesightArray.push(31);
+                else if (la[index] == "失明")
+                    eyesightArray.push(32);
+                else if (la[index] == "有光感")
+                    eyesightArray.push(33);
+                else if (la[index] == "一般障碍")
+                    eyesightArray.push(34);
+                else if(la[index] == "严重障碍")
+                    eyesightArray.push(35);
+                else if (la[index] == "有慢病"){
+                    health.push(1);
+                    isMb = 1;
+                }
+                else if (la[index] == "有失能情况"){
+                    health.push(2);
+                }
+                else if (la[index] == "有药物反应"){
+                    health.push(3);
+                }
+                else if (la[index] == "有恶性肿瘤史"){
+                    health.push(4);
+                }
+                else if (la[index] == "有骨折史"){
+                    health.push(5);
+                }
+                else if (la[index] == "有残疾史"){
+                    health.push(6);
+                }
+                else if (la[index] == "帮困人员")
+                    economic.push(22);
+                else if (la[index] == "低保")
+                    economic.push(23);
+                else if (la[index] == "城乡居民养老保障")
+                    economic.push(24);
+                else if (la[index] == "医疗救助金")
+                    economic.push(25);
+                else if (la[index] == "城镇居民基本医疗保险")
+                    economic.push(26);
+                else if (la[index] == "其他")
+                    economic.push(27);
+                else if (la[index] == "纯老")
+                    family.push(15);
+                else if (la[index] == "独居")
+                    family.push(16);
+                else if (la[index] == "孤老")
+                    family.push(19);
+                else if (la[index] == "一老养一老")
+                    family.push(17);
+                else if (la[index] == "失独家庭")
+                    family.push(18);
+                else if (la[index] == "三支人员")
+                    family.push(20);
+                else if (la[index] == "独生子女家庭")
+                    familyType.push(21);
+                else if (la[index] == "军属")
+                    familyType.push(74);
+                else if (la[index] == "烈士家属")
+                    familyType.push(75);
+                else if (la[index] == "离休干部")
+                    familyType.push(76);
+                else if (la[index] == "侨属")
+                    familyType.push(77);
+                else if (la[index] == "莲花老年公寓")
+                    organIdArray.push(79);
+                else if (la[index] == "平阳养老院")
+                    organIdArray.push(114);
+                else if (la[index] == "古美养老院")
+                    organIdArray.push(115);
+                else if (la[index] == "平南艾为")
+                    organIdArray.push(14);
+                else if (la[index] == "平阳智汇坊")
+                    organIdArray.push(118);
+                else if (la[index] == "平阳乐健")
+                    organIdArray.push(145);
+                else if (la[index] == "平南日间照料中心")
+                    organIdArray.push(15);
+                else if (la[index] == "平吉助餐点")
+                    organIdArray.push(16);
+                else if (la[index] == "古美助餐点")
+                    organIdArray.push(117);
+                else if (la[index] == "平南助餐点")
+                    organIdArray.push(17);
+                else if (la[index] == "古龙助餐点")
+                    organIdArray.push(116);
+                else if (la[index] == "2-3级"){
+                    secTypeArray.push(1);
+                    secTypeArray.push(2);
+                }
+                else if (la[index] == "4级")
+                    secTypeArray.push(3);
+                else if (la[index] == "5级")
+                    secTypeArray.push(4);
+                else if (la[index] == "6级")
+                    secTypeArray.push(5);
+                else if (la[index] == "7级")
+                    secTypeArray.push(6);
+                else if (la[index] == "助餐")
+                {
+                    thirdTypeArray.push(7);
+                }
+                else if (la[index] == "助洁"){
+                    thirdTypeArray.push(8);
+                }
+                else if (la[index] == "助急"){
+                    thirdTypeArray.push(9);
+                }
+                else if (la[index] == "助浴"){
+                    thirdTypeArray.push(10);
+                }
+                else if (la[index] == "助行"){
+                    thirdTypeArray.push(11);
+                }
+                else if (la[index] == "康复辅助"){
+                    thirdTypeArray.push(13);
+                }
+                else if (la[index] == "助医"){
+                    thirdTypeArray.push(12);
+                }
+                else if (la[index] == "相谈"){
+                    thirdTypeArray.push(14);
+                }
+                else if (la[index] == "洗涤"){
+                    thirdTypeArray.push(15);
+                }
+                else if (la[index] == "生活护理"){
+                    thirdTypeArray.push(16);
+                }
+
+
+            }
+        }
+        getAgeAndSex();
+        getNumOfJw();
+
+        butt2(flag);
+        table.fnFilter();
+        //getJwData();
+        // heatmapOverlay.setDataSet({data:heatPoints,max:200});
+        sex = 0;
+        census = [];
+        ageStart = 0;
+        ageEnd = 0;
+        family = [];
+        familyType = [];
+        economic = [];
+        health = [];
+        oldStatus = [];
+        politicalStatusArray = [];
+        organIdArray = [];
+        secTypeArray = [];
+        thirdTypeArray = [];
+        mapDistrict = [];
+        eyesightArray = [];
+        intelligenceArray = [];
+        health = [];
+        isMb = 0;
+        isSn = 0;
+        isYwfy = 0;
+        isExzl = 0;
+        isGz = 0;
+        isCj = 0;
+        zhucan = 0;
+        zhuji = 0;
+        zhujie = 0;
+        zhuyu = 0;
+        zhuxing = 0;
+        zhuyi = 0;
+        kangfu = 0;
+        xiangtan = 0;
+        xidi = 0;
+        shenghuo = 0;
+
+        // ageBar = echarts.init(document.getElementById('ageBar'));
+        // sexPie= echarts.init(document.getElementById('sexPie'));
+        // pqBar= echarts.init(document.getElementById('pqBar'));
+        // hjPie= echarts.init(document.getElementById('hjPie'));
+        // ageBar.setOption(option_age_bar);
+        // sexPie.setOption(option_sex_pie);
+        // pqBar.setOption(option_pq_bar);
+        // hjPie.setOption(option_hj_pie);
+
+
+        //添加label筛选条件
+
+
+    }
+    function butt2(flag) {
+        $('#dt').dataTable().fnDestroy();//清空一下table
+        table =$(".dataTables-example").dataTable(
+            {
+                // "sPaginationType": "full_numbers",
+                // bAutoWidth: false,
+                // "bScrollInfinite":true,
+                // "paging": true,
+                // "bPaginate": false,
+                "paging": false,
+                "scrollY": '125px', //支持垂直滚动
+                // "scrollCollapse": true,
+
+                "bInfo": false,
+                "bSort": false,
+                "bFilter": false, //搜索栏
+                "bStateSave": true,
+                "bProcessing": false, //加载数据时显示正在加载信息
+                "bServerSide": true, //指定从服务器端获取数据
+                "iDisplayLength":2,
+                // "paging": false,
+                "columns":[{
+                    data:"dName"
+                },{
+                    data:"jName"
+                },{
+                    data:"name"
+                },{
+                    data:"sex"
+                },{
+                    data:"age"
+                },{
+                    data:"census"
                 },{
                     data:"pid"
                 }
@@ -1695,8 +2147,8 @@
 
                     },
                     {
-                        "targets": [7], // 目标列位置，下标从0开始
-                        "data": "name", // 数据列名
+                        "targets": [6], // 目标列位置，下标从0开始
+                        "data": "pid", // 数据列名
                         "sWidth":"18%",
                         "render": function(data, type, full) { // 返回自定义内容
                             //alert(data);
@@ -1704,15 +2156,15 @@
                         }
 
                     },
-                    {
-                        // "targets": [6], // 目标列位置，下标从0开始
-                        // "visible": false
-                        "targets": [6], // 目标列位置，下标从0开始
-                        "data": "phone", // 数据列名
-                        "sWidth":"15%",
-
-
-                    },
+                    // {
+                    //     // "targets": [6], // 目标列位置，下标从0开始
+                    //     // "visible": false
+                    //     "targets": [6], // 目标列位置，下标从0开始
+                    //     "data": "phone", // 数据列名
+                    //     "sWidth":"15%",
+                    //
+                    //
+                    // },
                     {
                         // "targets": [6], // 目标列位置，下标从0开始
                         // "visible": false
@@ -2090,7 +2542,6 @@
         //添加label筛选条件
 
 
-
     }
     function clearLabels(){
         $('#selectLabel').html('');
@@ -2129,11 +2580,13 @@
         shenghuo = 0;
         getAgeAndSex();
         getNumOfJw();
-        table.fnFilter();
         $('.select').each(function() {
             var cl=$(this).attr('class').split(' ')[1];
             $(this).attr('class','label '+cl);
         });
+        butt(0);
+        table.fnFilter();
+
     }
 
     function getNumOfJw(){

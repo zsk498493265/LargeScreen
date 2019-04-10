@@ -487,7 +487,7 @@
                         //创建一个Icon
                         function createIcon(json){
                             if(json.type==1){
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/yhanglaoyuan.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/yanglaoyuan.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             } else if(json.type==2)
                             var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==0)
