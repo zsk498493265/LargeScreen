@@ -416,7 +416,7 @@
                 ${item}
             </foreach>
         </if>
-        limit 0,500
+        limit #{start},#{length}
     </select>
 
     <select id="getSizeByPage" parameterType="com.organOld.dao.util.Page" resultType="java.lang.Long">

@@ -5,38 +5,39 @@
     }
 </style>
 
-    <div class="wrapper wrapper-content animated fadeInRight box" id="table1" >
-        <div class="zz"></div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-content">
-                        <table class="table table-striped table-bordered table-hover dataTables-example text-nowrap" id="dt" style="table-layout:fixed">
-                            <thead>
-                            <tr>
-                                <th>片区</th>
-                                <th>居委</th>
-                                <th>姓名</th>
-                                <th>性别</th>
-                                <th>年龄</th>
-                                <th>户籍</th>
-                                <th>电话</th>
-                                <th>身份证号码</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
+<div class="wrapper wrapper-content animated fadeInRight box" id="table1" >
+    <div class="zz"></div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <table class="table table-striped table-bordered table-hover dataTables-example text-nowrap" id="dt" style="table-layout:fixed">
+                        <thead>
+                        <tr>
+                            <th>片区</th>
+                            <th>居委</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>年龄</th>
+                            <th>户籍</th>
+                            <th>电话</th>
+                            <th>身份证号码</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <#include "table_info.ftl" />
 <script>
-    $("#table1").css("margin-top",(winHeight/1.5+150)+"px");
+    $("#table1").css("margin-top",(winHeight/1.5+125)+"px");
+    $("#table1").css("height",150+"px");
     var tableWidth=document.getElementById('dt');
     tableWidth.style.width='105%';
     tableWidth.style.height='80%';
@@ -70,14 +71,14 @@
             {
                 "sPaginationType": "full_numbers",
                 // bAutoWidth: false,
-                "bPaginite": true,
+                "bPaginate": true,
                 "bInfo": true,
                 "bSort": false,
                 "bFilter": false, //搜索栏
-                "bStateSave": true,
-                "bProcessing": true, //加载数据时显示正在加载信息
+                "bStateSave": false,
+                "bProcessing": false, //加载数据时显示正在加载信息
                 "bServerSide": true, //指定从服务器端获取数据
-                "iDisplayLength":9,
+                "iDisplayLength":2,
                 "columns":[{
                     data:"dName"
                 },{
@@ -96,7 +97,6 @@
                     data:"pid"
                 }
                 ],
-                "iDisplayLength" : iDisplayLength,
                 "columnDefs": [
                     {
                         "targets": [2], // 目标列位置，下标从0开始
@@ -188,13 +188,13 @@
 
 
 
-        // $("#DataTables_Table_0").prev().css("display","none");
-        // $("#dt_wrapper").find("div.row:first-child").hide();
-        // var oTable=$("#editable").dataTable();
-        // oTable.$("td").editable("",{
-        //     "callback":function(sValue,y){var aPos=oTable.fnGetPosition(this);oTable.fnUpdate(sValue,aPos[0],aPos[1])},
-        //     "submitdata":function(value,settings){return{"row_id":this.parentNode.getAttribute("id"),
-        //         "column":oTable.fnGetPosition(this)[2]}},"width":"90%","height":"100%"});
+        $("#DataTables_Table_0").prev().css("display","none");
+        $("#dt_wrapper").find("div.row:first-child").hide();
+        var oTable=$("#editable").dataTable();
+        oTable.$("td").editable("",{
+            "callback":function(sValue,y){var aPos=oTable.fnGetPosition(this);oTable.fnUpdate(sValue,aPos[0],aPos[1])},
+            "submitdata":function(value,settings){return{"row_id":this.parentNode.getAttribute("id"),
+                "column":oTable.fnGetPosition(this)[2]}},"width":"90%","height":"100%"});
 
     });
 
@@ -239,42 +239,42 @@
 
                     //
                     if(dataR.oldman.name!=null)
-                    document.getElementById("name").innerHTML += dataR.oldman.name;
+                        document.getElementById("name").innerHTML += dataR.oldman.name;
                     if(dataR.oldman.id!=null)
-                    document.getElementById("no").innerHTML += dataR.oldman.id;
+                        document.getElementById("no").innerHTML += dataR.oldman.id;
                     if(dataR.oldman.sex!=null)
-                    document.getElementById("sex").innerHTML += dataR.oldman.sex;
+                        document.getElementById("sex").innerHTML += dataR.oldman.sex;
                     if(dataR.oldman.age!=null)
-                    document.getElementById("age").innerHTML += dataR.oldman.age;
+                        document.getElementById("age").innerHTML += dataR.oldman.age;
                     if(dataR.oldman.phone!=null)
-                    document.getElementById("phone").innerHTML += dataR.oldman.phone;
+                        document.getElementById("phone").innerHTML += dataR.oldman.phone;
                     if(dataR.oldman.census!=null)
-                    document.getElementById("census").innerHTML += dataR.oldman.census;
+                        document.getElementById("census").innerHTML += dataR.oldman.census;
                     if(dataR.oldman.hasOwnProperty("politicalStatus"))
-                    document.getElementById("politicalStatus").innerHTML += dataR.oldman.politicalStatus;
+                        document.getElementById("politicalStatus").innerHTML += dataR.oldman.politicalStatus;
                     if(dataR.oldman.pid!=null)
-                    document.getElementById("pid").innerHTML += dataR.oldman.pid;
+                        document.getElementById("pid").innerHTML += dataR.oldman.pid;
 
                     if(dataR.oldman.dName!=null)
-                    document.getElementById("dName").innerHTML += dataR.oldman.dName;
+                        document.getElementById("dName").innerHTML += dataR.oldman.dName;
                     if(dataR.oldman.xName!=null)
-                    document.getElementById("xName").innerHTML += dataR.oldman.xName;
+                        document.getElementById("xName").innerHTML += dataR.oldman.xName;
                     if(dataR.oldman.louNum!=null)
-                    document.getElementById("louNum").innerHTML += dataR.oldman.louNum;
+                        document.getElementById("louNum").innerHTML += dataR.oldman.louNum;
                     if(dataR.oldman.jName!=null)
-                    document.getElementById("jName").innerHTML += dataR.oldman.jName;
+                        document.getElementById("jName").innerHTML += dataR.oldman.jName;
                     if(dataR.oldman.address!=null)
-                    document.getElementById("address").innerHTML += dataR.oldman.address;
+                        document.getElementById("address").innerHTML += dataR.oldman.address;
 
 
                     if(dataR.oldman.zc!=null)
-                    document.getElementById("zc").innerHTML += dataR.oldman.zc;
+                        document.getElementById("zc").innerHTML += dataR.oldman.zc;
                     if(dataR.oldman.bloodType!=null)
-                    document.getElementById("bloodType").innerHTML += dataR.health.bloodType;
+                        document.getElementById("bloodType").innerHTML += dataR.health.bloodType;
                     if(dataR.oldman.intelligence!=null)
-                    document.getElementById("intelligence").innerHTML += dataR.health.intelligence;
+                        document.getElementById("intelligence").innerHTML += dataR.health.intelligence;
                     if(dataR.oldman.eyesight!=null)
-                    document.getElementById("eyesight").innerHTML += dataR.health.eyesight;
+                        document.getElementById("eyesight").innerHTML += dataR.health.eyesight;
                     // if(dataR.health.selectMb[0].secTypeName!=null)
                     // document.getElementById("mb").innerHTML += dataR.health.selectMb[0].secTypeName;
                     //document.getElementById("mb").innerHTML += dataR.health.selectSn
@@ -286,14 +286,14 @@
                     }
 
                     if(dataR.economic!=null)
-                    document.getElementById("economic").innerHTML += dataR.economic;
+                        document.getElementById("economic").innerHTML += dataR.economic;
 
                     if(dataR.linkman.name!=null)
-                    document.getElementById("linkName").innerHTML += dataR.linkman.name;
+                        document.getElementById("linkName").innerHTML += dataR.linkman.name;
                     if(dataR.linkman.phone!=null)
-                    document.getElementById("linkPhone").innerHTML += dataR.linkman.phone;
+                        document.getElementById("linkPhone").innerHTML += dataR.linkman.phone;
                     if(dataR.linkman.relation!=null)
-                    document.getElementById("linkRelation").innerHTML += dataR.linkman.relation;
+                        document.getElementById("linkRelation").innerHTML += dataR.linkman.relation;
 
                     // 显示模态框
                     $('#editModal').modal('show');
