@@ -338,7 +338,7 @@
             and o.is_volunteer=#{entity.isVolunteer}
         </if>
         <if test="entity!=null and entity.isService!='' and entity.isService!=null">
-            and o.is_service = #{isService}
+            and o.is_service = #{entity.isService}
         </if>
 
         <if test="entity!=null and entity.isHealth!=null and entity.isHealth.length > 0">
@@ -549,7 +549,7 @@
             and o.is_volunteer=#{entity.isVolunteer}
         </if>
         <if test="entity!=null and entity.isService!=0 and entity.isService!=null">
-            and o.is_service = #{isService}
+            and o.is_service = #{entity.isService}
         </if>
 
         <if test="entity!=null and entity.isHealth!=null and entity.isHealth.length > 0">

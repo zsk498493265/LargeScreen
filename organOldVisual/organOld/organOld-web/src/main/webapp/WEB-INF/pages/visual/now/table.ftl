@@ -118,7 +118,7 @@
                     {
                         "targets": [7], // 目标列位置，下标从0开始
                         "data": "name", // 数据列名
-                        sWidth:"16%",
+                        sWidth:"20%",
                         "render": function(data, type, full) { // 返回自定义内容
                             //alert(data);
                             return data.substring(0,10)+"****"+data.substring(14);
@@ -149,14 +149,14 @@
                     {
                         "targets": [3], // 目标列位置，下标从0开始
                         "data": "sex", // 数据列名
-                        sWidth:"16%",
+                        sWidth:"10%",
 
 
                     },
                     {
                         "targets": [4], // 目标列位置，下标从0开始
                         "data": "age", // 数据列名
-                        sWidth:"16%",
+                        sWidth:"10%",
 
 
                     }
@@ -183,6 +183,22 @@
                     "sEcho" : aoData.sEcho,
                     "sSortDir_0" : aoData.sSortDir_0,
                     "sex": sex,
+                    "isMb":isMb,
+                    "isSn":isSn,
+                    "isYwfy":isYwfy,
+                    "isExzl":isExzl,
+                    "isGz":isGz,
+                    "isCj":isCj,
+                    "zhucan":zhucan,
+                    "zhuji":zhuji,
+                    "zhujie" :zhujie,
+                    "zhuyu" : zhuyu,
+                    "zhuxing"  :zhuxing,
+                    "zhuyi"  :zhuyi,
+                    "kangfu"  :kangfu,
+                    "xiangtan" : xiangtan ,
+                    "xidi" : xidi,
+                    "shenghuo": shenghuo,
                     "intelligence_array":intelligenceArray,
                     "isHealth_array":health,
                     "eyesight_array":eyesightArray,
@@ -200,6 +216,8 @@
                     "family_array":family,
                     "economic_array":economic,
                     "oldStatus_array":oldStatus,
+                    "isVolunteer":isVolunteer,
+                    "isService":isService,
                     "district_array":mapDistrict
 
                 },

@@ -1692,7 +1692,7 @@
                     {
                         "targets": [7], // 目标列位置，下标从0开始
                         "data": "name", // 数据列名
-                        sWidth:"16%",
+                        sWidth:"20%",
                         "render": function(data, type, full) { // 返回自定义内容
                             //alert(data);
                             return data.substring(0,10)+"****"+data.substring(14);
@@ -1723,14 +1723,14 @@
                     {
                         "targets": [3], // 目标列位置，下标从0开始
                         "data": "sex", // 数据列名
-                        sWidth:"16%",
+                        sWidth:"10%",
 
 
                     },
                     {
                         "targets": [4], // 目标列位置，下标从0开始
                         "data": "age", // 数据列名
-                        sWidth:"16%",
+                        sWidth:"10%",
 
 
                     }
