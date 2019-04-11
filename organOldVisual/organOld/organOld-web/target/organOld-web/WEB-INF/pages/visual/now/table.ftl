@@ -37,7 +37,7 @@
 <#include "table_info.ftl" />
 <script>
     $("#table1").css("margin-top",(winHeight/1.5+125)+"px");
-    $("#table1").css("height",150+"px");
+    $("#table1").css("height",155+"px");
     var tableWidth=document.getElementById('dt');
     tableWidth.style.width='105%';
     tableWidth.style.height='80%';
@@ -101,6 +101,7 @@
                     {
                         "targets": [2], // 目标列位置，下标从0开始
                         "data": "name", // 数据列名
+                        sWidth:"16%",
                         "render": function(data, type, full) { // 返回自定义内容
                             //先拿到点击的行号
                             var oid=data.split("*")[1];
@@ -117,7 +118,7 @@
                     {
                         "targets": [7], // 目标列位置，下标从0开始
                         "data": "name", // 数据列名
-                        sWidth:"8%",
+                        sWidth:"16%",
                         "render": function(data, type, full) { // 返回自定义内容
                             //alert(data);
                             return data.substring(0,10)+"****"+data.substring(14);
@@ -127,6 +128,35 @@
                     {
                         "targets": [6], // 目标列位置，下标从0开始
                         "visible": false
+
+
+                    },
+                    {
+                        "targets": [0], // 目标列位置，下标从0开始
+                        "data": "dname", // 数据列名
+                        sWidth:"16%",
+
+
+
+                    },
+                    {
+                        "targets": [1], // 目标列位置，下标从0开始
+                        "data": "jname", // 数据列名
+                        sWidth:"16%",
+
+
+                    },
+                    {
+                        "targets": [3], // 目标列位置，下标从0开始
+                        "data": "sex", // 数据列名
+                        sWidth:"16%",
+
+
+                    },
+                    {
+                        "targets": [4], // 目标列位置，下标从0开始
+                        "data": "age", // 数据列名
+                        sWidth:"16%",
 
 
                     }

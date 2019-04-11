@@ -307,6 +307,7 @@
                 <span class="label color_1">群众</span>
                 <span class="label color_1">党员</span>
             </div>
+            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
         </div>
         <div id="label32" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px">
             <div class="zz"></div>
@@ -326,6 +327,7 @@
                 <span class="label color_2">有骨折史</span>
                 <span class="label color_2">有残疾史</span>
             </div>
+            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
         </div>
         <div id="label33" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px">
             <div class="zz"></div>
@@ -337,6 +339,7 @@
                 <span class="label color_3">城镇居民基本医疗保险</span>
                 <span class="label color_3">其他</span>
             </div>
+            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
         </div>
         <div id="label34" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px">
             <div class="zz"></div>
@@ -353,6 +356,7 @@
                 <span class="label color_4">离休干部</span>
                 <span class="label color_4">侨属</span>
             </div>
+            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
         </div>
         <div id="label35" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px">
             <div class="zz"></div>
@@ -373,11 +377,6 @@
                 <span class="label color_5">5级</span>
                 <span class="label color_5">6级</span>
                 <span class="label color_5">7级</span>
-                <span class="label color_5">2-3级</span>
-                <span class="label color_5">4级</span>
-                <span class="label color_5">5级</span>
-                <span class="label color_5">6级</span>
-                <span class="label color_5">7级</span>
                 <span class="label color_5">助餐</span>
                 <span class="label color_5">助洁</span>
                 <span class="label color_5">助急</span>
@@ -389,6 +388,7 @@
                 <span class="label color_5">洗涤</span>
                 <span class="label color_5">生活护理</span>
             </div>
+            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
         </div>
         <div class="row box selectLabel" style="margin-top: 0px;word-break : break-all;height: 280px;width:650px;">
             <div class="zz"></div>
@@ -472,7 +472,10 @@
     $(".selectLabel").css("height",218+"px");
     $("#label1").css("height",218+"px");
     $(".label3").css("height",218+"px");
-
+    function turnback(){
+        $(".label3").hide();
+        $("#label1").show();
+    }
     function add_org_info(json){
         var parent = document.getElementById("map_info");
 
@@ -1672,6 +1675,7 @@
                     {
                         "targets": [2], // 目标列位置，下标从0开始
                         "data": "name", // 数据列名
+                        sWidth:"16%",
                         "render": function(data, type, full) { // 返回自定义内容
                             //先拿到点击的行号
                             var oid=data.split("*")[1];
@@ -1688,7 +1692,7 @@
                     {
                         "targets": [7], // 目标列位置，下标从0开始
                         "data": "name", // 数据列名
-                        sWidth:"8%",
+                        sWidth:"16%",
                         "render": function(data, type, full) { // 返回自定义内容
                             //alert(data);
                             return data.substring(0,10)+"****"+data.substring(14);
@@ -1698,6 +1702,35 @@
                     {
                         "targets": [6], // 目标列位置，下标从0开始
                         "visible": false
+
+
+                    },
+                    {
+                        "targets": [0], // 目标列位置，下标从0开始
+                        "data": "dname", // 数据列名
+                        sWidth:"16%",
+
+
+
+                    },
+                    {
+                        "targets": [1], // 目标列位置，下标从0开始
+                        "data": "jname", // 数据列名
+                        sWidth:"16%",
+
+
+                    },
+                    {
+                        "targets": [3], // 目标列位置，下标从0开始
+                        "data": "sex", // 数据列名
+                        sWidth:"16%",
+
+
+                    },
+                    {
+                        "targets": [4], // 目标列位置，下标从0开始
+                        "data": "age", // 数据列名
+                        sWidth:"16%",
 
 
                     }
