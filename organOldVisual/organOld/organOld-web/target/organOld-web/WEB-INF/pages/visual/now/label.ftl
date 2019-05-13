@@ -2084,6 +2084,11 @@
         organIdArray = [];
         secTypeArray = [];
         thirdTypeArray = [];
+        thirdTypeArray1 = [];
+        forthTypeArray = [];
+        forthTypeArray1 = [];
+        fifthTypeArray = [];
+        sixthTypeArray = [];
         la = [];
         familyType = [];
         eyesightArray = [];
@@ -2105,6 +2110,7 @@
         xiangtan = 0;
         xidi = 0;
         shenghuo = 0;
+        isService = null ;
         getAgeAndSex();
         getNumOfJw();
         $('.select').each(function() {

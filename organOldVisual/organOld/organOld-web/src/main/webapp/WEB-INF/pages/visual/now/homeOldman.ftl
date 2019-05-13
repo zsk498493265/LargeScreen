@@ -91,15 +91,15 @@
     homeOldman_num_pie.setOption(homeOldman_option_num);
 
     homeOldman_num_pie.on('legendselectchanged', function (params) {
-        var name = params.name;
-        if(name=="已参加的重点老人"){
-            thirdTypeArray.push(7,8,9,10,11,12,19,14,15,16);
-        }else if(name=="未参加的重点老人"){
-            zhucan = 1;
-        }
-        table.fnFilter();
-        //getAgeAndSex();
-        getNumOfJw();
+        // var name = params.name;
+        // if(name=="已参加的重点老人"){
+        //     thirdTypeArray.push(7,8,9,10,11,12,19,14,15,16);
+        // }else if(name=="未参加的重点老人"){
+        //     zhucan = 1;
+        // }
+        // table.fnFilter();
+        // //getAgeAndSex();
+        // getNumOfJw();
     });
 
     //片区人数分布
@@ -337,32 +337,100 @@
     var homeOldman_option_jj_pie = chartPieClick(title,legend_data,series);
     homeOldman_jj_pie.setOption(homeOldman_option_jj_pie);
 
-
-    homeOldman_jj_pie.on('legendselectchanged', function (params) {
-        var name = params.name;
-        if(name=="助餐"){
-            thirdTypeArray.push(7);
-        }else if(name=="助洁"){
-            thirdTypeArray.push(8);
-        }else if(name=="助浴"){
-            thirdTypeArray.push(10);
-        }else if(name=="助行"){
-            thirdTypeArray.push(11);
-        }else if(name=="助医"){
-            thirdTypeArray.push(12);
-        }else if(name=="洗衣服"){
-            thirdTypeArray.push(15);
-        }else if(name=="相谈"){
-            thirdTypeArray.push(14);
-        }else if(name=="康复辅助"){
-            thirdTypeArray.push(13);
-        }else if(name=="生活护理"){
-            thirdTypeArray.push(16);
-        }else if(name=="其他"){
-            thirdTypeArray.push(0);
-        }
-        table.fnFilter();
-        //getAgeAndSex();
-        getNumOfJw();
-    });
+    // var thirdTypeArray1 = [];
+    // function listIntersection(x, y) {
+    //     var result = [];
+    //     for (var i = 0; i < y.length; i++) {
+    //         var temp = y[i];
+    //         for (var j = 0; j < x.length; j++) {
+    //             // 普通数组 (temp === clone[j])
+    //             if (temp.id === x[j].id) {
+    //                 result.push(temp);
+    //                 break;
+    //             }
+    //         }
+    //     }
+    //     return array_remove_repeat(result);
+    // }
+    // function array_remove_repeat(a) { // 去重
+    //     var r = [];
+    //     for(var i = 0; i < a.length; i ++) {
+    //         var flag = true;
+    //         var temp = a[i];
+    //         for(var j = 0; j < r.length; j ++) {
+    //             if(temp === r[j]) {
+    //                 flag = false;
+    //                 break;
+    //             }
+    //         }
+    //         if(flag) {
+    //             r.push(temp);
+    //         }
+    //     }
+    //     return r;
+    // }
+    //
+    // homeOldman_jj_pie.on('legendselectchanged', function (params) {
+    //     var name = params.name;
+    //     if(name=="助餐"){
+    //         thirdTypeArray1.push(7);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="助洁"){
+    //         thirdTypeArray1.push(8);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="助浴"){
+    //         thirdTypeArray1.push(10);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="助行"){
+    //         thirdTypeArray1.push(11);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="助医"){
+    //         thirdTypeArray1.push(12);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="洗衣服"){
+    //         thirdTypeArray1.push(15);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="相谈"){
+    //         thirdTypeArray1.push(14);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="康复辅助"){
+    //         thirdTypeArray1.push(13);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="生活护理"){
+    //         thirdTypeArray1.push(16);
+    //         if(thirdTypeArray != null)
+    //             thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+    //         else
+    //             thirdTypeArray = thirdTypeArray1;
+    //     }else if(name=="其他"){
+    //
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    // });
 </script>

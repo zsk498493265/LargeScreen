@@ -88,17 +88,17 @@
     znh_zn_num_pie.setOption(znh_option_zn_num_pie);
 
     znh_zn_num_pie.on('legendselectchanged', function (params) {
-        var name = params.name;
-        if(name=="未使用的重点老人"){
-            zhujie = 1;
-        }else if(name=="已使用的重点老人"){
-            sixthTypeArray.push(5,127,128,130,131);
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        getNumOfJw();
-        //getAgeAndSex();
+        // var name = params.name;
+        // if(name=="未使用的重点老人"){
+        //     zhujie = 1;
+        // }else if(name=="已使用的重点老人"){
+        //     sixthTypeArray.push(5,127,128,130,131);
+        // }
+        // table.fnFilter();
+        // getNumOfJw();
+        // //getAgeAndSex();
+        // getNumOfJw();
+        // //getAgeAndSex();
     });
 
     title_text="各类产品服务人数";
@@ -134,14 +134,14 @@
     znh_zn_pie.setOption(znh_option_zn_pie);
 
     znh_zn_pie.on('legendselectchanged', function (params) {
-        var name = params.name;
-        if(name=="安康通"){
-            forthTypeArray.push(17);
-        }else if(name=="康乐福"){
-            forthTypeArray.push(18);
-        }
-        table.fnFilter();
-        getNumOfJw();
+        // var name = params.name;
+        // if(name=="安康通"){
+        //     forthTypeArray.push(17);
+        // }else if(name=="康乐福"){
+        //     forthTypeArray.push(18);
+        // }
+        // table.fnFilter();
+        // getNumOfJw();
         //getAgeAndSex();
     });
 
@@ -177,15 +177,15 @@
     znh_zn_sex_pie.setOption(znh_option_zn_sex_pie);
 
     znh_zn_sex_pie.on('legendselectchanged', function (params) {
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
+        // var name = params.name;
+        // if(name=="男"){
+        //     sex=2;
+        // }else if(name=="女"){
+        //     sex=1;
+        // }
+        // table.fnFilter();
+        // getNumOfJw();
+        // //getAgeAndSex();
     });
 
     title_text='总服务人数年龄';
@@ -253,15 +253,15 @@
     znh_zn_age_bar.setOption(znh_option_zn_age_bar);
 
     znh_zn_age_bar.on('legendselectchanged', function (params) {
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
+        // var name = params.name;
+        // if(name=="男"){
+        //     sex=2;
+        // }else if(name=="女"){
+        //     sex=1;
+        // }
+        // table.fnFilter();
+        // getNumOfJw();
+        // //getAgeAndSex();
     });
 
     // //片区人数分布
@@ -326,15 +326,15 @@
     znh_zn_pq_bar.setOption(znh_option_zn_pq_bar);
 
     znh_zn_pq_bar.on('legendselectchanged', function (params) {
-        var name = params.name;
-        if(name=="户籍"){
-            census.push(12);
-        }else if(name=="非户籍"){
-           census.push(13,14);
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
+        // var name = params.name;
+        // if(name=="户籍"){
+        //     census.push(12);
+        // }else if(name=="非户籍"){
+        //    census.push(13,14);
+        // }
+        // table.fnFilter();
+        // getNumOfJw();
+        // //getAgeAndSex();
     });
 
 

@@ -78,14 +78,14 @@
 
 
     jjbc_jt_ys_num_pie.on('legendselectchanged', function (params) {
-        var name = params.name;
-        if(name=="未参加"){
-            zhujie = 1;
-        }else if(name=="已参加"){
-            sixthTypeArray.push(5,127,128,130,131);
-        }
-        table.fnFilter();
-        getNumOfJw();
+        // var name = params.name;
+        // if(name=="未参加"){
+        //     zhujie = 1;
+        // }else if(name=="已参加"){
+        //     sixthTypeArray.push(5,127,128,130,131);
+        // }
+        // table.fnFilter();
+        // getNumOfJw();
         //getAgeAndSex();
         
     });

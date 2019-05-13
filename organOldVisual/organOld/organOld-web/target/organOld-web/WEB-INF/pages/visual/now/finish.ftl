@@ -222,7 +222,8 @@
                                                                 if (result4.success == true) {
                                                                     dataR4 = result4.data;
                                                                     Object.assign(dataR, dataR1,dataR2,dataR3,dataR4);
-                                                                    document.getElementById("pNumAll").innerHTML = dataR.NumJieDaoPeople;
+                                                                    // document.getElementById("pNumAll").innerHTML = dataR.NumJieDaoPeople;
+                                                                    document.getElementById("pNumAll").innerHTML = 200000;
                                                                     document.getElementById("pNum60").innerHTML = dataR.NumOld;
                                                                     document.getElementById("pNum80").innerHTML = dataR.NumOld80;
                                                                     pieOldNum = dataR.NumOld;
@@ -527,7 +528,7 @@
                                                                             ],
                                                                             labelLine:{
                                                                                 normal:{
-                                                                                    length:45
+                                                                                    length:45,
                                                                                 }
                                                                             },
                                                                         }
@@ -6104,14 +6105,14 @@
                                                                     znh_zn_num_pie.setOption(znh_option_zn_num_pie);
 
                                                                     znh_zn_num_pie.on('legendselectchanged', function (params) {
-                                                                        var name = params.name;
-                                                                        if(name=="未使用的老人"){
-                                                                            oldStatus.push(1);
-                                                                        }else if(name=="已使用的老人"){
-                                                                            oldStatus.push(2);
-                                                                        }
-                                                                        table.fnFilter();
-                                                                        getNumOfJw();
+                                                                        // var name = params.name;
+                                                                        // if(name=="未使用的老人"){
+                                                                        //     oldStatus.push(1);
+                                                                        // }else if(name=="已使用的老人"){
+                                                                        //     oldStatus.push(2);
+                                                                        // }
+                                                                        // table.fnFilter();
+                                                                        // getNumOfJw();
                                                                         //getAgeAndSex();
                                                       
                                                                     });
@@ -6146,15 +6147,23 @@
                                                                     }];
                                                                     var znh_option_zn_pie = chartPie(title_text,legend_data,series);
                                                                     znh_zn_pie.setOption(znh_option_zn_pie);
+                                                                    var forthTypeArray1 = [];
 
                                                                     znh_zn_pie.on('legendselectchanged', function (params) {
                                                                         var name = params.name;
                                                                         if(name=="安康通"){
-                                                                            forthTypeArray.push(17);
+                                                                            forthTypeArray1.push(17);
+                                                                            if(forthTypeArray != null)
+                                                                                forthTypeArray = listIntersection(forthTypeArray, forthTypeArray1);
+                                                                            else
+                                                                                forthTypeArray = forthTypeArray1;
 
                                                                         }else if(name=="康乐福"){
-                                                                            forthTypeArray.push(18);
-
+                                                                            forthTypeArray1.push(18);
+                                                                            if(forthTypeArray != null)
+                                                                                forthTypeArray = listIntersection(forthTypeArray, forthTypeArray1);
+                                                                            else
+                                                                                forthTypeArray = forthTypeArray1;
                                                                         }
                                                                         table.fnFilter();
                                                                         getNumOfJw();
@@ -8265,6 +8274,38 @@
 
 
                                                                     });
+                                                                    var thirdTypeArray1 = [];
+                                                                    function array_remove_repeat(a) { // 去重
+                                                                        var r = [];
+                                                                        for(var i = 0; i < a.length; i ++) {
+                                                                            var flag = true;
+                                                                            var temp = a[i];
+                                                                            for(var j = 0; j < r.length; j ++) {
+                                                                                if(temp === r[j]) {
+                                                                                    flag = false;
+                                                                                    break;
+                                                                                }
+                                                                            }
+                                                                            if(flag) {
+                                                                                r.push(temp);
+                                                                            }
+                                                                        }
+                                                                        return r;
+                                                                    }
+                                                                    function listIntersection(x, y) {
+                                                                        var result = [];
+                                                                        for (var i = 0; i < y.length; i++) {
+                                                                            var temp = y[i];
+                                                                            for (var j = 0; j < x.length; j++) {
+                                                                                // 普通数组 (temp === clone[j])
+                                                                                if (temp.id === x[j].id) {
+                                                                                    result.push(temp);
+                                                                                    break;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        return array_remove_repeat(result);
+                                                                    }
 
 
                                                                     change_fuwu_detail(dataR.NumFWHuJi,dataR.NumFWFeiHuJi,
@@ -8275,23 +8316,59 @@
                                                                     homeOldman_jj_pie.on('legendselectchanged', function (params) {
                                                                         var name = params.name;
                                                                         if(name=="助餐"){
-                                                                            thirdTypeArray.push(7);
+                                                                            thirdTypeArray1.push(7);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="助洁"){
-                                                                            thirdTypeArray.push(8);
+                                                                            thirdTypeArray1.push(8);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="助浴"){
-                                                                            thirdTypeArray.push(10);
+                                                                            thirdTypeArray1.push(10);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="助行"){
-                                                                            thirdTypeArray.push(11);
+                                                                            thirdTypeArray1.push(11);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="助医"){
-                                                                            thirdTypeArray.push(12);
+                                                                            thirdTypeArray1.push(12);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="洗衣服"){
-                                                                            thirdTypeArray.push(15);
+                                                                            thirdTypeArray1.push(15);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="相谈"){
-                                                                            thirdTypeArray.push(14);
+                                                                            thirdTypeArray1.push(14);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="康复辅助"){
-                                                                            thirdTypeArray.push(13);
+                                                                            thirdTypeArray1.push(13);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="生活护理"){
-                                                                            thirdTypeArray.push(16);
+                                                                            thirdTypeArray1.push(16);
+                                                                            if(thirdTypeArray != null)
+                                                                                thirdTypeArray = listIntersection(thirdTypeArray, thirdTypeArray1);
+                                                                            else
+                                                                                thirdTypeArray = thirdTypeArray1;
                                                                         }else if(name=="其他"){
 
                                                                         }
