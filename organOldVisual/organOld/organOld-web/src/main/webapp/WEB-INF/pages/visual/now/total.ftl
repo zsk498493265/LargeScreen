@@ -46,13 +46,13 @@
     <div class="row">
         <div class="col-lg-6 box total_text">
             <div class="zz"></div>
-            <div  style="position:relative;top: 10px">
-                <p style="text-align: center;font-size: 30px;">街道人口总数：</p>
-                <p style="text-align: center;font-size: 30px;line-height: 5px"class="number" id="pNumAll"></br>16万人</p>                    <#--<p style="text-align: center" id="pNum60"><span class="title">60岁及以上老人总数：</br></span><span class="number"  id="oldNum60"><font face="STFangsong" color="yellow" style="font-size: 40px">31666</font> </span><span class="title">人</span></p>-->
-                <p style="text-align: center;font-size: 30px;">60岁及以上老人总数：</p>
-                <p style="text-align: center;font-size: 30px;line-height: 5px" class="number" id="pNum60"></br>31666人</p>
-                <p style="text-align: center;font-size: 30px;">80岁及以上老人总数：</p>
-                <p style="text-align: center;font-size: 30px;line-height: 5px" class="number" id="pNum80"></br>3783</p>
+            <div  style="position:relative;top: 10px;padding:38px 12px">
+                <p style="text-align: center;font-size: 30px;display:inline-block;">街道人口总数：</p>
+                <p style="text-align: center;font-size: 35px;line-height: 5px;display:inline-block"class="number" id="pNumAll"></br>16万人</p>                    <#--<p style="text-align: center" id="pNum60"><span class="title">60岁及以上老人总数：</br></span><span class="number"  id="oldNum60"><font face="STFangsong" color="yellow" style="font-size: 40px">31666</font> </span><span class="title">人</span></p>-->
+                <p style="text-align: center;font-size: 30px;display:inline-block">60岁及以上老人总数：</p>
+                <p style="text-align: center;font-size: 35px;line-height: 5px;display:inline-block" class="number" id="pNum60"></br>31666人</p>
+                <p style="text-align: center;font-size: 30px;display:inline-block">80岁及以上老人总数：</p>
+                <p style="text-align: center;font-size: 35px;line-height: 5px;display:inline-block" class="number" id="pNum80"></br>3783</p>
             </div>
         </div>
         <div class="col-lg-6">

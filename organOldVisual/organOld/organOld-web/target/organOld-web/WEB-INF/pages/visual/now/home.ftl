@@ -6,10 +6,10 @@
 
 </head>
 
-<body>
+<body style="margin-top: 1%">
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3" style="position: relative;right: 80px">
             <div class="row">
                 <div class="col-lg-12" >
                     <#include "news.ftl" />
@@ -21,20 +21,20 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3" style="position: relative;left: -1.5%">
+        <div class="col-lg-3" style="position: relative;right:30px;margin-top:30px" align="center">
             <div class="row">
-                <div class="col-lg-12" id="map">
+                <div class="col-lg-12" id="map" style="position: relative;right:19.6px">
                     <#include "map.ftl" />
                     <#--<#include "heatmap.js" />-->
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12" id="table">
+                <div class="col-lg-12" id="table" style="position: relative;top:-54px;left:20px">
                     <#include "table.ftl" />
                 </div>
             </div>
         </div>
-        <div class="col-lg-6" style="position: relative;left: -1.5%">
+        <div class="col-lg-6" style="position: relative;left:10px">
             <div class="row">
                 <div class="col-lg-6"  id="total" style="margin-top: 1%;margin-bottom: 1%;">
                     <#include "total.ftl" />

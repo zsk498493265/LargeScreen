@@ -125,6 +125,78 @@ function chartBar(title_text,legend_data,yAxis_data,series) {
     };
     return option;
 }
+
+//label
+function chartBar_label_age(title_text,legend_data,yAxis_data,series) {
+    var option = {
+        title: {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:title_fontSize,
+                fontWeight:'normal'
+            },
+            x:'0%',
+            y:'0%',
+        },
+        tooltip:{
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            //right:'0',
+            x:'right',
+            data:legend_data,
+        },
+        grid:  {
+            top:'45%',
+            left: '3%',
+            right: '8%',
+            bottom: '-3%',
+            x2: 80,
+            containLabel: true
+        },
+        xAxis: {
+            show:false
+        },
+        yAxis: {
+            type:'category',
+            data: yAxis_data,
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    //color: '#fff',
+                    fontSize:'5',
+                }
+            },
+            boundaryGap:false,
+            axisTick:{
+                show:false
+            },
+            // y 轴线
+            axisLine:{
+                show:false,
+
+            },
+            // 分割线设置
+            splitLine:{
+                show:false,  //显示分割线
+            },
+            axisLabel:{
+                textStyle: {
+                    color: '#fff',
+                    fontSize:yAxis_axisLabel_fontSize_bar,
+                    interval: 0,
+                }
+            }
+        },
+        series: series
+    };
+    return option;
+}
 function chartBarDisplayAll(title_text,legend_data,yAxis_data,series) {
     var option = {
         title: {
@@ -1026,6 +1098,7 @@ function chartPie(title_text,legend_data,series) {
             left:'right',
             // right: '0',
             top:"0",
+            height:"250",
             data: legend_data,
         },
         series :series,
@@ -1196,7 +1269,17 @@ function chartPieClick(title,legend_data,series) {
             orient: 'vertical',
             right: '0',
             top:"0",
+            align:"right",
+            height:"500",
+           // type:"scroll",
             data: legend_data
+        },
+        grid:  {
+            top:'25%',
+            left: '3%',
+            right: '4%',
+            bottom: '-30%',
+            containLabel: true
         },
         series :series,
         color: [series_color_1,series_color_2,series_color_3,series_color_4,series_color_5,series_color_6,series_color_7]
@@ -1387,10 +1470,10 @@ function chartBarHeiForFinish(title_text,legend_data,xAxis_data,series) {
             data:legend_data
         },
         grid:  {
-            top:'25%',
+            top:'35%',
             left: '3%',
             right: '4%',
-            bottom: '3%',
+            bottom: '1%',
             containLabel: true
         },
         xAxis : [
@@ -1699,8 +1782,9 @@ function customizedPie(title_text,data,legend_data) {
             {
                 name:'',
                 type:'pie',
+                startAngle:90,
                 radius : '45%',
-                center: ['40%', '65%'],
+                center: ['25%', '65%'],
                 // data:[
                 //     {value:335, name:dataName1},
                 //     {value:310, name:dataName2},
@@ -1723,8 +1807,8 @@ function customizedPie(title_text,data,legend_data) {
                             color: 'rgba(255, 255, 255, 0.3)'
                         },
                         smooth: 0.2,
-                        length: 10,
-                        length2: 20
+                        length: 2,
+                        length2: 2
                     }
                 },
                 itemStyle: {

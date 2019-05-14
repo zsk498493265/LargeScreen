@@ -447,7 +447,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '55%'],
+                                                                        center: ['42%', '70%'],
                                                                         data:[
                                                                             {value: dataR.NumOrganOld, name: '机构养老'},
                                                                             {value: dataR.NumCommunityOld+dataR.NumSqJjOldOnly, name: '社区养老'},
@@ -511,7 +511,7 @@
                                                                             name: '',
                                                                             type: 'pie',
                                                                             radius: ['40%', '60%'],
-                                                                            center:['50%','55%'],
+                                                                            center:['50%','60%'],
                                                                             avoidLabelOverlap: false,
                                                                             label: {
                                                                                 normal: {
@@ -528,7 +528,7 @@
                                                                             ],
                                                                             labelLine:{
                                                                                 normal:{
-                                                                                    length:45,
+                                                                                    length:20,
                                                                                 }
                                                                             },
                                                                         }
@@ -579,7 +579,7 @@
                                                                             name: '',
                                                                             type: 'pie',
                                                                             radius: ['40%', '60%'],
-                                                                            center:['50%','55%'],
+                                                                            center:['50%','65%'],
                                                                             avoidLabelOverlap: false,
                                                                             label: {
                                                                                 normal: {
@@ -595,7 +595,7 @@
 
                                                                             labelLine:{
                                                                                 normal:{
-                                                                                    length:45
+                                                                                    length:20
                                                                                 }
                                                                             },
                                                                         }
@@ -803,7 +803,8 @@
                                                                     series = [{
                                                                         name: '老人家庭结构',
                                                                         type: 'pie',
-                                                                        radius: '45%',
+                                                                        startAngle:30,
+                                                                        radius: '55%',
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
@@ -813,7 +814,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '60%'],
+                                                                        center: ['50%', '62%'],
                                                                         data: [
                                                                             {value: dataR.NumChunLao, name: '纯老'},
                                                                             {value: dataR.NumDuJu, name: '独居'},
@@ -832,7 +833,7 @@
                                                                         },
                                                                         labelLine:{
                                                                             normal:{
-                                                                                length:55
+                                                                                length:20
                                                                             }
                                                                         },
                                                                     }];
@@ -843,22 +844,23 @@
 
                                                                     title.text = "健康状态";
                                                                     title.link = "javascript: change('child_oldman','child_health')";
-                                                                    legend_data = [{name: '失能', textStyle: {color: legend_color, fontSize: 12}}, {
+                                                                    legend_data = [{name: '失能', textStyle: {color: legend_color, fontSize: 8}}, {
                                                                         name: '慢病',
-                                                                        textStyle: {color: legend_color, fontSize: 12}
+                                                                        textStyle: {color: legend_color, fontSize: 8}
                                                                     }
-                                                                        , {name: '肿瘤史', textStyle: {color: legend_color, fontSize: 12}}, {
+                                                                        , {name: '肿瘤史', textStyle: {color: legend_color, fontSize: 8}}, {
                                                                             name: '骨折史',
-                                                                            textStyle: {color: legend_color, fontSize: 12}
+                                                                            textStyle: {color: legend_color, fontSize: 8}
                                                                         },
-                                                                        {name: '失智', textStyle: {color: legend_color, fontSize: 12}}, {
+                                                                        {name: '失智', textStyle: {color: legend_color, fontSize: 8}}, {
                                                                             name: '长护险评级',
-                                                                            textStyle: {color: legend_color, fontSize: 12}
-                                                                        }, {name: '其他', textStyle: {color: legend_color, fontSize: 12}}];
+                                                                            textStyle: {color: legend_color, fontSize: 8}
+                                                                        }, {name: '其他', textStyle: {color: legend_color, fontSize: 8}}];
                                                                     series = [{
                                                                         name: '健康状态',
                                                                         type: 'pie',
-                                                                        radius: '45%',
+                                                                        // startAngle:0,
+                                                                        radius: '55%',
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
@@ -869,7 +871,7 @@
                                                                             }
                                                                         },
 
-                                                                        center: ['48%', '60%'],
+                                                                        center: ['50%', '62%'],
                                                                         data: [
                                                                             {value: dataR.NumSN, name: '失能'},
                                                                             {value: dataR.NumMB, name: '慢病'},
@@ -885,8 +887,15 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:1
+                                                                            }
                                                                         }
-                                                                    }];
+                                                                    },
+
+                                                                    ];
                                                                     var oldman_option_health_pie = chartPieClick(title, legend_data, series);
                                                                     oldman_healthPie.setOption(oldman_option_health_pie);
 
@@ -908,7 +917,7 @@
                                                                     series = [{
                                                                         name: '老人经济条件',
                                                                         type: 'pie',
-                                                                        radius: '45%',
+                                                                        radius: '55%',
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
@@ -918,7 +927,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '60%'],
+                                                                        center: ['50%', '62%'],
                                                                         data: [
                                                                             {value: dataR.NumBangKun, name: '帮困'},
                                                                             {value: dataR.NumDiBao, name: '低保'},
@@ -933,7 +942,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        // labelLine:{
+                                                                        //     normal:{
+                                                                        //         length:1
+                                                                        //     }
+                                                                        // }
                                                                     }];
                                                                     var oldman_option_econmic_pie = chartPieClick(title, legend_data, series);
                                                                     oldman_econmicPie.setOption(oldman_option_econmic_pie);
@@ -1343,7 +1357,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '60%'],
+                                                                        center: ['50%', '60%'],
                                                                         data: [
                                                                             {value: dataR.NumChunLao, name: '纯老'},
                                                                             {value: dataR.NumDuJu, name: '独居'},
@@ -2114,8 +2128,8 @@
                                                                         radiusAxis: {
                                                                         },
                                                                         polar: {
-                                                                            center: ['50%','50%'],
-                                                                            radius: [[80]]//半径大小
+                                                                            center: ['50%','60%'],
+                                                                            radius: [[65]]//半径大小
                                                                         },
                                                                         series: [{
                                                                             type: 'bar',
@@ -2135,7 +2149,7 @@
                                                                                     length2: 20
                                                                                 }
                                                                             },
-                                                                            center: ['50%','50%']
+                                                                            center: ['50%','60%']
                                                                         }],
                                                                         legend: {
                                                                             show: true,
@@ -2388,7 +2402,7 @@
                                                                                     show: true,
                                                                                     position: 'top',
                                                                                     textStyle: {
-                                                                                        fontSize: 20
+                                                                                        fontSize: 12
                                                                                     }
                                                                                 }
                                                                             },
@@ -6586,12 +6600,13 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideLeft'
+                                                                                    position: 'insideTop'
                                                                                 }
                                                                             },
                                                                             itemStyle:{
                                                                                 normal: {
-                                                                                    color:series_color_1
+                                                                                    color:series_color_1,
+
                                                                                 }
                                                                             },
                                                                             data: [dataR.NumAbove90M,dataR.Num80To90M,dataR.Num70To80M,dataR.Num60To70M]
@@ -6603,7 +6618,7 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight'
+                                                                                    position: 'insideTop'
                                                                                 }
                                                                             },
                                                                             itemStyle:{
@@ -6614,7 +6629,7 @@
                                                                             data: [dataR.NumAbove90F,dataR.Num80To90F,dataR.Num70To80F,dataR.Num60To70F]
                                                                         }
                                                                     ];
-                                                                    var label_option_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
+                                                                    var label_option_age_bar=chartBar_label_age(title_text,legend_data,yAxis_data,series);
                                                                     //性别饼图
                                                                     title_text="性别";
                                                                     legend_data=[{name:'男',textStyle:{color:legend_color}},{name:'女',textStyle:{color:legend_color}}];
@@ -6622,13 +6637,13 @@
                                                                         name: '老人性别',
                                                                         type: 'pie',
                                                                         radius : '55%',
-                                                                        center: ['50%', '60%'],
+                                                                        center: ['50%', '65%'],
                                                                         label: {
                                                                             normal : {
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -6753,8 +6768,9 @@
                                                                         },
                                                                         calculable: true,
                                                                         grid:  {
-                                                                            top:'30%',
+                                                                            top:'35%',
                                                                             bottom: '-2%',
+                                                                            x:"2%",
                                                                             containLabel: true
                                                                         },
                                                                         xAxis: [
@@ -6818,13 +6834,13 @@
                                                                         name: '老人户籍',
                                                                         type: 'pie',
                                                                         radius : '55%',
-                                                                        center: ['48%', '60%'],
+                                                                        center: ['48%', '65%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },

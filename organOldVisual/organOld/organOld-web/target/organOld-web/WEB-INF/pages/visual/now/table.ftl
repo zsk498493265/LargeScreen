@@ -1,7 +1,7 @@
 <style>
     #table{
-        position: relative;
-        top:50px;
+        /*position: relative;*/
+        /*top:50px;*/
     }
 </style>
 
@@ -37,7 +37,7 @@
 <#include "table_info.ftl" />
 <script>
     $("#table1").css("margin-top",(winHeight/1.5+125)+"px");
-    $("#table1").css("height",155+"px");
+    $("#table1").css("height",156.5+"px");
     var tableWidth=document.getElementById('dt');
     tableWidth.style.width='105%';
     tableWidth.style.height='80%';
@@ -121,7 +121,7 @@
                         sWidth:"20%",
                         "render": function(data, type, full) { // 返回自定义内容
                             //alert(data);
-                            return data.substring(0,10)+"****"+data.substring(14);
+                            return data.substring(0,14)+"****";
                         }
 
                     },

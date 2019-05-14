@@ -138,8 +138,8 @@
                         // $("#dituContent").css("height",winHeight/1.55);
                         // $("#dituContent").css("left",winWidth/22);
                         // $("#container").css("left",winWidth/22);
-                        $("#dituContent").css("width",winWidth/4.6);
-                        $("#dituContent").css("height",winHeight/1.2);
+                        $("#dituContent").css("width",winWidth/4.22);
+                        $("#dituContent").css("height",winHeight/1.3);
                         $("#dituContent").css("left",winWidth/70);
                         $("#container").css("left",winWidth/70);
 
@@ -148,7 +148,7 @@
                         function initMap(){
                             createMap();//创建地图
                             setMapEvent();//设置地图事件
-                            //addMapControl();//向地图添加控件
+                            addMapControl();//向地图添加控件
                             addPolygon();//多边形覆盖物
                             addPolyline();//向地图中添加线
                             addMarker();//向地图中添加标注
@@ -735,8 +735,8 @@
                     }
                     function show_heat_map() {
 
-                        $("#container").css("width",winWidth/4.6);
-                        $("#container").css("height",winHeight/1.2);
+                        $("#container").css("width",winWidth/4.22);
+                        $("#container").css("height",winHeight/1.3);
                         var hmap = new BMap.Map("container");          // 创建地图实例
                         window.hmap=hmap;
 

@@ -45,9 +45,9 @@
         opacity: 0.5;
     }
     .qk{
-        font-size: 24px;
+        font-size: 16px;
         background-color:#6cbdfc ;
-        padding:10px 10px;
+        padding:2.5px 4px;
         color: white;
         border: none;
         border-radius: 10px;
@@ -94,26 +94,34 @@
         font-weight: bold;
     }
     .qk_1{
-        font-size: 22px;
+        font-size: 19px;
         padding:5px 30px;
         color: white;
         border: none;
         border-radius: 10px;
-        margin: 10px;
+        margin: 4px;
         width: 90%;
     }
     .label{
-        font-size: 20px!important;
-        padding:5px!important;
+        font-size: 18px!important;
+        padding:3px 4px!important;
         margin: 1px!important;
-        line-height: 2!important;
+        line-height: 1.9!important;
+    }
+    #selectLabel span{
+        font-size: 15px!important;
+        padding:1px 4px!important;
+        margin:1px!important;
+    }
+    .returnBtn{
+
     }
 </style>
 <div class="row" style="margin-top: 15px">
     <div class="col-lg-1" style="width: 5%;height: 5%"></div>
     <div class="col-lg-5">
         <div class="row">
-            <div class="col-lg-12 box" style="height: 435px;width:650px;margin-top: 0px">
+            <div class="col-lg-12 box" style="height: 435px;width:620px;margin-top: 0px">
                 <div class="zz"></div>
                 <div class="row">
                     <h1></h1>
@@ -134,7 +142,7 @@
                     <h1></h1>
                 </div>
 
-                <div class="row">
+                <div class="row"style="position: relative;right:8px">
                     <div class="col-lg-2" align="left">
                         <#--<button style="height: 60px;">标题</button>-->
                         <img src="/static/img/org_map/lejian.png" style="height:60px;position:relative;top:0px" onclick="picChange(1)">
@@ -163,7 +171,7 @@
                 <div class="row">
                     <h1></h1>
                 </div>
-                <div class="row">
+                <div class="row"style="position: relative;right:8px">
                     <div class="col-lg-2" align="left">
                         <button style="display: none;height: 60px;">标题</button>
                     </div>
@@ -190,7 +198,7 @@
                     <h1></h1>
                 </div>
 
-                <div class="row">
+                <div class="row"style="position: relative;right:8px">
                     <div class="col-lg-2" align="left">
                         <img src="/static/img/org_map/gumeip.png" onclick="picChange(7)" style="height: 85px;width: 90px">
                     </div>
@@ -207,7 +215,7 @@
                         <img src="/static/img/org_map/pingjip.png" onclick="picChange(11)" style="height: 85px;width: 90px">
                     </div>
                     <div class="col-lg-2" align="left">
-                        <img src="/static/img/org_map/pingyangp.png" onclick="picChange(12)" style="height: 85px;width: 90px">
+                        <img src="/static/img/org_map/pingyangp.png" onclick="picChange(12)" style="height: 85px;width: 90px;">
                     </div>
                 </div>
                 <#--<div class="row">-->
@@ -223,16 +231,16 @@
             </div>
         </div>
 
-        <div class="row box" style="margin-top: 0px;height: 300px;width:650px;" id="label1">
+        <div class="row box" style="margin-top: 0px;height: 300px;width:620px;" id="label1">
             <div class="zz"></div>
             <div class="row" style="border-bottom: 0px solid white;margin: 0!important;">
                 <#--<div class="col-lg-5" >-->
                     <#--<p class="title ta"  onclick="ChangeMap()" style="font-size: 40px">身</br>份</br>标</br>签</p>-->
                 <#--</div>-->
                 <div class="row">
-                    <p class="title ta"  onclick="ChangeMap()" style="font-size: 40px" align="center">身份标签</p>
+                    <p class="title ta"  onclick="ChangeMap()" style="font-size: 24px;position:relative;top:5px" align="center">身份标签</p>
                 </div>
-                <div class="row">
+                <div class="row"style="width:620px;margin:0px 1px">
                     <div class="col-lg-4" >
                         <button class="qk_1 color_2" style="height: 40px;" onclick="label3Show(31)">基 本 信 息</button>
                     </div>
@@ -243,7 +251,7 @@
                         <button class="qk_1 color_2" style="height: 40px" onclick="label3Show(33)">经 济 条 件</button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row"style="width:620px;margin:0px 1px">
                     <div class="col-lg-6" >
                         <button class="qk_1 color_2" style="height: 40px" onclick="label3Show(34)">家 庭 结 构</button>
                     </div>
@@ -286,7 +294,7 @@
                 <#--</div>-->
             </div>
         </div>
-        <div id="label31" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px;border: 1px red">
+        <div id="label31" class="row box label3" style="display: none;margin-top: 0px;width:620px;height:140px;border: 1px red">
             <div class="zz"></div>
             <div class="col-lg-12">
                 <span class="label color_1">男</span>
@@ -307,9 +315,9 @@
                 <span class="label color_1">群众</span>
                 <span class="label color_1">党员</span>
             </div>
-            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
+            <button class="qk" style="position:absolute;right:8px;top:100px;font-size: 16px;padding: 2.5px 4px" onclick="turnback()">返回</button>
         </div>
-        <div id="label32" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px">
+        <div id="label32" class="row box label3" style="display: none;margin-top: 0px;width:620px;height:140px">
             <div class="zz"></div>
             <div class="col-lg-12">
                 <span class="label color_2">智力正常</span>
@@ -327,9 +335,9 @@
                 <span class="label color_2">有骨折史</span>
                 <span class="label color_2">有残疾史</span>
             </div>
-            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
+            <button class="qk" style="position:absolute;right:8px;top:100px" onclick="turnback()">返回</button>
         </div>
-        <div id="label33" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px">
+        <div id="label33" class="row box label3" style="display: none;margin-top: 0px;width:620px;height:140px">
             <div class="zz"></div>
             <div class="col-lg-12">
                 <span class="label color_3">帮困人员</span>
@@ -339,9 +347,9 @@
                 <span class="label color_3">城镇居民基本医疗保险</span>
                 <span class="label color_3">其他</span>
             </div>
-            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
+            <button class="qk" style="position:absolute;right:8px;top:100px" onclick="turnback()">返回</button>
         </div>
-        <div id="label34" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px">
+        <div id="label34" class="row box label3" style="display: none;margin-top: 0px;width:620px;height:140px">
             <div class="zz"></div>
             <div class="col-lg-12">
                 <span class="label color_4">纯老</span>
@@ -356,9 +364,9 @@
                 <span class="label color_4">离休干部</span>
                 <span class="label color_4">侨属</span>
             </div>
-            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
+            <button class="qk" style="position:absolute;right:8px;top:100px" onclick="turnback()">返回</button>
         </div>
-        <div id="label35" class="row box label3" style="display: none;margin-top: 0px;width:650px;height:208px">
+        <div id="label35" class="row box label3" style="display: none;margin-top: 0px;width:620px;height:140px">
             <div class="zz"></div>
             <div class="col-lg-12">
                 <span class="label color_5">莲花老年公寓</span>
@@ -388,26 +396,25 @@
                 <span class="label color_5">洗涤</span>
                 <span class="label color_5">生活护理</span>
             </div>
-            <button class="btn btn-info" style="position:absolute;left:593px;top:182px" onclick="turnback()">返回</button>
+            <button class="qk" style="position:absolute;right:8px;top:100px" onclick="turnback()">返回</button>
         </div>
-        <div class="row box selectLabel" style="margin-top: 0px;word-break : break-all;height: 280px;width:650px;">
+        <div class="row box selectLabel" style="margin-top: 0px;word-break : break-all;height: 109px;width:620px;">
             <div class="zz"></div>
             <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="title" style="font-size: 30px">所选标签</p>
+                <div class="row" style="margin-top: 5px">
+                    <div class="col-lg-8">
+                        <p class="title" style="font-size: 20px">所选标签</p>
+                    </div>
+                    <div class="col-lg-4" style="position: relative;left:100px">
+                        <button class="qk" style="background-color: #47e6da" onclick="butt(0)">确认</button>
+                        <button class="qk" onclick="clearLabels()">清空</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12" id="selectLabel">
                     </div>
                 </div>
-                <div class="row" align="center">
-                    <div class="col-lg-12">
-                        <button class="qk" style="background-color: #47e6da" onclick="butt(0)">确认</button>
-                        <button class="qk" onclick="clearLabels()">清空</button>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -415,25 +422,25 @@
     <div class="col-lg-1" style="width: 3%"></div>
     <div class="col-lg-5" style="width: 0.1%;position: relative;left: -1.5%">
         <div class="row" style="width: 10px;">
-            <div class="col-lg-12 box" align="center" style="width: 410px;position: relative;left:135px">
+            <div class="col-lg-12 box" align="center" style="width: 330px;position: relative;left:215px">
                 <div class="zz"></div>
                 <div id="label_hjPie" class="label_tu"></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 box" align="center" style="width: 410px;position: relative;left:135px">
+            <div class="col-lg-12 box" align="center" style="width: 330px;position: relative;left:215px">
                 <div class="zz"></div>
                 <div id="label_sexPie" class="label_tu"></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 box" align="center" style="width: 410px;position: relative;left:135px">
+            <div class="col-lg-12 box" align="center" style="width: 330px;position: relative;left:215px">
                 <div class="zz"></div>
                 <div id="label_ageBar" class="label_tu_age"></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 box" align="center" style="width: 410px;position: relative;left:135px">
+            <div class="col-lg-12 box" align="center" style="width: 330px;position: relative;left:215px">
                 <div class="zz"></div>
                 <div id="label_pqBar" class="label_tu2"></div>
             </div>
@@ -448,13 +455,13 @@
                 label_tu_w=winWidth/3;
                 label_tu_h=winHeight/5.5;
             }
-            $(".label_tu").css('width',label_tu_w/1.3);
-            $(".label_tu").css( 'height', label_tu_h*1.05);
+            $(".label_tu").css('width',label_tu_w/1.17);
+            $(".label_tu").css( 'height', label_tu_h*1.03);
             //$(".label_tu").css( 'margin-bottom', 10+"px");
-            $(".label_tu2").css('width',label_tu_w/1.3);
-            $(".label_tu2").css( 'height', label_tu_h*1.05);
-            $(".label_tu_age").css('width',label_tu_w/1.3);
-            $(".label_tu_age").css( 'height', label_tu_h*1.05);
+            $(".label_tu2").css('width',label_tu_w/1.17);
+            $(".label_tu2").css( 'height', label_tu_h*1.03);
+            $(".label_tu_age").css('width',label_tu_w/1.17);
+            $(".label_tu_age").css( 'height', label_tu_h*1.03);
             var label_ageBar = echarts.init(document.getElementById('label_ageBar'));
             var label_sexPie= echarts.init(document.getElementById('label_sexPie'));
             var label_pqBar= echarts.init(document.getElementById('label_pqBar'));
@@ -469,9 +476,9 @@
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Lak4ThuxodnoDdL3ZrfK5t91UR4uDmGm"></script>
 
 <script>
-    $(".selectLabel").css("height",218+"px");
-    $("#label1").css("height",218+"px");
-    $(".label3").css("height",218+"px");
+    $(".selectLabel").css("height",110+"px");
+    $("#label1").css("height",140+"px");
+    $(".label3").css("height",140+"px");
     function turnback(){
         $(".label3").hide();
         $("#label1").show();
@@ -2606,7 +2613,7 @@
                                 formatter: '{d}%\n({c})',
                                 textStyle: {
                                     fontWeight: 'normal',
-                                    fontSize: 20
+                                    fontSize: 12
                                 }
                             }
                         },
