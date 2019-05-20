@@ -222,11 +222,11 @@ function chartBarDisplayAll(title_text,legend_data,yAxis_data,series) {
             data:legend_data,
         },
         grid:  {
-            top:'45%',
-            left: '3%',
-            right: '8%',
-            bottom: '3%',
-            x2: 80,
+            top:'48%',
+            left: '6%',
+            right: '15%',
+            bottom: '-15%',
+            //x2: 80,
             containLabel: true
         },
         xAxis: {
@@ -239,7 +239,7 @@ function chartBarDisplayAll(title_text,legend_data,yAxis_data,series) {
                 show: true,
                 textStyle: {
                     //color: '#fff',
-                    fontSize:'5',
+                    fontSize:'15',
                 },
                 interval:0,
 
@@ -261,7 +261,7 @@ function chartBarDisplayAll(title_text,legend_data,yAxis_data,series) {
             axisLabel:{
                 textStyle: {
                     color: '#fff',
-                    fontSize:6,
+                    fontSize:16,
                     interval: 0,
                 },
                 interval:0,
@@ -278,11 +278,11 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-                fontSize:20,
+                fontSize:size_bed,
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'0%',
+            y:'-5%'
         },
         tooltip:{
             trigger: 'axis',
@@ -292,20 +292,25 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
         },
         legend: {
             orient: 'vertical',
-            right:'0',
-            data:legend_data
+            // right:'0',
+            data:legend_data,
+            right:'20',
+            data: legend_data,
+            itemGap: -10,
+            itemWidth: 18,
+            itemHeight: 8,
         },
         grid:  {
-            top:'40%',
+            top:'10%',
             left: '3%',
             right: '16%',
-            bottom: '3%',
+            bottom: '0%',
             containLabel: true
         },
-        xAxis: {
+        yAxis: {
             show:false
         },
-        yAxis: {
+        xAxis: {
             type:'category',
             data: yAxis_data,
             axisLabel: {
@@ -314,6 +319,9 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
                     color: '#fff',
                 }
             },
+            max:4,
+          //  barGap:'1%',
+
             boundaryGap:false,
             axisTick:{
                 //show:true,
@@ -331,7 +339,7 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
             axisLabel:{
                 textStyle: {
                     color: '#fff',
-                    fontSize:6,
+                    fontSize:10,
 
                 },
                 interval: 0,
@@ -920,7 +928,7 @@ function chartLine(title_text,legend_data,xAxis_data,series) {
         grid:  {
             left: '3%',
             right: '4%',
-            bottom: '3%',
+            bottom: '-3%',
             top:'50%',
             containLabel: true
         },
@@ -946,7 +954,7 @@ function chartLine(title_text,legend_data,xAxis_data,series) {
             axisLabel:{
                 textStyle: {
                     color: '#fff',
-                    fontSize:xAxis_axisLabel_fontSize,
+                    fontSize:10,
                     fontWeight:100
 
                 }
@@ -1106,6 +1114,7 @@ function chartPie(title_text,legend_data,series) {
     };
     return option;
 }
+size_bed=16;
 function chartPieForOrgOld(title_text,legend_data,series) {
     //不用能以下方式 容易出现两个图一样的标题 应该是异步  不同步造成
     var option = {
@@ -1113,24 +1122,30 @@ function chartPieForOrgOld(title_text,legend_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-                fontSize:20,
+                fontSize:size_bed,
                 fontWeight: 'normal'
             },
             left:'left',
             x:'0%',
-            y:'0%'
+            y:'-5%'
         },
         tooltip : {
             trigger: 'item',
             formatter: ""
         },
         legend: {
-            orient: 'vertical',
-            left:'right',
+            orient: 'horizontal',
+           // left:'right',
             // right: '0',
-            top:"0",
+            //right:'180',
+            // left:'10',
+            top:"-5",
+            right:'20',
             data: legend_data,
-        },
+            itemGap: 0,
+            itemWidth: 18,
+            itemHeight: 8,
+},
         series :series,
         color: [series_color_1,series_color_2,series_color_3,series_color_4,series_color_5,series_color_6,series_color_7],
     };
@@ -1143,23 +1158,30 @@ function chartPieForOrgOldHealth(title_text,legend_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-                fontSize:20,
+                fontSize:size_bed,
                 fontWeight: 'normal'
             },
             left:'left',
             x:'0%',
-            y:'0%'
+            y:'-5%'
         },
         tooltip : {
             trigger: 'item',
             formatter: ""
         },
         legend: {
-            orient: 'vertical',
-            align:'right',
-            // right: '20',
-            x: '71%',
+            orient: 'horizontal',
+            // left:'right',
+            // right: '0',
+            //right:'180',
+            // left:'10',
+            top:"-5",
+            right:'16',
             data: legend_data,
+            itemGap: 0,
+            itemWidth: 18,
+            itemHeight: 8,
+
         },
         series :series,
         color: [series_color_1,series_color_2,series_color_3,series_color_4,series_color_5,series_color_6,series_color_7],
@@ -2370,7 +2392,7 @@ function toolTipReal(title_text,legend_data,name1,name2,data_t1,data_t2) {
                     backgroundColor: '#004E52'
                 },
                 handle: {
-                    show: true,
+                    show: false,
                     color: '#004E52'
                 }
             },
@@ -2410,10 +2432,11 @@ function toolTipReal(title_text,legend_data,name1,name2,data_t1,data_t2) {
             splitNumber:3
         },
         grid: {
-            top: 80,
+            top: 55,
             left: 15,
             right: 15,
-            height: 50
+            height: 40,
+            bottom:35
         },
         dataZoom: [{
             type: 'inside',
@@ -2560,6 +2583,7 @@ function toolTipMulti1(title_text,legend_data,data_t1,data_t2,data_t3,data_t4) {
         legend: {
             x:'right',
             y:'top',
+            width:'50%',
             data:legend_data,
 
             textStyle: {
@@ -2592,7 +2616,7 @@ function toolTipMulti1(title_text,legend_data,data_t1,data_t2,data_t3,data_t4) {
                     backgroundColor: '#004E52'
                 },
                 handle: {
-                    show: true,
+                    show: false,
                     color: '#004E52'
                 }
             },
@@ -2632,10 +2656,10 @@ function toolTipMulti1(title_text,legend_data,data_t1,data_t2,data_t3,data_t4) {
             splitNumber:3
         },
         grid: {
-            top: 80,
+            top: 55,
             left: 15,
             right: 15,
-            height: 40
+            height: 35
         },
         dataZoom: [{
             type: 'inside',

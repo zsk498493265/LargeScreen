@@ -608,7 +608,7 @@
         }
 
         //add all pq
-        map.addOverlay(polygonOrg);
+       // map.addOverlay(polygonOrg);
         map.addOverlay(polygon_DongLan);
         map.addOverlay(polygon_PingNan);
         map.addOverlay(polygon_PingJi);
@@ -631,7 +631,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                   // map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_PingJi);
@@ -695,7 +695,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                  //  map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_PingJi);
@@ -758,7 +758,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                  //  map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_PingJi);
@@ -821,7 +821,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                  //  map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_PingJi);
@@ -884,7 +884,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                   // map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_PingJi);
@@ -947,7 +947,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                  //  map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_PingJi);
@@ -1012,7 +1012,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                 //   map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_GuMei);
                     //add marker
                     for(var i=0;i<markerArr.length;i++){
@@ -1071,7 +1071,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                 //   map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_GuLong);
                     //add marker
                     for(var i=0;i<markerArr.length;i++){
@@ -1130,7 +1130,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                 //   map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_WanYuan);
                     map.addOverlay(polygon_XuHui);
@@ -1190,7 +1190,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                 //   map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
 
                     //add marker
@@ -1249,7 +1249,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                  //  map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_PingJi);
 
                     //add marker
@@ -1308,7 +1308,7 @@
                         map.removeOverlay(map.getOverlays()[i]);
                     }
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                  //  map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_PingYang);
 
                     //add marker
@@ -1363,7 +1363,7 @@
                 }
                 else if(index == -1){
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                 //   map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_PingJi);
@@ -1386,6 +1386,15 @@
                         marker.setLabel(label);
                         marker.json=json;
                         map.addOverlay(marker);
+                        //置顶
+                        if(json.title != "古美片区"&&json.title != "古龙片区"
+                            &&json.title != "平南片区"&&json.title != "平吉片区"
+                            &&json.title != "平阳片区"&&json.title != "东兰片区")
+                        {
+                            //alert(json.title);
+                            marker.setTop(true);
+
+                        }
                         all_marker.push(marker);
                         label.setStyle({
                             borderColor:"#808080",
@@ -1425,7 +1434,7 @@
 
                 else if(index == 0){
                     map.clearOverlays();
-                    map.addOverlay(polygonOrg);
+                 //   map.addOverlay(polygonOrg);
                     map.addOverlay(polygon_DongLan);
                     map.addOverlay(polygon_PingNan);
                     map.addOverlay(polygon_PingJi);
@@ -1448,7 +1457,8 @@
 
                         }
 
-                            var p0 = json.point.split("|")[0];
+
+                        var p0 = json.point.split("|")[0];
                         var p1 = json.point.split("|")[1];
                         var point = new BMap.Point(p0,p1);
                         var iconImg = createIcon(json.icon);
@@ -1458,6 +1468,17 @@
                         marker.setLabel(label);
                         marker.json=json;
                         map.addOverlay(marker);
+                        //置顶
+                        if(json.title != "古美片区"&&json.title != "古龙片区"
+                            &&json.title != "平南片区"&&json.title != "平吉片区"
+                            &&json.title != "平阳片区"&&json.title != "东兰片区")
+                        {
+                            //alert(json.title);
+                            marker.setTop(true);
+
+                        }
+
+
                         all_marker.push(marker);
                         label.setStyle({
                             borderColor:"#808080",
@@ -1502,23 +1523,25 @@
     }
     function createIcon(json){
         if(json.type==1){
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/yanglaoyuan.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gongyu-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         } else if(json.type==2)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==-1)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gumeip.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gumeip-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==-2)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gulongp.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gulongp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==-3)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingnanp.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingnanp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==-4)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/donglanp.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/donglanp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==-5)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingjip.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingjip-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==-6)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingyanp.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingyanp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+        else if(json.type==100)
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/star-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/juwei.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/cun-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
 
         // var icon = new BMap.Icon("http://map.baidu.com/image/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         //var icon = new BMap.Icon("http://api.map.baidu.com/lbsapi/creatmap/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})

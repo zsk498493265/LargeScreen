@@ -548,14 +548,17 @@
                                                                         {
                                                                             name: '',
                                                                             type: 'pie',
-                                                                            radius: ['30%', '50%'],
+                                                                            startAngle:0,
+                                                                            radius: ['30%', '55%'],
+                                                                            center:['48%','52%'],
                                                                             avoidLabelOverlap: false,
                                                                             label: {
                                                                                 normal: {
                                                                                     formatter: '{d}%\n({c})',
+                                                                                   // formatter: '{d}%',
                                                                                     textStyle: {
                                                                                         fontWeight: 'normal',
-                                                                                        fontSize: 20
+                                                                                        fontSize: 16
                                                                                     }
                                                                                 }
                                                                             },
@@ -969,7 +972,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize: 20
+                                                                                    fontSize: 16
                                                                                 }
                                                                             }
                                                                         },
@@ -1009,7 +1012,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize: 20
+                                                                                    fontSize: 16
                                                                                 }
                                                                             }
                                                                         },
@@ -1043,14 +1046,14 @@
                                                                             name: '男',
                                                                             textStyle: {
                                                                                 color: '#fff',
-                                                                                fontSize: 12
+                                                                                fontSize: 18
                                                                             }
                                                                         },
                                                                         {
                                                                             name: '女',
                                                                             textStyle: {
                                                                                 color: '#fff',
-                                                                                fontSize: 12
+                                                                                fontSize: 18
 
                                                                             }
                                                                         }
@@ -1064,9 +1067,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideLeft',
+                                                                                    position: 'insideTop',
                                                                                     textStyle: {
-                                                                                        fontSize: 8
+                                                                                        fontSize: 12
                                                                                     }
                                                                                 }
                                                                             },
@@ -1076,7 +1079,9 @@
                                                                                     fontSize: 8
                                                                                 }
                                                                             },
-                                                                            barWidth:8,
+                                                                            barWidth:15,
+                                                                            // barGap:'150%',
+                                                                            // barCategory:'160%',
                                                                             data: [dataR.NumAbove90M, dataR.Num80To90M, dataR.Num70To80M, dataR.Num60To70M]
                                                                         },
                                                                         {
@@ -1086,9 +1091,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight',
+                                                                                    position: 'insideTop',
                                                                                     textStyle: {
-                                                                                        fontSize: 8
+                                                                                        fontSize: 12
                                                                                     }
                                                                                 }
                                                                             },
@@ -1142,6 +1147,7 @@
                                                                             },
                                                                             label:{
                                                                                 normal:{
+                                                                                    formatter: '',
                                                                                     textStyle:{
                                                                                         fontSize:10
                                                                                     }
@@ -1201,12 +1207,13 @@
                                                                             type: 'line',
                                                                             itemStyle:{
                                                                                 normal: {
+                                                                                    formatter: '',
                                                                                     lineStyle:{
                                                                                         width:1,
                                                                                         color:series_color_1
                                                                                     },
                                                                                     label : {
-                                                                                        show: true
+                                                                                        show: false
                                                                                     },
                                                                                     color:"yellow"
                                                                                 }
@@ -4049,14 +4056,16 @@
                                                                     ];
                                                                     var chx_option_num_pie = chartPieClick(title,legend_data,series);
                                                                     chx_num_pie.setOption(chx_option_num_pie);
+                                                                    var bed_radius_size='35%';
                                                                     //part8
                                                                     title_text="床位数";
                                                                     legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        startAngle:'-30',
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4093,8 +4102,9 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        startAngle:10,
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
@@ -4129,8 +4139,8 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4168,8 +4178,9 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['52%', '55%'],
+                                                                        startAngle:-20,
+                                                                        radius: bed_radius_size,
+                                                                        center: ['52%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
@@ -4204,8 +4215,8 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4242,8 +4253,9 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        startAngle:-10,
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
@@ -4278,8 +4290,8 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4316,8 +4328,9 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        startAngle:-20,
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
@@ -4363,7 +4376,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4373,7 +4386,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumPingYangJLAndMale+dataR.NumGuMeiJLAndMale+dataR.NumLianHuaJLAndMale, name:'男'},
                                                                             {value:dataR.NumPingYangJLAndFemale+dataR.NumGuMeiJLAndFemale+dataR.NumLianHuaJLAndFemale, name:'女'}
@@ -4399,7 +4412,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4409,7 +4422,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumPingYangJLAndMale, name:'男'},
                                                                             {value:dataR.NumPingYangJLAndFemale, name:'女'}
@@ -4435,7 +4448,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4445,7 +4458,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumGuMeiJLAndMale, name:'男'},
                                                                             {value:dataR.NumGuMeiJLAndFemale, name:'女'}
@@ -4471,7 +4484,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4481,7 +4494,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumLianHuaJLAndMale, name:'男'},
                                                                             {value:dataR.NumLianHuaJLAndFemale, name:'女'}
@@ -4529,7 +4542,7 @@
                                                                                     show: true,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
-                                                                                        fontSize:8
+                                                                                        fontSize:10
                                                                                     }
 
                                                                                 }
@@ -4537,7 +4550,7 @@
                                                                             itemStyle:{
                                                                                 normal: {
                                                                                     color:series_color_1,
-                                                                                    fontSize: 8
+                                                                                    fontSize: 10
                                                                                 }
                                                                             },
                                                                             data: [dataR.NumPingYangJLAnd90AboveM+dataR.NumGuMeiJLAnd90AboveM+dataR.NumLianHuaJLAnd90AboveM,
@@ -4549,6 +4562,9 @@
                                                                             //         length:2
                                                                             //     }
                                                                             // },
+                                                                            barWidth:10,
+                                                                          //  barGap:'1%',
+                                                                          //  barCategoryGap:'1',
                                                                         },
                                                                         {
                                                                             name: '女',
@@ -4557,9 +4573,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight',
+                                                                                    position: 'insideLeft',
                                                                                     textStyle:{
-                                                                                        fontSize:8
+                                                                                        fontSize:10
                                                                                     }
                                                                                 }
                                                                             },
@@ -4571,11 +4587,66 @@
                                                                             data: [dataR.NumPingYangJLAnd90AboveF+dataR.NumGuMeiJLAnd90AboveF+dataR.NumLianHuaJLAnd90AboveF,
                                                                                 dataR.NumPingYangJLAnd80To90F+dataR.NumGuMeiJLAnd80To90F+dataR.NumLianHuaJLAnd80To90F,
                                                                                 dataR.NumPingYangJLAnd70To80F+dataR.NumGuMeiJLAnd70To80F+dataR.NumLianHuaJLAnd70To80F,
-                                                                                dataR.NumPingYangJLAnd60To70F+dataR.NumGuMeiJLAnd60To70F+dataR.NumLianHuaJLAnd60To70F]
+                                                                                dataR.NumPingYangJLAnd60To70F+dataR.NumGuMeiJLAnd60To70F+dataR.NumLianHuaJLAnd60To70F],
+                                                                            barWidth:10,
+                                                                            //barGap:'1%',
+                                                                            barCategoryGap:60,
                                                                         }
                                                                     ];
+                                                                    //test highcharts
+                                                                    // var chart1 = Highcharts.chart('container', {
+                                                                    //     chart: {
+                                                                    //         type: 'column'
+                                                                    //     },
+                                                                    //     title: {
+                                                                    //         text: '按性别划分的水果消费总量'
+                                                                    //     },
+                                                                    //     xAxis: {
+                                                                    //         categories: ['苹果', '橘子', '梨', '葡萄', '香蕉']
+                                                                    //     },
+                                                                    //     yAxis: {
+                                                                    //         allowDecimals: false,
+                                                                    //         min: 0,
+                                                                    //         title: {
+                                                                    //             text: '水果数量'
+                                                                    //         }
+                                                                    //     },
+                                                                    //     tooltip: {
+                                                                    //         formatter: function () {
+                                                                    //             return '<b>' + this.x + '</b><br/>' +
+                                                                    //                 this.series.name + ': ' + this.y + '<br/>' +
+                                                                    //                 '总量: ' + this.point.stackTotal;
+                                                                    //         }
+                                                                    //     },
+                                                                    //     plotOptions: {
+                                                                    //         column: {
+                                                                    //             stacking: 'normal'
+                                                                    //         }
+                                                                    //     },
+                                                                    //     series: [{
+                                                                    //         name: '小张',
+                                                                    //         data: [5, 3, 4, 7, 2],
+                                                                    //         stack: 'male' // stack 值相同的为同一组
+                                                                    //     }, {
+                                                                    //         name: '小潘',
+                                                                    //         data: [3, 4, 4, 2, 5],
+                                                                    //         stack: 'male'
+                                                                    //     }, {
+                                                                    //         name: '小彭',
+                                                                    //         data: [2, 5, 6, 2, 1],
+                                                                    //         stack: 'female'
+                                                                    //     }, {
+                                                                    //         name: '小王',
+                                                                    //         data: [3, 0, 4, 4, 3],
+                                                                    //         stack: 'female'
+                                                                    //     }]
+                                                                    // });
+
                                                                     var organOldman_option_jg_age_bar=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+
+
                                                                     organOldman_jg_age_bar.setOption(organOldman_option_jg_age_bar);
+                                                                   // organOldman_jg_age_bar.setOption(chart1);
                                                                     title_text='年龄';
                                                                     legend_data=[
                                                                         {

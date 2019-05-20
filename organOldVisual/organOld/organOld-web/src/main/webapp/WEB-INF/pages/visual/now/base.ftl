@@ -12,17 +12,17 @@
             <div class="zz"></div>
             <div id="base_zbPie" class="base_tu"></div>
         </div>
-        <div class="col-lg-6 box line">
+        <div class="col-lg-6 box line"style="margin-left: -5px">
             <div class="zz"></div>
             <div id="base_numLine" class="base_tu"></div>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-6 box">
+        <div class="col-lg-6 box" style="margin-top: -5px">
             <div class="zz"></div>
             <div id="base_hjPie" class="base_tu"></div>
         </div>
-        <div class="col-lg-6 box">
+        <div class="col-lg-6 box" style="margin-top: -5px">
             <div class="zz"></div>
             <div id="base_hjLine" class="base_tu"></div>
         </div>
@@ -32,17 +32,17 @@
             <div class="zz"></div>
             <div id="base_sexPie" class="base_tu"></div>
         </div>
-        <div class="col-lg-6 box line">
+        <div class="col-lg-6 box line"style="margin-left: -5px">
             <div class="zz"></div>
             <div id="base_sexLine" class="base_tu"></div>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-6 box">
+        <div class="col-lg-6 box" style="margin-top: -5px">
             <div class="zz"></div>
             <div id="base_ageBar" class="base_tu_age"></div>
         </div>
-        <div class="col-lg-6 box">
+        <div class="col-lg-6 box"style="margin-top: -5px">
             <div class="zz"></div>
             <div id="base_ageLine" class="base_tu"></div>
         </div>

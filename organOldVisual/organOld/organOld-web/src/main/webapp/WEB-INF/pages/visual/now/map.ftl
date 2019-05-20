@@ -68,9 +68,9 @@
 
                 <div class="col-lg-15" style="border:#ccc solid 1px;z-index: 1;position: absolute;top: -50px" id="dituContent" align="center"></div>
                 <div class="col-lg-15" style="border:#ccc solid 1px;z-index: 2;position: absolute;top: -50px" id="container" align="center"></div>
-                <div style="width: 300px; height: 200px;right: 5.5%;top: -20px;position: absolute;z-index: 2;">
+                <div style="width: 300px; height: 200px;right: 1.5%;top: -20px;position: absolute;z-index: 2;">
                     <#--<img src="/static/img/map/btn.jpg" onclick="clear_select()">-->
-                    <p id="date" style="font-size: 40px" onclick="clear_select()"></p>
+                    <p id="date" style="font-size: 30px" onclick="clear_select()"></p>
                 </div>
 
                 <script type="text/javascript">
@@ -148,7 +148,7 @@
                         function initMap(){
                             createMap();//创建地图
                             setMapEvent();//设置地图事件
-                            addMapControl();//向地图添加控件
+                            //addMapControl();//向地图添加控件
                             addPolygon();//多边形覆盖物
                             addPolyline();//向地图中添加线
                             addMarker();//向地图中添加标注
@@ -194,15 +194,19 @@
 
                         markerArr = [
 
+                            {title:"古美片区",content:"古美片区",point:"121.412299|31.148708",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-1},type:-1,text:"古美片区"}
+                            ,{title:"古龙片区",content:"古龙片区",point:"121.410071|31.154518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-2},type:-2,text:"古龙片区"}
+                            ,{title:"平南片区",content:"平南片区",point:"121.39965|31.157237",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-3},type:-3,text:"平南片区"}
+                            ,{title:"东兰片区",content:"东兰片区",point:"121.389302|31.158659",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-4},type:-4,text:"东兰片区"}
+                            ,{title:"平吉片区",content:"平吉片区",point:"121.391242|31.150871",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-5},type:-5,text:"平吉片区"}
+                            ,{title:"平阳片区",content:"平阳片区",point:"121.394333|31.140857",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-6},type:-6,text:"平阳片区"}
                             //老有所养
-                            {title:"莲花敬老院",content:"<div style='width:720px;height: 1200px'>"+"上海市闵行区莲花敬老院，位于闵行区莲花路1115号，东近中环线，是目前市内难得的地处黄金地段，生活环境理想的老年公寓。我院占地面积4900平方米，建筑面积7480平方米，绿化面积1800平方米，拥有养老床位187张，是一所重点投资建设的集休养、医疗、康复、娱乐为一体的综合型宾馆式养老机构。"+
+                            ,{title:"莲花敬老院",content:"<div style='width:720px;height: 1200px'>"+"上海市闵行区莲花敬老院，位于闵行区莲花路1115号，东近中环线，是目前市内难得的地处黄金地段，生活环境理想的老年公寓。我院占地面积4900平方米，建筑面积7480平方米，绿化面积1800平方米，拥有养老床位187张，是一所重点投资建设的集休养、医疗、康复、娱乐为一体的综合型宾馆式养老机构。"+
                                 "<div style='width:720px;height: 500px'>"+
                                 "<img  style='width:100%;height: 100%;'id='LianHua' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.jpeg'>"+
                                 "</div>"+
                                 "</div>",point:"121.402695|31.160113",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},
-                                type:4,img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.jpeg",text:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。\\n\" +\n" +
-                                    "                                \"  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。\\n\" +\n" +
-                                    "                               \"已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。\\n"}//莲花敬老院
+                                type:4,img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.png",text:"莲花敬老院"}//莲花敬老院
                             ,{title:"古美敬老院",content:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。\n" +
                                 "  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。\n" +
                                "已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。\n"+
@@ -224,7 +228,7 @@
                             ,{title:"乐健长者照护之家",content:"乐健长者照护之家",point:"121.40849|31.148522",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:1,
                                 text:"乐健长者照护之家"}
                             ,{title:"艾维康长者照护之家",content:"艾维康长者照护之家",point:"121.397495|31.158041",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:2,
-                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiSix.png",text:"艾维康长者照护之家"}
+                            text:"艾维康长者照护之家"}
                             ,{title:"智慧坊长者照护之家",content:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。\n" +
                                 "长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；\n" +
                                 "短期照护——对处于慢性病康复期的长者进行专业护理；\n" +
@@ -414,14 +418,18 @@
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:50%;height: 100%;'id='WanYuanSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanSec.png'>"+
                                 "</div>",point:"121.401069|31.155103",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
-                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanSec.png",text:"万源二居"},
+                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanSec.png",text:"万源二居"}
 
-                            {title:"古美片区",content:"古美片区",point:"121.412299|31.148708",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-1},type:-1}
-                            ,{title:"古龙片区",content:"古龙片区",point:"121.410071|31.154518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-2},type:-2}
-                            ,{title:"平南片区",content:"平南片区",point:"121.39965|31.157237",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-3},type:-3}
-                            ,{title:"东兰片区",content:"东兰片区",point:"121.389302|31.158659",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-4},type:-4}
-                            ,{title:"平吉片区",content:"平吉片区",point:"121.391242|31.150871",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-5},type:-5}
-                            ,{title:"平阳片区",content:"平阳片区",point:"121.394333|31.140857",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-6},type:-6}
+                            // {title:"古美片区",content:"古美片区",point:"121.412299|31.148708",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-1},type:-1}
+                            // ,{title:"古龙片区",content:"古龙片区",point:"121.410071|31.154518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-2},type:-2}
+                            // ,{title:"平南片区",content:"平南片区",point:"121.39965|31.157237",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-3},type:-3}
+                            // ,{title:"东兰片区",content:"东兰片区",point:"121.389302|31.158659",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-4},type:-4}
+                            // ,{title:"平吉片区",content:"平吉片区",point:"121.391242|31.150871",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-5},type:-5}
+                            // ,{title:"平阳片区",content:"平阳片区",point:"121.394333|31.140857",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-6},type:-6}
+                            ,{title:"古美路街道办事处",content:"古美街道"+
+                        "<div style='width:720px;height: 500px;'>"+
+                        "<img  style='width:50%;height: 100%;'id='WanYuanSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanSec.png'>"+
+                        "</div>",point:"121.400746|31.152942",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:100},type:100,text:"古美路街道办事处"}
 
 
 
@@ -487,23 +495,25 @@
                         //创建一个Icon
                         function createIcon(json){
                             if(json.type==1){
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/yanglaoyuan.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gongyu-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             } else if(json.type==2)
-                            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==0)
-                            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/juwei.png", new BMap.Size(30,30),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/cun-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==-1)
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gumeip.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gumeip-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==-2)
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gulongp.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gulongp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==-3)
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingnanp.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingnanp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==-4)
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/donglanp.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/donglanp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==-5)
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingjip.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingjip-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==-6)
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingyangp.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingyangp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                            else if(json.type==100)
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/star-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
 
                             // var icon = new BMap.Icon("http://map.baidu.com/image/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
                             //var icon = new BMap.Icon("http://api.map.baidu.com/lbsapi/creatmap/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
@@ -622,7 +632,7 @@
                                 new BMap.Point(121.383661, 31.16351),
                                 new BMap.Point(121.383661, 31.163448)
 
-                            ], { strokeColor: getRandomColorDongLan(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#FF3030" });
+                            ], { strokeColor: getRandomColorDongLan(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.4,fillColor:"#DDA0DD" });
                             polygon_PingNan = new BMap.Polygon([
                                 new BMap.Point(121.394656, 31.159678),
                                 new BMap.Point(121.395446, 31.156217),
@@ -632,7 +642,7 @@
                                 new BMap.Point(121.394656, 31.15974),
 
 
-                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#FF8247" });
+                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#EEAEEE" });
                             polygon_PingJi = new BMap.Polygon([
                                 new BMap.Point(121.386966, 31.153189),
                                 new BMap.Point(121.395446, 31.156156),
@@ -655,7 +665,7 @@
                                 new BMap.Point(121.391817, 31.133161),
                                 new BMap.Point(121.388224, 31.140332),
 
-                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#FF00FF" });
+                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#EE799F" });
                             polygon_XuHui = new BMap.Polygon([
                                 new BMap.Point(121.40116, 31.165488),
                                 new BMap.Point(121.405184, 31.166785),
@@ -667,7 +677,7 @@
 
                                 new BMap.Point(121.40116, 31.165611),
 
-                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#836FFF" });
+                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#EEAEEE" });
                             polygon_WanYuan = new BMap.Polygon([
                                 new BMap.Point(121.39541, 31.156341),
                                 new BMap.Point(121.403459, 31.158319),
@@ -679,7 +689,7 @@
 
                                 new BMap.Point(121.395554, 31.156341),
 
-                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#551A8B" });
+                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#EEAEEE" });
                             polygon_GuLong = new BMap.Polygon([
                                 new BMap.Point(121.403459, 31.158504),
                                 new BMap.Point(121.412227, 31.160667),
@@ -691,7 +701,7 @@
 
                                 new BMap.Point(121.403531, 31.158504),
 
-                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#43CD80" });
+                            ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#C1FFC1" });
                             polygon_GuMei = new BMap.Polygon([
                                 new BMap.Point(121.406334, 31.149789),
                                 new BMap.Point(121.410933, 31.15152),
@@ -709,7 +719,7 @@
                                 new BMap.Point(121.406478, 31.149851),
 
                             ], { strokeColor: getRandomColor(), strokeWeight: 3, strokeOpacity: 0.0, fillOpacity: 0.5,fillColor:"#63B8FF" });
-                            map.addOverlay(polygonOrg);
+                           // map.addOverlay(polygonOrg);
                             map.addOverlay(polygon_DongLan);
                             map.addOverlay(polygon_PingNan);
                             map.addOverlay(polygon_PingJi);

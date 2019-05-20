@@ -5,70 +5,122 @@
             padding-bottom: 2%;
         }
     }
+
+    /*#child_organOldman p{*/
+        /*padding-left: 5px !important;*/
+        /*padding-top: 5px!important;*/
+        /*margin: 0 !important;*/
+    /*}*/
+
+    #child_organOldman .box{
+        height: 123px !important;
+
+    }
+    /*#child_organOldman p{*/
+        /*position: relative!important;*/
+        /*bottom: 40px!important;*/
+
+    /*}*/
+    .xx{
+        position: relative!important;
+        bottom:60px!important;
+    }
+    .xx_title{
+        position: relative!important;
+        bottom:50px!important;
+    }
+    .aa{
+        position: relative!important;
+        bottom:50px!important;
+    }
+    .bb{
+        position: relative!important;
+        bottom:50px!important;
+    }
+    .cc{
+        position: relative!important;
+        bottom:110px!important;
+    }
+    .cc_title{
+        position: relative!important;
+        bottom:100px!important;
+    }
+    .dd{
+        position: relative!important;
+        bottom:155px!important;
+    }
+    .dd_title{
+        position: relative!important;
+        bottom:145px!important;
+    }
+    /*#child_organOldman .col-lg-3{*/
+        /*position: relative;*/
+        /*//right: 12px;*/
+    /*}*/
 </style>
 <div id="child_organOldman" style="display: none">
     <div class="row box" style="height: ">
         <div class="zz"></div>
-        <p class="title" onclick="change('child_organOldman','child_organ')" style="font-size: 28px;">辖区内养老院床位数总和</p>
+        <p class="title" onclick="change('child_organOldman','child_organ')" style="font-size: 20px;padding: 5px;">辖区内养老院床位数总和</p>
         <div class="col-lg-3">
-            <div id="organOldman_jg_sub_pie" class="organOldman_tu"></div>
+            <div id="organOldman_jg_sub_pie" style="position:relative;bottom: 10px" class="organOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_sex_pie" class="organOldman_tu"></div>
+            <div id="organOldman_jg_sex_pie" style="position:relative;bottom: 10px" class="organOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_age_bar" class="organOldman_tu"></div>
+            <div id="organOldman_jg_age_bar" style="position:relative;bottom: 10px" class="organOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_sub_wl" class="organOldman_tu"></div>
-        </div>
-    </div>
-    <div class="row box">
-        <div class="zz"></div>
-        <p class="title" style="font-size: 28px">上海闵行区平阳敬老院</p>
-        <div class="col-lg-3">
-            <div id="organOldman_jg_1_pie" class="organOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="organOldman_jg_1_sex" class="organOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="organOldman_jg_1_age" class="organOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="organOldman_jg_1_wl" class="organOldman_tu"></div>
+            <div id="organOldman_jg_sub_wl" style="position:relative;bottom: 10px" class="organOldman_tu"></div>
         </div>
     </div>
     <div class="row box">
         <div class="zz"></div>
-        <p class="title" style="font-size: 28px">上海闵行区古美敬老院</p>
+        <p class="title xx_title" style="font-size: 20px;padding: 5px">上海闵行区平阳敬老院</p>
         <div class="col-lg-3">
-            <div id="organOldman_jg_2_pie" class="organOldman_tu"></div>
+            <div id="organOldman_jg_1_pie" class="organOldman_tu xx"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_2_sex" class="organOldman_tu"></div>
+            <div id="organOldman_jg_1_sex" class="organOldman_tu xx"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_2_age" class="organOldman_tu"></div>
+            <div id="organOldman_jg_1_age" class="organOldman_tu xx"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_2_wl" class="organOldman_tu"></div>
+            <div id="organOldman_jg_1_wl" class="organOldman_tu xx"></div>
         </div>
     </div>
     <div class="row box">
         <div class="zz"></div>
-        <p class="title" style="font-size: 28px">上海闵行区莲花敬老院</p>
+        <p class="title cc_title" style="font-size: 20px;padding: 5px">上海闵行区古美敬老院</p>
         <div class="col-lg-3">
-            <div id="organOldman_jg_3_pie" class="organOldman_tu"></div>
+            <div id="organOldman_jg_2_pie" class="organOldman_tu cc"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_3_sex" class="organOldman_tu"></div>
+            <div id="organOldman_jg_2_sex" class="organOldman_tu cc"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_3_age" class="organOldman_tu"></div>
+            <div id="organOldman_jg_2_age" class="organOldman_tu cc"></div>
         </div>
         <div class="col-lg-3">
-            <div id="organOldman_jg_3_wl" class="organOldman_tu"></div>
+            <div id="organOldman_jg_2_wl" class="organOldman_tu cc"></div>
+        </div>
+    </div>
+    <div class="row box">
+        <div class="zz"></div>
+        <p class="title dd_title" style="font-size: 20px;padding: 5px">上海闵行区莲花敬老院</p>
+        <div class="col-lg-3">
+            <div id="organOldman_jg_3_pie" class="organOldman_tu dd"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="organOldman_jg_3_sex" class="organOldman_tu dd"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="organOldman_jg_3_age" class="organOldman_tu dd"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="organOldman_jg_3_wl" class="organOldman_tu dd"></div>
         </div>
     </div>
 </div>
@@ -87,7 +139,7 @@
     }
 
     $(".organOldman_tu").css('width',organOldman_tu_w);
-    $(".organOldman_tu").css( 'height', organOldman_tu_h);
+    $(".organOldman_tu").css( 'height', organOldman_tu_h*1.5);
 
     var organOldman_jg_sub_pie = echarts.init(document.getElementById('organOldman_jg_sub_pie'));
     var organOldman_jg_sub_wl= echarts.init(document.getElementById('organOldman_jg_sub_wl'));

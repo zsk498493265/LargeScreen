@@ -4,9 +4,10 @@
 <#include "../head_part.ftl" />
 <#--<script src="/static/js/chart_part.js"></script>-->
 
+
 </head>
 
-<body style="margin-top: 1%">
+<body style="margin-top: 0.7%">
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3" style="position: relative;right: 80px">
