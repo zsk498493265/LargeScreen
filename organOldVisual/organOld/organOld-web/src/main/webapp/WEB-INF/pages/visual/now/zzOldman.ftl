@@ -5,70 +5,103 @@
             padding-bottom: 2%;
         }
     }
+    #child_zzOldman .box{
+        height: 123px !important;
+
+    }
+    /*#child_organOldman p{*/
+    /*position: relative!important;*/
+    /*bottom: 40px!important;*/
+
+    /*}*/
+    .xx_zz{
+        position: relative!important;
+        bottom:60px!important;
+    }
+    .xx_zz_title{
+        position: relative!important;
+        bottom:50px!important;
+    }
+    .cc_zz{
+        position: relative!important;
+        bottom:110px!important;
+    }
+    .cc_zz_title{
+        position: relative!important;
+        bottom:100px!important;
+    }
+    .dd_zz{
+        position: relative!important;
+        bottom:155px!important;
+    }
+    .dd_zz_title{
+        position: relative!important;
+        bottom:145px!important;
+    }
 </style>
 <div id="child_zzOldman" style="display: none">
     <div class="row box">
         <div class="zz"></div>
-        <p class="title" onclick="change('child_zzOldman','child_organ')" style="font-size: 28px">长者照护之家床位数总和</p>
+        <p class="title" onclick="change('child_zzOldman','child_organ')" style="font-size: 20px;padding: 5px;">长者照护之家床位数总和</p>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_sub_pie" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_sub_pie"style="position:relative;bottom: 10px" class="zzOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_sex_pie" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_sex_pie" style="position:relative;bottom: 10px"class="zzOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_age_bar" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_age_bar" style="position:relative;bottom: 10px"class="zzOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_sub_wl" class="zzOldman_tu"></div>
-        </div>
-    </div>
-    <div class="row box">
-        <div class="zz"></div>
-        <p class="title" style="font-size: 28px">智汇坊长者照护之家</p>
-        <div class="col-lg-3">
-            <div id="zzOldman_jg_1_pie" class="zzOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="zzOldman_jg_1_sex" class="zzOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="zzOldman_jg_1_age" class="zzOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="zzOldman_jg_1_wl" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_sub_wl" style="position:relative;bottom: 10px"class="zzOldman_tu"></div>
         </div>
     </div>
     <div class="row box">
         <div class="zz"></div>
-        <p class="title" style="font-size: 28px">平南艾为长者照护之家</p>
+        <p class="title xx_zz_title" style="font-size: 20px;padding: 5px">智汇坊长者照护之家</p>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_2_pie" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_1_pie" class="zzOldman_tu xx_zz"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_2_sex" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_1_sex" class="zzOldman_tu xx_zz"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_2_age" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_1_age" class="zzOldman_tu xx_zz"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_2_wl" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_1_wl" class="zzOldman_tu xx_zz"></div>
         </div>
     </div>
     <div class="row box">
         <div class="zz"></div>
-        <p class="title" style="font-size: 28px">平阳乐健长者照护之家</p>
+        <p class="title cc_zz_title" style="font-size: 20px;padding: 5px">平南艾为长者照护之家</p>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_3_pie" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_2_pie" class="zzOldman_tu cc_zz"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_3_sex" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_2_sex" class="zzOldman_tu cc_zz"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_3_age" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_2_age" class="zzOldman_tu cc_zz"></div>
         </div>
         <div class="col-lg-3">
-            <div id="zzOldman_jg_3_wl" class="zzOldman_tu"></div>
+            <div id="zzOldman_jg_2_wl" class="zzOldman_tu cc_zz"></div>
+        </div>
+    </div>
+    <div class="row box">
+        <div class="zz"></div>
+        <p class="title dd_zz_title" style="font-size: 20px;padding: 5px">平阳乐健长者照护之家</p>
+        <div class="col-lg-3">
+            <div id="zzOldman_jg_3_pie" class="zzOldman_tu dd_zz"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="zzOldman_jg_3_sex" class="zzOldman_tu dd_zz"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="zzOldman_jg_3_age" class="zzOldman_tu dd_zz"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="zzOldman_jg_3_wl" class="zzOldman_tu dd_zz"></div>
         </div>
     </div>
 </div>
@@ -84,7 +117,7 @@
     }
 
     $(".zzOldman_tu").css('width',zzOldman_tu_w);
-    $(".zzOldman_tu").css( 'height', zzOldman_tu_h);
+    $(".zzOldman_tu").css( 'height', zzOldman_tu_h*1.5);
 
     var zzOldman_jg_sub_pie = echarts.init(document.getElementById('zzOldman_jg_sub_pie'));
     var zzOldman_jg_sub_wl= echarts.init(document.getElementById('zzOldman_jg_sub_wl'));

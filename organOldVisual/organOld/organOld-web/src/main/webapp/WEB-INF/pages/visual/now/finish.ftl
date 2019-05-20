@@ -1977,7 +1977,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize: 20
+                                                                                    fontSize: 16
                                                                                 }
                                                                             }
                                                                         },
@@ -2010,7 +2010,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize: 20
+                                                                                    fontSize: 16
                                                                                 }
                                                                             }
                                                                         },
@@ -2057,9 +2057,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideLeft',
+                                                                                    position: 'insideTop',
                                                                                     textStyle: {
-                                                                                        fontSize: 20
+                                                                                        fontSize: 16
                                                                                     }
                                                                                 }
                                                                             },
@@ -2068,7 +2068,7 @@
                                                                                     color: series_color_1
                                                                                 }
                                                                             },
-                                                                            barWidth:45,
+                                                                            barWidth:30,
                                                                             data: [dataR.NumAllAnd90AboveMFam, dataR.NumAllAnd80To90MFam, dataR.NumAllAnd70To80MFam, dataR.NumAllAnd60To70MFam]
                                                                         },
                                                                         {
@@ -2078,9 +2078,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight',
+                                                                                    position: 'insideTop',
                                                                                     textStyle: {
-                                                                                        fontSize: 20
+                                                                                        fontSize: 16
                                                                                     }
                                                                                 }
                                                                             },
@@ -2192,14 +2192,14 @@
                                                                     series = [{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius: '40%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: '45%',
+                                                                        center: ['48%', '60%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize: 8
+                                                                                    fontSize: 12
                                                                                 }
                                                                             }
                                                                         },
@@ -2529,7 +2529,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -3010,7 +3010,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -3040,7 +3040,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -3086,9 +3086,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideLeft',
+                                                                                    position: 'insideTop',
                                                                                     textStyle:{
-                                                                                        fontSize:20
+                                                                                        fontSize:16
                                                                                     }
                                                                                 }
                                                                             },
@@ -3097,7 +3097,7 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
-                                                                            barWidth:45,
+                                                                            barWidth:30,
                                                                             data: [dataR.NumAllAnd90AboveMEco,dataR.NumAllAnd80To90MEco,dataR.NumAllAnd70To80MEco,dataR.NumAllAnd60To70MEco]
                                                                         },
                                                                         {
@@ -3107,9 +3107,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight',
+                                                                                    position: 'insideTop',
                                                                                     textStyle:{
-                                                                                        fontSize:20
+                                                                                        fontSize:16
                                                                                     }
                                                                                 }
                                                                             },
@@ -3698,7 +3698,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -3728,7 +3728,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -3774,9 +3774,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideLeft',
+                                                                                    position: 'insideTop',
                                                                                     textStyle:{
-                                                                                        fontSize:20
+                                                                                        fontSize:16
                                                                                     }
                                                                                 }
                                                                             },
@@ -3785,7 +3785,7 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
-                                                                            barWidth:45,
+                                                                            barWidth:30,
                                                                             data: [dataR.NumAllAnd90AboveMHeal,dataR.NumAllAnd80To90MHeal,dataR.NumAllAnd70To80MHeal,dataR.NumAllAnd60To70MHeal]
                                                                         },
                                                                         {
@@ -3795,9 +3795,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight',
+                                                                                    position: 'insideTop',
                                                                                     textStyle:{
-                                                                                        fontSize:20
+                                                                                        fontSize:16
                                                                                     }
                                                                                 }
                                                                             },
@@ -4039,10 +4039,10 @@
                                                                             avoidLabelOverlap: false,
                                                                             label: {
                                                                                 normal : {
-                                                                                    formatter: '{d}%\n({c})',
+                                                                                    formatter: '{d}%',
                                                                                     textStyle : {
                                                                                         fontWeight : 'normal',
-                                                                                        fontSize : 20
+                                                                                        fontSize : 16
                                                                                     }
                                                                                 }
                                                                             },
@@ -4562,7 +4562,7 @@
                                                                             //         length:2
                                                                             //     }
                                                                             // },
-                                                                            barWidth:10,
+                                                                            barWidth:16,
                                                                           //  barGap:'1%',
                                                                           //  barCategoryGap:'1',
                                                                         },
@@ -4588,60 +4588,10 @@
                                                                                 dataR.NumPingYangJLAnd80To90F+dataR.NumGuMeiJLAnd80To90F+dataR.NumLianHuaJLAnd80To90F,
                                                                                 dataR.NumPingYangJLAnd70To80F+dataR.NumGuMeiJLAnd70To80F+dataR.NumLianHuaJLAnd70To80F,
                                                                                 dataR.NumPingYangJLAnd60To70F+dataR.NumGuMeiJLAnd60To70F+dataR.NumLianHuaJLAnd60To70F],
-                                                                            barWidth:10,
-                                                                            //barGap:'1%',
-                                                                            barCategoryGap:60,
+                                                                            barWidth:20,
+                                                                            barCategoryGap:20,
                                                                         }
                                                                     ];
-                                                                    //test highcharts
-                                                                    // var chart1 = Highcharts.chart('container', {
-                                                                    //     chart: {
-                                                                    //         type: 'column'
-                                                                    //     },
-                                                                    //     title: {
-                                                                    //         text: '按性别划分的水果消费总量'
-                                                                    //     },
-                                                                    //     xAxis: {
-                                                                    //         categories: ['苹果', '橘子', '梨', '葡萄', '香蕉']
-                                                                    //     },
-                                                                    //     yAxis: {
-                                                                    //         allowDecimals: false,
-                                                                    //         min: 0,
-                                                                    //         title: {
-                                                                    //             text: '水果数量'
-                                                                    //         }
-                                                                    //     },
-                                                                    //     tooltip: {
-                                                                    //         formatter: function () {
-                                                                    //             return '<b>' + this.x + '</b><br/>' +
-                                                                    //                 this.series.name + ': ' + this.y + '<br/>' +
-                                                                    //                 '总量: ' + this.point.stackTotal;
-                                                                    //         }
-                                                                    //     },
-                                                                    //     plotOptions: {
-                                                                    //         column: {
-                                                                    //             stacking: 'normal'
-                                                                    //         }
-                                                                    //     },
-                                                                    //     series: [{
-                                                                    //         name: '小张',
-                                                                    //         data: [5, 3, 4, 7, 2],
-                                                                    //         stack: 'male' // stack 值相同的为同一组
-                                                                    //     }, {
-                                                                    //         name: '小潘',
-                                                                    //         data: [3, 4, 4, 2, 5],
-                                                                    //         stack: 'male'
-                                                                    //     }, {
-                                                                    //         name: '小彭',
-                                                                    //         data: [2, 5, 6, 2, 1],
-                                                                    //         stack: 'female'
-                                                                    //     }, {
-                                                                    //         name: '小王',
-                                                                    //         data: [3, 0, 4, 4, 3],
-                                                                    //         stack: 'female'
-                                                                    //     }]
-                                                                    // });
-
                                                                     var organOldman_option_jg_age_bar=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
 
 
@@ -4674,15 +4624,17 @@
                                                                                     show: true,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
-                                                                                        fontSize:8
+                                                                                        fontSize:10
                                                                                     }
                                                                                 }
                                                                             },
                                                                             itemStyle:{
                                                                                 normal: {
-                                                                                    color:series_color_1
+                                                                                    color:series_color_1,
+                                                                                    fontSize: 10
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data:[dataR.NumPingYangJLAnd90AboveM,dataR.NumPingYangJLAnd80To90M,dataR.NumPingYangJLAnd70To80M,dataR.NumPingYangJLAnd60To70M]
                                                                         },
                                                                         {
@@ -4692,18 +4644,20 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight',
+                                                                                    position: 'insideLeft',
                                                                                     textStyle:{
-                                                                                        fontSize:8
+                                                                                        fontSize:10
                                                                                     }
                                                                                 }
                                                                             },
                                                                             itemStyle:{
                                                                                 normal: {
-                                                                                    color:series_color_2
+                                                                                    color:series_color_2,
                                                                                 }
                                                                             },
-                                                                            data:[dataR.NumPingYangJLAnd90AboveF,dataR.NumPingYangJLAnd80To90F,dataR.NumPingYangJLAnd70To80F,dataR.NumPingYangJLAnd60To70F]
+                                                                            data:[dataR.NumPingYangJLAnd90AboveF,dataR.NumPingYangJLAnd80To90F,dataR.NumPingYangJLAnd70To80F,dataR.NumPingYangJLAnd60To70F],
+                                                                            barWidth:20,
+                                                                            barCategoryGap:20,
                                                                         }
                                                                     ];
                                                                     var organOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
@@ -4744,6 +4698,7 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data:[dataR.NumGuMeiJLAnd90AboveM,dataR.NumGuMeiJLAnd80To90M,dataR.NumGuMeiJLAnd70To80M,dataR.NumGuMeiJLAnd60To70M]
                                                                         },
                                                                         {
@@ -4753,7 +4708,7 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight',
+                                                                                    position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
                                                                                     }
@@ -4764,7 +4719,9 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data:[dataR.NumGuMeiJLAnd90AboveF,dataR.NumGuMeiJLAnd80To90F,dataR.NumGuMeiJLAnd70To80F,dataR.NumGuMeiJLAnd60To70F]
+                                                                            data:[dataR.NumGuMeiJLAnd90AboveF,dataR.NumGuMeiJLAnd80To90F,dataR.NumGuMeiJLAnd70To80F,dataR.NumGuMeiJLAnd60To70F],
+                                                                            barWidth:20,
+                                                                            barCategoryGap:20,
                                                                         }
                                                                     ];
                                                                     var organOldman_option_jg_2_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
@@ -4806,6 +4763,7 @@
                                                                                 }
                                                                             },
                                                                             barWidth:8,
+                                                                            barWidth:16,
                                                                             data:[dataR.NumLianHuaAnd90AboveM,dataR.NumLianHuaJLAnd80To90M,dataR.NumLianHuaJLAnd70To80M,dataR.NumLianHuaJLAnd60To70M]
                                                                         },
                                                                         {
@@ -4826,7 +4784,9 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data:[dataR.NumLianHuaAnd90AboveF,dataR.NumLianHuaJLAnd80To90F,dataR.NumLianHuaJLAnd70To80F,dataR.NumLianHuaJLAnd60To70F]
+                                                                            data:[dataR.NumLianHuaAnd90AboveF,dataR.NumLianHuaJLAnd80To90F,dataR.NumLianHuaJLAnd70To80F,dataR.NumLianHuaJLAnd60To70F],
+                                                                            barWidth:20,
+                                                                            barCategoryGap:20,
                                                                         }
                                                                     ];
                                                                     var organOldman_option_jg_3_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
@@ -4838,14 +4798,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -4859,7 +4819,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_pie = chartPieForOrgOld(title_text,legend_data,series);
 
@@ -4871,14 +4836,15 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        startAngle:20,
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -4893,7 +4859,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
@@ -4909,7 +4880,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -4919,7 +4890,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumZhiHuiZZAndMale, name:'男'},
                                                                             {value:dataR.NumZhiHuiZZAndFemale, name:'女'}
@@ -4930,7 +4901,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zzOldman_jg_1_sex.setOption(zzOldman_option_jg_1_sex);
@@ -5004,14 +4980,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius :bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -5172,14 +5148,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius :bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -5193,7 +5169,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var rzzxOldman_option_1_pie = chartPieForOrgOld(title_text,legend_data,series);
 
@@ -5205,14 +5186,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -5227,7 +5208,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var rzzxOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
@@ -5243,17 +5229,17 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumPingNanRZAndMale, name:'男'},
                                                                             {value:dataR.NumPingNanRZAndFemale, name:'女'}
@@ -5264,7 +5250,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var rzzxOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     rzzxOldman_jg_1_sex.setOption(rzzxOldman_option_jg_1_sex);
@@ -5475,7 +5466,8 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumPingNanRZAnd90AboveM,dataR.NumPingNanRZAnd80To90M,dataR.NumPingNanRZAnd70To80M,dataR.NumPingNanRZAnd60To70M]
+                                                                            data:[0,0,0,0]
+                                                                            //data: [dataR.NumPingNanRZAnd90AboveM,dataR.NumPingNanRZAnd80To90M,dataR.NumPingNanRZAnd70To80M,dataR.NumPingNanRZAnd60To70M]
                                                                         },
                                                                         {
                                                                             name: '女',
@@ -5495,7 +5487,8 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
+                                                                            data:[0,0,0,0]
+                                                                           // data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
                                                                         }
                                                                     ];
                                                                     var rzzxOldman_option_jg_age_bar=chartPieForOrgOld(title_text,legend_data,yAxis_data,series);
@@ -5527,14 +5520,14 @@
                                                                     series = [{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize: 8
+                                                                                    fontSize: 12
                                                                                 }
                                                                             }
                                                                         },
@@ -5548,7 +5541,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_sub_pie = chartPieForOrgOld(title_text, legend_data, series);
 
@@ -5560,14 +5558,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius:bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -5582,7 +5580,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_sub_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
@@ -5591,14 +5594,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -5612,7 +5615,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_1_pie = chartPieForOrgOld(title_text,legend_data,series);
 
@@ -5624,14 +5632,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -5646,7 +5654,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
@@ -5655,14 +5668,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -5676,7 +5689,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_2_pie = chartPieForOrgOld(title_text,legend_data,series);
 
@@ -5688,14 +5706,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -5710,7 +5728,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_2_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
@@ -5719,14 +5742,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -5740,7 +5763,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_3_pie = chartPieForOrgOld(title_text,legend_data,series);
 
@@ -5752,14 +5780,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -5774,7 +5802,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_3_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
@@ -5794,17 +5827,17 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data: [
                                                                             {value:male_all, name: '男'},
                                                                             {value: female_all, name: '女'}
@@ -5815,7 +5848,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_jg_sex_pie = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zcdOldman_jg_sex_pie.setOption(zcdOldman_option_jg_sex_pie);
@@ -5825,7 +5863,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -5835,7 +5873,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumPingJiZCAndMale, name:'男'},
                                                                             {value:dataR.NumPingJiZCAndFemale, name:'女'}
@@ -5846,7 +5884,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zcdOldman_jg_1_sex.setOption(zcdOldman_option_jg_1_sex);
@@ -5856,17 +5899,17 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumPingNanZCAndMale, name:'男'},
                                                                             {value:dataR.NumPingNanZCAndMale, name:'女'}
@@ -5877,7 +5920,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_jg_2_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zcdOldman_jg_2_sex.setOption(zcdOldman_option_jg_2_sex);
@@ -5887,7 +5935,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -5897,7 +5945,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumGuMeiZCAndMale, name:'男'},
                                                                             {value:dataR.NumGuMeiZCAndMale, name:'女'}
@@ -5908,7 +5956,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zcdOldman_option_jg_3_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zcdOldman_jg_3_sex.setOption(zcdOldman_option_jg_3_sex);
@@ -6176,7 +6229,7 @@
                                                                                     formatter: '{d}%\n({c})',
                                                                                     textStyle : {
                                                                                         fontWeight : 'normal',
-                                                                                        fontSize : 20
+                                                                                        fontSize : 16
                                                                                     }
                                                                                 }
                                                                             },
@@ -6207,13 +6260,14 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
+                                                                        startAngle:20,
                                                                         radius : '55%',
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -6267,7 +6321,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -6337,7 +6391,7 @@
                                                                                     fontSize:18
                                                                                 }
                                                                             },
-                                                                            barWidth:45,
+                                                                            barWidth:30,
                                                                             data: [dataR.NumZhiNengAnd90AboveM,dataR.NumZhiNengAnd80To90M,dataR.NumZhiNengAnd70To80M,dataR.NumZhiNengAnd60To70M]
                                                                         },
                                                                         {
@@ -6391,7 +6445,7 @@
                                                                                 formatter: '{d}%\n({c})',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 20
+                                                                                    fontSize : 16
                                                                                 }
                                                                             }
                                                                         },
@@ -6429,7 +6483,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '45%',
+                                                                        radius : '55%',
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%\n({c})',
@@ -6439,7 +6493,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['50%', '50%'],
+                                                                        center: ['50%', '55%'],
                                                                         data:[
                                                                             {value:dataR.NumYiShengAndMale, name:'男'},
                                                                             {value:dataR.NumYiShengAndFemale, name:'女'}
@@ -6504,7 +6558,7 @@
                                                                                     color:series_color_1,
                                                                                 }
                                                                             },
-                                                                            barWidth:45,
+                                                                            barWidth:30,
                                                                             data: [dataR.NumYiShengAnd90AboveM,dataR.NumYiShengAnd80To90M,dataR.NumYiShengAnd70To80M,dataR.NumYiShengAnd60To70M]
                                                                         },
                                                                         {
@@ -6597,6 +6651,7 @@
                                                                         {
                                                                             name:'',
                                                                             type:'pie',
+                                                                            startAngle:30,
                                                                             radius: ['40%', '60%'],
                                                                             avoidLabelOverlap: false,
                                                                             label: {
@@ -6625,7 +6680,8 @@
                                                                         {
                                                                             name:'',
                                                                             type:'pie',
-                                                                            radius: ['40%', '60%'],
+                                                                            startAngle:-20,
+                                                                            radius: ['36%', '60%'],
                                                                             avoidLabelOverlap: false,
                                                                             label: {
                                                                                 normal : {
@@ -6938,14 +6994,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -6959,7 +7015,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_pie = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zzOldman_jg_2_pie.setOption(zzOldman_option_1_pie);
@@ -6972,14 +7033,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -6994,7 +7055,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
                                                                     zzOldman_jg_2_wl.setOption(zzOldman_option_1_wl);
@@ -7004,7 +7070,7 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -7014,7 +7080,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumAiWeiZZAndMale, name:'男'},
                                                                             {value:dataR.NumAiWeiZZAndFemale, name:'女'}
@@ -7025,7 +7091,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zzOldman_jg_2_sex.setOption(zzOldman_option_jg_1_sex);
@@ -7099,14 +7170,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -7120,7 +7191,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_pie = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zzOldman_jg_3_pie.setOption(zzOldman_option_1_pie);
@@ -7133,14 +7209,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -7155,7 +7231,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
                                                                     zzOldman_jg_3_wl.setOption(zzOldman_option_1_wl);
@@ -7165,17 +7246,17 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumLeJianZZAndMale, name:'男'},
                                                                             {value:dataR.NumLeJianZZAndFemale, name:'女'}
@@ -7186,7 +7267,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zzOldman_jg_3_sex.setOption(zzOldman_option_jg_1_sex);
@@ -7260,14 +7346,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -7293,15 +7379,16 @@
                                                                     },{name: '自理', textStyle: {color: legend_color, fontSize:8}}];
                                                                     series = [{
                                                                         name: '老人健康状态',
+                                                                        startAngle:20,
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -7316,7 +7403,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
                                                                     zzOldman_jg_sub_wl.setOption(zzOldman_option_1_wl);
@@ -7326,7 +7418,8 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        startAngle:-20,
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
@@ -7336,7 +7429,7 @@
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumZhiHuiZZAndMale+dataR.NumAiWeiZZAndMale+dataR.NumLeJianZZAndMale, name:'男'},
                                                                             {value:dataR.NumZhiHuiZZAndFemale+dataR.NumAiWeiZZAndFemale+dataR.NumLeJianZZAndFemale, name:'女'}
@@ -7347,7 +7440,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     zzOldman_jg_sex_pie.setOption(zzOldman_option_jg_1_sex);
@@ -7380,7 +7478,7 @@
                                                                                     show: true,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
-                                                                                        fontSize:8
+                                                                                        fontSize:10
                                                                                     }
                                                                                 }
                                                                             },
@@ -7398,9 +7496,9 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideRight',
+                                                                                    position: 'insideLeft',
                                                                                     textStyle:{
-                                                                                        fontSize:8
+                                                                                        fontSize:10
                                                                                     }
                                                                                 }
                                                                             },
@@ -7409,7 +7507,9 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumZhiHuiZZAnd90AboveF+dataR.NumAiWeiZZAnd90AboveF+dataR.NumLeJianZZAnd90AboveF,dataR.NumZhiHuiZZAnd80To90F+dataR.NumAiWeiZZAnd80To90F+dataR.NumLeJianZZAnd80To90F,dataR.NumZhiHuiZZAnd70To80F+dataR.NumAiWeiZZAnd70To80F+dataR.NumLeJianZZAnd70To80F,dataR.NumZhiHuiZZAnd60To70F+dataR.NumAiWeiZZAnd60To70F+dataR.NumLeJianZZAnd60To70F]
+                                                                            data: [dataR.NumZhiHuiZZAnd90AboveF+dataR.NumAiWeiZZAnd90AboveF+dataR.NumLeJianZZAnd90AboveF,dataR.NumZhiHuiZZAnd80To90F+dataR.NumAiWeiZZAnd80To90F+dataR.NumLeJianZZAnd80To90F,dataR.NumZhiHuiZZAnd70To80F+dataR.NumAiWeiZZAnd70To80F+dataR.NumLeJianZZAnd70To80F,dataR.NumZhiHuiZZAnd60To70F+dataR.NumAiWeiZZAnd60To70F+dataR.NumLeJianZZAnd60To70F],
+                                                                            barWidth:20,
+                                                                            barCategoryGap:20,
 
                                                                         }
                                                                     ];
@@ -7423,14 +7523,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius :bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -7444,7 +7544,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_pie = chartPieForOrgOld(title_text,legend_data,series);
                                                                     rzzxOldman_jg_sub_pie.setOption(zzOldman_option_1_pie);
@@ -7457,14 +7562,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -7479,7 +7584,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
                                                                     rzzxOldman_jg_sub_wl.setOption(zzOldman_option_1_wl);
@@ -7489,17 +7599,17 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumPingNanRZAndMale+dataR.NumPingJi1RZAndMale+dataR.NumPingJi2RZAndMale, name:'男'},
                                                                             {value:dataR.NumPingNanRZAndFemale+dataR.NumPingJi1RZAndFemale+dataR.NumPingJi2RZAndFemale, name:'女'}
@@ -7510,7 +7620,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     rzzxOldman_jg_sex_pie.setOption(zzOldman_option_jg_1_sex);
@@ -7552,7 +7667,9 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumPingNanRZAnd90AboveM+dataR.NumPingJi1RZAnd90AboveM+dataR.NumPingJi2RZAnd90AboveM,dataR.NumPingNanRZAnd80To90M+dataR.NumPingJi1RZAnd80To90M+dataR.NumPingJi2RZAnd80To90M,dataR.NumPingNanRZAnd70To80M+dataR.NumPingJi1RZAnd70To80M+dataR.NumPingJi2RZAnd70To80M,dataR.NumPingNanRZAnd60To70M+dataR.NumPingJi1RZAnd60To70M+dataR.NumPingJi2RZAnd60To70M]
+                                                                            data: [0,0,0,0]
+
+                                                                            // data: [dataR.NumPingNanRZAnd90AboveM+dataR.NumPingJi1RZAnd90AboveM+dataR.NumPingJi2RZAnd90AboveM,dataR.NumPingNanRZAnd80To90M+dataR.NumPingJi1RZAnd80To90M+dataR.NumPingJi2RZAnd80To90M,dataR.NumPingNanRZAnd70To80M+dataR.NumPingJi1RZAnd70To80M+dataR.NumPingJi2RZAnd70To80M,dataR.NumPingNanRZAnd60To70M+dataR.NumPingJi1RZAnd60To70M+dataR.NumPingJi2RZAnd60To70M]
                                                                         },
                                                                         {
                                                                             name: '女',
@@ -7572,7 +7689,9 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumPingNanRZAnd90AboveF+dataR.NumPingJi1RZAnd90AboveF+dataR.NumPingJi2RZAnd90AboveF,dataR.NumPingNanRZAnd80To90F+dataR.NumPingJi1RZAnd80To90F+dataR.NumPingJi2RZAnd80To90F,dataR.NumPingNanRZAnd70To80F+dataR.NumPingJi1RZAnd70To80F+dataR.NumPingJi2RZAnd70To80F,dataR.NumPingNanRZAnd60To70F+dataR.NumPingJi1RZAnd60To70F+dataR.NumPingJi2RZAnd60To70F]
+                                                                            data: [0,0,0,0]
+
+                                                                            //data: [dataR.NumPingNanRZAnd90AboveF+dataR.NumPingJi1RZAnd90AboveF+dataR.NumPingJi2RZAnd90AboveF,dataR.NumPingNanRZAnd80To90F+dataR.NumPingJi1RZAnd80To90F+dataR.NumPingJi2RZAnd80To90F,dataR.NumPingNanRZAnd70To80F+dataR.NumPingJi1RZAnd70To80F+dataR.NumPingJi2RZAnd70To80F,dataR.NumPingNanRZAnd60To70F+dataR.NumPingJi1RZAnd60To70F+dataR.NumPingJi2RZAnd60To70F]
 
                                                                         }
                                                                     ];
@@ -7584,14 +7703,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -7605,7 +7724,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_pie = chartPieForOrgOld(title_text,legend_data,series);
                                                                     rzzxOldman_jg_2_pie.setOption(zzOldman_option_1_pie);
@@ -7619,14 +7743,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -7641,7 +7765,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
                                                                     rzzxOldman_jg_2_wl.setOption(zzOldman_option_1_wl);
@@ -7651,17 +7780,17 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumPingJi1RZAndMale, name:'男'},
                                                                             {value:dataR.NumPingJi1RZAndFemale, name:'女'}
@@ -7672,7 +7801,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     rzzxOldman_jg_2_sex.setOption(zzOldman_option_jg_1_sex);
@@ -7714,7 +7848,9 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumPingJi1RZAnd90AboveM,dataR.NumPingJi1RZAnd80To90M,dataR.NumPingJi1RZAnd70To80M,dataR.NumPingJi1RZAnd60To70M]
+                                                                            data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
+
+                                                                            //data: [dataR.NumPingJi1RZAnd90AboveM,dataR.NumPingJi1RZAnd80To90M,dataR.NumPingJi1RZAnd70To80M,dataR.NumPingJi1RZAnd60To70M]
                                                                         },
                                                                         {
                                                                             name: '女',
@@ -7734,7 +7870,9 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumPingJi1RZAnd90AboveF,dataR.NumPingJi1RZAnd80To90F,dataR.NumPingJi1RZAnd70To80F,dataR.NumPingJi1RZAnd60To70F]
+                                                                            data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
+
+                                                                            //data: [dataR.NumPingJi1RZAnd90AboveF,dataR.NumPingJi1RZAnd80To90F,dataR.NumPingJi1RZAnd70To80F,dataR.NumPingJi1RZAnd60To70F]
                                                                         }
                                                                     ];
                                                                     var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
@@ -7745,14 +7883,14 @@
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
-                                                                        radius : '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius : bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
@@ -7766,7 +7904,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_pie = chartPieForOrgOld(title_text,legend_data,series);
                                                                     rzzxOldman_jg_3_pie.setOption(zzOldman_option_1_pie);
@@ -7779,14 +7922,14 @@
                                                                     series = [{
                                                                         name: '老人健康状态',
                                                                         type: 'pie',
-                                                                        radius: '30%',
-                                                                        center: ['48%', '50%'],
+                                                                        radius: bed_radius_size,
+                                                                        center: ['48%', '40%'],
                                                                         label: {
                                                                             normal: {
                                                                                 formatter: '{d}%',
                                                                                 textStyle: {
                                                                                     fontWeight: 'normal',
-                                                                                    fontSize:8
+                                                                                    fontSize:12
                                                                                 }
                                                                             }
                                                                         },
@@ -7801,7 +7944,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
                                                                     rzzxOldman_jg_3_wl.setOption(zzOldman_option_1_wl);
@@ -7811,17 +7959,17 @@
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
-                                                                        radius : '30%',
+                                                                        radius : bed_radius_size,
                                                                         label : {
                                                                             normal : {
                                                                                 formatter: '{d}%',
                                                                                 textStyle : {
                                                                                     fontWeight : 'normal',
-                                                                                    fontSize : 8
+                                                                                    fontSize : 12
                                                                                 }
                                                                             }
                                                                         },
-                                                                        center: ['48%', '50%'],
+                                                                        center: ['48%', '40%'],
                                                                         data:[
                                                                             {value:dataR.NumPingJi2RZAndMale, name:'男'},
                                                                             {value:dataR.NumPingJi2RZAndFemale, name:'女'}
@@ -7832,7 +7980,12 @@
                                                                                 shadowOffsetX: 0,
                                                                                 shadowColor: 'rgba(0, 0, 0, 0.5)'
                                                                             }
-                                                                        }
+                                                                        },
+                                                                        labelLine:{
+                                                                            normal:{
+                                                                                length:2
+                                                                            }
+                                                                        },
                                                                     }];
                                                                     var zzOldman_option_jg_1_sex = chartPieForOrgOld(title_text,legend_data,series);
                                                                     rzzxOldman_jg_3_sex.setOption(zzOldman_option_jg_1_sex);
@@ -7874,7 +8027,9 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumPingJi2RZAnd90AboveM,dataR.NumPingJi2RZAnd80To90M,dataR.NumPingJi2RZAnd70To80M,dataR.NumPingJi2RZAnd60To70M]
+                                                                            data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
+
+                                                                            //data: [dataR.NumPingJi2RZAnd90AboveM,dataR.NumPingJi2RZAnd80To90M,dataR.NumPingJi2RZAnd70To80M,dataR.NumPingJi2RZAnd60To70M]
                                                                         },
                                                                         {
                                                                             name: '女',
@@ -7894,7 +8049,9 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumPingJi2RZAnd90AboveF,dataR.NumPingJi2RZAnd80To90F,dataR.NumPingJi2RZAnd70To80F,dataR.NumPingJi2RZAnd60To70F]
+                                                                            data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
+
+                                                                            //data: [dataR.NumPingJi2RZAnd90AboveF,dataR.NumPingJi2RZAnd80To90F,dataR.NumPingJi2RZAnd70To80F,dataR.NumPingJi2RZAnd60To70F]
                                                                         }
                                                                     ];
                                                                     var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
@@ -8528,7 +8685,7 @@
                                                                                 label: {
                                                                                     normal: {
                                                                                         show: true,
-                                                                                        position: 'insideLeft',
+                                                                                        position: 'insideTop',
                                                                                         textStyle:{
                                                                                             fontSize:20
                                                                                         }
@@ -8543,7 +8700,7 @@
                                                                                     }
                                                                                 },
                                                                                 data: [num90AboveM,num80To90M,num70To80M,num60To70M],
-                                                                                barWidth:45
+                                                                                barWidth:30
                                                                             },
                                                                             {
                                                                                 name: '女',
@@ -8552,7 +8709,7 @@
                                                                                 label: {
                                                                                     normal: {
                                                                                         show: true,
-                                                                                        position: 'insideRight',
+                                                                                        position: 'insideTop',
                                                                                         textStyle:{
                                                                                             fontSize:20
                                                                                         }
@@ -9453,7 +9610,7 @@
                                                                                         show: true,
                                                                                         position: 'right',
                                                                                         textStyle: {
-                                                                                            fontSize: 8
+                                                                                            fontSize: 5
                                                                                         }
                                                                                     }
                                                                                 },
@@ -9462,6 +9619,7 @@
                                                                                         color: series_color_1
                                                                                     }
                                                                                 },
+                                                                                barWidth:20,
                                                                                 data: [dataR.NumDongLanServed, dataR.NumGuLongServed, dataR.NumPingNanServed, dataR.NumPingYangServed, dataR.NumPingJiServed, dataR.NumGuMeiServed]
                                                                             }
                                                                         ];
@@ -9568,7 +9726,7 @@
                                                                         series=[{
                                                                             name: '老人性别',
                                                                             type: 'pie',
-                                                                            radius : '45%',
+                                                                            radius : '55%',
                                                                             label : {
                                                                                 normal : {
                                                                                     formatter: '{d}%\n({c})',
@@ -9632,7 +9790,7 @@
                                                                                     }
                                                                                 },
                                                                                 data: [num90AboveM,num80To90M,num70To80M,num60To70M],
-                                                                                barWidth:45
+                                                                                barWidth:30
                                                                             },
                                                                             {
                                                                                 name: '女',

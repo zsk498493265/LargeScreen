@@ -301,10 +301,11 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
             itemHeight: 8,
         },
         grid:  {
-            top:'10%',
-            left: '3%',
+            top:'0%',
+            left: '8%',
             right: '16%',
-            bottom: '0%',
+            bottom: '-1%',
+            height:'70%',
             containLabel: true
         },
         yAxis: {
@@ -319,7 +320,7 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
                     color: '#fff',
                 }
             },
-            max:4,
+            max:4.3,
           //  barGap:'1%',
 
             boundaryGap:false,
@@ -630,7 +631,7 @@ function chartBarForChx(title_text,legend_data,yAxis_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-                fontSize:25,
+                fontSize:18,
                 fontWeight:'normal'
             },
             x:'0%',
@@ -651,7 +652,7 @@ function chartBarForChx(title_text,legend_data,yAxis_data,series) {
             top:'45%',
             left: '3%',
             right: '4%',
-            bottom: '-13%',
+            bottom: '-23%',
             containLabel: true
         },
         xAxis: {
@@ -699,7 +700,7 @@ function chartBarForChxJi(title_text,legend_data,yAxis_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-                fontSize:25,
+                fontSize:18,
                 fontWeight:'normal'
             },
             x:'0%',
@@ -720,7 +721,7 @@ function chartBarForChxJi(title_text,legend_data,yAxis_data,series) {
             top:'45%',
             left: '3%',
             right: '4%',
-            bottom: '-18%',
+            bottom: '-25%',
             containLabel: true
         },
         xAxis: {
@@ -911,7 +912,7 @@ function chartLine(title_text,legend_data,xAxis_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-            fontSize:title_fontSize,
+            fontSize:20,
             fontWeight:'normal'
             },
             x:'0%',
@@ -929,7 +930,7 @@ function chartLine(title_text,legend_data,xAxis_data,series) {
             left: '3%',
             right: '4%',
             bottom: '-3%',
-            top:'50%',
+            top:'30%',
             containLabel: true
         },
         xAxis: {
@@ -1009,9 +1010,10 @@ function chartLineForFamily(title_text,legend_data,xAxis_data,series) {
             trigger: 'axis'
         },
         legend: {
-            right:'0',
+            // right:'-50',
+            left:'50',
             top:'16%',
-            data:legend_data
+            data:legend_data,
         },
         grid:  {
             left: '3%',
@@ -1176,7 +1178,7 @@ function chartPieForOrgOldHealth(title_text,legend_data,series) {
             //right:'180',
             // left:'10',
             top:"-5",
-            right:'16',
+            right:'12',
             data: legend_data,
             itemGap: 0,
             itemWidth: 18,
@@ -1195,7 +1197,7 @@ function chartPieForChx(title_text,legend_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-                fontSize:25,
+                fontSize:18,
                 fontWeight: 'normal'
             },
             left:'left',
@@ -2354,7 +2356,7 @@ function toolTipReal(title_text,legend_data,name1,name2,data_t1,data_t2) {
             textStyle: {
                 fontWeight: 'normal',      //标题颜色
                 color: '#FFFFFF',
-                fontSize: title_fontSize
+                fontSize: 20
             },
         },
         legend: {
@@ -2432,11 +2434,11 @@ function toolTipReal(title_text,legend_data,name1,name2,data_t1,data_t2) {
             splitNumber:3
         },
         grid: {
-            top: 55,
+            top: 40,
             left: 15,
             right: 15,
-            height: 40,
-            bottom:35
+            height: 50,
+            bottom:-30
         },
         dataZoom: [{
             type: 'inside',
@@ -2577,7 +2579,7 @@ function toolTipMulti1(title_text,legend_data,data_t1,data_t2,data_t3,data_t4) {
             textStyle: {
                 fontWeight: 'normal',      //标题颜色
                 color: '#FFFFFF',
-                fontSize: title_fontSize
+                fontSize: 20
             },
         },
         legend: {
@@ -2656,10 +2658,10 @@ function toolTipMulti1(title_text,legend_data,data_t1,data_t2,data_t3,data_t4) {
             splitNumber:3
         },
         grid: {
-            top: 55,
+            top: 40,
             left: 15,
             right: 15,
-            height: 35
+            height: 50
         },
         dataZoom: [{
             type: 'inside',

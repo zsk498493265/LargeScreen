@@ -99,6 +99,8 @@
     $(".chx_tu").css( 'height', chx_tu_h);
     $(".chx_tu_mid").css('width',chx_tu_mid_w/0.95);
     $(".chx_tu_mid").css( 'height', chx_tu_mid_h);
+    $(".chx_tu_pq").css('width',chx_tu_mid_w/0.95);
+    $(".chx_tu_pq").css( 'height', chx_tu_mid_h*1.2);
 
     var chx_num_pie=echarts.init(document.getElementById('chx_num_pie'));
 

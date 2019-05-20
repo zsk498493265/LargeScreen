@@ -5,71 +5,112 @@
             padding-bottom: 2%;
         }
     }
+    #child_rzzxOldman .box{
+        height: 123px !important;
+
+    }
+    /*#child_organOldman p{*/
+    /*position: relative!important;*/
+    /*bottom: 40px!important;*/
+
+    /*}*/
+    .xx{
+        position: relative!important;
+        bottom:60px!important;
+    }
+    .xx_title{
+        position: relative!important;
+        bottom:50px!important;
+    }
+    .aa{
+        position: relative!important;
+        bottom:50px!important;
+    }
+    .bb{
+        position: relative!important;
+        bottom:50px!important;
+    }
+    .cc{
+        position: relative!important;
+        bottom:110px!important;
+    }
+    .cc_title{
+        position: relative!important;
+        bottom:100px!important;
+    }
+    .dd{
+        position: relative!important;
+        bottom:155px!important;
+    }
+    .dd_title{
+        position: relative!important;
+        bottom:145px!important;
+    }
 </style>
 <#include "../head.ftl" />
 <div id="child_rzzxOldman" style="display: none">
     <div class="row box">
         <div class="zz"></div>
-        <p class="title" onclick="change('child_rzzxOldman','child_organ')" style="font-size: 28px">日照中心床位数总和</p>
+        <p class="title" onclick="change('child_rzzxOldman','child_organ')" style="font-size: 20px;padding: 5px;">日照中心床位数总和</p>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_sub_pie" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_sub_pie"style="position:relative;bottom: 10px" class="rzzxOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_sex_pie" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_sex_pie"style="position:relative;bottom: 10px" class="rzzxOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_age_bar" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_age_bar"style="position:relative;bottom: 10px"class="rzzxOldman_tu"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_sub_wl" class="rzzxOldman_tu"></div>
-        </div>
-    </div>
-    <div class="row box">
-        <div class="zz"></div>
-        <p class="title" style="font-size: 28px">日间照料中心(平南邻里中心）</p>
-        <div class="col-lg-3">
-            <div id="rzzxOldman_jg_1_pie" class="rzzxOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="rzzxOldman_jg_1_sex" class="rzzxOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="rzzxOldman_jg_1_age" class="rzzxOldman_tu"></div>
-        </div>
-        <div class="col-lg-3">
-            <div id="rzzxOldman_jg_1_wl" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_sub_wl"style="position:relative;bottom: 10px" class="rzzxOldman_tu"></div>
         </div>
     </div>
     <div class="row box">
         <div class="zz"></div>
-        <p class="title" style="font-size: 28px">平吉一村日托站</p>
+        <p class="title xx_title" style="font-size: 20px;padding: 5px">日间照料中心(平南邻里中心）</p>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_2_pie" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_1_pie" class="rzzxOldman_tu xx"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_2_sex" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_1_sex" class="rzzxOldman_tu xx"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_2_age" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_1_age" class="rzzxOldman_tu xx"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_2_wl" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_1_wl" class="rzzxOldman_tu xx"></div>
         </div>
     </div>
     <div class="row box">
         <div class="zz"></div>
-        <p class="title" style="font-size: 28px">平吉二村日托站</p>
+        <p class="cc_title" style="font-size: 20px;padding: 5px">平吉一村日托站</p>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_3_pie" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_2_pie" class="rzzxOldman_tu cc"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_3_sex" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_2_sex" class="rzzxOldman_tu cc"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_3_age" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_2_age" class="rzzxOldman_tu cc"></div>
         </div>
         <div class="col-lg-3">
-            <div id="rzzxOldman_jg_3_wl" class="rzzxOldman_tu"></div>
+            <div id="rzzxOldman_jg_2_wl" class="rzzxOldman_tu cc"></div>
+        </div>
+    </div>
+    <div class="row box">
+        <div class="zz"></div>
+        <p class="title dd_title" style="font-size: 20px;padding: 5px;">平吉二村日托站</p>
+        <div class="col-lg-3">
+            <div id="rzzxOldman_jg_3_pie" class="rzzxOldman_tu dd"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="rzzxOldman_jg_3_sex" class="rzzxOldman_tu dd"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="rzzxOldman_jg_3_age" class="rzzxOldman_tu dd"></div>
+        </div>
+        <div class="col-lg-3">
+            <div id="rzzxOldman_jg_3_wl" class="rzzxOldman_tu dd"></div>
         </div>
     </div>
 </div>
@@ -85,7 +126,7 @@
     }
 
     $(".rzzxOldman_tu").css('width',rzzxOldman_tu_w);
-    $(".rzzxOldman_tu").css( 'height', rzzxOldman_tu_h);
+    $(".rzzxOldman_tu").css( 'height', rzzxOldman_tu_h*1.5);
 
     var rzzxOldman_jg_sub_pie = echarts.init(document.getElementById('rzzxOldman_jg_sub_pie'));
     var rzzxOldman_jg_sub_wl= echarts.init(document.getElementById('rzzxOldman_jg_sub_wl'));
@@ -608,7 +649,7 @@
                     color:series_color_1
                 }
             },
-            data: [67,134,234,534]
+            data: [0,0,0,0]
         },
         {
             name: '女',
@@ -628,7 +669,7 @@
                     color:series_color_2
                 }
             },
-            data: [7,34,134,234]
+            data: [0,0,0,0]
         }
     ];
     var rzzxOldman_option_jg_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
@@ -779,8 +820,8 @@
             data: [0,0,0,0]
         }
     ];
-    var rzzxOldman_option_jg_2_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
-    rzzxOldman_jg_2_age.setOption(rzzxOldman_option_jg_2_age);
+    //var rzzxOldman_option_jg_2_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+    //rzzxOldman_jg_2_age.setOption(rzzxOldman_option_jg_2_age);
     rzzxOldman_jg_2_age.on('legendselectchanged',function (params){
         var name = params.name;
         if(name=="男"){
