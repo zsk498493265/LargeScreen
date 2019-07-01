@@ -28,7 +28,7 @@ public class VisualData4Controller {
     @ResponseBody
     @RequestMapping(value = "/getVisualData4",method = RequestMethod.GET)
     public Result admin_getOldNum2(){
-        List<Map<String,Long>> dataMap=oldmanService.getVisualData4(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),"2019-04");
+        List<Map<String,Long>> dataMap=oldmanService.getVisualData4(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),"2019-05");
         //String s=AgeTobirthday(80).toString();
 
         JSONObject jsonObject = new JSONObject();

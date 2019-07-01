@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <#include "../common/head.ftl" />
 <script  src="/static/js/echarts.common.min.js" type="text/javascript"></script>
 <script src="/static/js/visual/common.js" type="text/javascript"></script>

@@ -6,7 +6,7 @@
         }
     }
 </style>
-<div id="child_family" style="display: none">
+<div id="child_family" style="display: none;margin-bottom: -1.5%">
     <div class="row" >
         <div class="col-lg-6 box"  align="center">
             <div class="zz"></div>

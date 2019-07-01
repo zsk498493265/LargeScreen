@@ -6,7 +6,7 @@
         }
     }
 </style>
-<div id="child_economic" style="display: none">
+<div id="child_economic" style="display: none;margin-bottom: -1.5%">
     <div class="row" >
         <div class="col-lg-6 box"  align="center">
             <div class="zz"></div>
@@ -17,7 +17,7 @@
             <div id="economic_economicLine" class="economic_tu_big"></div>
         </div>
     </div>
-    <div class="row"style="position: relative;top:-5px">
+    <div class="row"style="position: relative;top:0px">
         <div class="col-lg-4 box">
             <div class="zz"></div>
             <div id="economic_hjPie" class="economic_tu"></div>

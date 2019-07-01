@@ -148,7 +148,7 @@
                         function initMap(){
                             createMap();//创建地图
                             setMapEvent();//设置地图事件
-                            //addMapControl();//向地图添加控件
+                            addMapControl();//向地图添加控件
                             addPolygon();//多边形覆盖物
                             addPolyline();//向地图中添加线
                             addMarker();//向地图中添加标注
@@ -180,14 +180,14 @@
                         //地图控件添加函数：
                         function addMapControl(){
                             //向地图中添加缩放控件
-                            var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+                            var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,type:BMAP_NAVIGATION_CONTROL_SMALL});
                             map.addControl(ctrl_nav);
                             //向地图中添加缩略图控件
-                            var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-                            map.addControl(ctrl_ove);
+                            // var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+                            // map.addControl(ctrl_ove);
                             //向地图中添加比例尺控件
-                            var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-                            map.addControl(ctrl_sca);
+                            // var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                            // map.addControl(ctrl_sca);
                         }
 
                         //标注点数组
@@ -1152,6 +1152,7 @@
                             heatmapOverlay.setOptions({"gradient":gradient});
                         }
 
+                        addHmapControl();
                         heatmapOverlay.show();
 
                         addPolygon();//多边形覆盖物
@@ -1160,14 +1161,14 @@
                         //地图控件添加函数：
                         function addHmapControl(){
                             //向地图中添加缩放控件
-                            var hctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+                            var hctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,type:BMAP_NAVIGATION_CONTROL_SMALL});
                             hmap.addControl(hctrl_nav);
                             //向地图中添加缩略图控件
-                            var hctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-                            hmap.addControl(hctrl_ove);
-                            //向地图中添加比例尺控件
-                            var hctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-                            hmap.addControl(hctrl_sca);
+                            // var hctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+                            // hmap.addControl(hctrl_ove);
+                            // //向地图中添加比例尺控件
+                            // var hctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                            // hmap.addControl(hctrl_sca);
                         }
 
                         //标注线数组

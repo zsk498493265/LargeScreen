@@ -1839,6 +1839,8 @@
             });
         }
 
+        document.getElementById("dt_paginate").style.width=600+'px';
+        document.getElementById("dt_info").style.display="none";
         //add
         // $("#DataTables_Table_0").prev().css("display","none");
         // $("#dt_wrapper").find("div.row:first-child").hide();

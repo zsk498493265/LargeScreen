@@ -238,13 +238,21 @@
 
         $("#DataTables_Table_0").prev().css("display","none");
         $("#dt_wrapper").find("div.row:first-child").hide();
+        //$('#table1').bootstrapTable('selectPage',7);
+        //表格不分行
+        //alert(document.getElementById("dt_paginate").style.width);
+        document.getElementById("dt_paginate").style.width=600+'px';
+        document.getElementById("dt_info").style.display="none";
         var oTable=$("#editable").dataTable();
         oTable.$("td").editable("",{
             "callback":function(sValue,y){var aPos=oTable.fnGetPosition(this);oTable.fnUpdate(sValue,aPos[0],aPos[1])},
             "submitdata":function(value,settings){return{"row_id":this.parentNode.getAttribute("id"),
                 "column":oTable.fnGetPosition(this)[2]}},"width":"90%","height":"100%"});
 
+
+
     });
+  //  $('#table1').bootstrapTable('selectPage',7);
 
 
     function look(id) {

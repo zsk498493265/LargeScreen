@@ -713,7 +713,7 @@
                                                                         calculable: true,
                                                                         grid:  {
                                                                             top:'30%',
-                                                                            bottom: '-2%',
+                                                                            bottom: '10%',
                                                                             containLabel: true
                                                                         },
                                                                         xAxis: [
@@ -2387,7 +2387,7 @@
                                                                                             color: series_color_1
                                                                                         }
                                                                                     },
-                                                                                    data: [(dataR.NumPingNan1Finish/dataR.NumPingNan1FinishAll*100).toFixed(2), (dataR.NumPingNan2Finish/dataR.NumPingNan2FinishAll*100).toFixed(2), (dataR.NumPingNan3Finish/dataR.NumPingNan3FinishAll*100).toFixed(2), (dataR.NumHuaYiFinish/dataR.NumHuaYiFinishAll*100).toFixed(2), (dataR.NumHuaMeiFinish/dataR.NumHuaMeiFinishAll*100).toFixed(2), (dataR.NumMeiLianFinish/dataR.NumMeiLianFinishAll*100).toFixed(2), (dataR.NumWanYuan1Finish/dataR.NumWanYuan1FinishAll*100).toFixed(2), (dataR.NumWanYuan2Finish/dataR.NumWanYuan2FinishAll*100).toFixed(2), (dataR.NumWanYuan3Finish/dataR.NumWanYuan3FinishAll*100).toFixed(2), (dataR.NumWanYuan4Finish/dataR.NumWanYuan4FinishAll*100).toFixed(2)],
+                                                                                    data: [(dataR.NumPingNan1Finish/dataR.NumPingNan1FinishAll*100).toFixed(0), (dataR.NumPingNan2Finish/dataR.NumPingNan2FinishAll*100).toFixed(0), (dataR.NumPingNan3Finish/dataR.NumPingNan3FinishAll*100).toFixed(0), (dataR.NumHuaYiFinish/dataR.NumHuaYiFinishAll*100).toFixed(0), (dataR.NumHuaMeiFinish/dataR.NumHuaMeiFinishAll*100).toFixed(0), (dataR.NumMeiLianFinish/dataR.NumMeiLianFinishAll*100).toFixed(0), (dataR.NumWanYuan1Finish/dataR.NumWanYuan1FinishAll*100).toFixed(0), (dataR.NumWanYuan2Finish/dataR.NumWanYuan2FinishAll*100).toFixed(0), (dataR.NumWanYuan3Finish/dataR.NumWanYuan3FinishAll*100).toFixed(0), (dataR.NumWanYuan4Finish/dataR.NumWanYuan4FinishAll*100).toFixed(0)],
                                                                                     barWidth: 30,//柱图宽度
                                                                                 }
                                                                             ];
@@ -2409,7 +2409,7 @@
                                                                                     show: true,
                                                                                     position: 'top',
                                                                                     textStyle: {
-                                                                                        fontSize: 12
+                                                                                        fontSize: 20
                                                                                     }
                                                                                 }
                                                                             },
@@ -2436,6 +2436,7 @@
                                                                             type:'pie',
                                                                             selectedMode: 'single',
                                                                             radius: [0, '30%'],
+                                                                            center:['35%','60%'],
 
                                                                             label: {
                                                                                 normal: {
@@ -2466,6 +2467,7 @@
                                                                             name:'',
                                                                             type:'pie',
                                                                             radius: ['40%', '55%'],
+                                                                            center:['35%','60%'],
                                                                             label: {
                                                                                 normal: {
                                                                                     fontSize : 20,
@@ -4540,7 +4542,8 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideLeft',
+                                                                                     position: 'right',
+                                                                                    //position: ['0%','0%'],
                                                                                     textStyle:{
                                                                                         fontSize:10
                                                                                     }
@@ -6727,7 +6730,8 @@
                                                                             label: {
                                                                                 normal: {
                                                                                     show: true,
-                                                                                    position: 'insideTop'
+                                                                                    // position: 'insideTop'
+                                                                                    position: ['220%', '40%']
                                                                                 }
                                                                             },
                                                                             itemStyle:{
@@ -6896,7 +6900,7 @@
                                                                         calculable: true,
                                                                         grid:  {
                                                                             top:'35%',
-                                                                            bottom: '-2%',
+                                                                            bottom: '10%',
                                                                             x:"2%",
                                                                             containLabel: true
                                                                         },
@@ -9378,7 +9382,7 @@
                                                                         //    级别分布柱状图
                                                                         title_text='已经评级老人级别';
                                                                         legend_data=[];
-                                                                        yAxis_data=['2级','3级','4级','5级','6级'];
+                                                                        yAxis_data=['2-3级','4级','5-6级'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -9401,7 +9405,8 @@
                                                                                         color:series_color_1
                                                                                     }
                                                                                 },
-                                                                                data: [numLeveled2,numLeveled3,numLeveled4,numLeveled5,numLeveled6]
+                                                                                data: [numLeveled2+numLeveled3,numLeveled4,numLeveled5+numLeveled6],
+                                                                                barWidth:9,
                                                                             }
                                                                         ];
                                                                         var chx_option_pj_jb_bar=chartBarForChx(title_text,legend_data,yAxis_data,series);

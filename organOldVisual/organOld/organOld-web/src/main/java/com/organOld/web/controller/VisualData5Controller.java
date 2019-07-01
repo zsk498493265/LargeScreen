@@ -48,7 +48,7 @@ public class VisualData5Controller {
             month2 = Increase[mon + 1];
 
         List<Map<String,Integer>> dataMap=oldmanService.getVisualData5(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),
-                getNowDate1(),getNowDate2(),getNowDate3(),getNowDate4(),getNowDate5(),"2019-04");
+                getNowDate1(),getNowDate2(),getNowDate3(),getNowDate4(),getNowDate5(),"2019-05");
         JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("NumOrgPingYang",dataMap.get(0).get("NumOrgPingYang"));
@@ -371,7 +371,8 @@ public class VisualData5Controller {
         jsonObject.put("NumOld1",dataMap.get(0).get("NumOld1"));
         jsonObject.put("NumOld2",dataMap.get(0).get("NumOld2"));
         jsonObject.put("NumOld3",dataMap.get(0).get("NumOld3"));
-        String num = dataMap.get(0).get("NumOld3").toString();
+//        String num = dataMap.get(0).get("NumOld3").toString();
+        String num = "1482";
         Integer numold3 = Integer.parseInt(num);
         Integer NumOld4 = Tool.ReturnTendence(numold3,month1);
         Integer NumOld5 = Tool.ReturnTendence(NumOld4,month2);
@@ -404,7 +405,8 @@ public class VisualData5Controller {
         jsonObject.put("NumFenLi1",dataMap.get(0).get("NumFenLi1"));
         jsonObject.put("NumFenLi2",dataMap.get(0).get("NumFenLi2"));
         jsonObject.put("NumFenLi3",dataMap.get(0).get("NumFenLi3"));
-        Integer NumFenLi4 = Tool.ReturnTendence(dataMap.get(0).get("NumFenLi3"),month1);
+//        Integer NumFenLi4 = Tool.ReturnTendence(dataMap.get(0).get("NumFenLi3"),month1);
+        Integer NumFenLi4 = 48;
         Integer NumFenLi5 = Tool.ReturnTendence(NumFenLi4,month2);
         jsonObject.put("NumFenLi4",NumFenLi4);
         jsonObject.put("NumFenLi5",NumFenLi5);

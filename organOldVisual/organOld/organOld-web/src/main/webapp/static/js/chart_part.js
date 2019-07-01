@@ -282,7 +282,7 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'-5%'
+            y:'0%'
         },
         tooltip:{
             trigger: 'axis',
@@ -296,7 +296,7 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
             data:legend_data,
             right:'20',
             data: legend_data,
-            itemGap: -10,
+            itemGap: 0,
             itemWidth: 18,
             itemHeight: 8,
         },
@@ -304,8 +304,8 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
             top:'0%',
             left: '8%',
             right: '16%',
-            bottom: '-1%',
-            height:'70%',
+            bottom: '0%',
+            height:'65%',
             containLabel: true
         },
         yAxis: {
@@ -652,7 +652,7 @@ function chartBarForChx(title_text,legend_data,yAxis_data,series) {
             top:'45%',
             left: '3%',
             right: '4%',
-            bottom: '-23%',
+            bottom: '0%',
             containLabel: true
         },
         xAxis: {
@@ -1129,7 +1129,7 @@ function chartPieForOrgOld(title_text,legend_data,series) {
             },
             left:'left',
             x:'0%',
-            y:'-5%'
+            y:'0%'
         },
         tooltip : {
             trigger: 'item',
@@ -1165,7 +1165,7 @@ function chartPieForOrgOldHealth(title_text,legend_data,series) {
             },
             left:'left',
             x:'0%',
-            y:'-5%'
+            y:'0%'
         },
         tooltip : {
             trigger: 'item',
@@ -1497,7 +1497,7 @@ function chartBarHeiForFinish(title_text,legend_data,xAxis_data,series) {
             top:'35%',
             left: '3%',
             right: '4%',
-            bottom: '1%',
+            bottom: '-1%',
             containLabel: true
         },
         xAxis : [
@@ -1507,8 +1507,8 @@ function chartBarHeiForFinish(title_text,legend_data,xAxis_data,series) {
                 axisLabel:{
                     textStyle: {
                         color: '#fff',
-                        fontSize:xAxis_axisLabel_fontSize_barHei,
-                        fontWeight:100
+                        fontSize:16,
+                        fontWeight:'normal'
                     },
                     show:true,
                     interval: 0,
@@ -1528,7 +1528,7 @@ function chartBarHeiForFinish(title_text,legend_data,xAxis_data,series) {
                     textStyle: {
                         color: '#fff',
                         fontSize:yAxis_axisLabel_fontSize_barHei,
-                        fontWeight:100
+                        fontWeight:'normal'
                     }
                 },
                 axisLine:{

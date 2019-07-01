@@ -17,7 +17,7 @@
             <div id="health_healthLine" class="health_tu_big"></div>
         </div>
     </div>
-    <div class="row"style="position: relative;top:-5px">
+    <div class="row"style="position: relative;top:0px">
         <div class="col-lg-4 box">
             <div class="zz"></div>
             <div id="health_hjPie" class="health_tu"></div>
