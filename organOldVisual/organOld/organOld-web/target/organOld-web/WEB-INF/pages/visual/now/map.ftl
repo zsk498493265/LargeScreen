@@ -41,6 +41,10 @@
     #r-result{width:100%;}
     .BMap_cpyCtrl {display:none;}
     .anchorBL{display:none;}
+    .BMap_stdMpPan {background-position:0px 0px !important;}
+    /*.BMap_button {background-position:0px px !important;}*/
+    .BMap_stdMpZoomIn {background-position:-8px -57px !important;}
+    .BMap_stdMpZoomOut {background-position:-9px -293px !important;}
 
 
 </style>

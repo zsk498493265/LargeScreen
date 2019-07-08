@@ -75,7 +75,7 @@
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'0%'
+            y:'6%'
 
         },
         color: colors,
@@ -301,7 +301,7 @@
                                                                                 fontWeight:'normal'
                                                                             },
                                                                             x:'0%',
-                                                                            y:'0%'
+                                                                            y:'6%'
 
                                                                         },
                                                                         color: colors,
@@ -501,6 +501,7 @@
 
                                                                     //part2
                                                                     title.text = "80岁及以上老人占比";
+                                                                    title.y='6%';
                                                                     //title.link = "javascript: change('child_oldman','child_base')";
                                                                     legend_data = [{
                                                                         name: '80以上',
@@ -572,6 +573,7 @@
                                                                     //60岁老人占比
                                                                     title.text = "老年人数占比";
                                                                     title.link = "javascript: change('child_oldman','child_base')";
+                                                                    title.y='6%'
                                                                     title.textStyle.fontWeight='normal';
                                                                     legend_data = [{
                                                                         name: '老人',
@@ -1070,7 +1072,9 @@
                                                                                     position: 'insideTop',
                                                                                     textStyle: {
                                                                                         fontSize: 12
-                                                                                    }
+                                                                                    },
+                                                                                    formatter: '',
+
                                                                                 }
                                                                             },
                                                                             itemStyle: {
@@ -1094,7 +1098,8 @@
                                                                                     position: 'insideTop',
                                                                                     textStyle: {
                                                                                         fontSize: 12
-                                                                                    }
+                                                                                    },
+                                                                                    formatter: '',
                                                                                 }
                                                                             },
                                                                             itemStyle: {
@@ -2056,8 +2061,9 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideTop',
+                                                                                    formatter: '',
                                                                                     textStyle: {
                                                                                         fontSize: 16
                                                                                     }
@@ -2077,7 +2083,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideTop',
                                                                                     textStyle: {
                                                                                         fontSize: 16
@@ -2111,6 +2117,7 @@
                                                                                 fontSize: 26
                                                                             },
                                                                             x: 'left',
+                                                                            y:'6%',
                                                                             textAlign: 'left'
                                                                         },
                                                                         angleAxis: {
@@ -2140,7 +2147,7 @@
                                                                         },
                                                                         series: [{
                                                                             type: 'bar',
-                                                                            data: [(dataR.NumPingYangFinish/dataR.NumPingYangFinishAll*100).toFixed(2), (dataR.NumDongLanFinish/dataR.NumDongLanFinishAll*100).toFixed(2), (dataR.NumGuLongFinish/dataR.NumGuLongFinishAll*100).toFixed(2), (dataR.NumPingJiFinish/dataR.NumPingJiFinishAll*100).toFixed(2), (dataR.NumPingNanFinish/dataR.NumPingNanFinishAll*100).toFixed(2), (dataR.NumGuMeiFinish/dataR.NumGuMeiFinishAll*100).toFixed(2)],
+                                                                            data: [(dataR.NumPingYangFinish/dataR.NumPingYangFinishAll*100).toFixed(0), (dataR.NumDongLanFinish/dataR.NumDongLanFinishAll*100).toFixed(0), (dataR.NumGuLongFinish/dataR.NumGuLongFinishAll*100).toFixed(0), (dataR.NumPingJiFinish/dataR.NumPingJiFinishAll*100).toFixed(0), (dataR.NumPingNanFinish/dataR.NumPingNanFinishAll*100).toFixed(0), (dataR.NumGuMeiFinish/dataR.NumGuMeiFinishAll*100).toFixed(0)],
                                                                             coordinateSystem: 'polar',
                                                                             name: '已完成',
                                                                             fontSize: 40,
@@ -2231,11 +2238,11 @@
                                                                         var name = param.name;
                                                                         //alert(name);
                                                                         //alert(param.name);
-                                                                        var title_text = name + '片区居委完成度对比';
+                                                                        var title_text = name + '片区居委完成度对比(%)';
                                                                         var legend_data = [];
                                                                         var series;
                                                                         if (name == '平阳') {
-                                                                            title_text = '平阳片区居委完成度对比';
+                                                                            title_text = '平阳片区居委完成度对比(%)';
                                                                             xAxis_data = ['平阳一村', '平阳二村', '平阳三村', '平阳四村', '平阳五村', '平阳六村'];
                                                                             series = [
                                                                                 {
@@ -2255,7 +2262,7 @@
                                                                                             color: series_color_1
                                                                                         }
                                                                                     },
-                                                                                    data: [(dataR.NumPingYang1Finish/dataR.NumPingYang1FinishAll*100).toFixed(2), (dataR.NumPingYang2Finish/dataR.NumPingYang2FinishAll*100).toFixed(2), (dataR.NumPingYang3Finish/dataR.NumPingYang3FinishAll*100).toFixed(2), (dataR.NumPingYang4Finish/dataR.NumPingYang4FinishAll*100).toFixed(2), (dataR.NumPingYang5Finish/dataR.NumPingYang5FinishAll*100).toFixed(2), (dataR.NumPingYang6Finish/dataR.NumPingYang6FinishAll*100).toFixed(2)],
+                                                                                    data: [(dataR.NumPingYang1Finish/dataR.NumPingYang1FinishAll*100).toFixed(0), (dataR.NumPingYang2Finish/dataR.NumPingYang2FinishAll*100).toFixed(0), (dataR.NumPingYang3Finish/dataR.NumPingYang3FinishAll*100).toFixed(0), (dataR.NumPingYang4Finish/dataR.NumPingYang4FinishAll*100).toFixed(0), (dataR.NumPingYang5Finish/dataR.NumPingYang5FinishAll*100).toFixed(0), (dataR.NumPingYang6Finish/dataR.NumPingYang6FinishAll*100).toFixed(0)],
                                                                                     barWidth: 30,//柱图宽度
                                                                                 }
                                                                             ];
@@ -2263,7 +2270,7 @@
 
 
                                                                         } else if (name == '古美') {
-                                                                            title_text = '古美片区居委完成度对比';
+                                                                            title_text = '古美片区居委完成度对比(%)';
                                                                             xAxis_data = ['古美一村', '古美三村', '古美四村', '古美七村', '古美一八村', '古美九村', '古美十村'];
                                                                             series = [
                                                                                 {
@@ -2283,13 +2290,13 @@
                                                                                             color: series_color_1
                                                                                         }
                                                                                     },
-                                                                                    data: [(dataR.NumGuMei1Finish/dataR.NumGuMei1FinishAll*100).toFixed(2), (dataR.NumGuMei3Finish/dataR.NumGuMei3FinishAll*100).toFixed(2), (dataR.NumGuMei4Finish/dataR.NumGuMei4FinishAll*100).toFixed(2), (dataR.NumGuMei7Finish/dataR.NumGuMei7FinishAll*100).toFixed(2), (dataR.NumGuMei18Finish/dataR.NumGuMei18FinishAll*100).toFixed(2), (dataR.NumGuMei9Finish/dataR.NumGuMei9FinishAll*100).toFixed(2), (dataR.NumGuMei10Finish/dataR.NumGuMei10FinishAll*100).toFixed(2)],
+                                                                                    data: [(dataR.NumGuMei1Finish/dataR.NumGuMei1FinishAll*100).toFixed(0), (dataR.NumGuMei3Finish/dataR.NumGuMei3FinishAll*100).toFixed(0), (dataR.NumGuMei4Finish/dataR.NumGuMei4FinishAll*100).toFixed(0), (dataR.NumGuMei7Finish/dataR.NumGuMei7FinishAll*100).toFixed(0), (dataR.NumGuMei18Finish/dataR.NumGuMei18FinishAll*100).toFixed(0), (dataR.NumGuMei9Finish/dataR.NumGuMei9FinishAll*100).toFixed(0), (dataR.NumGuMei10Finish/dataR.NumGuMei10FinishAll*100).toFixed(0)],
                                                                                     barWidth: 30,//柱图宽度
                                                                                 }
                                                                             ];
 
                                                                         } else if (name == '古龙') {
-                                                                            title_text = '古龙片区居委完成度对比';
+                                                                            title_text = '古龙片区居委完成度对比(%)';
                                                                             xAxis_data = ['古龙一村', '古龙二村', '古龙三村', '古龙四村', '古龙五村', '古龙六村'];
                                                                             series = [
                                                                                 {
@@ -2309,13 +2316,13 @@
                                                                                             color: series_color_1
                                                                                         }
                                                                                     },
-                                                                                    data: [(dataR.NumGuLong1Finish/dataR.NumGuLong1FinishAll*100).toFixed(2), (dataR.NumGuLong2Finish/dataR.NumGuLong2FinishAll*100).toFixed(2), (dataR.NumGuLong3Finish/dataR.NumGuLong3FinishAll*100).toFixed(2), (dataR.NumGuLong4Finish/dataR.NumGuLong4FinishAll*100).toFixed(2), (dataR.NumGuLong5Finish/dataR.NumGuLong5FinishAll*100).toFixed(2), (dataR.NumGuLong6Finish/dataR.NumGuLong6FinishAll*100).toFixed(2)],
+                                                                                    data: [(dataR.NumGuLong1Finish/dataR.NumGuLong1FinishAll*100).toFixed(0), (dataR.NumGuLong2Finish/dataR.NumGuLong2FinishAll*100).toFixed(0), (dataR.NumGuLong3Finish/dataR.NumGuLong3FinishAll*100).toFixed(0), (dataR.NumGuLong4Finish/dataR.NumGuLong4FinishAll*100).toFixed(0), (dataR.NumGuLong5Finish/dataR.NumGuLong5FinishAll*100).toFixed(0), (dataR.NumGuLong6Finish/dataR.NumGuLong6FinishAll*100).toFixed(0)],
                                                                                     barWidth: 30,//柱图宽度
                                                                                 }
                                                                             ];
 
                                                                         } else if (name == '平吉') {
-                                                                            title_text = '平吉片区居委完成度对比';
+                                                                            title_text = '平吉片区居委完成度对比(%)';
                                                                             xAxis_data = ['平吉一村', '平吉二村', '平吉一三村', '平吉四村', '平吉五村', '平吉六村'];
                                                                             series = [
                                                                                 {
@@ -2335,13 +2342,13 @@
                                                                                             color: series_color_1
                                                                                         }
                                                                                     },
-                                                                                    data: [(dataR.NumPingJi1Finish/dataR.NumPingJi1FinishAll*100).toFixed(2), (dataR.NumPingJi2Finish/dataR.NumPingJi2FinishAll*100).toFixed(2), (dataR.NumPingJi3Finish/dataR.NumPingJi3FinishAll*100).toFixed(2), (dataR.NumPingJi4Finish/dataR.NumPingJi4FinishAll*100).toFixed(2), (dataR.NumPingJi5Finish/dataR.NumPingJi5FinishAll*100).toFixed(2), (dataR.NumPingJi6Finish/dataR.NumPingJi6FinishAll*100).toFixed(2)],
+                                                                                    data: [(dataR.NumPingJi1Finish/dataR.NumPingJi1FinishAll*100).toFixed(0), (dataR.NumPingJi2Finish/dataR.NumPingJi2FinishAll*100).toFixed(0), (dataR.NumPingJi3Finish/dataR.NumPingJi3FinishAll*100).toFixed(0), (dataR.NumPingJi4Finish/dataR.NumPingJi4FinishAll*100).toFixed(0), (dataR.NumPingJi5Finish/dataR.NumPingJi5FinishAll*100).toFixed(0), (dataR.NumPingJi6Finish/dataR.NumPingJi6FinishAll*100).toFixed(0)],
                                                                                     barWidth: 30,//柱图宽度
                                                                                 }
                                                                             ];
 
                                                                         } else if (name == '东兰') {
-                                                                            title_text = '东兰片区居委完成度对比';
+                                                                            title_text = '东兰片区居委完成度对比(%)';
                                                                             xAxis_data = ['东兰一居', '东兰二居', '东兰三居', '东兰四居'];
                                                                             series = [
                                                                                 {
@@ -2361,13 +2368,13 @@
                                                                                             color: series_color_1
                                                                                         }
                                                                                     },
-                                                                                    data: [(dataR.NumDongLan1Finish/dataR.NumDongLan1FinishAll*100).toFixed(2), (dataR.NumDongLan2Finish/dataR.NumDongLan2FinishAll*100).toFixed(2), (dataR.NumDongLan3Finish/dataR.NumDongLan3FinishAll*100).toFixed(2), (dataR.NumDongLan4Finish/dataR.NumDongLan4FinishAll*100).toFixed(2)],
+                                                                                    data: [(dataR.NumDongLan1Finish/dataR.NumDongLan1FinishAll*100).toFixed(0), (dataR.NumDongLan2Finish/dataR.NumDongLan2FinishAll*100).toFixed(0), (dataR.NumDongLan3Finish/dataR.NumDongLan3FinishAll*100).toFixed(0), (dataR.NumDongLan4Finish/dataR.NumDongLan4FinishAll*100).toFixed(0)],
                                                                                     barWidth: 30,//柱图宽度
                                                                                 }
                                                                             ];
 
                                                                         } else if (name == '平南') {
-                                                                            title_text = '平南片区居委完成度对比';
+                                                                            title_text = '平南片区居委完成度对比(%)';
                                                                             xAxis_data = ['平南一居', '平南二居', '平南三居', '华一新城', '华梅花苑', '梅莲苑', '万源一居', '万源二居', '万源三居', '万源四居'];
                                                                             series = [
                                                                                 {
@@ -2397,7 +2404,7 @@
                                                                         finish_jw_bar.setOption(finish_option_jw_bar);
                                                                     });
 
-                                                                    title_text = '平阳片区居委完成度对比';
+                                                                    title_text = '平阳片区居委完成度对比(%)';
                                                                     legend_data = [];
                                                                     xAxis_data = ['平阳一村', '平阳二村', '平阳三村', '平阳四村', '平阳五村', '平阳六村'];
                                                                     series = [
@@ -2418,7 +2425,7 @@
                                                                                     color: series_color_1
                                                                                 }
                                                                             },
-                                                                            data: [(dataR.NumPingYang1Finish/dataR.NumPingYang1FinishAll*100).toFixed(2), (dataR.NumPingYang2Finish/dataR.NumPingYang2FinishAll*100).toFixed(2), (dataR.NumPingYang3Finish/dataR.NumPingYang3FinishAll*100).toFixed(2), (dataR.NumPingYang4Finish/dataR.NumPingYang4FinishAll*100).toFixed(2), (dataR.NumPingYang5Finish/dataR.NumPingYang5FinishAll*100).toFixed(2), (dataR.NumPingYang6Finish/dataR.NumPingYang6FinishAll*100).toFixed(2)],
+                                                                            data: [(dataR.NumPingYang1Finish/dataR.NumPingYang1FinishAll*100).toFixed(0), (dataR.NumPingYang2Finish/dataR.NumPingYang2FinishAll*100).toFixed(0), (dataR.NumPingYang3Finish/dataR.NumPingYang3FinishAll*100).toFixed(0), (dataR.NumPingYang4Finish/dataR.NumPingYang4FinishAll*100).toFixed(0), (dataR.NumPingYang5Finish/dataR.NumPingYang5FinishAll*100).toFixed(0), (dataR.NumPingYang6Finish/dataR.NumPingYang6FinishAll*100).toFixed(0)],
                                                                             barWidth: 30,//柱图宽度
                                                                         }
                                                                     ];
@@ -2440,13 +2447,12 @@
 
                                                                             label: {
                                                                                 normal: {
-                                                                                    // formatter: '{d}%',
-                                                                                    formatter: '',
+                                                                                    formatter: '{d}%',
                                                                                     position: 'inner',
-                                                                                    fontSize : 20,
+                                                                                    fontSize : 10,
                                                                                     textStyle: {
                                                                                         color: '#fff',
-                                                                                        fontSize:'20'
+                                                                                        fontSize:'10'
                                                                                     }
 
                                                                                 }
@@ -2513,6 +2519,7 @@
                                                                     ];
                                                                     var organ_option_sum_pie = chartPie(title_text,legend_data,series);
                                                                     organ_sum_pie.setOption(organ_option_sum_pie);
+                                                                    //alert(dataR.NumOrganOld);
 
                                                                     //part5
                                                                     //经济条件
@@ -3087,7 +3094,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideTop',
                                                                                     textStyle:{
                                                                                         fontSize:16
@@ -3108,7 +3115,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideTop',
                                                                                     textStyle:{
                                                                                         fontSize:16
@@ -3775,7 +3782,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideTop',
                                                                                     textStyle:{
                                                                                         fontSize:16
@@ -3796,7 +3803,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideTop',
                                                                                     textStyle:{
                                                                                         fontSize:16
@@ -3859,7 +3866,7 @@
                                                                             fontWeight:'normal'
                                                                         },
                                                                         x:'0%',
-                                                                        y:'0%'
+                                                                        y:'6%'
                                                                     };
                                                                     data=[
                                                                         {value:dataR.NumOrgPingYang, name:'平阳敬老院'},
@@ -6729,8 +6736,9 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     // position: 'insideTop'
+                                                                                    formatter: '',
                                                                                     position: ['220%', '40%']
                                                                                 }
                                                                             },
@@ -6748,7 +6756,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideTop'
                                                                                 }
                                                                             },
@@ -6891,7 +6899,7 @@
                                                                                 fontWeight:100
                                                                             },
                                                                             x:'0%',
-                                                                            y:'0%',
+                                                                            y:'6%',
                                                                         },
                                                                         color: ['#ffd289'],
                                                                         legend: {
@@ -8085,12 +8093,37 @@
                                                                             sex=1;
 
                                                                         }
+                                                                        //alert(1);
+                                                                        //selected['男']=false;
+
+                                                                       // triggerAction('legendselected', selected);
                                                                         table.fnFilter();
                                                                         getNumOfJw();
+                                                                        label_sexPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                                          //getAgeAndSex();
+
                                                       
 
                                                                     });
+                                                                    var triggerAction = function(action, selected) {
+                                                                        legend = [];
+
+                                                                        for ( name in selected) {
+                                                                            if (selected.hasOwnProperty(name)) {
+                                                                                legend.push({name: name});
+                                                                            }
+                                                                        }
+
+                                                                        label_sexPie.dispatchAction({
+                                                                                type: 'legendUnSelect',
+                                                                            name: '男'
+                                                                        });
+                                                                    };
+
+
 
                                                                     label_hjPie.on('legendselectchanged', function (params) {
                                                                         var name = params.name;
@@ -8688,7 +8721,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideTop',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -8712,7 +8745,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideTop',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -9489,7 +9522,7 @@
                                                                                 label: {
                                                                                     normal: {
                                                                                         formatter: '',
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'right',
                                                                                         textStyle:{
                                                                                             fontSize:12
@@ -10198,7 +10231,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10218,7 +10251,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20

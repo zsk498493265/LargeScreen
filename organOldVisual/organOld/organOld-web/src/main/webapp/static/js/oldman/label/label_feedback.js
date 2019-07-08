@@ -50,7 +50,7 @@ $(document).ready(function(){
                     "data": "labelManImplNum", // 数据列名
                     "render": function(data, type, full) { // 返回自定义内容
                         if(data.sum!=0){
-                            return ((((data.sum-data.no)*1.00)/(data.sum))*100).toFixed(2);
+                            return ((((data.sum-data.no)*1.00)/(data.sum))*100).toFixed(0);
                         }else{
                             return "0.00";
                         }
@@ -60,7 +60,7 @@ $(document).ready(function(){
                     "data": "labelManImplNum", // 数据列名
                     "render": function(data, type, full) { // 返回自定义内容
                         if(data.sum!=0){
-                            return ((data.impl*1.00/(data.sum)*100)).toFixed(2);
+                            return ((data.impl*1.00/(data.sum)*100)).toFixed(0);
                         }else{
                             return "0.00";
                         }

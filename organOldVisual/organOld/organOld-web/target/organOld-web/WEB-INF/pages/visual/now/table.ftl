@@ -242,7 +242,14 @@
         //表格不分行
         //alert(document.getElementById("dt_paginate").style.width);
         document.getElementById("dt_paginate").style.width=600+'px';
-        document.getElementById("dt_info").style.display="none";
+        //document.getElementById("dt_info").style.display="none";
+
+        document.getElementById("dt_paginate").style.position='relative';
+        document.getElementById("dt_paginate").style.left=-230+'px';
+
+        document.getElementById("dt_info").style.position="relative";
+        document.getElementById("dt_info").style.top=30+"px";
+        document.getElementById("dt_info").style.left=-85+"px";
         var oTable=$("#editable").dataTable();
         oTable.$("td").editable("",{
             "callback":function(sValue,y){var aPos=oTable.fnGetPosition(this);oTable.fnUpdate(sValue,aPos[0],aPos[1])},

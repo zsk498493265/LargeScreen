@@ -65,7 +65,7 @@ function chartBar(title_text,legend_data,yAxis_data,series) {
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'0%',
+            y:'6%',
         },
         tooltip:{
             trigger: 'axis',
@@ -137,7 +137,7 @@ function chartBar_label_age(title_text,legend_data,yAxis_data,series) {
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'0%',
+            y:'6%',
         },
         tooltip:{
             trigger: 'axis',
@@ -207,7 +207,7 @@ function chartBarDisplayAll(title_text,legend_data,yAxis_data,series) {
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'0%',
+            y:'6%',
         },
         tooltip:{
             trigger: 'axis',
@@ -225,7 +225,7 @@ function chartBarDisplayAll(title_text,legend_data,yAxis_data,series) {
             top:'48%',
             left: '6%',
             right: '15%',
-            bottom: '-15%',
+            bottom: '-12%',
             //x2: 80,
             containLabel: true
         },
@@ -687,7 +687,7 @@ function chartBarForChx(title_text,legend_data,yAxis_data,series) {
                     interval:0,//轴信息全部显示
                     rotate:15,//-15度角倾斜显示
                 },
-                interval:0
+                // interval:0
             }
         },
         series: series
@@ -916,7 +916,7 @@ function chartLine(title_text,legend_data,xAxis_data,series) {
             fontWeight:'normal'
             },
             x:'0%',
-            y:'0%'
+            y:'4%'
         },
         tooltip:{
             trigger: 'axis'
@@ -929,7 +929,7 @@ function chartLine(title_text,legend_data,xAxis_data,series) {
         grid:  {
             left: '3%',
             right: '4%',
-            bottom: '-3%',
+            bottom: '0%',
             top:'30%',
             containLabel: true
         },
@@ -1004,7 +1004,7 @@ function chartLineForFamily(title_text,legend_data,xAxis_data,series) {
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'0%'
+            y:'4%'
         },
         tooltip:{
             trigger: 'axis'
@@ -1097,7 +1097,7 @@ function chartPie(title_text,legend_data,series) {
             },
             left:'left',
             x:'0%',
-            y:'0%'
+            y:'6%'
         },
         tooltip : {
             trigger: 'item',
@@ -1480,7 +1480,7 @@ function chartBarHeiForFinish(title_text,legend_data,xAxis_data,series) {
                 fontWeight: 'normal'
             },
             x:'0%',
-            y:'0%'
+            y:'6%'
         },
         tooltip:{
             trigger: 'axis',
@@ -1774,7 +1774,7 @@ function customizedPie(title_text,data,legend_data) {
                 fontWeight: 'normal'
             },
             x:'0%',
-            y:'0%'
+            y:'6%'
         },
         tooltip : {
             trigger: 'item',
@@ -1865,7 +1865,7 @@ function customizedPie2(title_text,data,legend_data) {
                 fontWeight: 'normal'
             },
             x:'0%',
-            y:'0%'
+            y:'6%'
         },
 
         tooltip : {
@@ -2358,6 +2358,8 @@ function toolTipReal(title_text,legend_data,name1,name2,data_t1,data_t2) {
                 color: '#FFFFFF',
                 fontSize: 20
             },
+            x:'0%',
+            y:'6%'
         },
         legend: {
             x:'right',
@@ -2581,6 +2583,8 @@ function toolTipMulti1(title_text,legend_data,data_t1,data_t2,data_t3,data_t4) {
                 color: '#FFFFFF',
                 fontSize: 20
             },
+            x:'0%',
+            y:'6%'
         },
         legend: {
             x:'right',

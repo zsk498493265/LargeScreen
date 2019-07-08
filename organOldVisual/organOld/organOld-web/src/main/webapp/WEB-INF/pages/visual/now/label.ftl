@@ -1666,6 +1666,10 @@
         return iw;
     }
 
+    function goToHeatMap(){
+        document.getElementById("container").style.zIndex = 2;
+        document.getElementById("dituContent").style.zIndex = 1;
+    }
     function ChangeMap() {
         document.getElementById("container").style.zIndex = 3 - document.getElementById("container").style.zIndex;
         document.getElementById("dituContent").style.zIndex = 3 - document.getElementById("dituContent").style.zIndex;
@@ -1779,6 +1783,7 @@
     var fifthTypeArray = new Array();
     var sixthTypeArray = new Array();
     function butt(flag) {
+        goToHeatMap();
         $('#dt').dataTable().fnDestroy();//清空一下table
         table =$(".dataTables-example").dataTable(
             {
@@ -1949,7 +1954,13 @@
         }
 
         document.getElementById("dt_paginate").style.width=600+'px';
-        document.getElementById("dt_info").style.display="none";
+        //document.getElementById("dt_info").style.display="none";
+        document.getElementById("dt_paginate").style.position='relative';
+        document.getElementById("dt_paginate").style.left=-230+'px';
+
+        document.getElementById("dt_info").style.position="relative";
+        document.getElementById("dt_info").style.top=30+"px";
+        document.getElementById("dt_info").style.left=-85+"px";
         //add
         // $("#DataTables_Table_0").prev().css("display","none");
         // $("#dt_wrapper").find("div.row:first-child").hide();

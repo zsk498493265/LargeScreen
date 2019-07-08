@@ -53880,7 +53880,7 @@ var FunnelSeries = extendSeriesModel({
         var valueDim = data.mapDimension('value');
         var sum = data.getSum(valueDim);
         // Percent is 0 if sum is 0
-        params.percent = !sum ? 0 : +(data.get(valueDim, dataIndex) / sum * 100).toFixed(2);
+        params.percent = !sum ? 0 : +(data.get(valueDim, dataIndex) / sum * 100).toFixed(0);
 
         params.$vars.push('percent');
         return params;

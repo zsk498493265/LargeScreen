@@ -512,7 +512,7 @@
         if (current === 0 || max === 0 || isNaN(current) || isNaN(max)) {
             return 0;
         }
-        return ((current / max) * 100).toFixed(2);
+        return ((current / max) * 100).toFixed(0);
     }
 
     // Deep extend/merge two Objects

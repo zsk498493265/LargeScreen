@@ -97,7 +97,7 @@
                     polar: {},
                     series: [{
                         type: 'bar',
-                        data: [(dataR.NumPingYangFinish/dataR.NumPingYangFinishAll*100).toFixed(2), (dataR.NumDongLanFinish/dataR.NumDongLanFinishAll*100).toFixed(2), (dataR.NumGuLongFinish/dataR.NumGuLongFinishAll*100).toFixed(2), (dataR.NumPingJiFinish/dataR.NumPingJiFinishAll*100).toFixed(2), (dataR.NumPingNanFinish/dataR.NumPingNanFinishAll*100).toFixed(2), (dataR.NumGuMeiFinish/dataR.NumGuMeiFinishAll*100).toFixed(2)],
+                        data: [(dataR.NumPingYangFinish/dataR.NumPingYangFinishAll*100).toFixed(0), (dataR.NumDongLanFinish/dataR.NumDongLanFinishAll*100).toFixed(0), (dataR.NumGuLongFinish/dataR.NumGuLongFinishAll*100).toFixed(0), (dataR.NumPingJiFinish/dataR.NumPingJiFinishAll*100).toFixed(0), (dataR.NumPingNanFinish/dataR.NumPingNanFinishAll*100).toFixed(0), (dataR.NumGuMeiFinish/dataR.NumGuMeiFinishAll*100).toFixed(0)],
 
                         // data: [dataR.NumPingYangFinish, dataR.NumDongLanFinish, dataR.NumGuLongFinish, dataR.NumPingJiFinish, dataR.NumPingNanFinish, dataR.NumGuMeiFinish],
                         coordinateSystem: 'polar',
@@ -141,7 +141,7 @@
                                 color: series_color_1
                             }
                         },
-                        data: [(dataR.NumPingYang1Finish/dataR.NumPingYang1FinishAll*100).toFixed(2), (dataR.NumPingYang2Finish/dataR.NumPingYang2FinishAll*100).toFixed(2), (dataR.NumPingYang3Finish/dataR.NumPingYang3FinishAll*100).toFixed(2), (dataR.NumPingYang4Finish/dataR.NumPingYang4FinishAll*100).toFixed(2), (dataR.NumPingYang5Finish/dataR.NumPingYang5FinishAll*100).toFixed(2), (dataR.NumPingYang6Finish/dataR.NumPingYang6FinishAll*100).toFixed(2)],
+                        data: [(dataR.NumPingYang1Finish/dataR.NumPingYang1FinishAll*100).toFixed(0), (dataR.NumPingYang2Finish/dataR.NumPingYang2FinishAll*100).toFixed(0), (dataR.NumPingYang3Finish/dataR.NumPingYang3FinishAll*100).toFixed(0), (dataR.NumPingYang4Finish/dataR.NumPingYang4FinishAll*100).toFixed(0), (dataR.NumPingYang5Finish/dataR.NumPingYang5FinishAll*100).toFixed(0), (dataR.NumPingYang6Finish/dataR.NumPingYang6FinishAll*100).toFixed(0)],
                         barWidth: 30,//柱图宽度
                     }
                 ];
@@ -363,7 +363,7 @@
                                         color:series_color_1
                                     }
                                 },
-                                data: [(dataR.NumPingYang1Finish/dataR.NumPingYang1FinishAll*100).toFixed(2), (dataR.NumPingYang2Finish/dataR.NumPingYang2FinishAll*100).toFixed(2), (dataR.NumPingYang3Finish/dataR.NumPingYang3FinishAll*100).toFixed(2), (dataR.NumPingYang4Finish/dataR.NumPingYang4FinishAll*100).toFixed(2), (dataR.NumPingYang5Finish/dataR.NumPingYang5FinishAll*100).toFixed(2), (dataR.NumPingYang6Finish/dataR.NumPingYang6FinishAll*100).toFixed(2)],
+                                data: [(dataR.NumPingYang1Finish/dataR.NumPingYang1FinishAll*100).toFixed(0), (dataR.NumPingYang2Finish/dataR.NumPingYang2FinishAll*100).toFixed(0), (dataR.NumPingYang3Finish/dataR.NumPingYang3FinishAll*100).toFixed(0), (dataR.NumPingYang4Finish/dataR.NumPingYang4FinishAll*100).toFixed(0), (dataR.NumPingYang5Finish/dataR.NumPingYang5FinishAll*100).toFixed(0), (dataR.NumPingYang6Finish/dataR.NumPingYang6FinishAll*100).toFixed(0)],
                                 barWidth : 30,//柱图宽度
                             }
                         ];
@@ -390,7 +390,7 @@
                                         color:series_color_1
                                     }
                                 },
-                                data: [(dataR.NumGuMei1Finish/dataR.NumGuMei1FinishAll*100).toFixed(2), (dataR.NumGuMei3Finish/dataR.NumGuMei3FinishAll*100).toFixed(2), (dataR.NumGuMei4Finish/dataR.NumGuMei4FinishAll*100).toFixed(2), (dataR.NumGuMei7Finish/dataR.NumGuMei7FinishAll*100).toFixed(2), (dataR.NumGuMei18Finish/dataR.NumGuMei18FinishAll*100).toFixed(2), (dataR.NumGuMei9Finish/dataR.NumGuMei9FinishAll*100).toFixed(2), (dataR.NumGuMei10Finish/dataR.NumGuMei10FinishAll*100).toFixed(2)],
+                                data: [(dataR.NumGuMei1Finish/dataR.NumGuMei1FinishAll*100).toFixed(0), (dataR.NumGuMei3Finish/dataR.NumGuMei3FinishAll*100).toFixed(0), (dataR.NumGuMei4Finish/dataR.NumGuMei4FinishAll*100).toFixed(0), (dataR.NumGuMei7Finish/dataR.NumGuMei7FinishAll*100).toFixed(0), (dataR.NumGuMei18Finish/dataR.NumGuMei18FinishAll*100).toFixed(0), (dataR.NumGuMei9Finish/dataR.NumGuMei9FinishAll*100).toFixed(0), (dataR.NumGuMei10Finish/dataR.NumGuMei10FinishAll*100).toFixed(0)],
                                 barWidth : 30,//柱图宽度
                             }
                         ];
@@ -416,7 +416,7 @@
                                         color:series_color_1
                                     }
                                 },
-                                data: [(dataR.NumGuLong1Finish/dataR.NumGuLong1FinishAll*100).toFixed(2), (dataR.NumGuLong2Finish/dataR.NumGuLong2FinishAll*100).toFixed(2), (dataR.NumGuLong3Finish/dataR.NumGuLong3FinishAll*100).toFixed(2), (dataR.NumGuLong4Finish/dataR.NumGuLong4FinishAll*100).toFixed(2), (dataR.NumGuLong5Finish/dataR.NumGuLong5FinishAll*100).toFixed(2), (dataR.NumGuLong6Finish/dataR.NumGuLong6FinishAll*100).toFixed(2)],
+                                data: [(dataR.NumGuLong1Finish/dataR.NumGuLong1FinishAll*100).toFixed(0), (dataR.NumGuLong2Finish/dataR.NumGuLong2FinishAll*100).toFixed(0), (dataR.NumGuLong3Finish/dataR.NumGuLong3FinishAll*100).toFixed(0), (dataR.NumGuLong4Finish/dataR.NumGuLong4FinishAll*100).toFixed(0), (dataR.NumGuLong5Finish/dataR.NumGuLong5FinishAll*100).toFixed(0), (dataR.NumGuLong6Finish/dataR.NumGuLong6FinishAll*100).toFixed(0)],
                                 barWidth : 30,//柱图宽度
                             }
                         ];
@@ -442,7 +442,7 @@
                                         color:series_color_1
                                     }
                                 },
-                                data: [(dataR.NumPingJi1Finish/dataR.NumPingJi1FinishAll*100).toFixed(2), (dataR.NumPingJi2Finish/dataR.NumPingJi2FinishAll*100).toFixed(2), (dataR.NumPingJi3Finish/dataR.NumPingJi3FinishAll*100).toFixed(2), (dataR.NumPingJi4Finish/dataR.NumPingJi4FinishAll*100).toFixed(2), (dataR.NumPingJi5Finish/dataR.NumPingJi5FinishAll*100).toFixed(2), (dataR.NumPingJi6Finish/dataR.NumPingJi6FinishAll*100).toFixed(2)],
+                                data: [(dataR.NumPingJi1Finish/dataR.NumPingJi1FinishAll*100).toFixed(0), (dataR.NumPingJi2Finish/dataR.NumPingJi2FinishAll*100).toFixed(0), (dataR.NumPingJi3Finish/dataR.NumPingJi3FinishAll*100).toFixed(0), (dataR.NumPingJi4Finish/dataR.NumPingJi4FinishAll*100).toFixed(0), (dataR.NumPingJi5Finish/dataR.NumPingJi5FinishAll*100).toFixed(0), (dataR.NumPingJi6Finish/dataR.NumPingJi6FinishAll*100).toFixed(0)],
                                 barWidth : 30,//柱图宽度
                             }
                         ];
@@ -468,7 +468,7 @@
                                         color:series_color_1
                                     }
                                 },
-                                data: [(dataR.NumDongLan1Finish/dataR.NumDongLan1FinishAll*100).toFixed(2), (dataR.NumDongLan2Finish/dataR.NumDongLan2FinishAll*100).toFixed(2), (dataR.NumDongLan3Finish/dataR.NumDongLan3FinishAll*100).toFixed(2), (dataR.NumDongLan4Finish/dataR.NumDongLan4FinishAll*100).toFixed(2)],
+                                data: [(dataR.NumDongLan1Finish/dataR.NumDongLan1FinishAll*100).toFixed(0), (dataR.NumDongLan2Finish/dataR.NumDongLan2FinishAll*100).toFixed(0), (dataR.NumDongLan3Finish/dataR.NumDongLan3FinishAll*100).toFixed(0), (dataR.NumDongLan4Finish/dataR.NumDongLan4FinishAll*100).toFixed(0)],
                                 barWidth : 30,//柱图宽度
                             }
                         ];
@@ -494,7 +494,7 @@
                                         color:series_color_1
                                     }
                                 },
-                                data: [(dataR.NumPingNan1Finish/dataR.NumPingNan1FinishAll*100).toFixed(2), (dataR.NumPingNan2Finish/dataR.NumPingNan2FinishAll*100).toFixed(2), (dataR.NumPingNan3Finish/dataR.NumPingNan3FinishAll*100).toFixed(2), (dataR.NumHuaYiFinish/dataR.NumHuaYiFinishAll*100).toFixed(2), (dataR.NumHuaMeiFinish/dataR.NumHuaMeiFinishAll*100).toFixed(2), (dataR.NumMeiLianFinish/dataR.NumMeiLianFinishAll*100).toFixed(2), (dataR.NumWanYuan1Finish/dataR.NumWanYuan1FinishAll*100).toFixed(2), (dataR.NumWanYuan2Finish/dataR.NumWanYuan2FinishAll*100).toFixed(2), (dataR.NumWanYuan3Finish/dataR.NumWanYuan3FinishAll*100).toFixed(2), (dataR.NumWanYuan4Finish/dataR.NumWanYuan4FinishAll*100).toFixed(2)],
+                                data: [(dataR.NumPingNan1Finish/dataR.NumPingNan1FinishAll*100).toFixed(0), (dataR.NumPingNan2Finish/dataR.NumPingNan2FinishAll*100).toFixed(0), (dataR.NumPingNan3Finish/dataR.NumPingNan3FinishAll*100).toFixed(0), (dataR.NumHuaYiFinish/dataR.NumHuaYiFinishAll*100).toFixed(0), (dataR.NumHuaMeiFinish/dataR.NumHuaMeiFinishAll*100).toFixed(0), (dataR.NumMeiLianFinish/dataR.NumMeiLianFinishAll*100).toFixed(0), (dataR.NumWanYuan1Finish/dataR.NumWanYuan1FinishAll*100).toFixed(0), (dataR.NumWanYuan2Finish/dataR.NumWanYuan2FinishAll*100).toFixed(0), (dataR.NumWanYuan3Finish/dataR.NumWanYuan3FinishAll*100).toFixed(0), (dataR.NumWanYuan4Finish/dataR.NumWanYuan4FinishAll*100).toFixed(0)],
                                 barWidth : 30,//柱图宽度
                             }
                         ];

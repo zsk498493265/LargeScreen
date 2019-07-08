@@ -249,7 +249,7 @@
                     }
                 }];
                 var option_sub_wl =chartPie2(title_text, legend_data, series);
-                //var option_sub_wl = gauge(title_text, dataR.NumZhiHuiZZFutureRemain.toFixed(2));
+                //var option_sub_wl = gauge(title_text, dataR.NumZhiHuiZZFutureRemain.toFixed(0));
                 title_text = "床位数";
                 legend_data = [{name: '已入住', textStyle: {color: legend_color, fontSize: 10}}, {
                     name: '剩余',
