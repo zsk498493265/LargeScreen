@@ -635,7 +635,7 @@ function chartBarForChx(title_text,legend_data,yAxis_data,series) {
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'-3%',
+            y:'6%',
         },
         tooltip:{
             trigger: 'axis',
@@ -652,7 +652,7 @@ function chartBarForChx(title_text,legend_data,yAxis_data,series) {
             top:'45%',
             left: '3%',
             right: '4%',
-            bottom: '0%',
+            bottom: '-10%',
             containLabel: true
         },
         xAxis: {
@@ -687,14 +687,14 @@ function chartBarForChx(title_text,legend_data,yAxis_data,series) {
                     interval:0,//轴信息全部显示
                     rotate:15,//-15度角倾斜显示
                 },
-                // interval:0
+                interval:0
             }
         },
         series: series
     };
     return option;
 }
-function chartBarForChxJi(title_text,legend_data,yAxis_data,series) {
+function chartBarForChxPqService(title_text,legend_data,yAxis_data,series) {
     var option = {
         title: {
             text:title_text,
@@ -704,7 +704,7 @@ function chartBarForChxJi(title_text,legend_data,yAxis_data,series) {
                 fontWeight:'normal'
             },
             x:'0%',
-            y:'-3%',
+            y:'6%',
         },
         tooltip:{
             trigger: 'axis',
@@ -721,7 +721,76 @@ function chartBarForChxJi(title_text,legend_data,yAxis_data,series) {
             top:'45%',
             left: '3%',
             right: '4%',
-            bottom: '-25%',
+            bottom: '-15%',
+            containLabel: true
+        },
+        xAxis: {
+            show:false
+        },
+        yAxis: {
+            type:'category',
+            data: yAxis_data,
+            // axisLabel: {
+            //     show: true,
+            //     textStyle: {
+            //         color: '#fff',
+            //     }
+            // },
+            boundaryGap:false,
+            axisTick:{
+                show:false
+            },
+            // y 轴线
+            axisLine:{
+                show:false,
+
+            },
+            // 分割线设置
+            splitLine:{
+                show:false,  //显示分割线
+            },
+            axisLabel:{
+                textStyle: {
+                    color: '#fff',
+                    fontSize:8,
+                    interval:0,//轴信息全部显示
+                    rotate:15,//-15度角倾斜显示
+                },
+                interval:0
+            }
+        },
+        series: series
+    };
+    return option;
+}
+function chartBarForChxJi(title_text,legend_data,yAxis_data,series) {
+    var option = {
+        title: {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:18,
+                fontWeight:'normal'
+            },
+            x:'0%',
+            y:'6%',
+        },
+        tooltip:{
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            orient: 'horizontal',
+            right:'0',
+            data:legend_data
+        },
+        grid:  {
+            top:'45%',
+            left: '3%',
+            right: '4%',
+            bottom: '-8%',
             containLabel: true
         },
         xAxis: {

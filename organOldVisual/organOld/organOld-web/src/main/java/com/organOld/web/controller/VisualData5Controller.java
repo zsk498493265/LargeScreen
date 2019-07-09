@@ -405,7 +405,8 @@ public class VisualData5Controller {
         jsonObject.put("NumFenLi1",dataMap.get(0).get("NumFenLi1"));
         jsonObject.put("NumFenLi2",dataMap.get(0).get("NumFenLi2"));
         jsonObject.put("NumFenLi3",dataMap.get(0).get("NumFenLi3"));
-//        Integer NumFenLi4 = Tool.ReturnTendence(dataMap.get(0).get("NumFenLi3"),month1);
+//error
+        //Integer NumFenLi4 = Tool.ReturnTendence(dataMap.get(0).get("NumFenLi3"),month1);
         Integer NumFenLi4 = 48;
         Integer NumFenLi5 = Tool.ReturnTendence(NumFenLi4,month2);
         jsonObject.put("NumFenLi4",NumFenLi4);

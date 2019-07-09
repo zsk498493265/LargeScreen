@@ -1130,6 +1130,7 @@
                                                                     var base_option_age_line = toolTipMulti1(title_text, legend_data,data1,data2,data3,data4);
 
 
+                                                                    alert(dataR.NumOld1);
                                                                     title_text='老人数量变化趋势';
                                                                     legend_data=[{name:'老人',textStyle:{color:legend_color,fontSize:12}},{name:'总人口',textStyle:{color:legend_color,fontSize:12}}];
                                                                     xAxis_data=[month1+'月',month2+'月',month3+'月',month4+'月',month5+'月'];
@@ -9608,7 +9609,7 @@
                                                                         //    级别分布柱状图
                                                                         title_text='获得服务老人级别';
                                                                         legend_data=[];
-                                                                        yAxis_data=['2级','3级','4级','5级','6级'];
+                                                                        yAxis_data=['2-3级','4级','5-6级'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -9629,7 +9630,7 @@
                                                                                         color:series_color_1
                                                                                     }
                                                                                 },
-                                                                                data: [numServedLeve2,numServedLeve3,numServedLeve4,numServedLeve5,numServedLeve6]
+                                                                                data: [numServedLeve2+numServedLeve3,numServedLeve4,numServedLeve5+numServedLeve6]
                                                                             }
                                                                         ];
                                                                         var chx_option_fw_jb_bar=chartBarForChx(title_text,legend_data,yAxis_data,series);
@@ -9661,7 +9662,7 @@
                                                                                 data: [dataR.NumDongLanServed, dataR.NumGuLongServed, dataR.NumPingNanServed, dataR.NumPingYangServed, dataR.NumPingJiServed, dataR.NumGuMeiServed]
                                                                             }
                                                                         ];
-                                                                        var chx_option_fw_pq_bar =  chartBarForChx(title_text, legend_data, yAxis_data, series);
+                                                                        var chx_option_fw_pq_bar =  chartBarForChxPqService(title_text, legend_data, yAxis_data, series);
                                                                         chx_fw_pq_bar.setOption(chx_option_fw_pq_bar);
 
                                                                         //    已评级年龄分布柱状图
