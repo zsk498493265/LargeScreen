@@ -16,12 +16,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import com.organOld.outService.constant.ValueConstant;
-import static com.organOld.visualService.util.Tool.AgeTobirthday;
-import static com.organOld.visualService.util.Tool.getNowDate1;
-import static com.organOld.visualService.util.Tool.getNowDate2;
-import static com.organOld.visualService.util.Tool.getNowDate3;
-import static com.organOld.visualService.util.Tool.getNowDate4;
-import static com.organOld.visualService.util.Tool.getNowDate5;
+
+import static com.organOld.visualService.util.Tool.*;
 
 /**
  * 可视化 数据
@@ -47,8 +43,9 @@ public class VisualData5Controller {
         else
             month2 = Increase[mon + 1];
 
+        String str1=getNowYearAndMonth();
         List<Map<String,Integer>> dataMap=oldmanService.getVisualData5(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),
-                getNowDate1(),getNowDate2(),getNowDate3(),getNowDate4(),getNowDate5(),"2019-05");
+                getNowDate1(),getNowDate2(),getNowDate3(),getNowDate4(),getNowDate5(),str1);
         JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("NumOrgPingYang",dataMap.get(0).get("NumOrgPingYang"));
@@ -371,10 +368,10 @@ public class VisualData5Controller {
         jsonObject.put("NumOld1",dataMap.get(0).get("NumOld1"));
         jsonObject.put("NumOld2",dataMap.get(0).get("NumOld2"));
         jsonObject.put("NumOld3",dataMap.get(0).get("NumOld3"));
-//        String num = dataMap.get(0).get("NumOld3").toString();
-        String num = "1482";
-        Integer numold3 = Integer.parseInt(num);
-        Integer NumOld4 = Tool.ReturnTendence(numold3,month1);
+        String num = dataMap.get(0).get("NumOld3").toString();
+        //String num = "1482";
+        Integer NumOld3 = Integer.parseInt(num);
+        Integer NumOld4 = Tool.ReturnTendence(NumOld3,month1);
         Integer NumOld5 = Tool.ReturnTendence(NumOld4,month2);
         jsonObject.put("NumOld4",NumOld4);
         jsonObject.put("NumOld5",NumOld5);

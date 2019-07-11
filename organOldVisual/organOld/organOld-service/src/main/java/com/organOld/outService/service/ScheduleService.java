@@ -35,6 +35,7 @@ public class ScheduleService {
         List<NumberHistory> numberHistoryList=new ArrayList<>();
         String tm=commonService.getToday();
         numberHistoryList.add(new NumberHistory(1,(long)manSum,tm));
+        numberHistoryList.add(new NumberHistory(12,model.getNan()+model.getNv(),tm));
         numberHistoryList.add(new NumberHistory(21,model.getHj(),tm));
         numberHistoryList.add(new NumberHistory(22,model.getFhj(),tm));
         numberHistoryList.add(new NumberHistory(31,model.getNan(),tm));

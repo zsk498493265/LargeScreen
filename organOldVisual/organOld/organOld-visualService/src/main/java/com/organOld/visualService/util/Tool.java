@@ -72,6 +72,15 @@ public class Tool {
         cal.set(Calendar.MILLISECOND, 0);
         return cal.getTime();
     }
+    public static String getNowYearAndMonth(){
+        Date nowDate = new Date();
+        Calendar cal=Calendar.getInstance();
+        cal.setTime(nowDate);
+        cal.set(Calendar.DAY_OF_MONTH,1);
+        String result=cal.get(Calendar.YEAR )+"-0"+cal.get(Calendar.MONTH );
+
+        return result;
+    }
     public static int birthdayToAge(Date birthday){
         Date date=new Date();
         return calculateTwoDateYears(date,birthday);

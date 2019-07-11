@@ -2577,7 +2577,7 @@
                             stack: '总量',
                             label: {
                                 normal: {
-                                    show: true,
+                                    show: false,
                                     position: 'insideLeft'
                                 }
                             },
@@ -2594,7 +2594,7 @@
                             stack: '总量',
                             label: {
                                 normal: {
-                                    show: true,
+                                    show: false,
                                     position: 'insideRight'
                                 }
                             },
@@ -2606,7 +2606,7 @@
                             data: [dataLabel.numOfOverNineF, dataLabel.numOfEightToNineF, dataLabel.numOfSevenToEightF, dataLabel.numOfSixToSevenF]
                         }
                     ];
-                    var option_age_bar = chartBar(title_text, legend_data, yAxis_data, series);
+                    var option_age_bar = chartBar_label_age(title_text, legend_data, yAxis_data, series);
                     //ageBar = echarts.init(document.getElementById('ageBar'));
                     label_ageBar.setOption(option_age_bar);
                 }
@@ -2675,7 +2675,7 @@
                                 formatter: '{d}%\n({c})',
                                 textStyle: {
                                     fontWeight: 'normal',
-                                    fontSize: 20
+                                    fontSize: 16
                                 }
                             }
                         },
@@ -2758,7 +2758,7 @@
                                 formatter: '{d}%\n({c})',
                                 textStyle: {
                                     fontWeight: 'normal',
-                                    fontSize: 12
+                                    fontSize: 16
                                 }
                             }
                         },

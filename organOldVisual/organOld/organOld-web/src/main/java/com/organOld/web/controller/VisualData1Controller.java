@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 import java.util.Map;
 
-import static com.organOld.visualService.util.Tool.AgeTobirthday;
-import static com.organOld.visualService.util.Tool.getNowDate1;
+import static com.organOld.visualService.util.Tool.*;
 import static com.organOld.web.controller.VisualDataController2.add_code;
 
 /**
@@ -29,7 +28,8 @@ public class VisualData1Controller {
     @ResponseBody
     @RequestMapping(value = "/getVisualData1",method = RequestMethod.GET)
     public Result admin_getOldNum1(){
-        List<Map<String,Long>> dataMap=oldmanService.getVisualData1(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),"2019-05");
+        String str1=getNowYearAndMonth();
+        List<Map<String,Long>> dataMap=oldmanService.getVisualData1(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),str1);
         String s=AgeTobirthday(80).toString();
         String str=getNowDate1().toString();
         JSONObject jsonObject = new JSONObject();

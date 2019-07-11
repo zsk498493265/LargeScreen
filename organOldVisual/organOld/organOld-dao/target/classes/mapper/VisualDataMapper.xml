@@ -1478,7 +1478,7 @@
     <select id="getVisualData3" resultType="java.util.Map">
         select
         (select count(1)
-	from view_test2 where 1=1
+	from view_test2 vt where vt.sex=1 or vt.sex=2
 	) NumOld,
 	(select count(1)
 	from view_test2
@@ -4040,15 +4040,15 @@ and ob.id=ho.oldman_id
 
 
 -- 		  tendency
-        (select num from oldman_number_history where tm=#{param5} and type=11
+        (select num from oldman_number_history where tm=#{param5} and type=1
         )NumOld1,
-        (select num from oldman_number_history where tm=#{param6} and type=11
+        (select num from oldman_number_history where tm=#{param6} and type=1
         )NumOld2,
-        (select num from oldman_number_history where tm=#{param7} and type=11
+        (select num from oldman_number_history where tm=#{param7} and type=1
         )NumOld3,
-        (select num from oldman_number_history where tm=#{param8} and type=11
+        (select num from oldman_number_history where tm=#{param8} and type=1
         )NumOld4,
-        (select num from oldman_number_history where tm=#{param9} and type=11
+        (select num from oldman_number_history where tm=#{param9} and type=1
         )NumOld5,
 
         (select num from oldman_number_history where tm=#{param5} and type=12

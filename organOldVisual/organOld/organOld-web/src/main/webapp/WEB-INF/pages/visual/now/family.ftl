@@ -22,7 +22,7 @@
             <div class="zz"></div>
             <div id="family_hjPie" class="family_tu"></div>
         </div>
-        <div class="col-lg-4 box line">
+        <div class="col-lg-4 box line" style="position: relative;left:0px">
             <div class="zz"></div>
             <div id="family_sexPie" class="family_tu"></div>
         </div>

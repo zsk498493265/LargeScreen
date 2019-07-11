@@ -22,7 +22,7 @@
             <div class="zz"></div>
             <div id="economic_hjPie" class="economic_tu"></div>
         </div>
-        <div class="col-lg-4 box line">
+        <div class="col-lg-4 box line" style="position: relative;left:0px">
             <div class="zz"></div>
             <div id="economic_sexPie" class="economic_tu"></div>
         </div>

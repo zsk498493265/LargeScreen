@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.organOld.visualService.util.Tool.AgeTobirthday;
+import static com.organOld.visualService.util.Tool.getNowYearAndMonth;
 
 /**
  * 可视化 数据
@@ -27,7 +28,8 @@ public class VisualData3Controller {
     @ResponseBody
     @RequestMapping(value = "/getVisualData3",method = RequestMethod.GET)
     public Result admin_getOldNum1(){
-        List<Map<String,Long>> dataMap=oldmanService.getVisualData3(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),"2019-05");
+        String str1=getNowYearAndMonth();
+        List<Map<String,Long>> dataMap=oldmanService.getVisualData3(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),str1);
         //String s=AgeTobirthday(80).toString();
 
         JSONObject jsonObject = new JSONObject();

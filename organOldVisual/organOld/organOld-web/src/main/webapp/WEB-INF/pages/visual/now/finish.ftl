@@ -1130,13 +1130,13 @@
                                                                     var base_option_age_line = toolTipMulti1(title_text, legend_data,data1,data2,data3,data4);
 
 
-                                                                    alert(dataR.NumOld1);
+                                                                    //alert(dataR.NumOld1);
                                                                     title_text='老人数量变化趋势';
                                                                     legend_data=[{name:'老人',textStyle:{color:legend_color,fontSize:12}},{name:'总人口',textStyle:{color:legend_color,fontSize:12}}];
                                                                     xAxis_data=[month1+'月',month2+'月',month3+'月',month4+'月',month5+'月'];
                                                                     series=[
                                                                         {
-                                                                            name: '老人',
+                                                                            name: '总人口',
                                                                             type: 'line',
                                                                             itemStyle:{
                                                                                 normal: {
@@ -1209,7 +1209,7 @@
                                                                                     }}},dataR.NumOld4,dataR.NumOld5]
                                                                         },
                                                                         {
-                                                                            name: '总人口',
+                                                                            name: '老人',
                                                                             type: 'line',
                                                                             itemStyle:{
                                                                                 normal: {
@@ -1282,7 +1282,7 @@
                                                                         }
                                                                     ];
                                                                     //alert(dataR.NumOld1);
-                                                                    var base_option_num_line = chartLine(title_text,legend_data,xAxis_data,series);
+                                                                    var base_option_num_line = chartLineForOldNumTend(title_text,legend_data,xAxis_data,series);
                                                                     base_numLine.setOption(base_option_num_line);
                                                                     base_hjPie.setOption(base_option_area_pie);
                                                                     base_hjLine.setOption(base_option_area_line);
@@ -3877,6 +3877,7 @@
                                                                     legend_data=[{name:'平阳敬老院',textStyle:{color:legend_color,fontSize:12}},{name:'古美敬老院',textStyle:{color:legend_color,fontSize:12}},{name:'莲花敬老院',textStyle:{color:legend_color,fontSize:12}}];
 
 
+                                                                    //alert(dataR.NumOrgPingYang);
                                                                     var organ_option_jg_pie = customizedPieOrgan(title_organOldman_1,data,legend_data);
                                                                     organ_jg_pie.setOption(organ_option_jg_pie);
 
@@ -4549,7 +4550,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                      position: 'right',
                                                                                     //position: ['0%','0%'],
                                                                                     textStyle:{
@@ -4583,7 +4584,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:10
@@ -4632,8 +4633,8 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
-                                                                                    position: 'insideLeft',
+                                                                                    show: false,
+                                                                                    position: 'right',
                                                                                     textStyle:{
                                                                                         fontSize:10
                                                                                     }
@@ -4654,7 +4655,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:10
@@ -4671,7 +4672,7 @@
                                                                             barCategoryGap:20,
                                                                         }
                                                                     ];
-                                                                    var organOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var organOldman_option_jg_1_age=chartBarForOrgOldLeft(title_text,legend_data,yAxis_data,series);
                                                                     organOldman_jg_1_age.setOption(organOldman_option_jg_1_age);
                                                                     title_text='年龄';
                                                                     legend_data=[
@@ -4697,7 +4698,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -4718,7 +4719,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -4735,7 +4736,7 @@
                                                                             barCategoryGap:20,
                                                                         }
                                                                     ];
-                                                                    var organOldman_option_jg_2_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var organOldman_option_jg_2_age=chartBarForOrgOldLeft(title_text,legend_data,yAxis_data,series);
                                                                     organOldman_jg_2_age.setOption(organOldman_option_jg_2_age);
                                                                     title_text='年龄';
                                                                     legend_data=[
@@ -4761,7 +4762,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -4783,7 +4784,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -4800,7 +4801,7 @@
                                                                             barCategoryGap:20,
                                                                         }
                                                                     ];
-                                                                    var organOldman_option_jg_3_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var organOldman_option_jg_3_age=chartBarForOrgOldLeft(title_text,legend_data,yAxis_data,series);
                                                                     organOldman_jg_3_age.setOption(organOldman_option_jg_3_age);
 
                                                                     //zhangzhezhaohu
@@ -4979,10 +4980,11 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumZhiHuiZZAnd90AboveF,dataR.NumZhiHuiZZAnd80To90F,dataR.NumZhiHuiZZAnd70To80F,dataR.NumZhiHuiZZAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     zzOldman_jg_1_age.setOption(zzOldman_option_jg_1_age);
 
                                                                     //zhangzhe top
@@ -5107,7 +5109,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90-','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -5115,10 +5117,10 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
-                                                                                        fontSize:8
+                                                                                        fontSize:10
                                                                                     }
                                                                                 }
                                                                             },
@@ -5127,6 +5129,7 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumZhiHuiZZAnd90AboveM,dataR.NumZhiHuiZZAnd80To90M,dataR.NumZhiHuiZZAnd70To80M,dataR.NumZhiHuiZZAnd60To70M]
                                                                         },
                                                                         {
@@ -5135,10 +5138,10 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
-                                                                                        fontSize:8
+                                                                                        fontSize:10
                                                                                     }
                                                                                 }
                                                                             },
@@ -5147,11 +5150,16 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data: [dataR.NumZhiHuiZZAnd90AboveF,dataR.NumZhiHuiZZAnd80To90F,dataR.NumZhiHuiZZAnd70To80F,dataR.NumZhiHuiZZAnd60To70F]
+                                                                            barWidth:20,
+                                                                            barCategoryGap:20,
+                                                                            data: [4,1,2,3]
+
+                                                                            //data: [dataR.NumZhiHuiZZAnd90AboveF,dataR.NumZhiHuiZZAnd80To90F,dataR.NumZhiHuiZZAnd70To80F,dataR.NumZhiHuiZZAnd60To70F]
                                                                         }
                                                                     ];
                                                                     var zzOldman_option_jg_age_bar=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
                                                                     zzOldman_jg_age_bar.setOption(zzOldman_option_jg_age_bar);
+                                                                    //alert(dataR.NumZhiHuiZZAnd90AboveM+','+dataR.NumZhiHuiZZAnd80To90M+','+dataR.NumZhiHuiZZAnd70To80M+','+dataR.NumZhiHuiZZAnd60To70M);
 
                                                                     //rzzx
                                                                     title_text="床位数";
@@ -5328,10 +5336,11 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var rzzxOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var rzzxOldman_option_jg_1_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     rzzxOldman_jg_1_age.setOption(rzzxOldman_option_jg_1_age);
 
                                                                     //rzzx top
@@ -6001,7 +6010,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -6022,7 +6031,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -6034,10 +6043,11 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [age90AboveF_all, age80To90F_all,age70To80F_all ,age60To70F_all ]
                                                                         }
                                                                     ];
-                                                                    var zcdOldman_option_jg_age_bar=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zcdOldman_option_jg_age_bar=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     zcdOldman_jg_age_bar.setOption(zcdOldman_option_jg_age_bar);
                                                                     title_text='年龄';
                                                                     legend_data=[
@@ -6063,7 +6073,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -6083,7 +6093,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -6095,10 +6105,11 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumPingJiZCAnd90AboveF,dataR.NumPingJiZCAnd80To90F,dataR.NumPingJiZCAnd70To80F,dataR.NumPingJiZCAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var zcdOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zcdOldman_option_jg_1_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     zcdOldman_jg_1_age.setOption(zcdOldman_option_jg_1_age);
                                                                     title_text='年龄';
                                                                     legend_data=[
@@ -6124,7 +6135,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -6144,7 +6155,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -6156,10 +6167,11 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumPingNanZCAnd90AboveF,dataR.NumPingNanZCAnd80To90F,dataR.NumPingNanZCAnd70To80F,dataR.NumPingNanZCAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var zcdOldman_option_jg_2_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zcdOldman_option_jg_2_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     zcdOldman_jg_2_age.setOption(zcdOldman_option_jg_2_age);
                                                                     title_text='年龄';
                                                                     legend_data=[
@@ -6185,7 +6197,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -6205,7 +6217,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -6217,10 +6229,11 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumGuMeiZCAnd90AboveF,dataR.NumGuMeiZCAnd80To90F,dataR.NumGuMeiZCAnd70To80F,dataR.NumGuMeiZCAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var zcdOldman_option_jg_3_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zcdOldman_option_jg_3_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     zcdOldman_jg_3_age.setOption(zcdOldman_option_jg_3_age);
                                                                     //
 
@@ -6389,7 +6402,8 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
+                                                                                    formatter:'',
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:20
@@ -6411,7 +6425,8 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
+                                                                                    formatter:'',
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:20
@@ -6557,7 +6572,8 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
+                                                                                    formatter:'',
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:20
@@ -6578,7 +6594,8 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
+                                                                                    formatter:'',
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:20
@@ -7139,7 +7156,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -7159,7 +7176,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -7171,10 +7188,11 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumAiWeiZZAnd90AboveF,dataR.NumAiWeiZZAnd80To90F,dataR.NumAiWeiZZAnd70To80F,dataR.NumAiWeiZZAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     zzOldman_jg_2_age.setOption(zzOldman_option_jg_1_age);
 
                                                                     //lejian
@@ -7315,7 +7333,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -7335,7 +7353,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -7347,10 +7365,11 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumLeJianZZAnd90AboveF,dataR.NumLeJianZZAnd80To90F,dataR.NumLeJianZZAnd70To80F,dataR.NumLeJianZZAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     zzOldman_jg_3_age.setOption(zzOldman_option_jg_1_age);
 
                                                                     //zz all
@@ -7488,7 +7507,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:10
@@ -7500,6 +7519,7 @@
                                                                                     color:series_color_1
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumZhiHuiZZAnd90AboveM+dataR.NumAiWeiZZAnd90AboveM+dataR.NumLeJianZZAnd90AboveM,dataR.NumZhiHuiZZAnd80To90M+dataR.NumAiWeiZZAnd80To90M+dataR.NumLeJianZZAnd80To90M,dataR.NumZhiHuiZZAnd70To80M+dataR.NumAiWeiZZAnd70To80M+dataR.NumLeJianZZAnd70To80M,dataR.NumZhiHuiZZAnd60To70M+dataR.NumAiWeiZZAnd60To70M+dataR.NumLeJianZZAnd60To70M]
                                                                         },
                                                                         {
@@ -7508,7 +7528,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:10
@@ -7520,13 +7540,15 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            //data: [1,3,2,4],
+
                                                                             data: [dataR.NumZhiHuiZZAnd90AboveF+dataR.NumAiWeiZZAnd90AboveF+dataR.NumLeJianZZAnd90AboveF,dataR.NumZhiHuiZZAnd80To90F+dataR.NumAiWeiZZAnd80To90F+dataR.NumLeJianZZAnd80To90F,dataR.NumZhiHuiZZAnd70To80F+dataR.NumAiWeiZZAnd70To80F+dataR.NumLeJianZZAnd70To80F,dataR.NumZhiHuiZZAnd60To70F+dataR.NumAiWeiZZAnd60To70F+dataR.NumLeJianZZAnd60To70F],
                                                                             barWidth:20,
                                                                             barCategoryGap:20,
 
                                                                         }
                                                                     ];
-                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     zzOldman_jg_age_bar.setOption(zzOldman_option_jg_1_age);
 
                                                                     //rzzx
@@ -7702,13 +7724,14 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
-                                                                            data: [0,0,0,0]
+                                                                           // data: [0,0,0,0],
+                                                                            barWidth:16,
 
-                                                                            //data: [dataR.NumPingNanRZAnd90AboveF+dataR.NumPingJi1RZAnd90AboveF+dataR.NumPingJi2RZAnd90AboveF,dataR.NumPingNanRZAnd80To90F+dataR.NumPingJi1RZAnd80To90F+dataR.NumPingJi2RZAnd80To90F,dataR.NumPingNanRZAnd70To80F+dataR.NumPingJi1RZAnd70To80F+dataR.NumPingJi2RZAnd70To80F,dataR.NumPingNanRZAnd60To70F+dataR.NumPingJi1RZAnd60To70F+dataR.NumPingJi2RZAnd60To70F]
+                                                                            data: [dataR.NumPingNanRZAnd90AboveF+dataR.NumPingJi1RZAnd90AboveF+dataR.NumPingJi2RZAnd90AboveF,dataR.NumPingNanRZAnd80To90F+dataR.NumPingJi1RZAnd80To90F+dataR.NumPingJi2RZAnd80To90F,dataR.NumPingNanRZAnd70To80F+dataR.NumPingJi1RZAnd70To80F+dataR.NumPingJi2RZAnd70To80F,dataR.NumPingNanRZAnd60To70F+dataR.NumPingJi1RZAnd60To70F+dataR.NumPingJi2RZAnd60To70F]
 
                                                                         }
                                                                     ];
-                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series);
                                                                     rzzxOldman_jg_age_bar.setOption(zzOldman_option_jg_1_age);
                                                                     //pingji1
                                                                     title_text="床位数";
@@ -7849,7 +7872,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -7871,7 +7894,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -7883,12 +7906,13 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
 
                                                                             //data: [dataR.NumPingJi1RZAnd90AboveF,dataR.NumPingJi1RZAnd80To90F,dataR.NumPingJi1RZAnd70To80F,dataR.NumPingJi1RZAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOldZZ2(title_text,legend_data,yAxis_data,series);
                                                                     rzzxOldman_jg_2_age.setOption(zzOldman_option_jg_1_age);
                                                                     //pingji2
                                                                     title_text="床位数";
@@ -8028,7 +8052,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideLeft',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -8050,7 +8074,7 @@
                                                                             stack: '总量',
                                                                             label: {
                                                                                 normal: {
-                                                                                    show: true,
+                                                                                    show: false,
                                                                                     position: 'insideRight',
                                                                                     textStyle:{
                                                                                         fontSize:8
@@ -8062,12 +8086,13 @@
                                                                                     color:series_color_2
                                                                                 }
                                                                             },
+                                                                            barWidth:16,
                                                                             data: [dataR.NumPingNanRZAnd90AboveF,dataR.NumPingNanRZAnd80To90F,dataR.NumPingNanRZAnd70To80F,dataR.NumPingNanRZAnd60To70F]
 
                                                                             //data: [dataR.NumPingJi2RZAnd90AboveF,dataR.NumPingJi2RZAnd80To90F,dataR.NumPingJi2RZAnd70To80F,dataR.NumPingJi2RZAnd60To70F]
                                                                         }
                                                                     ];
-                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+                                                                    var zzOldman_option_jg_1_age=chartBarForOrgOldZZ2(title_text,legend_data,yAxis_data,series);
                                                                     rzzxOldman_jg_3_age.setOption(zzOldman_option_jg_1_age);
 
 
@@ -9815,7 +9840,8 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
+                                                                                        formatter:'',
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20,
@@ -9837,7 +9863,8 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
+                                                                                        formatter:'',
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10070,7 +10097,8 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        formatter: '',
+                                                                                        show: false,
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10091,7 +10119,8 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
+                                                                                        formatter: '',
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10524,7 +10553,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10544,7 +10573,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10653,7 +10682,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10665,7 +10694,7 @@
                                                                                         color:series_color_1
                                                                                     }
                                                                                 },
-                                                                                barWidth:45,
+                                                                                barWidth:30,
                                                                                 data: [num90AboveMEco,num80To90MEco,num70To80MEco,num60To70MEco]
                                                                             },
                                                                             {
@@ -10674,7 +10703,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10785,7 +10814,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -10805,7 +10834,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -11217,7 +11246,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -11237,7 +11266,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -11350,7 +11379,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -11370,7 +11399,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -11484,7 +11513,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideLeft',
                                                                                         textStyle:{
                                                                                             fontSize:20
@@ -11505,7 +11534,7 @@
                                                                                 stack: '总量',
                                                                                 label: {
                                                                                     normal: {
-                                                                                        show: true,
+                                                                                        show: false,
                                                                                         position: 'insideRight',
                                                                                         textStyle:{
                                                                                             fontSize:20

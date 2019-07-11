@@ -350,6 +350,240 @@ function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
     };
     return option;
 }
+function chartBarForOrgOldZZ(title_text,legend_data,yAxis_data,series) {
+    var option = {
+        title: {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:size_bed,
+                fontWeight:'normal'
+            },
+            x:'0%',
+            y:'0%'
+        },
+        tooltip:{
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            // right:'0',
+            data:legend_data,
+            right:'20',
+            data: legend_data,
+            itemGap: 0,
+            itemWidth: 18,
+            itemHeight: 8,
+        },
+        grid:  {
+            top:'0%',
+            left: '-6%',
+            right: '18%',
+            bottom: '0%',
+            height:'65%',
+            containLabel: true
+        },
+        yAxis: {
+            show:false
+        },
+        xAxis: {
+            type:'category',
+            data: yAxis_data,
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#fff',
+                }
+            },
+            max:4.3,
+            //  barGap:'1%',
+
+            boundaryGap:false,
+            axisTick:{
+                //show:true,
+                interval:0,
+            },
+            // y 轴线
+            axisLine:{
+                show:false,
+
+            },
+            // 分割线设置
+            splitLine:{
+                show:false,  //显示分割线
+            },
+            axisLabel:{
+                textStyle: {
+                    color: '#fff',
+                    fontSize:10,
+
+                },
+                interval: 0,
+            }
+        },
+        series: series
+    };
+    return option;
+}
+function chartBarForOrgOldZZ2(title_text,legend_data,yAxis_data,series) {
+    var option = {
+        title: {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:size_bed,
+                fontWeight:'normal'
+            },
+            x:'0%',
+            y:'0%'
+        },
+        tooltip:{
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            // right:'0',
+            data:legend_data,
+            right:'20',
+            data: legend_data,
+            itemGap: 0,
+            itemWidth: 18,
+            itemHeight: 8,
+        },
+        grid:  {
+            top:'0%',
+            left: '10%',
+            right: '18%',
+            bottom: '0%',
+            height:'65%',
+            containLabel: true
+        },
+        yAxis: {
+            show:false
+        },
+        xAxis: {
+            type:'category',
+            data: yAxis_data,
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#fff',
+                }
+            },
+            max:4.3,
+            //  barGap:'1%',
+
+            boundaryGap:false,
+            axisTick:{
+                //show:true,
+                interval:0,
+            },
+            // y 轴线
+            axisLine:{
+                show:false,
+
+            },
+            // 分割线设置
+            splitLine:{
+                show:false,  //显示分割线
+            },
+            axisLabel:{
+                textStyle: {
+                    color: '#fff',
+                    fontSize:10,
+
+                },
+                interval: 0,
+            }
+        },
+        series: series
+    };
+    return option;
+}
+function chartBarForOrgOldLeft(title_text,legend_data,yAxis_data,series) {
+    var option = {
+        title: {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:size_bed,
+                fontWeight:'normal'
+            },
+            x:'0%',
+            y:'0%'
+        },
+        tooltip:{
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            // right:'0',
+            data:legend_data,
+            right:'20',
+            data: legend_data,
+            itemGap: 0,
+            itemWidth: 18,
+            itemHeight: 8,
+        },
+        grid:  {
+            top:'0%',
+            left: '11%',
+            right: '16%',
+            bottom: '0%',
+            height:'65%',
+            containLabel: true
+        },
+        yAxis: {
+            show:false
+        },
+        xAxis: {
+            type:'category',
+            data: yAxis_data,
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#fff',
+                }
+            },
+            max:4.3,
+            //  barGap:'1%',
+
+            boundaryGap:false,
+            axisTick:{
+                //show:true,
+                interval:0,
+            },
+            // y 轴线
+            axisLine:{
+                show:false,
+
+            },
+            // 分割线设置
+            splitLine:{
+                show:false,  //显示分割线
+            },
+            axisLabel:{
+                textStyle: {
+                    color: '#fff',
+                    fontSize:10,
+
+                },
+                interval: 0,
+            }
+        },
+        series: series
+    };
+    return option;
+}
 function chartBarForOrgOld2(title_text,legend_data,yAxis_data,series) {
     var option = {
         title: {
@@ -1063,6 +1297,94 @@ function chartLine(title_text,legend_data,xAxis_data,series) {
     };
     return option;
 }
+function chartLineForOldNumTend(title_text,legend_data,xAxis_data,series) {
+    var option = {
+        title: {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:20,
+                fontWeight:'normal'
+            },
+            x:'0%',
+            y:'4%'
+        },
+        tooltip:{
+            trigger: 'axis'
+        },
+        legend: {
+            right:'0',
+            top:'6%',
+            data:legend_data
+        },
+        grid:  {
+            left: '3%',
+            right: '4%',
+            bottom: '0%',
+            top:'35%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data:xAxis_data,
+            nameTextStyle: {
+                color: ['#fff'],
+            },
+            axisLine:{
+                lineStyle:{
+                    color:'#fff',
+                    width:1//这里是为了突出显示加上的
+                }
+            },
+            axisTrack:{
+                length:1
+            },
+            splitLine:{
+                show:false
+            },
+            axisLabel:{
+                textStyle: {
+                    color: '#fff',
+                    fontSize:10,
+                    fontWeight:100
+
+                }
+            }
+
+        },
+        yAxis: {
+            type: 'value',
+            nameTextStyle: {
+                color: ['#fff'],
+            },
+            splitLine:{
+                show:false
+            },
+            axisLine:{
+                lineStyle:{
+                    color:'#fff',
+                    width:1,//这里是为了突出显示加上的
+                }
+            },
+            axisTrack:{
+                length:1
+            },
+            axisLabel:{
+                textStyle: {
+                    color: '#fff',
+                    fontSize:10,
+                    fontWeight:100
+                }
+            },
+            min:0,
+            max:150000,
+            splitNumber:2
+        },
+        series: series,
+    };
+    return option;
+}
 function chartLineForFamily(title_text,legend_data,xAxis_data,series) {
     var option = {
         title: {
@@ -1088,7 +1410,7 @@ function chartLineForFamily(title_text,legend_data,xAxis_data,series) {
             left: '3%',
             right: '4%',
             bottom: '3%',
-            top:'20%',
+            top:'35%',
             containLabel: true
         },
         xAxis: {
@@ -1145,7 +1467,7 @@ function chartLineForFamily(title_text,legend_data,xAxis_data,series) {
                 }
             },
             min:0,
-            max:100,
+            max:15000,
             splitNumber:3
         },
         series: series,
