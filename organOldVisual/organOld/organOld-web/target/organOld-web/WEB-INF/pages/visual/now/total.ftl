@@ -57,7 +57,7 @@
         </div>
         <div class="col-lg-6">
             <div class="row">
-                <div class="col-lg-12  box" >
+                <div class="col-lg-12  box" style="height: 245px">
                     <div class="zz"></div>
                     <div id="total_oldmanPie" class="total_tu"></div>
                 </div>

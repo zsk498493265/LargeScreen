@@ -429,10 +429,10 @@
                                                                     var title_text = "养老状态分布";
                                                                     var legend_data = [{
                                                                         name: '机构养老',
-                                                                        textStyle: {color: legend_color, fontSize: legand_fontSize}
-                                                                    }, {name: '社区养老', textStyle: {color: legend_color, fontSize: legand_fontSize}}, {
+                                                                        textStyle: {color: legend_color, fontSize: legand_fontSize,fontWeight:'normal'}
+                                                                    }, {name: '社区养老', textStyle: {color: legend_color, fontSize: legand_fontSize,fontWeight:'normal'}}, {
                                                                         name: '居家养老',
-                                                                        textStyle: {color: legend_color, fontSize: legand_fontSize}
+                                                                        textStyle: {color: legend_color, fontSize: legand_fontSize,fontWeight:'normal'}
                                                                     }];
                                                                     var series = [{
                                                                         name: '老养老状态',
@@ -849,18 +849,18 @@
 
                                                                     title.text = "健康状态";
                                                                     title.link = "javascript: change('child_oldman','child_health')";
-                                                                    legend_data = [{name: '失能', textStyle: {color: legend_color, fontSize: 8}}, {
+                                                                    legend_data = [{name: '失能', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                         name: '慢病',
-                                                                        textStyle: {color: legend_color, fontSize: 8}
+                                                                        textStyle: {color: legend_color, fontSize: 12}
                                                                     }
-                                                                        , {name: '肿瘤史', textStyle: {color: legend_color, fontSize: 8}}, {
+                                                                        , {name: '肿瘤史', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                             name: '骨折史',
-                                                                            textStyle: {color: legend_color, fontSize: 8}
+                                                                            textStyle: {color: legend_color, fontSize: 12}
                                                                         },
-                                                                        {name: '失智', textStyle: {color: legend_color, fontSize: 8}}, {
+                                                                        {name: '失智', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                             name: '长护险评级',
-                                                                            textStyle: {color: legend_color, fontSize: 8}
-                                                                        }, {name: '其他', textStyle: {color: legend_color, fontSize: 8}}];
+                                                                            textStyle: {color: legend_color, fontSize: 12}
+                                                                        }, {name: '其他', textStyle: {color: legend_color, fontSize: 12}}];
                                                                     series = [{
                                                                         name: '健康状态',
                                                                         type: 'pie',
@@ -2141,6 +2141,12 @@
                                                                             },
                                                                         },
                                                                         radiusAxis: {
+                                                                            axisLine: {
+                                                                                lineStyle: {
+                                                                                    color: 'white',
+                                                                                    fontSize: 12,
+                                                                                }
+                                                                            },
                                                                         },
                                                                         polar: {
                                                                             center: ['50%','60%'],
@@ -2157,7 +2163,7 @@
                                                                             labelLine: {
                                                                                 normal: {
                                                                                     lineStyle: {
-                                                                                        color: "#000000"
+                                                                                        color: "#F5FFFA"
                                                                                     },
                                                                                     smooth: 0.2,
                                                                                     length: 10,
@@ -2181,6 +2187,7 @@
 
                                                                     title.text = "服务项目";
                                                                     title.link = "javascript: change('child_homeOldman','child_organ')";
+                                                                    title.textStyle.fontSize=30;
                                                                     legend_data = [{name: '助餐', textStyle: {color: legend_color, fontSize: 8}}, {
                                                                         name: '助洁',
                                                                         textStyle: {color: legend_color, fontSize: 8}
@@ -8718,7 +8725,7 @@
                                                                                 }
                                                                             }
                                                                         }];
-                                                                        var homeOldman_option_pq_bar = chartPie(title_text,legend_data,series);
+                                                                        var homeOldman_option_pq_bar = chartPieForHomeHuJiAndSex(title_text,legend_data,series);
                                                                         homeOldman_pq_bar.setOption(homeOldman_option_pq_bar);
 
 
@@ -8819,7 +8826,7 @@
                                                                                 }
                                                                             }
                                                                         }];
-                                                                        var homeOldman_option_sex_pie = chartPie(title_text,legend_data,series);
+                                                                        var homeOldman_option_sex_pie = chartPieForHomeHuJiAndSex(title_text,legend_data,series);
                                                                         homeOldman_sex_pie.setOption(homeOldman_option_sex_pie);
 
                                                                         title_text="人数占比";

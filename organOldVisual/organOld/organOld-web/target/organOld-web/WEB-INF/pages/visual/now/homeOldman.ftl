@@ -8,7 +8,7 @@
 </style>
 <div id="child_homeOldman" style="display: none">
     <div class="row" >
-        <div class="col-lg-6 box"  align="center">
+        <div class="col-lg-6 box"  align="center" style="height: 246px">
             <div class="zz"></div>
             <div id="homeOldman_jj_pie" class="homeOldman_tu_big"></div>
         </div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 box">
+                <div class="col-lg-12 box" style="height:124px">
                     <div class="zz"></div>
 
                     <div id="homeOldman_sex_pie" class="homeOldman_tu"></div>

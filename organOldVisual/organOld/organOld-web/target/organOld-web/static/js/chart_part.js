@@ -1507,6 +1507,37 @@ function chartPie(title_text,legend_data,series) {
     };
     return option;
 }
+function chartPieForHomeHuJiAndSex(title_text,legend_data,series) {
+    //不用能以下方式 容易出现两个图一样的标题 应该是异步  不同步造成
+    var option = {
+        title : {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:title_fontSize,
+                fontWeight: 'normal'
+            },
+            left:'left',
+            x:'0%',
+            y:'9%'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: ""
+        },
+        legend: {
+            orient: 'vertical',
+            left:'right',
+            // right: '0',
+            top:"0",
+            height:"250",
+            data: legend_data,
+        },
+        series :series,
+        color: [series_color_1,series_color_2,series_color_3,series_color_4,series_color_5,series_color_6,series_color_7],
+    };
+    return option;
+}
 size_bed=16;
 function chartPieForOrgOld(title_text,legend_data,series) {
     //不用能以下方式 容易出现两个图一样的标题 应该是异步  不同步造成
@@ -1593,7 +1624,7 @@ function chartPieForChx(title_text,legend_data,series) {
             },
             left:'left',
             x:'0%',
-            y:'0%'
+            y:'6%'
         },
         tooltip : {
             trigger: 'item',
@@ -1867,7 +1898,7 @@ function chartBarHeiForFinish(title_text,legend_data,xAxis_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-                fontSize:title_fontSize,
+                fontSize:27,
                 fontWeight: 'normal'
             },
             x:'0%',
