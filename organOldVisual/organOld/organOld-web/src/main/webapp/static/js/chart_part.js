@@ -271,6 +271,80 @@ function chartBarDisplayAll(title_text,legend_data,yAxis_data,series) {
     };
     return option;
 }
+function chartBarDisplayAllTitleSmall(title_text,legend_data,yAxis_data,series) {
+    var option = {
+        title: {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:20,
+                fontWeight:'normal'
+            },
+            x:'0%',
+            y:'6%',
+        },
+        tooltip:{
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            //right:'0',
+            x:'right',
+            data:legend_data,
+        },
+        grid:  {
+            top:'48%',
+            left: '6%',
+            right: '15%',
+            bottom: '-12%',
+            //x2: 80,
+            containLabel: true
+        },
+        xAxis: {
+            show:false
+        },
+        yAxis: {
+            type:'category',
+            data: yAxis_data,
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    //color: '#fff',
+                    fontSize:'15',
+                },
+                interval:0,
+
+            },
+            boundaryGap:false,
+            axisTick:{
+                //show:false
+                'interval': 0,
+            },
+            // y 轴线
+            axisLine:{
+                show:false,
+
+            },
+            // 分割线设置
+            splitLine:{
+                show:false,  //显示分割线
+            },
+            axisLabel:{
+                textStyle: {
+                    color: '#fff',
+                    fontSize:16,
+                    interval: 0,
+                },
+                interval:0,
+            }
+        },
+        series: series
+    };
+    return option;
+}
 //chartbar for orgold
 function chartBarForOrgOld(title_text,legend_data,yAxis_data,series) {
     var option = {
@@ -1507,6 +1581,37 @@ function chartPie(title_text,legend_data,series) {
     };
     return option;
 }
+function chartPieTitleSmall(title_text,legend_data,series) {
+    //不用能以下方式 容易出现两个图一样的标题 应该是异步  不同步造成
+    var option = {
+        title : {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:20,
+                fontWeight: 'normal'
+            },
+            left:'left',
+            x:'0%',
+            y:'6%'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: ""
+        },
+        legend: {
+            orient: 'vertical',
+            left:'right',
+            // right: '0',
+            top:"0",
+            height:"250",
+            data: legend_data,
+        },
+        series :series,
+        color: [series_color_1,series_color_2,series_color_3,series_color_4,series_color_5,series_color_6,series_color_7],
+    };
+    return option;
+}
 function chartPieForHomeHuJiAndSex(title_text,legend_data,series) {
     //不用能以下方式 容易出现两个图一样的标题 应该是异步  不同步造成
     var option = {
@@ -1898,7 +2003,7 @@ function chartBarHeiForFinish(title_text,legend_data,xAxis_data,series) {
             text:title_text,
             textStyle:{
                 color:'#fff',
-                fontSize:27,
+                fontSize:30,
                 fontWeight: 'normal'
             },
             x:'0%',

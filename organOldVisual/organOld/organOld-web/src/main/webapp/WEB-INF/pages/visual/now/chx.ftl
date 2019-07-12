@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 box">
+                <div class="col-lg-12 box"style="height: 83px">
                     <div class="zz"></div>
                     <div id="chx_pj_pq_bar" class="chx_tu_mid"></div>
                 </div>

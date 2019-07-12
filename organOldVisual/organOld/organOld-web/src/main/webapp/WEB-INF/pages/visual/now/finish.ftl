@@ -540,6 +540,7 @@
 
                                                                     //老人比例
                                                                     title.text = "老人比例";
+                                                                    title.textStyle.fontSize=20;
                                                                     //title.link = "javascript: change('child_base','child_oldman')";
                                                                     legend_data = [{name: '老人', textStyle: {color: legend_color, fontSize: 18}}, {
                                                                         name: '非老人',
@@ -572,6 +573,7 @@
 
                                                                     //60岁老人占比
                                                                     title.text = "老年人数占比";
+                                                                    title.textStyle.fontSize=title_fontSize;
                                                                     title.link = "javascript: change('child_oldman','child_base')";
                                                                     title.y='6%'
                                                                     title.textStyle.fontWeight='normal';
@@ -990,7 +992,7 @@
                                                                             }
                                                                         }
                                                                     }];
-                                                                    var base_option_area_pie = chartPie(title_text, legend_data, series);
+                                                                    var base_option_area_pie = chartPieTitleSmall(title_text, legend_data, series);
 
                                                                     title_text = '户籍占比趋势';
                                                                     legendData = ['户籍', '非户籍'];
@@ -1031,7 +1033,7 @@
                                                                             }
                                                                         }
                                                                     }];
-                                                                    var base_option_sex_pie = chartPie(title_text, legend_data, series);
+                                                                    var base_option_sex_pie = chartPieTitleSmall(title_text, legend_data, series);
 
                                                                     title_text = '性别占比趋势';
                                                                     legendData = ['男', '女'];
@@ -1060,7 +1062,7 @@
                                                                             }
                                                                         }
                                                                     ];
-                                                                    yAxis_data = ['90-   ', '80-90', '70-80', '60-70'];
+                                                                    yAxis_data = ['90+   ', '80-90', '70-80', '60-70'];
                                                                     series = [
                                                                         {
                                                                             name: '男',
@@ -1111,7 +1113,7 @@
                                                                             data: [dataR.NumAbove90F, dataR.Num80To90F, dataR.Num70To80F, dataR.Num60To70F]
                                                                         }
                                                                     ];
-                                                                    var base_option_age_bar = chartBarDisplayAll(title_text, legend_data, yAxis_data, series);
+                                                                    var base_option_age_bar = chartBarDisplayAllTitleSmall(title_text, legend_data, yAxis_data, series);
 
 
                                                                     title_text = '年龄占比趋势';
@@ -1120,7 +1122,7 @@
                                                                         textStyle: {color: legend_color}
                                                                     },
                                                                         {name: '80-90', textStyle: {color: legend_color}}, {
-                                                                            name: '90-   ',
+                                                                            name: '90+   ',
                                                                             textStyle: {color: legend_color}
                                                                         }];
                                                                     data1=[dataR.NumSixToSeven1,dataR.NumSixToSeven2,dataR.NumSixToSeven3,dataR.NumSixToSeven4,dataR.NumSixToSeven5],
@@ -2054,7 +2056,7 @@
                                                                             }
                                                                         }
                                                                     ];
-                                                                    yAxis_data = ['90-   ', '80-90', '70-80', '60-70'];
+                                                                    yAxis_data = ['90+   ', '80-90', '70-80', '60-70'];
                                                                     series = [
                                                                         {
                                                                             name: '男',
@@ -2115,7 +2117,7 @@
                                                                             textStyle: {
                                                                                 fontWeight: 'normal',      //标题颜色
                                                                                 color: '#FFFFFF',
-                                                                                fontSize: 26
+                                                                                fontSize: 30
                                                                             },
                                                                             x: 'left',
                                                                             y:'6%',
@@ -3094,7 +3096,7 @@
                                                                                 fontSize:18
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -3782,7 +3784,7 @@
                                                                                 fontSize:18
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -4549,7 +4551,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -4632,7 +4634,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -4697,7 +4699,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -4761,7 +4763,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -4947,7 +4949,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -5116,7 +5118,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -5303,7 +5305,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -5473,7 +5475,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -6009,7 +6011,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -6072,7 +6074,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -6134,7 +6136,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -6196,7 +6198,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -6401,7 +6403,7 @@
                                                                                 fontSize:18
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -6571,7 +6573,7 @@
                                                                                 fontSize:18
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -6753,7 +6755,7 @@
                                                                                 color:'#fff'
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -7155,7 +7157,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -7332,7 +7334,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -7506,7 +7508,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -7689,7 +7691,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -7871,7 +7873,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -8051,7 +8053,7 @@
                                                                                 fontSize:8
                                                                             }}
                                                                     ];
-                                                                    yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                    yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                     series=[
                                                                         {
                                                                             name: '男',
@@ -8746,7 +8748,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -9048,7 +9050,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -9546,7 +9548,7 @@
                                                                         //    已评级年龄分布柱状图
                                                                         title_text='已评级老人年龄';
                                                                         legend_data=[];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -9700,7 +9702,7 @@
                                                                         //    已评级年龄分布柱状图
                                                                         title_text='获服务老人年龄';
                                                                         legend_data=[];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -9839,7 +9841,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -9970,7 +9972,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -10096,7 +10098,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -10260,7 +10262,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -10346,7 +10348,7 @@
                                                                                 }
                                                                             }
                                                                         }];
-                                                                        var base_option_sex_pie = chartPie(title_text,legend_data,series);
+                                                                        var base_option_sex_pie = chartPieTitleSmall(title_text,legend_data,series);
 
                                                                         title_text='年龄';
                                                                         legend_data=[
@@ -10365,7 +10367,7 @@
 
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -10410,7 +10412,7 @@
                                                                                 data: [num90AboveF,num80To90F,num70To80F,num60To70F]
                                                                             }
                                                                         ];
-                                                                        var base_option_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
+                                                                        var base_option_age_bar=chartBarDisplayAllTitleSmall(title_text,legend_data,yAxis_data,series);
 
                                                                         title_text="户籍";
                                                                         legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:18}},{name:'非户籍',textStyle:{color:legend_color,fontSize:18}}];
@@ -10440,12 +10442,13 @@
                                                                                 }
                                                                             }
                                                                         }];
-                                                                        var base_option_area_pie = chartPie(title_text,legend_data,series);
+                                                                        var base_option_area_pie = chartPieTitleSmall(title_text,legend_data,series);
                                                                         base_hjPie.setOption(base_option_area_pie);
                                                                         base_sexPie.setOption(base_option_sex_pie);
                                                                         base_ageBar.setOption(base_option_age_bar);
                                                                         //老人比例
                                                                         title.text = "老人比例";
+                                                                        title.textStyle.fontSize=20;
                                                                         //title.link = "javascript: change('child_base','child_oldman')";
                                                                         legend_data = [{name: '老人', textStyle: {color: legend_color, fontSize: 18}}, {
                                                                             name: '非老人',
@@ -10472,6 +10475,7 @@
                                                                         ];
                                                                         var base_option_zb_pie = chartPieClick(title, legend_data, series);
                                                                         base_zbPie.setOption(base_option_zb_pie);
+                                                                        title.textStyle.fontSize=title_fontSize;
                                                                         //
                                                                         title_text="户籍";
                                                                         legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:18}},{name:'非户籍',textStyle:{color:legend_color,fontSize:18}}];
@@ -10552,7 +10556,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -10681,7 +10685,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -10813,7 +10817,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -11245,7 +11249,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -11378,7 +11382,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
@@ -11512,7 +11516,7 @@
                                                                                     fontSize:18
                                                                                 }}
                                                                         ];
-                                                                        yAxis_data=['90-   ','80-90','70-80','60-70'];
+                                                                        yAxis_data=['90+   ','80-90','70-80','60-70'];
                                                                         series=[
                                                                             {
                                                                                 name: '男',
