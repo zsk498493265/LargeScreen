@@ -893,7 +893,7 @@ public class VisualData5Controller {
 
         String date=cal.get(Calendar.YEAR)+"-"+cal.get(Calendar.MONTH);
         oldmanService.deleteOldVisualData();
-        oldmanService.updateVisualData(date);
+        oldmanService.updateVisualData("2018-07");
 
 
     }

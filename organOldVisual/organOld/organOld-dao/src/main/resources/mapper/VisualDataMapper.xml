@@ -5570,7 +5570,7 @@ and ob.id=ho.oldman_id
     </select>
 
     <update id="updateVisualData">
-        INSERT INTO view_test
+        INSERT INTO view_test_test
         select ob.id oldman_id,ob.name name,ob.sex sex,ob.birthday birthday,ob.family family,ob.economic economic,
         ob.is_handle is_handle,ob.key_status key_status,ob.census census,ob.xq_id xq_id,ob.old_status old_status,
         oo.organ_id organ_id,
@@ -5609,7 +5609,7 @@ and ob.id=ho.oldman_id
     </update>
 
     <delete id="deleteOldVisualData">
-        truncate table view_test
+        truncate table view_test_test
     </delete>
 
 </mapper>

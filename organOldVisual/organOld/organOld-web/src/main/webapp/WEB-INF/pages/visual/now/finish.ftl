@@ -9141,6 +9141,7 @@
                                                                         var name=params.name;
                                                                         if(name=="东兰"){
                                                                             district_no=3;
+                                                                            mapDistrict=[];
                                                                             mapDistrict.push(3);
 
                                                                             changeFheAll(dataR.NumDongLanAndChunLao,dataR.NumDongLanAndDuJu,dataR.NumDongLanAndShiDu,dataR.NumDongLanAndYiLiao,dataR.NumDongLanAndGuLao,dataR.NumDongLanAndSanZhi,dataR.NumDongLanAndQiTa,
@@ -9191,6 +9192,7 @@
 
                                                                         }else if(name=="古龙"){
                                                                             district_no=2;
+                                                                            mapDistrict=[];
                                                                             mapDistrict.push(2);
                                                                             //alert(dataR.NumGuLongAndChunLao);
                                                                             changeFheAll(dataR.NumGuLongAndChunLao,dataR.NumGuLongAndDuJu,dataR.NumGuLongAndShiDu,dataR.NumGuLongAndYiLiao,dataR.NumGuLongAndGuLao,dataR.NumGuLongAndSanZhi,dataR.NumGuLongAndQiTa,
@@ -9240,6 +9242,7 @@
 
                                                                         }else if(name=="平南"){
                                                                             district_no=6;
+                                                                            mapDistrict=[];
                                                                             mapDistrict.push(6);
                                                                             changeFheAll(dataR.NumPingNanAndChunLao,dataR.NumPingNanAndDuJu,dataR.NumPingNanAndShiDu,dataR.NumPingNanAndYiLiao,dataR.NumPingNanAndGuLao,dataR.NumPingNanAndSanZhi,dataR.NumPingNanAndQiTa,
                                                                                     dataR.NumPingNanAndShiNeng,dataR.NumPingNanAndManBing,dataR.NumPingNanAndZhongLiu,dataR.NumPingNanAndGuZhe,dataR.NumPingNanAndShiZhi,dataR.NumPingNanAndChangHu,
@@ -9288,6 +9291,7 @@
 
                                                                         }else if(name=="平阳"){
                                                                             district_no=5;
+                                                                            mapDistrict=[];
                                                                             mapDistrict.push(5);
                                                                             changeFheAll(dataR.NumPingYangAndChunLao,dataR.NumPingYangAndDuJu,dataR.NumPingYangAndShiDu,dataR.NumPingYangAndYiLiao,dataR.NumPingYangAndGuLao,dataR.NumPingYangAndSanZhi,dataR.NumPingYangAndQiTa,
                                                                                     dataR.NumPingYangAndShiNeng,dataR.NumPingYangAndManBing,dataR.NumPingYangAndZhongLiu,dataR.NumPingYangAndGuZhe,dataR.NumPingYangAndShiZhi,dataR.NumPingYangAndChangHu,
@@ -9336,6 +9340,7 @@
 
                                                                         }else if(name=="平吉"){
                                                                             district_no=4;
+                                                                            mapDistrict=[];
                                                                             mapDistrict.push(4);
                                                                             changeFheAll(dataR.NumPingJiAndChunLao,dataR.NumPingJiAndDuJu,dataR.NumPingJiAndShiDu,dataR.NumPingJiAndYiLiao,dataR.NumPingJiAndGuLao,dataR.NumPingJiAndSanZhi,dataR.NumPingJiAndQiTa,
                                                                                     dataR.NumPingJiAndShiNeng,dataR.NumPingJiAndManBing,dataR.NumPingJiAndZhongLiu,dataR.NumPingJiAndGuZhe,dataR.NumPingJiAndShiZhi,dataR.NumPingJiAndChangHu,
@@ -9384,6 +9389,7 @@
 
                                                                         }else if(name=="古美"){
                                                                             district_no=1;
+                                                                            mapDistrict=[];
                                                                             mapDistrict.push(1);
                                                                             changeFheAll(dataR.NumGuMeiAndChunLao,dataR.NumGuMeiAndDuJu,dataR.NumGuMeiAndShiDu,dataR.NumGuMeiAndYiLiao,dataR.NumGuMeiAndGuLao,dataR.NumGuMeiAndSanZhi,dataR.NumGuMeiAndQiTa,
                                                                                     dataR.NumGuMeiAndShiNeng,dataR.NumGuMeiAndManBing,dataR.NumGuMeiAndZhongLiu,dataR.NumGuMeiAndGuZhe,dataR.NumGuMeiAndShiZhi,dataR.NumGuMeiAndChangHu,
