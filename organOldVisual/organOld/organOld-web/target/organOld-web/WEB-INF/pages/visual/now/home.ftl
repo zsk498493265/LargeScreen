@@ -83,8 +83,14 @@
 </script>
 </body>
 <script>
-    var oldman_base=0;
+    var oldman_base=0,error=0;
     function change(source,des) {
+        if(des=="child_base"&&error==1)return;
+        error=0;
+        if(source=="child_oldman"&&des!="child_base"){
+            error=1;
+        }
+        //
         if(source=="child_oldman"&&des=="child_base"){
             oldman_base=1-oldman_base;
             if(oldman_base==0){
@@ -95,6 +101,9 @@
 
         $("#"+source).hide();
         $("#"+des).show();
+
+        if(des=="child_oldman")error=0;
+        alert(error);
     }
 </script>
 </html>
