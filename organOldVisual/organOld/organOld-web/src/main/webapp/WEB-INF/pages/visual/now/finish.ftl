@@ -222,8 +222,8 @@
                                                                 if (result4.success == true) {
                                                                     dataR4 = result4.data;
                                                                     Object.assign(dataR, dataR1,dataR2,dataR3,dataR4);
-                                                                    // document.getElementById("pNumAll").innerHTML = dataR.NumJieDaoPeople;
-                                                                    document.getElementById("pNumAll").innerHTML = 200000;
+                                                                    document.getElementById("pNumAll").innerHTML = dataR.NumJieDaoPeople;
+                                                                    //document.getElementById("pNumAll").innerHTML = 200000;
                                                                     document.getElementById("pNum60").innerHTML = dataR.NumOld;
                                                                     document.getElementById("pNum80").innerHTML = dataR.NumOld80;
                                                                     pieOldNum = dataR.NumOld;

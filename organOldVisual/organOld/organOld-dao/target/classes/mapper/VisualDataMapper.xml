@@ -5,789 +5,789 @@
         select
         --         donglan overall
         --               health
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and is_sn=2
         )NumDongLanAndShiNeng,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and is_mb=1
         )NumDongLanAndManBing,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and is_exzl=4
         )NumDongLanAndZhongLiu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and is_gz=5
         )NumDongLanAndGuZhe,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and (intelligence=29 or intelligence=30)
         )NumDongLanAndShiZhi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and chx_id between 1 and 6
         )NumDongLanAndChangHu,
         (select 0
         )NumDongLanAndQiTa,
         -- 	    --economy
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and economic=22
         )NumDongLanAndBangKun,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and economic=23
         )NumDongLanAndDiBao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and economic=24
         )NumDongLanAndYangLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and economic=25
         )NumDongLanAndYiLiao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and economic=26
         )NumDongLanAndChenZhen,
         -- 		--family
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and family=15
         )NumDongLanAndChunLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and family=16
         )NumDongLanAndDuJu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and family=18
         )NumDongLanAndShiDu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and family=17
         )NumDongLanAndYiLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and family=19
         )NumDongLanAndGuLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and family=20
         )NumDongLanAndSanZhi,
 
         --         gulong
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and is_sn=2
         )NumGuLongAndShiNeng,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and is_mb=1
         )NumGuLongAndManBing,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and is_exzl=4
         )NumGuLongAndZhongLiu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and is_gz=5
         )NumGuLongAndGuZhe,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and (intelligence=29 or intelligence=30)
         )NumGuLongAndShiZhi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and chx_id between 1 and 6
         )NumGuLongAndChangHu,
         (select 0
         )NumGuLongAndQiTa,
         -- 	    --economy
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and economic=22
         )NumGuLongAndBangKun,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and economic=23
         )NumGuLongAndDiBao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and economic=24
         )NumGuLongAndYangLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and economic=25
         )NumGuLongAndYiLiao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and economic=26
         )NumGuLongAndChenZhen,
         -- 		--family
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and family=15
         )NumGuLongAndChunLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and family=16
         )NumGuLongAndDuJu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and family=18
         )NumGuLongAndShiDu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and family=17
         )NumGuLongAndYiLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and family=19
         )NumGuLongAndGuLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and family=20
         )NumGuLongAndSanZhi,
 
         --         pingnan
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and is_sn=2
         )NumPingNanAndShiNeng,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and is_mb=1
         )NumPingNanAndManBing,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and is_exzl=4
         )NumPingNanAndZhongLiu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and is_gz=5
         )NumPingNanAndGuZhe,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and (intelligence=29 or intelligence=30)
         )NumPingNanAndShiZhi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and chx_id between 1 and 6
         )NumPingNanAndChangHu,
         (select 0
         )NumPingNanAndQiTa,
         -- 	    --economy
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and economic=22
         )NumPingNanAndBangKun,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and economic=23
         )NumPingNanAndDiBao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and economic=24
         )NumPingNanAndYangLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and economic=25
         )NumPingNanAndYiLiao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and economic=26
         )NumPingNanAndChenZhen,
         -- 		--family
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and family=15
         )NumPingNanAndChunLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and family=16
         )NumPingNanAndDuJu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and family=18
         )NumPingNanAndShiDu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and family=17
         )NumPingNanAndYiLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and family=19
         )NumPingNanAndGuLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and family=20
         )NumPingNanAndSanZhi,
 
         --         pingyang
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and is_sn=2
         )NumPingYangAndShiNeng,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and is_mb=1
         )NumPingYangAndManBing,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and is_exzl=4
         )NumPingYangAndZhongLiu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and is_gz=5
         )NumPingYangAndGuZhe,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and (intelligence=29 or intelligence=30)
         )NumPingYangAndShiZhi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and chx_id between 1 and 6
         )NumPingYangAndChangHu,
         (select 0
         )NumPingYangAndQiTa,
         -- 	    --economy
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and economic=22
         )NumPingYangAndBangKun,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and economic=23
         )NumPingYangAndDiBao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and economic=24
         )NumPingYangAndYangLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and economic=25
         )NumPingYangAndYiLiao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and economic=26
         )NumPingYangAndChenZhen,
         -- 		--family
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and family=15
         )NumPingYangAndChunLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and family=16
         )NumPingYangAndDuJu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and family=18
         )NumPingYangAndShiDu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and family=17
         )NumPingYangAndYiLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and family=19
         )NumPingYangAndGuLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and family=20
         )NumPingYangAndSanZhi,
 
         --         pingji
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and is_sn=2
         )NumPingJiAndShiNeng,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and is_mb=1
         )NumPingJiAndManBing,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and is_exzl=4
         )NumPingJiAndZhongLiu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and is_gz=5
         )NumPingJiAndGuZhe,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and (intelligence=29 or intelligence=30)
         )NumPingJiAndShiZhi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and chx_id between 1 and 6
         )NumPingJiAndChangHu,
         (select 0
         )NumPingJiAndQiTa,
         -- 	    --economy
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and economic=22
         )NumPingJiAndBangKun,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and economic=23
         )NumPingJiAndDiBao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and economic=24
         )NumPingJiAndYangLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and economic=25
         )NumPingJiAndYiLiao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and economic=26
         )NumPingJiAndChenZhen,
         -- 		--family
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and family=15
         )NumPingJiAndChunLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and family=16
         )NumPingJiAndDuJu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and family=18
         )NumPingJiAndShiDu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and family=17
         )NumPingJiAndYiLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and family=19
         )NumPingJiAndGuLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and family=20
         )NumPingJiAndSanZhi,
 
 
         --         gumei
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and is_sn=2
         )NumGuMeiAndShiNeng,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and is_mb=1
         )NumGuMeiAndManBing,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and is_exzl=4
         )NumGuMeiAndZhongLiu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and is_gz=5
         )NumGuMeiAndGuZhe,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and (intelligence=29 or intelligence=30)
         )NumGuMeiAndShiZhi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and chx_id between 1 and 6
         )NumGuMeiAndChangHu,
         (select 0
         )NumGuMeiAndQiTa,
         -- 	    --economy
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and economic=22
         )NumGuMeiAndBangKun,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and economic=23
         )NumGuMeiAndDiBao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and economic=24
         )NumGuMeiAndYangLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and economic=25
         )NumGuMeiAndYiLiao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and economic=26
         )NumGuMeiAndChenZhen,
         -- 		--family
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and family=15
         )NumGuMeiAndChunLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and family=16
         )NumGuMeiAndDuJu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and family=18
         )NumGuMeiAndShiDu,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and family=17
         )NumGuMeiAndYiLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and family=19
         )NumGuMeiAndGuLao,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and family=20
         )NumGuMeiAndSanZhi,
         --         detail right
         -- donglan
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and census=12
         )NumDongLanAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and (census=13 or census=14)
         )NumDongLanAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         )NumDongLanAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         )NumDongLanAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumDongLanAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumDongLanAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumDongLanAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param4}>=birthday
         )NumDongLanAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumDongLanAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumDongLanAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumDongLanAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param4}>=birthday
         )NumDongLanAnd90AboveF,
 
         --         gulong
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and census=12
         )NumGuLongAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and (census=13 or census=14)
         )NumGuLongAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         )NumGuLongAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         )NumGuLongAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuLongAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuLongAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumGuLongAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param4}>=birthday
         )NumGuLongAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuLongAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuLongAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumGuLongAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param4}>=birthday
         )NumGuLongAnd90AboveF,
         --         pingnan
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and census=12
         )NumPingNanAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and (census=13 or census=14)
         )NumPingNanAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=2
         )NumPingNanAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=1
         )NumPingNanAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingNanAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingNanAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumPingNanAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=2
         and #{param4}>=birthday
         )NumPingNanAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingNanAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingNanAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumPingNanAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120,124)
         and sex=1
         and #{param4}>=birthday
         )NumPingNanAnd90AboveF,
         --         pingyang
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and census=12
         )NumPingYangAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and (census=13 or census=14)
         )NumPingYangAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         )NumPingYangAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         )NumPingYangAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingYangAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingYangAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumPingYangAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param4}>=birthday
         )NumPingYangAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingYangAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingYangAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumPingYangAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param4}>=birthday
         )NumPingYangAnd90AboveF,
         --         pingji
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and census=12
         )NumPingJiAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and (census=13 or census=14)
         )NumPingJiAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         )NumPingJiAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         )NumPingJiAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingJiAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingJiAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumPingJiAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param4}>=birthday
         )NumPingJiAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingJiAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingJiAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumPingJiAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param4}>=birthday
         )NumPingJiAnd90AboveF,
         --         gumei
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and census=12
         )NumGuMeiAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and (census=13 or census=14)
         )NumGuMeiAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         )NumGuMeiAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         )NumGuMeiAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuMeiAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuMeiAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumGuMeiAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param4}>=birthday
         )NumGuMeiAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuMeiAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuMeiAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumGuMeiAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param4}>=birthday
@@ -800,516 +800,516 @@
 
         --         fuwu all
         -- zhucan
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and census=12
         )NumZhuCanAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and (census=13 or census=14)
         )NumZhuCanAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=2
         )NumZhuCanAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=1
         )NumZhuCanAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuCanAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuCanAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuCanAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=2
         and #{param4}>=birthday
         )NumZhuCanAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuCanAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuCanAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuCanAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhucan_id=7
         and sex=1
         and #{param4}>=birthday
         )NumZhuCanAnd90AboveF,
         --         zhujie
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and census=12
         )NumZhuJieAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and (census=13 or census=14)
         )NumZhuJieAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=2
         )NumZhuJieAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=1
         )NumZhuJieAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuJieAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuJieAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuJieAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=2
         and #{param4}>=birthday
         )NumZhuJieAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuJieAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuJieAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuJieAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhujie_id=8
         and sex=1
         and #{param4}>=birthday
         )NumZhuJieAnd90AboveF,
         --         zhuyu
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and census=12
         )NumZhuYuAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and (census=13 or census=14)
         )NumZhuYuAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=2
         )NumZhuYuAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=1
         )NumZhuYuAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuYuAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuYuAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuYuAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=2
         and #{param4}>=birthday
         )NumZhuYuAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuYuAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuYuAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuYuAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyu_id=10
         and sex=1
         and #{param4}>=birthday
         )NumZhuYuAnd90AboveF,
         --         zhuxing
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and census=12
         )NumZhuXingAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and (census=13 or census=14)
         )NumZhuXingAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=2
         )NumZhuXingAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=1
         )NumZhuXingAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuXingAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuXingAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuXingAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=2
         and #{param4}>=birthday
         )NumZhuXingAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuXingAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuXingAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuXingAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuxing_id=11
         and sex=1
         and #{param4}>=birthday
         )NumZhuXingAnd90AboveF,
 
         --         zhuyi
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and census=12
         )NumZhuYiAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and (census=13 or census=14)
         )NumZhuYiAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=2
         )NumZhuYiAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=1
         )NumZhuYiAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuYiAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuYiAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuYiAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=2
         and #{param4}>=birthday
         )NumZhuYiAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumZhuYiAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumZhuYiAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumZhuYiAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where zhuyi_id=12
         and sex=1
         and #{param4}>=birthday
         )NumZhuYiAnd90AboveF,
 
         --         xiyifu
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and census=12
         )NumXiYiAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and (census=13 or census=14)
         )NumXiYiAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=2
         )NumXiYiAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=1
         )NumXiYiAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumXiYiAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumXiYiAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumXiYiAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=2
         and #{param4}>=birthday
         )NumXiYiAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumXiYiAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumXiYiAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumXiYiAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xidi_id=15
         and sex=1
         and #{param4}>=birthday
         )NumXiYiAnd90AboveF,
         --         xiangtan
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and census=12
         )NumXiangTanAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and (census=13 or census=14)
         )NumXiangTanAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=2
         )NumXiangTanAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=1
         )NumXiangTanAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumXiangTanAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumXiangTanAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumXiangTanAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=2
         and #{param4}>=birthday
         )NumXiangTanAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumXiangTanAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumXiangTanAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumXiangTanAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xiangtan_id=14
         and sex=1
         and #{param4}>=birthday
         )NumXiangTanAnd90AboveF,
         --         kangfu
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and census=12
         )NumKangFuAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and (census=13 or census=14)
         )NumKangFuAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=2
         )NumKangFuAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=1
         )NumKangFuAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumKangFuAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumKangFuAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumKangFuAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=2
         and #{param4}>=birthday
         )NumKangFuAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumKangFuAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumKangFuAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumKangFuAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where kangfu_id=13
         and sex=1
         and #{param4}>=birthday
         )NumKangFuAnd90AboveF,
         --         shenghuohuli
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and census=12
         )NumShengHuoAndHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and (census=13 or census=14)
         )NumShengHuoAndFeiHuJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=2
         )NumShengHuoAndMale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=1
         )NumShengHuoAndFemale,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=2
         and #{param1}>=birthday and birthday > #{param2}
         )NumShengHuoAnd60To70M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=2
         and #{param2}>=birthday and birthday > #{param3}
         )NumShengHuoAnd70To80M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=2
         and #{param3}>=birthday and birthday > #{param4}
         )NumShengHuoAnd80To90M,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=2
         and #{param4}>=birthday
         )NumShengHuoAnd90AboveM,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=1
         and #{param1}>=birthday and birthday > #{param2}
         )NumShengHuoAnd60To70F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=1
         and #{param2}>=birthday and birthday > #{param3}
         )NumShengHuoAnd70To80F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=1
         and #{param3}>=birthday and birthday > #{param4}
         )NumShengHuoAnd80To90F,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where shenghuo_id=16
         and sex=1
         and #{param4}>=birthday
@@ -1478,113 +1478,113 @@
     <select id="getVisualData3" resultType="java.util.Map">
         select
         (select count(1)
-	from view_test2 vt where vt.sex=1 or vt.sex=2
+	from view_backup vt where vt.sex=1 or vt.sex=2
 	) NumOld,
 	(select count(1)
-	from view_test2
+	from view_backup
 	) NumAll,
 	(select count(1)
-	from view_test2 where
+	from view_backup where
 	#{param1}>=birthday
 	and
 	birthday>#{param3}
 	) NumOld60,
-	(select count(1) from view_test2 where
+	(select count(1) from view_backup where
 	#{param3}>=birthday
 	) NumOld80,
 
 	(select count(1)
-	from view_test2 where old_status=4
+	from view_backup where old_status=4
 	) NumSqJjOld,
 	(select count(1)
-	from view_test2 where census=12
+	from view_backup where census=12
 	) NumHuJi,
 	(select count(1)
-	from view_test2 where (census=13 or census=14)
+	from view_backup where (census=13 or census=14)
 	) NumFeiHuJi,
 	(select count(1)
-	from view_test2 where sex=2
+	from view_backup where sex=2
 	) NumMale,
 	(select count(1)
-	from view_test2 where sex=1
+	from view_backup where sex=1
 	) NumFemale,
 	(select count(1)
-	from view_test2 where family=15
+	from view_backup where family=15
 	) NumChunLao,
 	(select count(1)
-	from view_test2 where family=16
+	from view_backup where family=16
 	) NumDuJu,
 	(select count(1)
-	from view_test2 where family=18
+	from view_backup where family=18
 	) NumShiDu,
 	(select count(1)
-	from view_test2 where family=17
+	from view_backup where family=17
 	) NumYiLaoYYL,
 	(select count(1)
-	from view_test2 where family=19
+	from view_backup where family=19
 	) NumGuLao,
 	(select count(1)
-	from view_test2 where family=20
+	from view_backup where family=20
 	) NumSanZhiRY,
 	(select count(1)
-	from view_test2 where family=21
+	from view_backup where family=21
 	) NumQiTaFamily,
 	(select count(1)
-	from view_test2  where #{param4}>=birthday
+	from view_backup  where #{param4}>=birthday
 	) NumAbove90M,
 	(select count(1)
-	from view_test2 where #{param3}>=birthday and birthday > #{param4} and sex=2
+	from view_backup where #{param3}>=birthday and birthday > #{param4} and sex=2
 	) Num80To90M,
 	(select count(1)
-	from view_test2 where #{param2}>=birthday and birthday > #{param3} and sex=2
+	from view_backup where #{param2}>=birthday and birthday > #{param3} and sex=2
 	) Num70To80M,
 	(select count(1)
-	from view_test2 where #{param1}>=birthday and birthday > #{param2} and sex=2
+	from view_backup where #{param1}>=birthday and birthday > #{param2} and sex=2
 	) Num60To70M,
 	(select count(1)
-	from view_test2  where #{param4}>=birthday and sex=1
+	from view_backup  where #{param4}>=birthday and sex=1
 	) NumAbove90F,
 	(select count(1)
-	from view_test2 where #{param3}>=birthday and birthday > #{param4} and sex=1
+	from view_backup where #{param3}>=birthday and birthday > #{param4} and sex=1
 	) Num80To90F,
 	(select count(1)
-	from view_test2 where #{param2}>=birthday and birthday > #{param3} and sex=1
+	from view_backup where #{param2}>=birthday and birthday > #{param3} and sex=1
 	) Num70To80F,
 	(select count(1)
-	from view_test2 where #{param1}>=birthday and birthday > #{param2} and sex=1
+	from view_backup where #{param1}>=birthday and birthday > #{param2} and sex=1
 	) Num60To70F,
 	(select count(1)
-	from view_test2 where economic=22
+	from view_backup where economic=22
 	) NumBangKunF,
 	(select count(1)
-	from view_test2 where economic=23
+	from view_backup where economic=23
 	) NumDiBao,
 	(select count(1)
-	from view_test2 where economic=24
+	from view_backup where economic=24
 	) NumYangLaoBX,
 	(select count(1)
-	from view_test2 where economic=25
+	from view_backup where economic=25
 	) NumYiLiaoJZJ,
 	(select count(1)
-	from view_test2 where economic=26
+	from view_backup where economic=26
 	) NumChengZhenYB,
 	(select count(1)
-	from view_test2 where economic=27
+	from view_backup where economic=27
 	) NumQiTaEco,
 	(select count(1)
-	from view_test2  where is_sn=2
+	from view_backup  where is_sn=2
 	) NumSN,
 	(select count(1)
-	from view_test2  where is_mb=1
+	from view_backup  where is_mb=1
 	) NumMB,
 	(select count(1)
-	from view_test2  where is_exzl=4
+	from view_backup  where is_exzl=4
 	) NumZLS,
 	(select count(1)
-	from view_test2  where is_gz=5
+	from view_backup  where is_gz=5
 	) NumGZS,
 	(select count(1)
-	from view_test2  where  (intelligence=29 or intelligence=30)
+	from view_backup  where  (intelligence=29 or intelligence=30)
 	) NumSZ,
 	(select count(1) from home,home_oldman ho,oldman_base ob
         where ho.home_id=home.id and home.id in(1,2,3,4,5,6) and ob.id=ho.oldman_id and ob.disable=0
@@ -1605,16 +1605,16 @@
 	(select 676
 	) NumJiaTingBC,
 	(select count(1)
-	from view_test2 where old_status=1
+	from view_backup where old_status=1
 	) NumOrgOld,
 	(select count(1)
-	from view_test2 where old_status=4
+	from view_backup where old_status=4
 	) NumSqJjOld,
 	(select count(1)
-	from view_test2 where old_status=2
+	from view_backup where old_status=2
 	) NumSqOld,
 	(select count(1)
-	from view_test2 where old_status=3
+	from view_backup where old_status=3
 	) NumJjOld,
 	(select 86
 
@@ -1639,27 +1639,27 @@
 
     <select id="getVisualData4" resultType="java.util.Map">
         select
-        (select count(1) from view_test2
+        (select count(1) from view_backup
 	where xq_id in (89,90,88,104,110,117,118)
 	and #{param3}>=birthday
 	)NumGuMeiAnd80Above,
-	(select count(1) from view_test2
+	(select count(1) from view_backup
 	where xq_id in (87,84,85,86,98,122)
 	and #{param3}>=birthday
 	)NumGuLongAnd80Above,
-	(select count(1) from view_test2
+	(select count(1) from view_backup
 	where xq_id in (78,123,127,81,83)
 	and #{param3}>=birthday
 	)NumDongLanAnd80Above,
-	(select count(1) from view_test2
+	(select count(1) from view_backup
 	where xq_id in (101,109,115,116,119)
 	and #{param3}>=birthday
 	)NumPingJiAnd80Above,
-	(select count(1) from view_test2
+	(select count(1) from view_backup
 	where xq_id in (93,94,105,106,113,121)
 	and #{param3}>=birthday
 	)NumPingYangAnd80Above,
-	(select count(1) from view_test2
+	(select count(1) from view_backup
 	where xq_id in (91,92,95,96,107,111,112,114,120,124)
 	and #{param3}>=birthday
 	)NumPingNanAnd80Above,
@@ -1928,7 +1928,7 @@
 
 
 
-	(SELECT count(1) from view_test2 where
+	(SELECT count(1) from view_backup where
 	<![CDATA[
             DATE_FORMAT(birthday,'%Y') <= DATE_FORMAT(#{param1},'%Y')
             ]]>
@@ -2752,24 +2752,24 @@
     <select id="getVisualData5" resultType="java.util.Map">
         select
 		 (select sum(people_num)
-from organ where organ.disable=0)NumJieDaoPeople,
+from organ where organ.disable=0 and organ_type_id=2)NumJieDaoPeople,
 
-        (select count(1) from view_test2
+        (select count(1) from view_backup
 		  where xq_id in (89,90,88,104,110,117,118)
         )NumGuMei,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
 		  where xq_id in (87,84,85,86,98,122)
         )NumGuLong,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
 		  where xq_id in (78,123,127,81,83)
         )NumDongLan,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
 		  where xq_id in (101,109,115,116,119)
         )NumPingJi,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
 		  where xq_id in (93,94,105,106,113,121)
         )NumPingYang,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
 		  where xq_id in (91,92,95,96,107,111,112,114,120,124)
         )NumPingNan,
 
@@ -2780,13 +2780,13 @@ from organ where organ.disable=0)NumJieDaoPeople,
 		  and ob.disable=0
         )NumManBing,
         (select count(1)
-	from view_test2 where old_status=1
+	from view_backup where old_status=1
 	) NumOrganOld,
 	(select count(1)
-	from view_test2 where old_status=2
+	from view_backup where old_status=2
 	) NumCommunityOld,
 	(select count(1)
-	from view_test2 where old_status=3
+	from view_backup where old_status=3
 	) NumFamilyOld,
 	 (select count(1)
             from oldman_base where old_status in(2,3,4) and disable=0
@@ -3365,42 +3365,42 @@ and ob.id=ho.oldman_id
 		and oo.oldman_id =ohb.oldman_id and ohb.intelligence!=29 and ohb.intelligence!=30  and ohb.is_sn!=2)NumGuMeiZCAndZiLi,
 
 		 (select count(1)
-	from view_test2 where xq_id in(89,90,88,104,110,117,118)
+	from view_backup where xq_id in(89,90,88,104,110,117,118)
 	and #{param1}>=birthday and birthday>#{param3}
 	) NumOldGuMei60To80,
 	 (select count(1)
-	from view_test2 where xq_id in(87,84,85,86,98,122) and #{param1}>=birthday and birthday>#{param3}
+	from view_backup where xq_id in(87,84,85,86,98,122) and #{param1}>=birthday and birthday>#{param3}
 	) NumOldGuLong60To80,
 	 (select count(1)
-	from view_test2 where xq_id in(78,123,127,81,83) and #{param1}>=birthday and birthday>#{param3}
+	from view_backup where xq_id in(78,123,127,81,83) and #{param1}>=birthday and birthday>#{param3}
 	) NumOldDongLan60To80,
 	 (select count(1)
-	from view_test2 where xq_id in(101,109,115,116,119) and #{param1}>=birthday and birthday>#{param3}
+	from view_backup where xq_id in(101,109,115,116,119) and #{param1}>=birthday and birthday>#{param3}
 	) NumOldPingJi60To80,
 	 (select count(1)
-	from view_test2 where xq_id in(93,94,105,106,113,121) and #{param1}>=birthday and birthday>#{param3}
+	from view_backup where xq_id in(93,94,105,106,113,121) and #{param1}>=birthday and birthday>#{param3}
 	) NumOldPingYang60To80,
 	 (select count(1)
-	from view_test2 where xq_id in(91,92,95,96,107,111,112,114,120) and #{param1}>=birthday and birthday>#{param3}
+	from view_backup where xq_id in(91,92,95,96,107,111,112,114,120) and #{param1}>=birthday and birthday>#{param3}
 	) NumOldPingNan60To80,
 
 	(select count(1)
-	from view_test2 where xq_id in(89,90,88,104,110,117,118) and #{param3}>=birthday
+	from view_backup where xq_id in(89,90,88,104,110,117,118) and #{param3}>=birthday
 	) NumOldGuMei80Above,
 	 (select count(1)
-	from view_test2 where xq_id in(87,84,85,86,98,122) and #{param3}>=birthday
+	from view_backup where xq_id in(87,84,85,86,98,122) and #{param3}>=birthday
 	) NumOldGuLong80Above,
 	 (select count(1)
-	from view_test2 where xq_id in(78,123,127,81,83) and #{param3}>=birthday
+	from view_backup where xq_id in(78,123,127,81,83) and #{param3}>=birthday
 	) NumOldDongLan80Above,
 	 (select count(1)
-	from view_test2 where xq_id in(101,109,115,116,119) and #{param3}>=birthday
+	from view_backup where xq_id in(101,109,115,116,119) and #{param3}>=birthday
 	) NumOldPingJi80Above,
 	 (select count(1)
-	from view_test2 where xq_id in(93,94,105,106,113,121) and #{param3}>=birthday
+	from view_backup where xq_id in(93,94,105,106,113,121) and #{param3}>=birthday
 	) NumOldPingYang80Above,
 	 (select count(1)
-	from view_test2 where xq_id in(91,92,95,96,107,111,112,114,120) and #{param3}>=birthday
+	from view_backup where xq_id in(91,92,95,96,107,111,112,114,120) and #{param3}>=birthday
 	) NumOldPingNan80Above,
 
 -- 	addorganinfo
@@ -3697,22 +3697,22 @@ and ob.id=ho.oldman_id
 		and oo.oldman_id =ohb.oldman_id and (ohb.intelligence=28 or ohb.intelligence is null)and is_sn!=2)NumPingJi2RZAndZiLi,
 
 		 (select count(1)
-	from view_test2 where xq_id in(89,90,88,104,110,117,118)
+	from view_backup where xq_id in(89,90,88,104,110,117,118)
 	) NumGuMeiOld,
 	(select count(1)
-	from view_test2 where xq_id in(87,84,85,86,98,122)
+	from view_backup where xq_id in(87,84,85,86,98,122)
 	) NumGuLongOld,
 	(select count(1)
-	from view_test2 where xq_id in(89,90,88,104,110,117,118)
+	from view_backup where xq_id in(89,90,88,104,110,117,118)
 	) NumDongLanOld,
 	(select count(1)
-	from view_test2 where xq_id in(101,109,115,116,119)
+	from view_backup where xq_id in(101,109,115,116,119)
 	) NumPingJiOld,
 	(select count(1)
-	from view_test2 where xq_id in(93,94,105,106,113,121)
+	from view_backup where xq_id in(93,94,105,106,113,121)
 	) NumPingYangOld,
 	(select count(1)
-	from view_test2 where xq_id in(91,92,95,96,107,111,112,114,120)
+	from view_backup where xq_id in(91,92,95,96,107,111,112,114,120)
 	) NumPingNanOld,
 
 -- 	finish39
@@ -4352,58 +4352,58 @@ and ob.id=ho.oldman_id
         )NumChenZhen5,
 
 --         qushi
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and census=12 and family!=0
         )NumDongLanAndHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and (census=13 or census=14) and family!=0
         )NumDongLanAndFeiHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and family!=0
         )NumDongLanAndMaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1 and family!=0
         )NumDongLanAndFemaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and family!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumDongLanAnd60To70MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and family!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumDongLanAnd70To80MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumDongLanAnd80To90MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param4}>=birthday and family !=0
         )NumDongLanAnd90AboveMFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and family!=0
         )NumDongLanAnd60To70FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and family!=0
         )NumDongLanAnd70To80FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumDongLanAnd80To90FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param4}>=birthday and family !=0
@@ -4411,174 +4411,174 @@ and ob.id=ho.oldman_id
 
 
 -- econo
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and census=12 and economic!=0
         )NumDongLanAndHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and (census=13 or census=14) and economic!=0
         )NumDongLanAndFeiHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and economic!=0
         )NumDongLanAndMaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1 and economic!=0
         )NumDongLanAndFemaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and economic!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumDongLanAnd60To70MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and economic!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumDongLanAnd70To80MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumDongLanAnd80To90MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param4}>=birthday and economic !=0
         )NumDongLanAnd90AboveMEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and economic!=0
         )NumDongLanAnd60To70FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and economic!=0
         )NumDongLanAnd70To80FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumDongLanAnd80To90FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param4}>=birthday and economic !=0
         )NumDongLanAnd90AboveFEco,
 
 --         heal
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and census=12 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAndHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and (census=13 or census=14) and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAndFeiHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAndMaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAndFemaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param1}>=birthday and birthday > #{param2}
         )NumDongLanAnd60To70MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param2}>=birthday and birthday > #{param3}
         )NumDongLanAnd70To80MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAnd80To90MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=2
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAnd90AboveMHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAnd60To70FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAnd70To80FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAnd80To90FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(78,123,127,81,83)
         and sex=1
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumDongLanAnd90AboveFHeal,
 
 --         gumei
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and census=12 and family!=0
         )NumGuMeiAndHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and (census=13 or census=14) and family!=0
         )NumGuMeiAndFeiHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and family!=0
         )NumGuMeiAndMaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1 and family!=0
         )NumGuMeiAndFemaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and family!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuMeiAnd60To70MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and family!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuMeiAnd70To80MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumGuMeiAnd80To90MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param4}>=birthday and family !=0
         )NumGuMeiAnd90AboveMFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and family!=0
         )NumGuMeiAnd60To70FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and family!=0
         )NumGuMeiAnd70To80FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumGuMeiAnd80To90FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param4}>=birthday and family !=0
@@ -4586,174 +4586,174 @@ and ob.id=ho.oldman_id
 
 
 -- econo
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and census=12 and economic!=0
         )NumGuMeiAndHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and (census=13 or census=14) and economic!=0
         )NumGuMeiAndFeiHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and economic!=0
         )NumGuMeiAndMaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1 and economic!=0
         )NumGuMeiAndFemaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and economic!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuMeiAnd60To70MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and economic!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuMeiAnd70To80MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumGuMeiAnd80To90MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param4}>=birthday and economic !=0
         )NumGuMeiAnd90AboveMEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and economic!=0
         )NumGuMeiAnd60To70FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and economic!=0
         )NumGuMeiAnd70To80FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumGuMeiAnd80To90FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param4}>=birthday and economic !=0
         )NumGuMeiAnd90AboveFEco,
 
 --         heal
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and census=12 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAndHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and (census=13 or census=14) and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAndFeiHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAndMaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAndFemaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuMeiAnd60To70MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuMeiAnd70To80MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAnd80To90MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=2
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAnd90AboveMHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAnd60To70FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAnd70To80FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAnd80To90FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(89,90,88,104,110,117,118)
         and sex=1
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuMeiAnd90AboveFHeal,
 
 --         gulong
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and census=12 and family!=0
         )NumGuLongAndHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and (census=13 or census=14) and family!=0
         )NumGuLongAndFeiHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and family!=0
         )NumGuLongAndMaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1 and family!=0
         )NumGuLongAndFemaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and family!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuLongAnd60To70MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and family!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuLongAnd70To80MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumGuLongAnd80To90MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param4}>=birthday and family !=0
         )NumGuLongAnd90AboveMFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and family!=0
         )NumGuLongAnd60To70FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and family!=0
         )NumGuLongAnd70To80FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumGuLongAnd80To90FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param4}>=birthday and family !=0
@@ -4761,174 +4761,174 @@ and ob.id=ho.oldman_id
 
 
 -- econo
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and census=12 and economic!=0
         )NumGuLongAndHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and (census=13 or census=14) and economic!=0
         )NumGuLongAndFeiHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and economic!=0
         )NumGuLongAndMaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1 and economic!=0
         )NumGuLongAndFemaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and economic!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuLongAnd60To70MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and economic!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuLongAnd70To80MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumGuLongAnd80To90MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param4}>=birthday and economic !=0
         )NumGuLongAnd90AboveMEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and economic!=0
         )NumGuLongAnd60To70FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and economic!=0
         )NumGuLongAnd70To80FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumGuLongAnd80To90FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param4}>=birthday and economic !=0
         )NumGuLongAnd90AboveFEco,
 
 --         heal
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and census=12 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAndHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and (census=13 or census=14) and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAndFeiHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAndMaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAndFemaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param1}>=birthday and birthday > #{param2}
         )NumGuLongAnd60To70MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param2}>=birthday and birthday > #{param3}
         )NumGuLongAnd70To80MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAnd80To90MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=2
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAnd90AboveMHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAnd60To70FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAnd70To80FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAnd80To90FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(87,84,85,86,98,122)
         and sex=1
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumGuLongAnd90AboveFHeal,
 
 --         pingji
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and census=12 and family!=0
         )NumPingJiAndHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and (census=13 or census=14) and family!=0
         )NumPingJiAndFeiHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and family!=0
         )NumPingJiAndMaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1 and family!=0
         )NumPingJiAndFemaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and family!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingJiAnd60To70MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and family!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingJiAnd70To80MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumPingJiAnd80To90MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param4}>=birthday and family !=0
         )NumPingJiAnd90AboveMFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and family!=0
         )NumPingJiAnd60To70FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and family!=0
         )NumPingJiAnd70To80FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumPingJiAnd80To90FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param4}>=birthday and family !=0
@@ -4936,174 +4936,174 @@ and ob.id=ho.oldman_id
 
 
 -- econo
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and census=12 and economic!=0
         )NumPingJiAndHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and (census=13 or census=14) and economic!=0
         )NumPingJiAndFeiHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and economic!=0
         )NumPingJiAndMaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1 and economic!=0
         )NumPingJiAndFemaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and economic!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingJiAnd60To70MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and economic!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingJiAnd70To80MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumPingJiAnd80To90MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param4}>=birthday and economic !=0
         )NumPingJiAnd90AboveMEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and economic!=0
         )NumPingJiAnd60To70FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and economic!=0
         )NumPingJiAnd70To80FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumPingJiAnd80To90FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param4}>=birthday and economic !=0
         )NumPingJiAnd90AboveFEco,
 
 --         heal
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and census=12 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAndHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and (census=13 or census=14) and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAndFeiHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAndMaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAndFemaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingJiAnd60To70MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingJiAnd70To80MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAnd80To90MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=2
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAnd90AboveMHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAnd60To70FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAnd70To80FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAnd80To90FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(101,109,115,116,119)
         and sex=1
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingJiAnd90AboveFHeal,
 
 --         pingyang
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and census=12 and family!=0
         )NumPingYangAndHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and (census=13 or census=14) and family!=0
         )NumPingYangAndFeiHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and family!=0
         )NumPingYangAndMaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1 and family!=0
         )NumPingYangAndFemaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and family!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingYangAnd60To70MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and family!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingYangAnd70To80MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumPingYangAnd80To90MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param4}>=birthday and family !=0
         )NumPingYangAnd90AboveMFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and family!=0
         )NumPingYangAnd60To70FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and family!=0
         )NumPingYangAnd70To80FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumPingYangAnd80To90FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param4}>=birthday and family !=0
@@ -5111,174 +5111,174 @@ and ob.id=ho.oldman_id
 
 
 -- econo
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and census=12 and economic!=0
         )NumPingYangAndHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and (census=13 or census=14) and economic!=0
         )NumPingYangAndFeiHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and economic!=0
         )NumPingYangAndMaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1 and economic!=0
         )NumPingYangAndFemaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and economic!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingYangAnd60To70MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and economic!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingYangAnd70To80MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumPingYangAnd80To90MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param4}>=birthday and economic !=0
         )NumPingYangAnd90AboveMEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and economic!=0
         )NumPingYangAnd60To70FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and economic!=0
         )NumPingYangAnd70To80FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumPingYangAnd80To90FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param4}>=birthday and economic !=0
         )NumPingYangAnd90AboveFEco,
 
 --         heal
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and census=12 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAndHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and (census=13 or census=14) and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAndFeiHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAndMaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAndFemaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingYangAnd60To70MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingYangAnd70To80MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAnd80To90MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=2
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAnd90AboveMHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAnd60To70FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAnd70To80FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAnd80To90FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(93,94,105,106,113,121)
         and sex=1
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingYangAnd90AboveFHeal,
 
 --         pingnan
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and census=12 and family!=0
         )NumPingNanAndHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and (census=13 or census=14) and family!=0
         )NumPingNanAndFeiHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and family!=0
         )NumPingNanAndMaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1 and family!=0
         )NumPingNanAndFemaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and family!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingNanAnd60To70MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and family!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingNanAnd70To80MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumPingNanAnd80To90MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2
         and #{param4}>=birthday and family !=0
         )NumPingNanAnd90AboveMFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and family!=0
         )NumPingNanAnd60To70FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and family!=0
         )NumPingNanAnd70To80FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumPingNanAnd80To90FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param4}>=birthday and family !=0
@@ -5286,256 +5286,256 @@ and ob.id=ho.oldman_id
 
 
 -- econo
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and census=12 and economic!=0
         )NumPingNanAndHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and (census=13 or census=14) and economic!=0
         )NumPingNanAndFeiHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and economic!=0
         )NumPingNanAndMaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1 and economic!=0
         )NumPingNanAndFemaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and economic!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingNanAnd60To70MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and economic!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingNanAnd70To80MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumPingNanAnd80To90MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2
         and #{param4}>=birthday and economic !=0
         )NumPingNanAnd90AboveMEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and economic!=0
         )NumPingNanAnd60To70FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and economic!=0
         )NumPingNanAnd70To80FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumPingNanAnd80To90FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param4}>=birthday and economic !=0
         )NumPingNanAnd90AboveFEco,
 
 --         heal
-(select count(1) from view_test2
+(select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and census=12 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAndHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and (census=13 or census=14) and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAndFeiHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAndMaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAndFemaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param1}>=birthday and birthday > #{param2}
         )NumPingNanAnd60To70MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param2}>=birthday and birthday > #{param3}
         )NumPingNanAnd70To80MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAnd80To90MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=2
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAnd90AboveMHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param1}>=birthday and birthday > #{param2} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAnd60To70FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param2}>=birthday and birthday > #{param3} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAnd70To80FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAnd80To90FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where xq_id in(91,92,95,96,107,111,112,114,120)
         and sex=1
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumPingNanAnd90AboveFHeal,
 
 --         qushiall
-(select count(1) from view_test2
+(select count(1) from view_backup
         where  census=12 and family!=0
         )NumAllAndHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where  (census=13 or census=14) and family!=0
         )NumAllAndFeiHuJiFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where  sex=2 and family!=0
         )NumAllAndMaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where  sex=1 and family!=0
         )NumAllAndFemaleFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where  sex=2 and family!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumAllAnd60To70MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2 and family!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumAllAnd70To80MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where  sex=2
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumAllAnd80To90MFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where  sex=2
         and #{param4}>=birthday and family !=0
         )NumAllAnd90AboveMFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where  sex=1
         and #{param1}>=birthday and birthday > #{param2} and family!=0
         )NumAllAnd60To70FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param2}>=birthday and birthday > #{param3} and family!=0
         )NumAllAnd70To80FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param3}>=birthday and birthday > #{param4} and family!=0
         )NumAllAnd80To90FFam,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param4}>=birthday and family !=0
         )NumAllAnd90AboveFFam,
 
 
 -- econo
-(select count(1) from view_test2
+(select count(1) from view_backup
         where census=12 and economic!=0
         )NumAllAndHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where (census=13 or census=14) and economic!=0
         )NumAllAndFeiHuJiEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2 and economic!=0
         )NumAllAndMaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1 and economic!=0
         )NumAllAndFemaleEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2 and economic!=0
         and #{param1}>=birthday and birthday > #{param2}
         )NumAllAnd60To70MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2 and economic!=0
         and #{param2}>=birthday and birthday > #{param3}
         )NumAllAnd70To80MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumAllAnd80To90MEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2
         and #{param4}>=birthday and economic !=0
         )NumAllAnd90AboveMEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param1}>=birthday and birthday > #{param2} and economic!=0
         )NumAllAnd60To70FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param2}>=birthday and birthday > #{param3} and economic!=0
         )NumAllAnd70To80FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param3}>=birthday and birthday > #{param4} and economic!=0
         )NumAllAnd80To90FEco,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param4}>=birthday and economic !=0
         )NumAllAnd90AboveFEco,
 
 --         heal
-(select count(1) from view_test2
+(select count(1) from view_backup
         where census=12 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAndHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where (census=13 or census=14) and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAndFeiHuJiHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAndMaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAndFemaleHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param1}>=birthday and birthday > #{param2}
         )NumAllAnd60To70MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2 and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         and #{param2}>=birthday and birthday > #{param3}
         )NumAllAnd70To80MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAnd80To90MHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=2
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAnd90AboveMHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param1}>=birthday and birthday > #{param2} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAnd60To70FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param2}>=birthday and birthday > #{param3} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAnd70To80FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param3}>=birthday and birthday > #{param4} and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAnd80To90FHeal,
-        (select count(1) from view_test2
+        (select count(1) from view_backup
         where sex=1
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
         )NumAllAnd90AboveFHeal
@@ -5570,7 +5570,7 @@ and ob.id=ho.oldman_id
     </select>
 
     <update id="updateVisualData">
-        INSERT INTO view_test_test
+        INSERT INTO view_backup
         select ob.id oldman_id,ob.name name,ob.sex sex,ob.birthday birthday,ob.family family,ob.economic economic,
         ob.is_handle is_handle,ob.key_status key_status,ob.census census,ob.xq_id xq_id,ob.old_status old_status,
         oo.organ_id organ_id,
@@ -5609,7 +5609,7 @@ and ob.id=ho.oldman_id
     </update>
 
     <delete id="deleteOldVisualData">
-        truncate table view_test_test
+        truncate table view_backup
     </delete>
 
 </mapper>

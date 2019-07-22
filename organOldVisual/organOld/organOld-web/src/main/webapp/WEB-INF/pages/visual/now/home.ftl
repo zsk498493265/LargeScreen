@@ -103,7 +103,7 @@
         $("#"+des).show();
 
         if(des=="child_oldman")error=0;
-        alert(error);
+       // alert(error);
     }
 </script>
 </html>
