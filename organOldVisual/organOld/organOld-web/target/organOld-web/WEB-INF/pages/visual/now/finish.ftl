@@ -1971,9 +1971,9 @@
                                                                     var family_option_family_line = chartLineForFamily(title_text, legend_data, xAxis_data, series);
 
                                                                     title_text = "户籍";
-                                                                    legend_data = [{name: '户籍', textStyle: {color: legend_color, fontSize: 18}}, {
+                                                                    legend_data = [{name: '户籍', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                         name: '非户籍',
-                                                                        textStyle: {color: legend_color, fontSize: 18}
+                                                                        textStyle: {color: legend_color, fontSize: 12}
                                                                     }];
                                                                     series = [{
                                                                         name: '老人户籍',
@@ -2005,9 +2005,9 @@
 
                                                                     //性别饼图
                                                                     title_text = "性别";
-                                                                    legend_data = [{name: '男', textStyle: {color: legend_color, fontSize: 18}}, {
+                                                                    legend_data = [{name: '男', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                         name: '女',
-                                                                        textStyle: {color: legend_color, fontSize: 18}
+                                                                        textStyle: {color: legend_color, fontSize: 12}
                                                                     }];
                                                                     series = [{
                                                                         name: '老人性别',
@@ -2045,14 +2045,14 @@
                                                                             name: '男',
                                                                             textStyle: {
                                                                                 color: '#fff',
-                                                                                fontSize: 18
+                                                                                fontSize: 12
                                                                             }
                                                                         },
                                                                         {
                                                                             name: '女',
                                                                             textStyle: {
                                                                                 color: '#fff',
-                                                                                fontSize: 18
+                                                                                fontSize: 12
                                                                             }
                                                                         }
                                                                     ];
@@ -3018,7 +3018,7 @@
                                                                     var economic_option_economic_line = chartLineForFamily(title_text,legend_data,xAxis_data,series);
 
                                                                     title_text="户籍";
-                                                                    legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:18}},{name:'非户籍',textStyle:{color:legend_color,fontSize:18}}];
+                                                                    legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:12}},{name:'非户籍',textStyle:{color:legend_color,fontSize:12}}];
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
@@ -3049,7 +3049,7 @@
 
                                                                     //性别饼图
                                                                     title_text="性别";
-                                                                    legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
+                                                                    legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:12}},{name:'女',textStyle:{color:legend_color,fontSize:12}}];
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
@@ -3086,14 +3086,14 @@
                                                                             name:'男',
                                                                             textStyle:{
                                                                                 color:'#fff',
-                                                                                fontSize:18
+                                                                                fontSize:12
                                                                             }
                                                                         },
                                                                         {
                                                                             name:'女',
                                                                             textStyle:{
                                                                                 color:'#fff',
-                                                                                fontSize:18
+                                                                                fontSize:12
                                                                             }}
                                                                     ];
                                                                     yAxis_data=['90+   ','80-90','70-80','60-70'];
@@ -3706,7 +3706,7 @@
                                                                     var health_option_health_line = chartLineForFamily(title_text,legend_data,xAxis_data,series);
 
                                                                     title_text="户籍";
-                                                                    legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:18}},{name:'非户籍',textStyle:{color:legend_color,fontSize:18}}];
+                                                                    legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:12}},{name:'非户籍',textStyle:{color:legend_color,fontSize:12}}];
                                                                     series=[{
                                                                         name: '老人户籍',
                                                                         type: 'pie',
@@ -3737,7 +3737,7 @@
 
                                                                     //性别饼图
                                                                     title_text="性别";
-                                                                    legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
+                                                                    legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:12}},{name:'女',textStyle:{color:legend_color,fontSize:12}}];
                                                                     series=[{
                                                                         name: '老人性别',
                                                                         type: 'pie',
@@ -3774,14 +3774,14 @@
                                                                             name:'男',
                                                                             textStyle:{
                                                                                 color:'#fff',
-                                                                                fontSize:18
+                                                                                fontSize:12
                                                                             }
                                                                         },
                                                                         {
                                                                             name:'女',
                                                                             textStyle:{
                                                                                 color:'#fff',
-                                                                                fontSize:18
+                                                                                fontSize:12
                                                                             }}
                                                                     ];
                                                                     yAxis_data=['90+   ','80-90','70-80','60-70'];
@@ -9548,7 +9548,59 @@
                                                                                 data: [dataR.NumDongLanLeveled, dataR.NumGuLongLeveled, dataR.NumPingNanLeveled, dataR.NumPingYangLeveled, dataR.NumPingJiLeveled, dataR.NumGuMeiLeveled]
                                                                             }
                                                                         ];
-                                                                        var chx_option_pj_pq_bar = chartBarForChxJi(title_text, legend_data, yAxis_data, series);
+                                                                        //var chx_option_pj_pq_bar = chartBarForChxJi(title_text, legend_data, yAxis_data, series);
+                                                                        //chx_pj_pq_bar.setOption(chx_option_pj_pq_bar);
+                                                                        //修改chx
+                                                                        //长护险图表修改
+                                                                        var title_text = "已评级老人片区分布";
+                                                                        var legend_data = [{
+                                                                            name: '东兰',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        }, {name: '古龙', textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}}, {
+                                                                            name: '平南',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        },{
+                                                                            name: '平阳',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        },{
+                                                                            name: '平吉',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        },{
+                                                                            name: '古美',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        }];
+                                                                        var series = [{
+                                                                            name: '年龄',
+                                                                            type: 'pie',
+                                                                            radius: '60%',
+                                                                            label: {
+                                                                                normal: {
+                                                                                    show: false,
+                                                                                    formatter: '',
+                                                                                    textStyle: {
+                                                                                        fontWeight: 'normal',
+                                                                                        fontSize: series_lebel_fontSize
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            center: ['42%', '60%'],
+                                                                            data:[
+                                                                                {value: dataR.NumDongLanLeveled, name: '东兰'},
+                                                                                {value: dataR.NumGuLongLeveled, name: '古龙'},
+                                                                                {value: dataR.NumPingNanLeveled, name: '平南'},
+                                                                                {value: dataR.NumPingYangLeveled, name: '平阳'},
+                                                                                {value: dataR.NumPingJiLeveled, name: '平吉'},
+                                                                                {value: dataR.NumGuMeiLeveled, name: '古美'}
+                                                                            ],
+                                                                            itemStyle: {
+                                                                                emphasis: {
+                                                                                    shadowBlur: 10,
+                                                                                    shadowOffsetX: 0,
+                                                                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                                                                }
+                                                                            }
+                                                                        }];
+                                                                        var chx_option_pj_pq_bar =chartPieChange(title_text, legend_data, series);
                                                                         chx_pj_pq_bar.setOption(chx_option_pj_pq_bar);
 
                                                                         //    已评级年龄分布柱状图
@@ -9578,7 +9630,50 @@
                                                                                 data: [numLeveled90Above,numLeveled80To90,numLeveled70To80,numLeveled60To70]
                                                                             }
                                                                         ];
-                                                                        var chx_option_pj_age_bar=chartBarForChx(title_text,legend_data,yAxis_data,series);
+                                                                        //var chx_option_pj_age_bar=chartBarForChx(title_text,legend_data,yAxis_data,series);
+                                                                        //chx_pj_age_bar.setOption(chx_option_pj_age_bar);
+                                                                        //长护险图表修改
+                                                                        var title_text = "已评级老人年龄";
+                                                                        var legend_data = [{
+                                                                            name: '60-70',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        }, {name: '70-80', textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}}, {
+                                                                            name: '80-90',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        },{
+                                                                            name: '90+',
+                                                                                textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        }];
+                                                                        var series = [{
+                                                                            name: '年龄',
+                                                                            type: 'pie',
+                                                                            radius: '60%',
+                                                                            label: {
+                                                                                normal: {
+                                                                                    show: false,
+                                                                                    formatter: '',
+                                                                                    textStyle: {
+                                                                                        fontWeight: 'normal',
+                                                                                        fontSize: series_lebel_fontSize
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            center: ['42%', '60%'],
+                                                                            data:[
+                                                                                {value: numLeveled60To70, name: '60-70'},
+                                                                                {value: numLeveled70To80, name: '70-80'},
+                                                                                {value: numLeveled80To90, name: '80-90'},
+                                                                                {value: numLeveled90Above, name: '90+'}
+                                                                            ],
+                                                                            itemStyle: {
+                                                                                emphasis: {
+                                                                                    shadowBlur: 10,
+                                                                                    shadowOffsetX: 0,
+                                                                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                                                                }
+                                                                            }
+                                                                        }];
+                                                                        var chx_option_pj_age_bar = chartPieChange(title_text, legend_data, series);
                                                                         chx_pj_age_bar.setOption(chx_option_pj_age_bar);
 
 
@@ -9702,9 +9797,62 @@
                                                                                 data: [dataR.NumDongLanServed, dataR.NumGuLongServed, dataR.NumPingNanServed, dataR.NumPingYangServed, dataR.NumPingJiServed, dataR.NumGuMeiServed]
                                                                             }
                                                                         ];
-                                                                        var chx_option_fw_pq_bar =  chartBarForChxPqService(title_text, legend_data, yAxis_data, series);
-                                                                        chx_fw_pq_bar.setOption(chx_option_fw_pq_bar);
+                                                                        //var chx_option_fw_pq_bar =  chartBarForChxPqService(title_text, legend_data, yAxis_data, series);
+                                                                        //chx_fw_pq_bar.setOption(chx_option_fw_pq_bar);
 
+                                                                        //change
+                                                                        //修改chx
+                                                                        //长护险图表修改
+                                                                        var title_text = "已评级老人片区分布";
+                                                                        var legend_data = [{
+                                                                            name: '东兰',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        }, {name: '古龙', textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}}, {
+                                                                            name: '平南',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        },{
+                                                                            name: '平阳',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        },{
+                                                                            name: '平吉',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        },{
+                                                                            name: '古美',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        }];
+                                                                        var series = [{
+                                                                            name: '年龄',
+                                                                            type: 'pie',
+                                                                            radius: '60%',
+                                                                            label: {
+                                                                                normal: {
+                                                                                    show: false,
+                                                                                    formatter: '',
+                                                                                    textStyle: {
+                                                                                        fontWeight: 'normal',
+                                                                                        fontSize: series_lebel_fontSize
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            center: ['42%', '60%'],
+                                                                            data:[
+                                                                                {value: dataR.NumDongLanServed, name: '东兰'},
+                                                                                {value: dataR.NumGuLongServed, name: '古龙'},
+                                                                                {value: dataR.NumPingNanServed, name: '平南'},
+                                                                                {value: dataR.NumPingYangServed, name: '平阳'},
+                                                                                {value: dataR.NumPingJiServed, name: '平吉'},
+                                                                                {value: dataR.NumGuMeiServed, name: '古美'}
+                                                                            ],
+                                                                            itemStyle: {
+                                                                                emphasis: {
+                                                                                    shadowBlur: 10,
+                                                                                    shadowOffsetX: 0,
+                                                                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                                                                }
+                                                                            }
+                                                                        }];
+                                                                        var chx_option_pj_pq_bar =chartPieChange(title_text, legend_data, series);
+                                                                        chx_fw_pq_bar.setOption(chx_option_pj_pq_bar);
                                                                         //    已评级年龄分布柱状图
                                                                         title_text='获服务老人年龄';
                                                                         legend_data=[];
@@ -9731,9 +9879,53 @@
                                                                                 data: [numServed90Above,numServed80To90,numServed70To80,numServed60To70]
                                                                             }
                                                                         ];
-                                                                        var chx_option_fw_age_bar=chartBarForChx(title_text,legend_data,yAxis_data,series);
-                                                                        chx_fw_age_bar.setOption(chx_option_fw_age_bar);
+                                                                        //var chx_option_fw_age_bar=chartBarForChx(title_text,legend_data,yAxis_data,series);
+                                                                        //chx_fw_age_bar.setOption(chx_option_fw_age_bar);
 
+                                                                        //change
+                                                                        //长护险图表修改
+                                                                        var title_text = "获服务老人年龄";
+                                                                        var legend_data = [{
+                                                                            name: '60-70',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        }, {name: '70-80', textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}}, {
+                                                                            name: '80-90',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        },{
+                                                                            name: '90+',
+                                                                            textStyle: {color: legend_color, fontSize: 8,fontWeight:'normal'}
+                                                                        }];
+                                                                        var series = [{
+                                                                            name: '年龄',
+                                                                            type: 'pie',
+                                                                            radius: '60%',
+                                                                            label: {
+                                                                                normal: {
+                                                                                    show: false,
+                                                                                    formatter: '',
+                                                                                    textStyle: {
+                                                                                        fontWeight: 'normal',
+                                                                                        fontSize: series_lebel_fontSize
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            center: ['42%', '60%'],
+                                                                            data:[
+                                                                                {value: numServed60To70, name: '60-70'},
+                                                                                {value: numServed70To80, name: '70-80'},
+                                                                                {value: numServed80To90, name: '80-90'},
+                                                                                {value: numServed90Above, name: '90+'}
+                                                                            ],
+                                                                            itemStyle: {
+                                                                                emphasis: {
+                                                                                    shadowBlur: 10,
+                                                                                    shadowOffsetX: 0,
+                                                                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                                                                }
+                                                                            }
+                                                                        }];
+                                                                        var chx_option_fw_age_bar=chartPieChange(title_text, legend_data, series);
+                                                                        chx_fw_age_bar.setOption(chx_option_fw_age_bar);
 
                                                                         title_text="获服务老人户籍";
                                                                         legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:8}},{name:'非户籍',textStyle:{color:legend_color,fontSize:8}}];
@@ -10327,7 +10519,7 @@
                                                                                               numHuJi,numFeiHuJi,numMale,numFemale,num60To70M,num70To80M,num80To90M,num90AboveM,num60To70F,num70To80F,num80To90F,num90AboveF){
                                                                         //base
                                                                         title_text="性别";
-                                                                        legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
+                                                                        legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:12}},{name:'女',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[{
                                                                             name: '老人性别',
                                                                             type: 'pie',
@@ -10362,14 +10554,14 @@
                                                                                 name:'男',
                                                                                 textStyle:{
                                                                                     color:'#fff',
-                                                                                    fontSize:18
+                                                                                    fontSize:12
                                                                                 }
                                                                             },
                                                                             {
                                                                                 name:'女',
                                                                                 textStyle:{
                                                                                     color:'#fff',
-                                                                                    fontSize:18
+                                                                                    fontSize:12
 
                                                                                 }}
                                                                         ];
@@ -10421,7 +10613,7 @@
                                                                         var base_option_age_bar=chartBarDisplayAllTitleSmall(title_text,legend_data,yAxis_data,series);
 
                                                                         title_text="户籍";
-                                                                        legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:18}},{name:'非户籍',textStyle:{color:legend_color,fontSize:18}}];
+                                                                        legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:12}},{name:'非户籍',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[{
                                                                             name: '老人户籍',
                                                                             type: 'pie',
@@ -10456,9 +10648,9 @@
                                                                         title.text = "老人比例";
                                                                         title.textStyle.fontSize=20;
                                                                         //title.link = "javascript: change('child_base','child_oldman')";
-                                                                        legend_data = [{name: '老人', textStyle: {color: legend_color, fontSize: 18}}, {
+                                                                        legend_data = [{name: '老人', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                             name: '非老人',
-                                                                            textStyle: {color: legend_color, fontSize: 18}
+                                                                            textStyle: {color: legend_color, fontSize: 12}
                                                                         }];
                                                                         series = [
                                                                             {
@@ -10484,7 +10676,7 @@
                                                                         title.textStyle.fontSize=title_fontSize;
                                                                         //
                                                                         title_text="户籍";
-                                                                        legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:18}},{name:'非户籍',textStyle:{color:legend_color,fontSize:18}}];
+                                                                        legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:12}},{name:'非户籍',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[{
                                                                             name: '老人户籍',
                                                                             type: 'pie',
@@ -10515,7 +10707,7 @@
 
                                                                         //性别饼图
                                                                         title_text="性别";
-                                                                        legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
+                                                                        legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:12}},{name:'女',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[{
                                                                             name: '老人性别',
                                                                             type: 'pie',
@@ -10552,14 +10744,14 @@
                                                                                 name:'男',
                                                                                 textStyle:{
                                                                                     color:'#fff',
-                                                                                    fontSize:18
+                                                                                    fontSize:12
                                                                                 }
                                                                             },
                                                                             {
                                                                                 name:'女',
                                                                                 textStyle:{
                                                                                     color:'#fff',
-                                                                                    fontSize:18
+                                                                                    fontSize:12
                                                                                 }}
                                                                         ];
                                                                         yAxis_data=['90+   ','80-90','70-80','60-70'];
@@ -10613,7 +10805,7 @@
 
 
                                                                         title_text="户籍";
-                                                                        legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:18}},{name:'非户籍',textStyle:{color:legend_color,fontSize:18}}];
+                                                                        legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:12}},{name:'非户籍',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[{
                                                                             name: '老人户籍',
                                                                             type: 'pie',
@@ -10644,7 +10836,7 @@
 
                                                                         //性别饼图
                                                                         title_text="性别";
-                                                                        legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
+                                                                        legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:12}},{name:'女',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[{
                                                                             name: '老人性别',
                                                                             type: 'pie',
@@ -10681,14 +10873,14 @@
                                                                                 name:'男',
                                                                                 textStyle:{
                                                                                     color:'#fff',
-                                                                                    fontSize:18
+                                                                                    fontSize:12
                                                                                 }
                                                                             },
                                                                             {
                                                                                 name:'女',
                                                                                 textStyle:{
                                                                                     color:'#fff',
-                                                                                    fontSize:18
+                                                                                    fontSize:12
                                                                                 }}
                                                                         ];
                                                                         yAxis_data=['90+   ','80-90','70-80','60-70'];
@@ -10745,7 +10937,7 @@
 
 
                                                                         title_text="户籍";
-                                                                        legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:18}},{name:'非户籍',textStyle:{color:legend_color,fontSize:18}}];
+                                                                        legend_data=[{name:'户籍',textStyle:{color:legend_color,fontSize:12}},{name:'非户籍',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[{
                                                                             name: '老人户籍',
                                                                             type: 'pie',
@@ -10776,7 +10968,7 @@
 
                                                                         //性别饼图
                                                                         title_text="性别";
-                                                                        legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
+                                                                        legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:12}},{name:'女',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[{
                                                                             name: '老人性别',
                                                                             type: 'pie',
@@ -10813,14 +11005,14 @@
                                                                                 name:'男',
                                                                                 textStyle:{
                                                                                     color:'#fff',
-                                                                                    fontSize:18
+                                                                                    fontSize:12
                                                                                 }
                                                                             },
                                                                             {
                                                                                 name:'女',
                                                                                 textStyle:{
                                                                                     color:'#fff',
-                                                                                    fontSize:18
+                                                                                    fontSize:12
                                                                                 }}
                                                                         ];
                                                                         yAxis_data=['90+   ','80-90','70-80','60-70'];

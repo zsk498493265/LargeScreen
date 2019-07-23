@@ -223,8 +223,8 @@
             }
         }
     }];
-    var chx_option_pj_pq_bar = chartPie(title_text,legend_data,series);
-    chx_pj_pq_bar.setOption(chx_option_pj_pq_bar);
+    //var chx_option_pj_pq_bar = chartPie(title_text,legend_data,series);
+    //chx_pj_pq_bar.setOption(chx_option_pj_pq_bar);
 
     chx_pj_pq_bar.on('legendselectchanged', function (params) {
         var name = params.name;
@@ -241,7 +241,7 @@
     //    已评级年龄分布柱状图
     title_text='已评级老人的年龄';
     legend_data=[];
-    yAxis_data=['90-   ','80-90','70-80','60-70'];
+    yAxis_data=['90+   ','80-90','70-80','60-70'];
     series=[
         {
             name: '男',
@@ -264,8 +264,8 @@
             data: [67,134,234,534]
         }
     ];
-    var chx_option_pj_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
-    chx_pj_age_bar.setOption(chx_option_pj_age_bar);
+    //var chx_option_pj_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
+    //chx_pj_age_bar.setOption(chx_option_pj_age_bar);
 
 
 
@@ -415,8 +415,8 @@
             }
         }
     }];
-    var chx_option_fw_pq_bar = chartPie(title_text,legend_data,series);
-    chx_fw_pq_bar.setOption(chx_option_fw_pq_bar);
+    //var chx_option_fw_pq_bar = chartPie(title_text,legend_data,series);
+    //chx_fw_pq_bar.setOption(chx_option_fw_pq_bar);
 
     chx_fw_pq_bar.on('legendselectchanged', function (params) {
         var name = params.name;
@@ -456,8 +456,8 @@
             data: [67,134,234,534]
         }
     ];
-    var chx_option_fw_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
-    chx_fw_age_bar.setOption(chx_option_fw_age_bar);
+    //var chx_option_fw_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
+    //chx_fw_age_bar.setOption(chx_option_fw_age_bar);
 
     chx_fw_age_bar.on('legendselectchanged', function (params) {
         var name = params.name;
