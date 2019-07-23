@@ -1632,9 +1632,9 @@
     }
     function createIcon(json){
         if(json.type==1){
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gongyu-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gongyu.png", new BMap.Size(45,45),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         } else if(json.type==2)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao.png", new BMap.Size(45,45),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==-1)
             var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gumeip-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==-2)
@@ -1648,9 +1648,9 @@
         else if(json.type==-6)
             var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingyanp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else if(json.type==100)
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/star-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/star.png", new BMap.Size(45,45),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
         else
-            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/cun-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/cun.png", new BMap.Size(45,45),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
 
         // var icon = new BMap.Icon("http://map.baidu.com/image/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         //var icon = new BMap.Icon("http://api.map.baidu.com/lbsapi/creatmap/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
@@ -1670,10 +1670,11 @@
         document.getElementById("container").style.zIndex = 2;
         document.getElementById("dituContent").style.zIndex = 1;
     }
-    function ChangeMap() {
-        document.getElementById("container").style.zIndex = 3 - document.getElementById("container").style.zIndex;
-        document.getElementById("dituContent").style.zIndex = 3 - document.getElementById("dituContent").style.zIndex;
-        heatmapOverlay.setDataSet({data:hpoints,max:200});
+    function picChange2(index){
+        //alert(markerArr.length);
+        // document.getElementById("container").style.zIndex = 3 - document.getElementById("container").style.zIndex;
+        // document.getElementById("dituContent").style.zIndex = 3 - document.getElementById("dituContent").style.zIndex;
+        var all_marker=new Array();
         for(var i=0;i<markerArr.length;i++){
             // alert(markerArr.length);
             var json = markerArr[i];
@@ -1686,8 +1687,8 @@
             var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
             marker.setLabel(label);
             marker.json=json;
-            //label.hide();
             map.addOverlay(marker);
+            all_marker.push(marker);
             label.setStyle({
                 borderColor:"#808080",
                 color:"#333",
@@ -1710,7 +1711,7 @@
                     _marker.getLabel().hide();
                 })
                 _iw.addEventListener("close",function(){
-                    //_marker.getLabel().show();
+                    // _marker.getLabel().show();
                 })
                 label.addEventListener("click",function(){
                     _marker.openInfoWindow(_iw);
@@ -1721,8 +1722,982 @@
                 }
             })()
             label.hide();
-            //map.removeOverlay(marker);
         }
+
+        //add all pq
+        // map.addOverlay(polygonOrg);
+        map.addOverlay(polygon_DongLan);
+        map.addOverlay(polygon_PingNan);
+        map.addOverlay(polygon_PingJi);
+        map.addOverlay(polygon_PingYang);
+        map.addOverlay(polygon_XuHui);
+        map.addOverlay(polygon_WanYuan);
+        map.addOverlay(polygon_GuLong);
+        map.addOverlay(polygon_GuMei);
+        //
+        var allOverlay = map.getOverlays();
+        var len = map.getOverlays().length;
+        for (var i = len; i >0; i--){
+            // if (markerArr[i].type != index) {
+            //     map.removeOverlay(all_marker[i]);
+            // }
+            if (allOverlay[i] instanceof BMap.Marker){
+                var str = allOverlay[i].getLabel().content;
+                if (index == 1) {
+                    if (str != "乐健长者照护之家") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    // map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_PingJi);
+                    map.addOverlay(polygon_PingYang);
+                    map.addOverlay(polygon_XuHui);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_GuLong);
+                    map.addOverlay(polygon_GuMei);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        json_param=json;
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                else if (index == 2) {
+                    if (str != "艾维康长者照护之家") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //  map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_PingJi);
+                    map.addOverlay(polygon_PingYang);
+                    map.addOverlay(polygon_XuHui);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_GuLong);
+                    map.addOverlay(polygon_GuMei);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                else if (index == 3) {
+                    if (str != "智慧坊长者照护之家") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //  map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_PingJi);
+                    map.addOverlay(polygon_PingYang);
+                    map.addOverlay(polygon_XuHui);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_GuLong);
+                    map.addOverlay(polygon_GuMei);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                else if (index == 4) {
+                    if (str != "莲花敬老院") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //  map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_PingJi);
+                    map.addOverlay(polygon_PingYang);
+                    map.addOverlay(polygon_XuHui);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_GuLong);
+                    map.addOverlay(polygon_GuMei);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                else if (index == 5) {
+                    if (str != "古美敬老院") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    // map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_PingJi);
+                    map.addOverlay(polygon_PingYang);
+                    map.addOverlay(polygon_XuHui);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_GuLong);
+                    map.addOverlay(polygon_GuMei);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                else if (index == 6) {
+                    if (str != "平阳敬老院") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //  map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_PingJi);
+                    map.addOverlay(polygon_PingYang);
+                    map.addOverlay(polygon_XuHui);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_GuLong);
+                    map.addOverlay(polygon_GuMei);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                //古美片区
+                else if (index == 7) {
+                    if (str != "古美一村"&&str != "古美三村"&&str != "古美四村"&&str != "古美七村"&&str != "古美八村"&&
+                        str != "古美九村"&&str != "古美十村") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //   map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_GuMei);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        marker.json=json;
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(this.json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                //古龙
+                else if (index == 8) {
+                    if (str != "古龙一居"&&str != "古龙二居"&&str != "古龙三居"&&str != "古龙四居"&&str != "古龙五居"&&
+                        str != "古龙六居") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //   map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_GuLong);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        marker.json=json;
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(this.json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                //平南
+                else if (index == 9) {
+                    if (str != "平南一居"&&str != "平南二居"&&str != "平南三居"&&str != "华梅花苑"&&str != "华一新城"&&
+                        str != "梅莲苑"&&str != "万源一居"&&str != "万源二居"&&str != "万源三居"&&str != "万源四居") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //   map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_XuHui);
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        marker.json=json;
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                // this.openInfoWindow(_iw);
+                                add_org_info(this.json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                //东兰
+                else if (index == 10) {
+                    if (str != "东兰一居"&&str != "东兰二居"&&str != "东兰三居"&&str != "东兰四居") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //   map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        marker.json=json;
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(this.json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                //平吉
+                else if (index == 11) {
+                    if (str != "平吉一村"&&str != "平吉二村"&&str != "平吉三村"&&str != "平吉四村"&&str != "平吉五村"&&str != "平吉六村") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //  map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_PingJi);
+
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        marker.json=json;
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(this.json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                //平阳
+                else if (index == 12) {
+                    if (str != "平阳一村"&&str != "平阳二村"&&str != "平阳三村"&&str != "平阳四村"&&str != "平阳五村"&&str != "平阳六村") {
+                        map.removeOverlay(map.getOverlays()[i]);
+                    }
+                    map.clearOverlays();
+                    //  map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_PingYang);
+
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        if(markerArr[i].type!=index)continue;
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        marker.json=json;
+                        map.addOverlay(marker);
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(this.json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+                else if(index == -1){
+                    map.clearOverlays();
+                    //   map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_PingJi);
+                    map.addOverlay(polygon_PingYang);
+                    map.addOverlay(polygon_XuHui);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_GuLong);
+                    map.addOverlay(polygon_GuMei);
+
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        marker.json=json;
+                        map.addOverlay(marker);
+                        //置顶
+                        if(json.title != "古美片区"&&json.title != "古龙片区"
+                            &&json.title != "平南片区"&&json.title != "平吉片区"
+                            &&json.title != "平阳片区"&&json.title != "东兰片区")
+                        {
+                            //alert(json.title);
+                            marker.setTop(true);
+
+                        }
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(this.json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+
+                else if(index == 0){
+                    map.clearOverlays();
+                    //   map.addOverlay(polygonOrg);
+                    map.addOverlay(polygon_DongLan);
+                    map.addOverlay(polygon_PingNan);
+                    map.addOverlay(polygon_PingJi);
+                    map.addOverlay(polygon_PingYang);
+                    map.addOverlay(polygon_XuHui);
+                    map.addOverlay(polygon_WanYuan);
+                    map.addOverlay(polygon_GuLong);
+                    map.addOverlay(polygon_GuMei);
+
+                    //add marker
+                    for(var i=0;i<markerArr.length;i++){
+                        var json = markerArr[i];
+                        if (json.title != "莲花敬老院"&&json.title != "古美敬老院"
+                            &&json.title != "平阳敬老院"&&json.title != "乐健长者照护之家"
+                            &&json.title != "艾维康长者照护之家"&&json.title != "智慧坊长者照护之家"
+                            &&json.title != "古美片区"&&json.title != "古龙片区"
+                            &&json.title != "平南片区"&&json.title != "平吉片区"
+                            &&json.title != "平阳片区"&&json.title != "东兰片区") {
+                            continue;
+
+                        }
+
+
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        marker.json=json;
+                        map.addOverlay(marker);
+                        //置顶
+                        if(json.title != "古美片区"&&json.title != "古龙片区"
+                            &&json.title != "平南片区"&&json.title != "平吉片区"
+                            &&json.title != "平阳片区"&&json.title != "东兰片区")
+                        {
+                            //alert(json.title);
+                            marker.setTop(true);
+
+                        }
+
+
+                        all_marker.push(marker);
+                        label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer",
+                            maxWidth:"none",
+                            fontSize : "30px"//字体大小 　　
+
+                        });
+
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                //this.openInfoWindow(_iw);
+                                add_org_info(this.json);
+                                $('#editModal2').modal('show');
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                // _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                        label.hide();
+                    }
+                }
+            }
+
+
+        }
+
+    }
+    function ChangeMap() {
+
+        document.getElementById("container").style.zIndex = 3 - document.getElementById("container").style.zIndex;
+        document.getElementById("dituContent").style.zIndex = 3 - document.getElementById("dituContent").style.zIndex;
+
+        heatmapOverlay.setDataSet({data:hpoints,max:200});
+        //alert(1);
+        picChange2(-1);
+        //alert(2);
+
+
+        //delete
+        // for(var i=0;i<markerArr.length;i++){
+        //     var json = markerArr[i];
+        //     var p0 = json.point.split("|")[0];
+        //     var p1 = json.point.split("|")[1];
+        //     var point = new BMap.Point(p0,p1);
+        //     var iconImg = createIcon(json.icon);
+        //     var marker = new BMap.Marker(point,{icon:iconImg});
+        //     var iw = createInfoWindow(i);
+        //     var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+        //     marker.setLabel(label);
+        //     marker.json=json;
+        //     //label.hide();
+        //     map.addOverlay(marker);
+        //     label.setStyle({
+        //         borderColor:"#808080",
+        //         color:"#333",
+        //         cursor:"pointer",
+        //         maxWidth:"none",
+        //         fontSize : "30px"//字体大小 　　
+        //
+        //     });
+        //
+        //     (function(){
+        //         var index = i;
+        //         var _iw = createInfoWindow(i);
+        //         var _marker = marker;
+        //         _marker.addEventListener("click",function(){
+        //             //this.openInfoWindow(_iw);
+        //             add_org_info(this.json);
+        //             $('#editModal2').modal('show');
+        //         });
+        //         _iw.addEventListener("open",function(){
+        //             _marker.getLabel().hide();
+        //         })
+        //         _iw.addEventListener("close",function(){
+        //             //_marker.getLabel().show();
+        //         })
+        //         label.addEventListener("click",function(){
+        //             _marker.openInfoWindow(_iw);
+        //         })
+        //         if(!!json.isOpen){
+        //             label.hide();
+        //             _marker.openInfoWindow(_iw);
+        //         }
+        //     })()
+        //     label.hide();
+        //     //map.removeOverlay(marker);
+        // }
     }
 
     function label3Show(index) {

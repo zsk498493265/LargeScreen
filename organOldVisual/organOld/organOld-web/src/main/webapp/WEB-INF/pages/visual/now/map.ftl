@@ -137,6 +137,7 @@
 
                     show_organ_map();
                     show_heat_map();
+
                     function show_organ_map(){
                         // $("#dituContent").css("width",winWidth/4);
                         // $("#dituContent").css("height",winHeight/1.55);
@@ -216,7 +217,7 @@
                                "已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。\n"+
                                 "<div style='width:720px;height: 500px'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMei' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png'>"+
-                                "</div>",type:5,point:"121.389151|31.148882",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},type:5,
+                                "</div>",type:5,point:"121.39056|31.148028",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},type:5,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png",text:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。\\n\" +\n" +
                                     "                                \"  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。\\n\" +\n" +
                                     "                               \"已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。\\n"}
@@ -229,9 +230,9 @@
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangGerocomium.png",text:"上海市闵行区平阳敬老院创建于2008年12月，" +
                                     "占地面积824平方米，总建筑面积为4997平方米，绿化面积1018平方米，总投资1000多万元。院内拥有双人房（或夫妻房）、" +
                                     "三人房和七人房共64间，共有床位200张，并有良好的设备、整洁的环境、严格的管理、周到的服务、医养的融合，是上海市社会福利行业协会会员单位。\n"}
-                            ,{title:"乐健长者照护之家",content:"乐健长者照护之家",point:"121.40849|31.148522",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:1,
+                            ,{title:"乐健长者照护之家",content:"乐健长者照护之家",point:"121.407448|31.148538",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:1,
                                 text:"乐健长者照护之家"}
-                            ,{title:"艾维康长者照护之家",content:"艾维康长者照护之家",point:"121.397495|31.158041",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:2,
+                            ,{title:"艾维康长者照护之家",content:"艾维康长者照护之家",point:"121.399399|31.158473",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:2,
                             text:"艾维康长者照护之家"}
                             ,{title:"智慧坊长者照护之家",content:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。\n" +
                                 "长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；\n" +
@@ -499,11 +500,11 @@
                         //创建一个Icon
                         function createIcon(json){
                             if(json.type==1){
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gongyu-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gongyu.png", new BMap.Size(45,45),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             } else if(json.type==2)
-                            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/zhangzhao.png", new BMap.Size(45,45),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==0)
-                            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/cun-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                            var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/cun.png", new BMap.Size(45,45),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==-1)
                                 var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/gumeip-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==-2)
@@ -517,7 +518,7 @@
                             else if(json.type==-6)
                                 var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/pingyangp-s.png", new BMap.Size(200,200),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
                             else if(json.type==100)
-                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/star-s.png", new BMap.Size(60,60),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
+                                var icon = new BMap.Icon("https://organold.oss-cn-shanghai.aliyuncs.com/img/star.png", new BMap.Size(45,45),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)});
 
                             // var icon = new BMap.Icon("http://map.baidu.com/image/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
                             //var icon = new BMap.Icon("http://api.map.baidu.com/lbsapi/creatmap/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})

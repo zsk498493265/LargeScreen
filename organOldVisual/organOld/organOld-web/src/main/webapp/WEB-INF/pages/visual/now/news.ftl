@@ -45,19 +45,19 @@
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <#--<li data-target="#myCarousel" data-slide-to="2"></li>-->
                 </ol>
                 <!-- 轮播（Carousel）项目 -->
                 <div class="carousel-inner"  style="height: 215px">
                     <div class="item active">
-                        <img src="/static/img/news/1.jpg" alt="First slide" >
+                        <img src="/static/img/news/22.png" alt="First slide" >
                     </div>
                     <div class="item">
-                        <img src="/static/img/news/2.jpg" alt="Second slide" >
+                        <img src="/static/img/news/11.png" alt="Second slide" >
                     </div>
-                    <div class="item">
-                        <img src="/static/img/news/3.jpg" alt="Third slide" >
-                    </div>
+                    <#--<div class="item">-->
+                        <#--<img src="/static/img/news/3.jpg" alt="Third slide" >-->
+                    <#--</div>-->
                 </div>
                 <!-- 轮播（Carousel）导航 -->
                 <a class="carousel-control left" href="#myCarousel"
@@ -69,9 +69,9 @@
             </div>
     </div>
     <div class="col-lg-5" style="width: 450px;margin-top:20px">
-        <p class="newsp p1" style="text-indent:5em;font-size: 20px"> 三伏天里，骄阳似火，热浪袭人。7月27日，古美路街道党工委书记张伟麟、党工委副书记张建刚、总工会主席吴栋等一行走访慰问在高温酷暑下坚守岗位的一线工作者，送上防暑降温用品，代表街道党工委、办事处和总工会对他们表示感谢和敬意。</p>
-        <p class="newsp p2" style="text-indent:5em;display: none;font-size: 20px" >张伟麟书记一行来到街道机关值班室、食堂和门岗间，与值班人员、门卫保安和食堂工作人员逐一握手致敬，叮嘱大家一定要劳逸结合，合理调整高温时期的作息时间，注意防暑降温，确保工作安全。</p>
-        <p class="newsp p3" style="text-indent:5em;display: none;font-size: 20px">“天气这么热，大家辛苦了！”在合川路，张伟麟书记一行慰问了坚守一线岗位的环卫工人和公厕管理员，仔细询问了大家的作息安排，叮嘱大家在认真工作的同时一定要保重身体，注意防暑和休息。</p>
+        <p class="newsp p1" style="text-indent:5em;font-size: 20px"> 不管是公办还是民营，不管是独立的养老院还是嵌入式养老机构，能打开“围墙”的统统打开，能共享的全部共享。闵行区第一家打开养老院“围墙”的是位于古美路街道的莲花老年公寓，社区老人可以进来享受日间照料、综合空间、短期照护和助餐等8项服务。</p>
+        <p class="newsp p2" style="text-indent:5em;display: none;font-size: 20px" >有意愿的老年人在志愿者团队登记后，只要符合条件就可以拿到这张“古美岁月敬老卡”。卡的背面印制了具有身份识别功能的二维码。这张“私人定制”的敬老卡中有老人参加每项服务的记录及自己基本的健康数据。社区也会根据敬老卡的记录为老人设计相应的活动。</p>
+       <#--// <p class="newsp p3" style="text-indent:5em;display: none;font-size: 20px">有意愿的老年人在志愿者团队登记后，只要符合条件就可以拿到这张“古美岁月敬老卡”。卡的背面印制了具有身份识别功能的二维码。这张“私人定制”的敬老卡中有老人参加每项服务的记录及自己基本的健康数据。社区也会根据敬老卡的记录为老人设计相应的活动。</p>-->
     </div>
 </div>
 <div class="row">
@@ -90,7 +90,7 @@
         $(".newsp").hide();
         $(".p"+i).show();
         i++;
-        if(i==4)
+        if(i==3)
             i=1;
     });
 </script>
