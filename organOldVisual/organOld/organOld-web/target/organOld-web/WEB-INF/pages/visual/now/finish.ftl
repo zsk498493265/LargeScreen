@@ -505,8 +505,8 @@
                                                                     //title.link = "javascript: change('child_oldman','child_base')";
                                                                     legend_data = [{
                                                                         name: '80以上',
-                                                                        textStyle: {color: legend_color, fontSize: 18}
-                                                                    }, {name: '60-79', textStyle: {color: legend_color, fontSize: 18}}];
+                                                                        textStyle: {color: legend_color, fontSize: 12}
+                                                                    }, {name: '60-79', textStyle: {color: legend_color, fontSize: 12}}];
                                                                     series = [
                                                                         {
                                                                             name: '',
@@ -542,9 +542,9 @@
                                                                     title.text = "老人比例";
                                                                     title.textStyle.fontSize=20;
                                                                     //title.link = "javascript: change('child_base','child_oldman')";
-                                                                    legend_data = [{name: '老人', textStyle: {color: legend_color, fontSize: 18}}, {
+                                                                    legend_data = [{name: '老人', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                         name: '非老人',
-                                                                        textStyle: {color: legend_color, fontSize: 18}
+                                                                        textStyle: {color: legend_color, fontSize: 12}
                                                                     }];
                                                                     series = [
                                                                         {
@@ -579,8 +579,8 @@
                                                                     title.textStyle.fontWeight='normal';
                                                                     legend_data = [{
                                                                         name: '老人',
-                                                                        textStyle: {color: legend_color, fontSize: legand_fontSize}
-                                                                    }, {name: '非老人', textStyle: {color: legend_color, fontSize: legand_fontSize}}];
+                                                                        textStyle: {color: legend_color, fontSize: 12}
+                                                                    }, {name: '非老人', textStyle: {color: legend_color, fontSize: 12}}];
                                                                     series = [
                                                                         {
                                                                             name: '',
@@ -962,9 +962,9 @@
 
                                                                     //part3
                                                                     title_text = "户籍";
-                                                                    legend_data = [{name: '户籍', textStyle: {color: legend_color, fontSize: 18}}, {
+                                                                    legend_data = [{name: '户籍', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                         name: '非户籍',
-                                                                        textStyle: {color: legend_color, fontSize: 18}
+                                                                        textStyle: {color: legend_color, fontSize: 12}
                                                                     }];
                                                                     series = [{
                                                                         name: '老人户籍',
@@ -1003,9 +1003,9 @@
 
 
                                                                     title_text = "性别";
-                                                                    legend_data = [{name: '男', textStyle: {color: legend_color, fontSize: 18}}, {
+                                                                    legend_data = [{name: '男', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                         name: '女',
-                                                                        textStyle: {color: legend_color, fontSize: 18}
+                                                                        textStyle: {color: legend_color, fontSize: 12}
                                                                     }];
                                                                     series = [{
                                                                         name: '老人性别',
@@ -1050,14 +1050,14 @@
                                                                             name: '男',
                                                                             textStyle: {
                                                                                 color: '#fff',
-                                                                                fontSize: 18
+                                                                                fontSize: 12
                                                                             }
                                                                         },
                                                                         {
                                                                             name: '女',
                                                                             textStyle: {
                                                                                 color: '#fff',
-                                                                                fontSize: 18
+                                                                                fontSize: 12
 
                                                                             }
                                                                         }
@@ -2178,6 +2178,7 @@
                                                                             show: true,
                                                                             data: ['已完成'],
                                                                             x: 'right',
+                                                                            y:'1%',
                                                                             textStyle: {
                                                                                 color: 'white',
                                                                             },
@@ -2190,21 +2191,21 @@
                                                                     title.text = "服务项目";
                                                                     title.link = "javascript: change('child_homeOldman','child_organ')";
                                                                     title.textStyle.fontSize=30;
-                                                                    legend_data = [{name: '助餐', textStyle: {color: legend_color, fontSize: 8}}, {
+                                                                    legend_data = [{name: '助餐', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                         name: '助洁',
-                                                                        textStyle: {color: legend_color, fontSize: 8}
-                                                                    }, {name: '助急', textStyle: {color: legend_color, fontSize: 8}}
-                                                                        , {name: '助浴', textStyle: {color: legend_color, fontSize: 8}}, {
+                                                                        textStyle: {color: legend_color, fontSize: 12}
+                                                                    }, {name: '助急', textStyle: {color: legend_color, fontSize: 12}}
+                                                                        , {name: '助浴', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                             name: '助行',
-                                                                            textStyle: {color: legend_color, fontSize: 8}
-                                                                        }, {name: '助医', textStyle: {color: legend_color, fontSize: 8}}
-                                                                        , {name: '洗衣服', textStyle: {color: legend_color, fontSize: 8}}, {
+                                                                            textStyle: {color: legend_color, fontSize: 12}
+                                                                        }, {name: '助医', textStyle: {color: legend_color, fontSize: 12}}
+                                                                        , {name: '洗衣服', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                             name: '相谈',
-                                                                            textStyle: {color: legend_color, fontSize: 8}
-                                                                        }, {name: '康复辅助', textStyle: {color: legend_color, fontSize: 8}}
-                                                                        , {name: '生活护理', textStyle: {color: legend_color, fontSize: 8}}, {
+                                                                            textStyle: {color: legend_color, fontSize: 12}
+                                                                        }, {name: '康复辅助', textStyle: {color: legend_color, fontSize: 12}}
+                                                                        , {name: '生活护理', textStyle: {color: legend_color, fontSize: 12}}, {
                                                                             name: '其他',
-                                                                            textStyle: {color: legend_color, fontSize: 8}
+                                                                            textStyle: {color: legend_color, fontSize: 12}
                                                                         }];
                                                                     series = [{
                                                                         name: '老人户籍',
@@ -2488,6 +2489,10 @@
                                                                                 normal: {
                                                                                     fontSize : 20,
                                                                                     formatter: '{d}%',
+                                                                                    // formatter: function(data){
+                                                                                    //     console.log(data);
+                                                                                    //     return data.percent.toFixed(4)+"%";},
+
                                                                                     backgroundColor: '#eee',
                                                                                     borderColor: '#aaa',
                                                                                     borderWidth: 1,
@@ -4050,7 +4055,7 @@
                                                                     title.text="长护险";
                                                                     title.link="javascript: change('child_chx','child_organ')";
                                                                     //数量饼图
-                                                                    legend_data=[{name:'获得服务',textStyle:{color:legend_color,fontSize:18}},{name:'未评级',textStyle:{color:legend_color,fontSize:18}},{name:'已经评级',textStyle:{color:legend_color,fontSize:18}}];
+                                                                    legend_data=[{name:'获得服务',textStyle:{color:legend_color,fontSize:15}},{name:'未评级',textStyle:{color:legend_color,fontSize:15}},{name:'已经评级',textStyle:{color:legend_color,fontSize:15}}];
                                                                     series=[
                                                                         {
                                                                             name:'',
@@ -8439,11 +8444,11 @@
                                                                         var name=params.name;
                                                                         if(name=="户籍"){
                                                                             census.push(12);
-                                                                            district.push(district_no);
+                                                                            //
 
                                                                         }else if(name=="非户籍"){
                                                                             census.push(13,14);
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8456,11 +8461,11 @@
                                                                         var name=params.name;
                                                                         if(name=="户籍"){
                                                                             census.push(12);
-                                                                            district.push(district_no);
+
 
                                                                         }else if(name=="非户籍"){
                                                                             census.push(13,14);
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8473,11 +8478,11 @@
                                                                         var name=params.name;
                                                                         if(name=="户籍"){
                                                                             census.push(12);
-                                                                            district.push(district_no);
+
 
                                                                         }else if(name=="非户籍"){
                                                                             census.push(13,14);
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8490,11 +8495,11 @@
                                                                         var name=params.name;
                                                                         if(name=="男"){
                                                                             sex=2;
-                                                                            district.push(district_no);
+
 
                                                                         }else if(name=="女"){
                                                                             sex=1;
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8507,11 +8512,11 @@
                                                                         var name=params.name;
                                                                         if(name=="男"){
                                                                             sex=2;
-                                                                            district.push(district_no);
+
 
                                                                         }else if(name=="女"){
                                                                             sex=1;
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8523,11 +8528,11 @@
                                                                         var name=params.name;
                                                                         if(name=="男"){
                                                                             sex=2;
-                                                                            district.push(district_no);
+
 
                                                                         }else if(name=="女"){
                                                                             sex=1;
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8541,11 +8546,11 @@
                                                                         var name=params.name;
                                                                         if(name=="男"){
                                                                             sex=2;
-                                                                            district.push(district_no);
+
 
                                                                         }else if(name=="女"){
                                                                             sex=1;
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8559,11 +8564,11 @@
                                                                         var name=params.name;
                                                                         if(name=="男"){
                                                                             sex=2;
-                                                                            district.push(district_no);
+
 
                                                                         }else if(name=="女"){
                                                                             sex=1;
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8577,11 +8582,11 @@
                                                                         var name=params.name;
                                                                         if(name=="男"){
                                                                             sex=2;
-                                                                            district.push(district_no);
+
 
                                                                         }else if(name=="女"){
                                                                             sex=1;
-                                                                            district.push(district_no);
+
 
                                                                         }
                                                                         table.fnFilter();
@@ -8906,7 +8911,24 @@
                                                                     }
                                                                     label_pqBar.on('click',function(params){
                                                                         var name=params.name;
-                                                                        district.push(district_no);
+
+                                                                        mapDistrict=[];
+                                                                    if (name == "东兰")
+                                                                        {
+
+                                                                            mapDistrict.push(3);
+                                                                        }
+
+                                                                        else if (name == "平阳")
+                                                                            mapDistrict.push(5);
+                                                                        else if (name == "古美")
+                                                                            mapDistrict.push(1);
+                                                                        else if (name == "平吉")
+                                                                            mapDistrict.push(4);
+                                                                        else if (name == "平南")
+                                                                            mapDistrict.push(6);
+                                                                        else if (name == "古龙")
+                                                                            mapDistrict.push(2);
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                           //getAgeAndSex();
@@ -9439,7 +9461,7 @@
 
 
                                                                         }
-                                                                        district.push(district_no);
+
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
@@ -9925,7 +9947,7 @@
                                                                                 }
                                                                             }
                                                                         }];
-                                                                        var chx_option_fw_age_bar=chartPieChange(title_text, legend_data, series);
+                                                                        var chx_option_fw_age_bar=chartPieChange2(title_text, legend_data, series);
                                                                         chx_fw_age_bar.setOption(chx_option_fw_age_bar);
 
                                                                         title_text="获服务老人户籍";
@@ -11340,7 +11362,7 @@
                                                                     function changeBaseInfo(num60To80,num80Above){
                                                                         //60岁老人占比
                                                                         title_text="80岁及以上老人占比";
-                                                                        legend_data=[{name:'80以上',textStyle:{color:legend_color,fontSize:legand_fontSize}},{name:'60-79',textStyle:{color:legend_color,fontSize:legand_fontSize}}];
+                                                                        legend_data=[{name:'80以上',textStyle:{color:legend_color,fontSize:12}},{name:'60-79',textStyle:{color:legend_color,fontSize:12}}];
                                                                         series=[
                                                                             {
                                                                                 name:'',

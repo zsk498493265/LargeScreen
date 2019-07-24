@@ -299,7 +299,7 @@ function chartBarDisplayAllTitleSmall(title_text,legend_data,yAxis_data,series) 
             top:'48%',
             left: '6%',
             right: '15%',
-            bottom: '-12%',
+            bottom: '-5%',
             //x2: 80,
             containLabel: true
         },
@@ -1452,7 +1452,7 @@ function chartLineForOldNumTend(title_text,legend_data,xAxis_data,series) {
                 }
             },
             min:0,
-            max:150000,
+            max:200000,
             splitNumber:2
         },
         series: series,
@@ -1637,10 +1637,11 @@ function chartPieChange2(title_text,legend_data,series) {
             left:'right',
             // right: '0',
             top:"0",
-            height:'3',
+            //height:'3',
            // width:"300",
             itemHeight:"8",
             itemWidth:"16",
+            itemGap:1,
             data: legend_data,
         },
         series :series,
@@ -3028,7 +3029,7 @@ function toolTipReal(title_text,legend_data,name1,name2,data_t1,data_t2) {
 
             z: -5,
             min:0,
-            max:15000,
+            max:40000,
             splitNumber:3
         },
         grid: {
@@ -3254,7 +3255,7 @@ function toolTipMulti1(title_text,legend_data,data_t1,data_t2,data_t3,data_t4) {
 
             z: -5,
             min:0,
-            max:15000,
+            max:40000,
             splitNumber:3
         },
         grid: {

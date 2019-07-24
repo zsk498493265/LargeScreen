@@ -35,7 +35,7 @@
     var label=[];//用于标签页面
     var sex;
     var census=new Array();
-    var ageEnd,ageStart;
+    // var ageEnd,ageStart;
     var family=new Array(),economic=new Array();
     var health=new Array();
     var oldStatus=new Array();
