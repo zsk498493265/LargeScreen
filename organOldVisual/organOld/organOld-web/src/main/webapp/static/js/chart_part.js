@@ -1614,6 +1614,40 @@ function chartPieChange(title_text,legend_data,series) {
     };
     return option;
 }
+function chartPieChange2(title_text,legend_data,series) {
+    //不用能以下方式 容易出现两个图一样的标题 应该是异步  不同步造成
+    var option = {
+        title : {
+            text:title_text,
+            textStyle:{
+                color:'#fff',
+                fontSize:18,
+                fontWeight: 'normal'
+            },
+            left:'left',
+            x:'0%',
+            y:'6%'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: ""
+        },
+        legend: {
+            orient: 'vertical',
+            left:'right',
+            // right: '0',
+            top:"0",
+            height:'3',
+           // width:"300",
+            itemHeight:"8",
+            itemWidth:"16",
+            data: legend_data,
+        },
+        series :series,
+        color: [series_color_1,series_color_2,series_color_3,series_color_4,series_color_5,series_color_6,series_color_7],
+    };
+    return option;
+}
 function chartPieTitleSmall(title_text,legend_data,series) {
     //不用能以下方式 容易出现两个图一样的标题 应该是异步  不同步造成
     var option = {

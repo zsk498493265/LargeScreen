@@ -717,7 +717,7 @@
                                                                         calculable: true,
                                                                         grid:  {
                                                                             top:'30%',
-                                                                            bottom: '10%',
+                                                                            bottom: '0%',
                                                                             containLabel: true
                                                                         },
                                                                         xAxis: [
@@ -8128,6 +8128,7 @@
                                                                             sex=1;
 
                                                                         }
+                                                                        getAgeAndSex();
                                                                         //alert(1);
                                                                         //selected['男']=false;
 
@@ -9673,7 +9674,7 @@
                                                                                 }
                                                                             }
                                                                         }];
-                                                                        var chx_option_pj_age_bar = chartPieChange(title_text, legend_data, series);
+                                                                        var chx_option_pj_age_bar = chartPieChange2(title_text, legend_data, series);
                                                                         chx_pj_age_bar.setOption(chx_option_pj_age_bar);
 
 

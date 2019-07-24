@@ -16,6 +16,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import com.organOld.outService.constant.ValueConstant;
+import org.springframework.web.servlet.ModelAndView;
 
 import static com.organOld.visualService.util.Tool.*;
 
@@ -896,6 +897,18 @@ public class VisualData5Controller {
         oldmanService.updateVisualData(getNowYearAndMonth());
 
 
+    }
+
+    //更新按钮
+    /**
+     * 更新视图按钮的页面
+     * @return
+     */
+    @RequestMapping(value = "/updateView",method = RequestMethod.GET)
+    public ModelAndView updateView(){
+//        ModelAndView mv=new ModelAndView("home/home_oldman_all");
+        ModelAndView mv=new ModelAndView("home/updateView");
+        return mv;
     }
 
 //    private Integer Tool.Tool.Tool.Tool.ReturnTendence(Integer size,double[] Increase,int month){
