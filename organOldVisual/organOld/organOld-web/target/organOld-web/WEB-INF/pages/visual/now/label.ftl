@@ -622,6 +622,7 @@
             div.setAttribute("height", "100%");
             div.setAttribute("width", "100%");
         }
+        //alert(json.title);
 
 
         //设置 div 属性，如 id

@@ -212,15 +212,15 @@
                                 "</div>"+
                                 "</div>",point:"121.402695|31.160113",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},
                                 type:4,img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.png",text:"莲花敬老院"}//莲花敬老院
-                            ,{title:"古美敬老院",content:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。\n" +
-                                "  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。\n" +
-                               "已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。\n"+
+                            ,{title:"古美敬老院",content:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。" +
+                                "  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。" +
+                               "已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。"+
                                 "<div style='width:720px;height: 500px'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMei' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png'>"+
                                 "</div>",type:5,point:"121.39056|31.148028",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},type:5,
-                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png",text:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。\\n\" +\n" +
-                                    "                                \"  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。\\n\" +\n" +
-                                    "                               \"已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。\\n"}
+                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png",text:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。" +
+                                    "收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。" +
+                                    "已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。"}
                             ,{title:"平阳敬老院",content:"上海市闵行区平阳敬老院创建于2008年12月，占地面积824平方米，总建筑面积为4997平方米，绿化面积1018平方米，" +
                                     "总投资1000多万元。院内拥有双人房（或夫妻房）、三人房和七人房共64间，共有床位200张，并有良好的设备、整洁的环境、" +
                                     "严格的管理、周到的服务、医养的融合，是上海市社会福利行业协会会员单位。\n"+
@@ -229,24 +229,24 @@
                                 "</div>",point:"121.395161|31.140954",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},type:6,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangGerocomium.png",text:"上海市闵行区平阳敬老院创建于2008年12月，" +
                                     "占地面积824平方米，总建筑面积为4997平方米，绿化面积1018平方米，总投资1000多万元。院内拥有双人房（或夫妻房）、" +
-                                    "三人房和七人房共64间，共有床位200张，并有良好的设备、整洁的环境、严格的管理、周到的服务、医养的融合，是上海市社会福利行业协会会员单位。\n"}
+                                    "三人房和七人房共64间，共有床位200张，并有良好的设备、整洁的环境、严格的管理、周到的服务、医养的融合，是上海市社会福利行业协会会员单位。"}
                             ,{title:"乐健长者照护之家",content:"乐健长者照护之家",point:"121.407448|31.148538",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:1,
                                 text:"乐健长者照护之家"}
                             ,{title:"艾维康长者照护之家",content:"艾维康长者照护之家",point:"121.399399|31.158473",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:2,
                             text:"艾维康长者照护之家"}
-                            ,{title:"智慧坊长者照护之家",content:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。\n" +
-                                "长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；\n" +
-                                "短期照护——对处于慢性病康复期的长者进行专业护理；\n" +
-                                "喘息照护——为长者提供超短期护理，缓解家属护理压力；\n" +
+                            ,{title:"智慧坊长者照护之家",content:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。" +
+                                "长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；" +
+                                "短期照护——对处于慢性病康复期的长者进行专业护理；" +
+                                "喘息照护——为长者提供超短期护理，缓解家属护理压力；" +
                                 "日托服务——日托单天护理。"+
                                 "<div style='width:445px;height: 335px;margin-left:20%'>"+
                                 "<img  style='width:100%;height: 100%;id='ZhihuiFang' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/ZhiHuiFang.jpg'>"+
                                 "</div>",point:"121.407592|31.150917",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:3,
-                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/ZhiHuiFang.jpg",text:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。\\n\" +\n" +
-                                    "                                \"长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；\\n\" +\n" +
-                                    "                                \"短期照护——对处于慢性病康复期的长者进行专业护理；\\n\" +\n" +
-                                    "                                \"喘息照护——为长者提供超短期护理，缓解家属护理压力；\\n\" +\n" +
-                                    "                                \"日托服务——日托单天护理。"}//unknown
+                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/ZhiHuiFang.jpg",text:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。" +
+                                    "                                长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；" +
+                                    "                                短期照护——对处于慢性病康复期的长者进行专业护理；" +
+                                    "                                喘息照护——为长者提供超短期护理，缓解家属护理压力；" +
+                                    "                                日托服务——日托单天护理。"}//unknown
                             // ,{title:"平南长者照护之家",content:"艾为养老服务（上海）有限公司注册于上海市，注册资金500万元。公司专注于打造以日间照料、居家养老、社区机构养老三位一体的现代 社区养老模式。经营管理团队具有丰富的执业经验，与北京、重庆、成都、浙江等市区政府构建了良好的业务合作关系。 \n" +
                             //     "              公司致力于传承光大“行孝天下、大爱无疆”的孝道文化，遵循“尊老、敬老、助老、爱老”的服务宗旨，着力尊重客户需求和体验，以专业护理为基础，医养结合为核心，智能养老为方向，为广大健康、空巢、独居、失能、半失能、失智的老年人及术后病人提供一系列的养老综合服务，提供全面解决方案，帮助老人愉悦身心，益智增能，延伸生命尺度和价值。\n",type:5,point:"121.389133|31.158804",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}//0
                             // ,{title:"平阳长者照护之家",content:"在建",type:5,point:"121.411903|31.152524",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}//
@@ -340,16 +340,16 @@
                             ,{title:"东兰二居",content:"东兰二居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='DongLanSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanSec.JPG'>"+
-                                "</div>",point:"121.393436|31.157818",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:10}
+                                "</div>",point:"121.393436|31.157818",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:10,text:"东兰二居"}
                             ,{title:"平吉四村",content:"平吉四村",type:5,point:"121.391183|31.153482",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,
-                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanSec.JPG",text:"东兰二居"}
+                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanSec.JPG",text:"平吉四村"}
                             ,{title:"古龙四居",content:"古龙四居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuLongForth' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongForth.png'>"+
                                 "</div>",point:"121.412186|31.155164",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongForth.png",text:"古龙四居"}
-                            ,{title:"古美八村",content:"古美八村",point:"121.409878|31.145572",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:7}}
-                            ,{title:"古美四村",content:"古美四村",point:"121.410402|31.148453",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:7}}
+                            ,{title:"古美八村",content:"古美八村",point:"121.409878|31.145572",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:7},text:"古美八村"}
+                            ,{title:"古美四村",content:"古美四村",point:"121.410402|31.148453",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:7},text:"古美四村"}
                             ,{title:"平南三居",content:"平南三居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingNanThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingNanThird.png'>"+
@@ -371,13 +371,13 @@
                                 "</div>",point:"121.396699|31.138846",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangForth.png",text:"平阳四村"}
 
-                            ,{title:"平阳一村",content:"平阳一村",point:"121.389500|31.141276",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12}
+                            ,{title:"平阳一村",content:"平阳一村",point:"121.389500|31.141276",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,text:"平阳一村"}
                             ,{title:"万源三居",content:"万源三居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='WanYuanThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanThird.jpg'>"+
                                 "</div>",point:"121.403865|31.152716",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanThird.jpg",text:"万源三居"}
-                            ,{title:"古龙五居",content:"古龙五居",point:"121.405819|31.155885",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:8}
+                            ,{title:"古龙五居",content:"古龙五居",point:"121.405819|31.155885",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:8,text:"古龙五居"}
                             ,{title:"平吉六村",content:"平吉六村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingJiSix' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiSix.png'>"+
@@ -393,7 +393,7 @@
                                 "<img  style='width:100%;height: 100%;'id='PingJiSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiSec.png'>"+
                                 "</div>",point:"121.388900|31.14893",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiSec.png",text:"平吉二村"}
-                            ,{title:"平吉五村",content:"平吉五村",point:"121.3945|31.151394",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11}
+                            ,{title:"平吉五村",content:"平吉五村",point:"121.3945|31.151394",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,text:"平吉五村"}
                             ,{title:"古美三村",content:"古美三村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMeiThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiThird.png'>"+
