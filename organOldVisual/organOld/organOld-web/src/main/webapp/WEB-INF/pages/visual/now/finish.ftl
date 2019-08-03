@@ -3913,6 +3913,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        organ_jg_pie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                      
 
                                                                     });
@@ -3952,6 +3956,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        total_statusPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -3977,6 +3985,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                       //getAgeAndSex();
+                                                                        organ_sum_pie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                     });
 
@@ -3999,6 +4011,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        organ_sq_sub_pie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                     });
 
@@ -4046,6 +4062,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        organ_jj_pie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                                        
                                                                     });
 
@@ -8178,6 +8198,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        label_hjPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8194,6 +8218,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        label_ageBar.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8211,6 +8239,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        oldman_zbPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8228,6 +8260,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                           //getAgeAndSex();
+                                                                        total_oldmanPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8263,6 +8299,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        oldman_familyPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                     });
                                                                     oldman_healthPie.on('legendselectchanged', function (params) {
@@ -8297,6 +8337,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        oldman_healthPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8330,6 +8374,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        oldman_econmicPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8367,6 +8415,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                                          //getAgeAndSex();
+                                                                        family_familyPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8405,6 +8457,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        health_healthPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8437,6 +8493,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        economic_economicPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8454,6 +8514,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        family_hjPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8471,6 +8535,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        economic_hjPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8488,6 +8556,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                                          //getAgeAndSex();
+                                                                        health_hjPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8505,6 +8577,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        family_sexPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
                                                                     });
@@ -8522,6 +8598,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                                          //getAgeAndSex();
+                                                                        economic_sexPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                     });
                                                                     health_sexPie.on('legendselectchanged',function(params){
@@ -8538,6 +8618,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        health_sexPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
 
@@ -8556,6 +8640,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                                          //getAgeAndSex();
+                                                                        family_ageBar.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
 
@@ -8574,6 +8662,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        economic_ageBar.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
 
@@ -8592,6 +8684,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        health_ageBar.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
 
 

@@ -48,6 +48,7 @@ public class VisualData5Controller {
         List<Map<String,Integer>> dataMap=oldmanService.getVisualData5(AgeTobirthday(60),AgeTobirthday(70),AgeTobirthday(80),AgeTobirthday(90),
                 getNowDate1(),getNowDate2(),getNowDate3(),getNowDate4(),getNowDate5(),str1);
         JSONObject jsonObject = new JSONObject();
+        Date tmp=getNowDate3();
 
         jsonObject.put("NumOrgPingYang",dataMap.get(0).get("NumOrgPingYang"));
         jsonObject.put("NumOrgGuMei",dataMap.get(0).get("NumOrgGuMei"));

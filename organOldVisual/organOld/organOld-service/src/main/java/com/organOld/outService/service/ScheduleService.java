@@ -22,6 +22,7 @@ public class ScheduleService {
     CommonService commonService;
 
     @Scheduled(cron = "0 0 1 1 * ? ")
+    //@Scheduled(cron = "0 0 22 1 * ?")
     public void demoSchedule() {
         Date start60=CommonService.AgeTobirthday(60);
         Date start80=CommonService.AgeTobirthday(80);
