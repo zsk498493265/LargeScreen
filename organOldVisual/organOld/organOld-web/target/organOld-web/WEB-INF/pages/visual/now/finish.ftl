@@ -788,6 +788,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        base_zbPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                                         
                                                                     });
 
@@ -1307,6 +1311,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        base_hjPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                          
                                                                     });
@@ -1322,6 +1330,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                          //getAgeAndSex();
+                                                                        base_sexPie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                          
                                                                     });
@@ -1337,6 +1349,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        base_ageBar.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                          
                                                                     });
@@ -4415,6 +4431,16 @@
                                                                     organOldman_jg_3_pie.setOption(organOldman_option_3_pie);
                                                                     organOldman_jg_3_wl.setOption(organOldman_option_3_wl);
 
+                                                                    //
+                                                                    // organOldman_jg_sub_pie.on('legendselectchanged', function (params) {
+                                                                    //     var name=params.name;
+                                                                    //     organOldman_jg_sub_pie.dispatchAction({
+                                                                    //         type: 'legendSelect',
+                                                                    //         name: name
+                                                                    //     });
+                                                                    //
+                                                                    // });
+
                                                                     //性别饼图
                                                                     title_text="性别";
                                                                     legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:8}},{name:'女',textStyle:{color:legend_color,fontSize:8}}];
@@ -6579,6 +6605,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        jjys_jt_ys_sex_pie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                     });
 
@@ -6657,6 +6687,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        jjys_jt_ys_age_bar.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                     });
 
@@ -6702,6 +6736,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        jjys_jt_ys_pq_bar.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                     });
 
@@ -8793,6 +8831,10 @@
                                                                         table.fnFilter();
                                                                         getNumOfJw();
                                                                         //getAgeAndSex();
+                                                                        homeOldman_jj_pie.dispatchAction({
+                                                                            type: 'legendSelect',
+                                                                            name: name
+                                                                        });
                                                       
                                                                     });
                                                                     function change_fuwu_detail(numHuJi,numFeiHuJi,
@@ -9032,6 +9074,14 @@
 
 
                                                                     });
+                                                                    //机构养老，社区养老，居家养老legend取消灰化
+                                                                    // organOldman_jg_sub_pie.on('legendselectchanged', function (params) {
+                                                                    //     organOldman_jg_sub_pie.dispatchAction({
+                                                                    //         type: 'legendSelect',
+                                                                    //         name: name
+                                                                    //     });
+                                                                    //
+                                                                    // });
                                                                     function changeOrgComFam(numOrgGM,numOrgDL,numOrgPY,
                                                                                              numZZ,numRZ,numZC,
                                                                                              numJTYL,numCHX,numZNH,numJTYS,numJTBC){

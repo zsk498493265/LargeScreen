@@ -100,6 +100,11 @@
         // table.fnFilter();
         // //getAgeAndSex();
         // getNumOfJw();
+        var name=params.name;
+        homeOldman_num_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     //片区人数分布
@@ -168,6 +173,10 @@
         table.fnFilter();
         //getAgeAndSex();
         getNumOfJw();
+        homeOldman_pq_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     //    已评级年龄分布柱状图
@@ -246,6 +255,11 @@
         table.fnFilter();
         //getAgeAndSex();
         getNumOfJw();
+        homeOldman_age_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
     });
 
 
@@ -292,6 +306,11 @@
         table.fnFilter();
         //getAgeAndSex();
         getNumOfJw();
+        var name=params.name;
+        homeOldman_sex_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     title.text="服务项目";

@@ -88,7 +88,7 @@
     znh_zn_num_pie.setOption(znh_option_zn_num_pie);
 
     znh_zn_num_pie.on('legendselectchanged', function (params) {
-        // var name = params.name;
+        var name = params.name;
         // if(name=="未使用的重点老人"){
         //     zhujie = 1;
         // }else if(name=="已使用的重点老人"){
@@ -99,6 +99,10 @@
         // //getAgeAndSex();
         // getNumOfJw();
         // //getAgeAndSex();
+        znh_zn_num_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     title_text="各类产品服务人数";
@@ -134,7 +138,7 @@
     znh_zn_pie.setOption(znh_option_zn_pie);
 
     znh_zn_pie.on('legendselectchanged', function (params) {
-        // var name = params.name;
+        var name = params.name;
         // if(name=="安康通"){
         //     forthTypeArray.push(17);
         // }else if(name=="康乐福"){
@@ -143,6 +147,10 @@
         // table.fnFilter();
         // getNumOfJw();
         //getAgeAndSex();
+        znh_zn_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     title_text="总服务人数性别";
@@ -177,7 +185,7 @@
     znh_zn_sex_pie.setOption(znh_option_zn_sex_pie);
 
     znh_zn_sex_pie.on('legendselectchanged', function (params) {
-        // var name = params.name;
+        var name = params.name;
         // if(name=="男"){
         //     sex=2;
         // }else if(name=="女"){
@@ -186,6 +194,10 @@
         // table.fnFilter();
         // getNumOfJw();
         // //getAgeAndSex();
+        znh_zn_sex_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     title_text='总服务人数年龄';
@@ -253,7 +265,7 @@
     znh_zn_age_bar.setOption(znh_option_zn_age_bar);
 
     znh_zn_age_bar.on('legendselectchanged', function (params) {
-        // var name = params.name;
+        var name = params.name;
         // if(name=="男"){
         //     sex=2;
         // }else if(name=="女"){
@@ -262,6 +274,10 @@
         // table.fnFilter();
         // getNumOfJw();
         // //getAgeAndSex();
+        znh_zn_age_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     // //片区人数分布
@@ -326,7 +342,7 @@
     znh_zn_pq_bar.setOption(znh_option_zn_pq_bar);
 
     znh_zn_pq_bar.on('legendselectchanged', function (params) {
-        // var name = params.name;
+        var name = params.name;
         // if(name=="户籍"){
         //     census.push(12);
         // }else if(name=="非户籍"){
@@ -335,6 +351,10 @@
         // table.fnFilter();
         // getNumOfJw();
         // //getAgeAndSex();
+        znh_zn_pq_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
 

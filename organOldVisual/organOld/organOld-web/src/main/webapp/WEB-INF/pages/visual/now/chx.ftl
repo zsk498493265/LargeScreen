@@ -192,6 +192,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        chx_num_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     //hujirenkou=>huji
@@ -236,6 +240,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        chx_pj_pq_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     //    已评级年龄分布柱状图
@@ -310,7 +318,20 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        chx_pj_hj_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
+
+    chx_pj_age_bar.on('legendselectchanged', function (params) {
+        var name = params.name;
+        chx_pj_age_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+    });
+
 
     //性别饼图
     title_text="已评级老人的性别";
@@ -354,6 +375,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        chx_pj_sex_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
 
@@ -428,6 +453,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        chx_fw_pq_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     //    已评级年龄分布柱状图
@@ -469,6 +498,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        chx_fw_age_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
 
@@ -513,6 +546,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        chx_fw_hj_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
     //性别饼图
@@ -557,6 +594,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        chx_fw_sex_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
     });
 
 

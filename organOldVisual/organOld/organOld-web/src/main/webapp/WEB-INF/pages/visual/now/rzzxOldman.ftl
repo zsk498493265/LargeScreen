@@ -150,763 +150,899 @@
 
 <script>
 
-    title_text="";
-    legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
-    series=[{
-        name: '老人户籍',
-        type: 'pie',
-        radius : '55%',
-        center: ['48%', '50%'],
-        label : {
-            normal : {
-                formatter: '{d}%',
-                textStyle : {
-                    fontWeight : 'normal',
-                    fontSize : 8
-                }
-            }
-        },
-        data:[
-            {value:476, name:'已入住'},
-            {value:376, name:'剩余'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_sub_pie = chartPie(title_text,legend_data,series);
+    // title_text="";
+    // legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
+    // series=[{
+    //     name: '老人户籍',
+    //     type: 'pie',
+    //     radius : '55%',
+    //     center: ['48%', '50%'],
+    //     label : {
+    //         normal : {
+    //             formatter: '{d}%',
+    //             textStyle : {
+    //                 fontWeight : 'normal',
+    //                 fontSize : 8
+    //             }
+    //         }
+    //     },
+    //     data:[
+    //         {value:476, name:'已入住'},
+    //         {value:376, name:'剩余'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_sub_pie = chartPie(title_text,legend_data,series);
+    //
+    // title_text="";
+    // legend_data=[];
+    // series=[
+    //     {
+    //         name:'未来空余',
+    //         type:'pie',
+    //         radius: ['50%', '65%'],
+    //         avoidLabelOverlap: false,
+    //         label: {
+    //             normal : {
+    //                 position:"center",
+    //                 formatter: '{a}',
+    //                 textStyle : {
+    //                     fontWeight : 'normal',
+    //                     fontSize : 8,
+    //                     color:"#f2f989"
+    //                 }
+    //             }
+    //         },
+    //         data:[
+    //             {value:0, name:'未来空余'}
+    //         ]
+    //     }
+    // ];
+    // var rzzxOldman_option_sub_wl = gauge(title_text,58);
+    // title_text="";
+    // legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
+    // series=[{
+    //     name: '老人户籍',
+    //     type: 'pie',
+    //     radius : '55%',
+    //     center: ['48%', '50%'],
+    //     label : {
+    //         normal : {
+    //             formatter: '{d}%',
+    //             textStyle : {
+    //                 fontWeight : 'normal',
+    //                 fontSize : 20
+    //             }
+    //         }
+    //     },
+    //     data:[
+    //         {value:476, name:'已入住'},
+    //         {value:376, name:'剩余'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_1_pie = chartPie(title_text,legend_data,series);
+    //
+    // title_text="";
+    // legend_data=[];
+    // series=[
+    //     {
+    //         name:'未来空余',
+    //         type:'pie',
+    //         radius: ['50%', '65%'],
+    //         avoidLabelOverlap: false,
+    //         label: {
+    //             normal : {
+    //                 position:"center",
+    //                 formatter: '{a}\n{c}',
+    //                 textStyle : {
+    //                     fontWeight : 'normal',
+    //                     fontSize : 18,
+    //                     color:"#f2f989"
+    //                 }
+    //             }
+    //         },
+    //         data:[
+    //             {value:40, name:'未来空余'}
+    //         ]
+    //     }
+    // ];
+    // var rzzxOldman_option_1_wl = gauge(title_text,58);
+    // title_text="";
+    // legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
+    // series=[{
+    //     name: '老人户籍',
+    //     type: 'pie',
+    //     radius : '30%',
+    //     center: ['48%', '50%'],
+    //     label : {
+    //         normal : {
+    //             formatter: '{d}%',
+    //             textStyle : {
+    //                 fontWeight : 'normal',
+    //                 fontSize : 8
+    //             }
+    //         }
+    //     },
+    //     data:[
+    //         {value:0, name:'已入住'},
+    //         {value:0, name:'剩余'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_2_pie = chartPie(title_text,legend_data,series);
+    //
+    // title_text = "";
+    // legend_data = [{name: '失能', textStyle: {color: legend_color, fontSize:8}}, {
+    //     name: '失智',
+    //     textStyle: {color: legend_color, fontSize:8}
+    // },{name: '自理', textStyle: {color: legend_color, fontSize:8}}];
+    // series = [{
+    //     name: '老人健康状态',
+    //     type: 'pie',
+    //     radius: '30%',
+    //     center: ['48%', '50%'],
+    //     label: {
+    //         normal: {
+    //             formatter: '{d}%',
+    //             textStyle: {
+    //                 fontWeight: 'normal',
+    //                 fontSize:8
+    //             }
+    //         }
+    //     },
+    //     data: [
+    //         {value: 0, name: '失能'},
+    //         {value: 0, name: '失智'},
+    //         {value: 0, name: '自理'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_2_wl =chartPie_for_big_SN(title_text, legend_data, series);
+    //
+    // title_text="";
+    // legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
+    // series=[{
+    //     name: '老人户籍',
+    //     type: 'pie',
+    //     radius : '30%',
+    //     center: ['48%', '50%'],
+    //     label : {
+    //         normal : {
+    //             formatter: '{d}%',
+    //             textStyle : {
+    //                 fontWeight : 'normal',
+    //                 fontSize : 12
+    //             }
+    //         }
+    //     },
+    //     data:[
+    //         {value:0, name:'已入住'},
+    //         {value:0, name:'剩余'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_3_pie = chartPie(title_text,legend_data,series);
+    //
+    // title_text = "";
+    // legend_data = [{name: '失能', textStyle: {color: legend_color, fontSize:8}}, {
+    //     name: '失智',
+    //     textStyle: {color: legend_color, fontSize:8}
+    // },{name: '自理', textStyle: {color: legend_color, fontSize:8}}];
+    // series = [{
+    //     name: '老人健康状态',
+    //     type: 'pie',
+    //     radius: '30%',
+    //     center: ['48%', '50%'],
+    //     label: {
+    //         normal: {
+    //             formatter: '{d}%',
+    //             textStyle: {
+    //                 fontWeight: 'normal',
+    //                 fontSize:12
+    //             }
+    //         }
+    //     },
+    //     data: [
+    //         {value: 0, name: '失能'},
+    //         {value: 0, name: '失智'},
+    //         {value: 0, name: '自理'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_3_wl =chartPieForOrgOld(title_text, legend_data, series);
+    //
+    //
+    // rzzxOldman_jg_sub_pie.setOption(rzzxOldman_option_sub_pie);
+    // rzzxOldman_jg_sub_wl.setOption(rzzxOldman_option_sub_wl);
+    // rzzxOldman_jg_1_pie.setOption(rzzxOldman_option_1_pie);
+    // rzzxOldman_jg_1_wl.setOption(rzzxOldman_option_1_wl);
+    // rzzxOldman_jg_2_pie.setOption(rzzxOldman_option_2_pie);
+    // rzzxOldman_jg_2_wl.setOption(rzzxOldman_option_2_wl);
+    // rzzxOldman_jg_3_pie.setOption(rzzxOldman_option_3_pie);
+    // rzzxOldman_jg_3_wl.setOption(rzzxOldman_option_3_wl);
+    // rzzxOldman_jg_1_wl.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name == "失能")
+    //         health.push(2);
+    //     else if(name == "失智")
+    //         intelligenceArray.push(29,30);
+    //     else if(name == "自理")
+    //         shenghuo = 1;
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    // rzzxOldman_jg_2_wl.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name == "失能")
+    //         health.push(2);
+    //     else if(name == "失智")
+    //         intelligenceArray.push(29,30);
+    //     else if(name == "自理")
+    //         shenghuo = 1;
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    // rzzxOldman_jg_3_wl.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name == "失能")
+    //         health.push(2);
+    //     else if(name == "失智")
+    //         intelligenceArray.push(29,30);
+    //     else if(name == "自理")
+    //         shenghuo = 1;
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    //
+    // //性别饼图
+    // title_text="性别";
+    // legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
+    // series=[{
+    //     name: '老人性别',
+    //     type: 'pie',
+    //     radius : '55%',
+    //     label : {
+    //         normal : {
+    //             formatter: '{d}%\n({c})',
+    //             textStyle : {
+    //                 fontWeight : 'normal',
+    //                 fontSize : 20
+    //             }
+    //         }
+    //     },
+    //     center: ['48%', '50%'],
+    //     data:[
+    //         {value:476, name:'男'},
+    //         {value:376, name:'女'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_jg_sex_pie = chartPie(title_text,legend_data,series);
+    // rzzxOldman_jg_sex_pie.setOption(rzzxOldman_option_jg_sex_pie);
+    // rzzxOldman_jg_sex_pie.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name=="男"){
+    //         sex=2;
+    //     }else if(name=="女"){
+    //         sex=1;
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    // //性别饼图
+    // title_text="性别";
+    // legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
+    // series=[{
+    //     name: '老人性别',
+    //     type: 'pie',
+    //     radius : '55%',
+    //     label : {
+    //         normal : {
+    //             formatter: '{d}%\n({c})',
+    //             textStyle : {
+    //                 fontWeight : 'normal',
+    //                 fontSize : 20
+    //             }
+    //         }
+    //     },
+    //     center: ['48%', '50%'],
+    //     data:[
+    //         {value:476, name:'男'},
+    //         {value:376, name:'女'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_jg_1_sex = chartPie(title_text,legend_data,series);
+    // rzzxOldman_jg_1_sex.setOption(rzzxOldman_option_jg_1_sex);
+    // rzzxOldman_jg_1_sex.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name=="男"){
+    //         sex=2;
+    //     }else if(name=="女"){
+    //         sex=1;
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    //
+    // //性别饼图
+    // title_text="性别";
+    // legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:8}},{name:'女',textStyle:{color:legend_color,fontSize:8}}];
+    // series=[{
+    //     name: '老人性别',
+    //     type: 'pie',
+    //     radius : '30%',
+    //     label : {
+    //         normal : {
+    //             formatter: '{d}%',
+    //             textStyle : {
+    //                 fontWeight : 'normal',
+    //                 fontSize : 8
+    //             }
+    //         }
+    //     },
+    //     center: ['48%', '50%'],
+    //     data:[
+    //         {value:0, name:'男'},
+    //         {value:0, name:'女'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_jg_2_sex = chartPieForOrgOld(title_text,legend_data,series);
+    // rzzxOldman_jg_2_sex.setOption(rzzxOldman_option_jg_2_sex);
+    // rzzxOldman_jg_2_sex.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name=="男"){
+    //         sex=2;
+    //     }else if(name=="女"){
+    //         sex=1;
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    //
+    // //性别饼图
+    // title_text="性别";
+    // legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:8}},{name:'女',textStyle:{color:legend_color,fontSize:8}}];
+    // series=[{
+    //     name: '老人性别',
+    //     type: 'pie',
+    //     radius : '30%',
+    //     label : {
+    //         normal : {
+    //             formatter: '{d}%',
+    //             textStyle : {
+    //                 fontWeight : 'normal',
+    //                 fontSize : 8
+    //             }
+    //         }
+    //     },
+    //     center: ['48%', '50%'],
+    //     data:[
+    //         {value:0, name:'男'},
+    //         {value:0, name:'女'}
+    //     ],
+    //     itemStyle: {
+    //         emphasis: {
+    //             shadowBlur: 10,
+    //             shadowOffsetX: 0,
+    //             shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //         }
+    //     }
+    // }];
+    // var rzzxOldman_option_jg_3_sex = chartPieForOrgOld(title_text,legend_data,series);
+    // rzzxOldman_jg_3_sex.setOption(rzzxOldman_option_jg_3_sex);
+    // rzzxOldman_jg_3_sex.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name=="男"){
+    //         sex=2;
+    //     }else if(name=="女"){
+    //         sex=1;
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    //
+    // title_text='年龄';
+    // legend_data=[
+    //     {
+    //         name:'男',
+    //         textStyle:{
+    //             color:'#fff',
+    //             fontSize:8
+    //         }
+    //     },
+    //     {
+    //         name:'女',
+    //         textStyle:{
+    //             color:'#fff',
+    //             fontSize:8
+    //         }}
+    // ];
+    // yAxis_data=['90-   ','80-90','70-80','60-70'];
+    // series=[
+    //     {
+    //         name: '男',
+    //         type: 'bar',
+    //         stack: '总量',
+    //         label: {
+    //             normal: {
+    //                 show: true,
+    //                 position: 'insideLeft',
+    //                 textStyle:{
+    //                     fontSize:8
+    //                 }
+    //
+    //             }
+    //         },
+    //         itemStyle:{
+    //             normal: {
+    //                 color:series_color_1
+    //             }
+    //         },
+    //         data: [0,0,0,0]
+    //     },
+    //     {
+    //         name: '女',
+    //         type: 'bar',
+    //         stack: '总量',
+    //         label: {
+    //             normal: {
+    //                 show: true,
+    //                 position: 'insideRight',
+    //                 textStyle:{
+    //                     fontSize:8
+    //                 }
+    //             }
+    //         },
+    //         itemStyle:{
+    //             normal: {
+    //                 color:series_color_2
+    //             }
+    //         },
+    //         data: [0,0,0,0]
+    //     }
+    // ];
+    // var rzzxOldman_option_jg_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
+    // rzzxOldman_jg_age_bar.setOption(rzzxOldman_option_jg_age_bar);
+    // rzzxOldman_jg_age_bar.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name=="男"){
+    //         sex=2;
+    //     }else if(name=="女"){
+    //         sex=1;
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    //
+    // title_text='年龄';
+    // legend_data=[
+    //     {
+    //         name:'男',
+    //         textStyle:{
+    //             color:'#fff',
+    //             fontSize:8
+    //         }
+    //     },
+    //     {
+    //         name:'女',
+    //         textStyle:{
+    //             color:'#fff',
+    //             fontSize:8
+    //         }}
+    // ];
+    // yAxis_data=['90-   ','80-90','70-80','60-70'];
+    // series=[
+    //     {
+    //         name: '男',
+    //         type: 'bar',
+    //         stack: '总量',
+    //         label: {
+    //             normal: {
+    //                 show: true,
+    //                 position: 'insideLeft',
+    //                 textStyle:{
+    //                     fontSize:8
+    //                 }
+    //             }
+    //         },
+    //         itemStyle:{
+    //             normal: {
+    //                 color:series_color_1
+    //             }
+    //         },
+    //         data: [67,134,234,534]
+    //     },
+    //     {
+    //         name: '女',
+    //         type: 'bar',
+    //         stack: '总量',
+    //         label: {
+    //             normal: {
+    //                 show: true,
+    //                 position: 'insideRight',
+    //                 textStyle:{
+    //                     fontSize:20
+    //                 }
+    //             }
+    //         },
+    //         itemStyle:{
+    //             normal: {
+    //                 color:series_color_2
+    //             }
+    //         },
+    //         data: [7,34,134,234]
+    //     }
+    // ];
+    // var rzzxOldman_option_jg_1_age=chartBar(title_text,legend_data,yAxis_data,series);
+    // rzzxOldman_jg_1_age.setOption(rzzxOldman_option_jg_1_age);
+    // rzzxOldman_jg_1_age.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name=="男"){
+    //         sex=2;
+    //     }else if(name=="女"){
+    //         sex=1;
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    //
+    // title_text='年龄';
+    // legend_data=[
+    //     {
+    //         name:'男',
+    //         textStyle:{
+    //             color:'#fff',
+    //             fontSize:8
+    //         }
+    //     },
+    //     {
+    //         name:'女',
+    //         textStyle:{
+    //             color:'#fff',
+    //             fontSize:8
+    //         }}
+    // ];
+    // yAxis_data=['90-   ','80-90','70-80','60-70'];
+    // series=[
+    //     {
+    //         name: '男',
+    //         type: 'bar',
+    //         stack: '总量',
+    //         label: {
+    //             normal: {
+    //                 show: true,
+    //                 position: 'insideLeft',
+    //                 textStyle:{
+    //                     fontSize:8
+    //                 }
+    //             }
+    //         },
+    //         itemStyle:{
+    //             normal: {
+    //                 color:series_color_1
+    //             }
+    //         },
+    //         data: [0,0,0,0]
+    //     },
+    //     {
+    //         name: '女',
+    //         type: 'bar',
+    //         stack: '总量',
+    //         label: {
+    //             normal: {
+    //                 show: true,
+    //                 position: 'insideRight',
+    //                 textStyle:{
+    //                     fontSize:20
+    //                 }
+    //             }
+    //         },
+    //         itemStyle:{
+    //             normal: {
+    //                 color:series_color_2
+    //             }
+    //         },
+    //         data: [0,0,0,0]
+    //     }
+    // ];
+    // //var rzzxOldman_option_jg_2_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+    // //rzzxOldman_jg_2_age.setOption(rzzxOldman_option_jg_2_age);
+    // rzzxOldman_jg_2_age.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name=="男"){
+    //         sex=2;
+    //     }else if(name=="女"){
+    //         sex=1;
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
+    //
+    // title_text='年龄';
+    // legend_data=[
+    //     {
+    //         name:'男',
+    //         textStyle:{
+    //             color:'#fff',
+    //             fontSize:8
+    //         }
+    //     },
+    //     {
+    //         name:'女',
+    //         textStyle:{
+    //             color:'#fff',
+    //             fontSize:8
+    //         }}
+    // ];
+    // yAxis_data=['90-   ','80-90','70-80','60-70'];
+    // series=[
+    //     {
+    //         name: '男',
+    //         type: 'bar',
+    //         stack: '总量',
+    //         label: {
+    //             normal: {
+    //                 show: true,
+    //                 position: 'insideLeft',
+    //                 textStyle:{
+    //                     fontSize:8
+    //                 }
+    //             }
+    //         },
+    //         itemStyle:{
+    //             normal: {
+    //                 color:series_color_1
+    //             }
+    //         },
+    //         data: [0,0,0,0]
+    //     },
+    //     {
+    //         name: '女',
+    //         type: 'bar',
+    //         stack: '总量',
+    //         label: {
+    //             normal: {
+    //                 show: true,
+    //                 position: 'insideRight',
+    //                 textStyle:{
+    //                     fontSize:8
+    //                 }
+    //             }
+    //         },
+    //         itemStyle:{
+    //             normal: {
+    //                 color:series_color_2
+    //             }
+    //         },
+    //         data: [0,0,0,0]
+    //     }
+    // ];
+    // var rzzxOldman_option_jg_3_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
+    // rzzxOldman_jg_3_age.setOption(rzzxOldman_option_jg_3_age);
+    // rzzxOldman_jg_3_age.on('legendselectchanged',function (params){
+    //     var name = params.name;
+    //     if(name=="男"){
+    //         sex=2;
+    //     }else if(name=="女"){
+    //         sex=1;
+    //     }
+    //     table.fnFilter();
+    //     getNumOfJw();
+    //     //getAgeAndSex();
+    //
+    // } );
 
-    title_text="";
-    legend_data=[];
-    series=[
-        {
-            name:'未来空余',
-            type:'pie',
-            radius: ['50%', '65%'],
-            avoidLabelOverlap: false,
-            label: {
-                normal : {
-                    position:"center",
-                    formatter: '{a}',
-                    textStyle : {
-                        fontWeight : 'normal',
-                        fontSize : 8,
-                        color:"#f2f989"
-                    }
-                }
-            },
-            data:[
-                {value:0, name:'未来空余'}
-            ]
-        }
-    ];
-    var rzzxOldman_option_sub_wl = gauge(title_text,58);
-    title_text="";
-    legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
-    series=[{
-        name: '老人户籍',
-        type: 'pie',
-        radius : '55%',
-        center: ['48%', '50%'],
-        label : {
-            normal : {
-                formatter: '{d}%',
-                textStyle : {
-                    fontWeight : 'normal',
-                    fontSize : 20
-                }
-            }
-        },
-        data:[
-            {value:476, name:'已入住'},
-            {value:376, name:'剩余'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_1_pie = chartPie(title_text,legend_data,series);
+    //line1
+    rzzxOldman_jg_sub_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_sub_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    title_text="";
-    legend_data=[];
-    series=[
-        {
-            name:'未来空余',
-            type:'pie',
-            radius: ['50%', '65%'],
-            avoidLabelOverlap: false,
-            label: {
-                normal : {
-                    position:"center",
-                    formatter: '{a}\n{c}',
-                    textStyle : {
-                        fontWeight : 'normal',
-                        fontSize : 18,
-                        color:"#f2f989"
-                    }
-                }
-            },
-            data:[
-                {value:40, name:'未来空余'}
-            ]
-        }
-    ];
-    var rzzxOldman_option_1_wl = gauge(title_text,58);
-    title_text="";
-    legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
-    series=[{
-        name: '老人户籍',
-        type: 'pie',
-        radius : '30%',
-        center: ['48%', '50%'],
-        label : {
-            normal : {
-                formatter: '{d}%',
-                textStyle : {
-                    fontWeight : 'normal',
-                    fontSize : 8
-                }
-            }
-        },
-        data:[
-            {value:0, name:'已入住'},
-            {value:0, name:'剩余'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_2_pie = chartPie(title_text,legend_data,series);
+    });
 
-    title_text = "";
-    legend_data = [{name: '失能', textStyle: {color: legend_color, fontSize:8}}, {
-        name: '失智',
-        textStyle: {color: legend_color, fontSize:8}
-    },{name: '自理', textStyle: {color: legend_color, fontSize:8}}];
-    series = [{
-        name: '老人健康状态',
-        type: 'pie',
-        radius: '30%',
-        center: ['48%', '50%'],
-        label: {
-            normal: {
-                formatter: '{d}%',
-                textStyle: {
-                    fontWeight: 'normal',
-                    fontSize:8
-                }
-            }
-        },
-        data: [
-            {value: 0, name: '失能'},
-            {value: 0, name: '失智'},
-            {value: 0, name: '自理'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_2_wl =chartPie_for_big_SN(title_text, legend_data, series);
+    rzzxOldman_jg_sex_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_sex_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    title_text="";
-    legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
-    series=[{
-        name: '老人户籍',
-        type: 'pie',
-        radius : '30%',
-        center: ['48%', '50%'],
-        label : {
-            normal : {
-                formatter: '{d}%',
-                textStyle : {
-                    fontWeight : 'normal',
-                    fontSize : 12
-                }
-            }
-        },
-        data:[
-            {value:0, name:'已入住'},
-            {value:0, name:'剩余'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_3_pie = chartPie(title_text,legend_data,series);
+    });
 
-    title_text = "";
-    legend_data = [{name: '失能', textStyle: {color: legend_color, fontSize:8}}, {
-        name: '失智',
-        textStyle: {color: legend_color, fontSize:8}
-    },{name: '自理', textStyle: {color: legend_color, fontSize:8}}];
-    series = [{
-        name: '老人健康状态',
-        type: 'pie',
-        radius: '30%',
-        center: ['48%', '50%'],
-        label: {
-            normal: {
-                formatter: '{d}%',
-                textStyle: {
-                    fontWeight: 'normal',
-                    fontSize:12
-                }
-            }
-        },
-        data: [
-            {value: 0, name: '失能'},
-            {value: 0, name: '失智'},
-            {value: 0, name: '自理'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_3_wl =chartPieForOrgOld(title_text, legend_data, series);
+    rzzxOldman_jg_age_bar.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_age_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
+    });
 
-    rzzxOldman_jg_sub_pie.setOption(rzzxOldman_option_sub_pie);
-    rzzxOldman_jg_sub_wl.setOption(rzzxOldman_option_sub_wl);
-    rzzxOldman_jg_1_pie.setOption(rzzxOldman_option_1_pie);
-    rzzxOldman_jg_1_wl.setOption(rzzxOldman_option_1_wl);
-    rzzxOldman_jg_2_pie.setOption(rzzxOldman_option_2_pie);
-    rzzxOldman_jg_2_wl.setOption(rzzxOldman_option_2_wl);
-    rzzxOldman_jg_3_pie.setOption(rzzxOldman_option_3_pie);
-    rzzxOldman_jg_3_wl.setOption(rzzxOldman_option_3_wl);
-    rzzxOldman_jg_1_wl.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name == "失能")
-            health.push(2);
-        else if(name == "失智")
-            intelligenceArray.push(29,30);
-        else if(name == "自理")
-            shenghuo = 1;
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
-    rzzxOldman_jg_2_wl.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name == "失能")
-            health.push(2);
-        else if(name == "失智")
-            intelligenceArray.push(29,30);
-        else if(name == "自理")
-            shenghuo = 1;
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
-    rzzxOldman_jg_3_wl.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name == "失能")
-            health.push(2);
-        else if(name == "失智")
-            intelligenceArray.push(29,30);
-        else if(name == "自理")
-            shenghuo = 1;
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
+    rzzxOldman_jg_sub_wl.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_sub_wl.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    //性别饼图
-    title_text="性别";
-    legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
-    series=[{
-        name: '老人性别',
-        type: 'pie',
-        radius : '55%',
-        label : {
-            normal : {
-                formatter: '{d}%\n({c})',
-                textStyle : {
-                    fontWeight : 'normal',
-                    fontSize : 20
-                }
-            }
-        },
-        center: ['48%', '50%'],
-        data:[
-            {value:476, name:'男'},
-            {value:376, name:'女'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_jg_sex_pie = chartPie(title_text,legend_data,series);
-    rzzxOldman_jg_sex_pie.setOption(rzzxOldman_option_jg_sex_pie);
-    rzzxOldman_jg_sex_pie.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
-    //性别饼图
-    title_text="性别";
-    legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:18}},{name:'女',textStyle:{color:legend_color,fontSize:18}}];
-    series=[{
-        name: '老人性别',
-        type: 'pie',
-        radius : '55%',
-        label : {
-            normal : {
-                formatter: '{d}%\n({c})',
-                textStyle : {
-                    fontWeight : 'normal',
-                    fontSize : 20
-                }
-            }
-        },
-        center: ['48%', '50%'],
-        data:[
-            {value:476, name:'男'},
-            {value:376, name:'女'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_jg_1_sex = chartPie(title_text,legend_data,series);
-    rzzxOldman_jg_1_sex.setOption(rzzxOldman_option_jg_1_sex);
-    rzzxOldman_jg_1_sex.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
+    });
+    //line2
+    rzzxOldman_jg_1_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_1_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    //性别饼图
-    title_text="性别";
-    legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:8}},{name:'女',textStyle:{color:legend_color,fontSize:8}}];
-    series=[{
-        name: '老人性别',
-        type: 'pie',
-        radius : '30%',
-        label : {
-            normal : {
-                formatter: '{d}%',
-                textStyle : {
-                    fontWeight : 'normal',
-                    fontSize : 8
-                }
-            }
-        },
-        center: ['48%', '50%'],
-        data:[
-            {value:0, name:'男'},
-            {value:0, name:'女'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_jg_2_sex = chartPieForOrgOld(title_text,legend_data,series);
-    rzzxOldman_jg_2_sex.setOption(rzzxOldman_option_jg_2_sex);
-    rzzxOldman_jg_2_sex.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
+    });
+    rzzxOldman_jg_1_sex.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_1_sex.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    //性别饼图
-    title_text="性别";
-    legend_data=[{name:'男',textStyle:{color:legend_color,fontSize:8}},{name:'女',textStyle:{color:legend_color,fontSize:8}}];
-    series=[{
-        name: '老人性别',
-        type: 'pie',
-        radius : '30%',
-        label : {
-            normal : {
-                formatter: '{d}%',
-                textStyle : {
-                    fontWeight : 'normal',
-                    fontSize : 8
-                }
-            }
-        },
-        center: ['48%', '50%'],
-        data:[
-            {value:0, name:'男'},
-            {value:0, name:'女'}
-        ],
-        itemStyle: {
-            emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }
-    }];
-    var rzzxOldman_option_jg_3_sex = chartPieForOrgOld(title_text,legend_data,series);
-    rzzxOldman_jg_3_sex.setOption(rzzxOldman_option_jg_3_sex);
-    rzzxOldman_jg_3_sex.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
+    });
+    rzzxOldman_jg_1_age.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_1_age.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    title_text='年龄';
-    legend_data=[
-        {
-            name:'男',
-            textStyle:{
-                color:'#fff',
-                fontSize:8
-            }
-        },
-        {
-            name:'女',
-            textStyle:{
-                color:'#fff',
-                fontSize:8
-            }}
-    ];
-    yAxis_data=['90-   ','80-90','70-80','60-70'];
-    series=[
-        {
-            name: '男',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideLeft',
-                    textStyle:{
-                        fontSize:8
-                    }
+    });
+    rzzxOldman_jg_1_wl.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_1_wl.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-                }
-            },
-            itemStyle:{
-                normal: {
-                    color:series_color_1
-                }
-            },
-            data: [0,0,0,0]
-        },
-        {
-            name: '女',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight',
-                    textStyle:{
-                        fontSize:8
-                    }
-                }
-            },
-            itemStyle:{
-                normal: {
-                    color:series_color_2
-                }
-            },
-            data: [0,0,0,0]
-        }
-    ];
-    var rzzxOldman_option_jg_age_bar=chartBar(title_text,legend_data,yAxis_data,series);
-    rzzxOldman_jg_age_bar.setOption(rzzxOldman_option_jg_age_bar);
-    rzzxOldman_jg_age_bar.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
+    });
+    //line3
+    rzzxOldman_jg_2_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_2_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    title_text='年龄';
-    legend_data=[
-        {
-            name:'男',
-            textStyle:{
-                color:'#fff',
-                fontSize:8
-            }
-        },
-        {
-            name:'女',
-            textStyle:{
-                color:'#fff',
-                fontSize:8
-            }}
-    ];
-    yAxis_data=['90-   ','80-90','70-80','60-70'];
-    series=[
-        {
-            name: '男',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideLeft',
-                    textStyle:{
-                        fontSize:8
-                    }
-                }
-            },
-            itemStyle:{
-                normal: {
-                    color:series_color_1
-                }
-            },
-            data: [67,134,234,534]
-        },
-        {
-            name: '女',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight',
-                    textStyle:{
-                        fontSize:20
-                    }
-                }
-            },
-            itemStyle:{
-                normal: {
-                    color:series_color_2
-                }
-            },
-            data: [7,34,134,234]
-        }
-    ];
-    var rzzxOldman_option_jg_1_age=chartBar(title_text,legend_data,yAxis_data,series);
-    rzzxOldman_jg_1_age.setOption(rzzxOldman_option_jg_1_age);
-    rzzxOldman_jg_1_age.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
+    });
+    rzzxOldman_jg_2_sex.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_2_sex.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    title_text='年龄';
-    legend_data=[
-        {
-            name:'男',
-            textStyle:{
-                color:'#fff',
-                fontSize:8
-            }
-        },
-        {
-            name:'女',
-            textStyle:{
-                color:'#fff',
-                fontSize:8
-            }}
-    ];
-    yAxis_data=['90-   ','80-90','70-80','60-70'];
-    series=[
-        {
-            name: '男',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideLeft',
-                    textStyle:{
-                        fontSize:8
-                    }
-                }
-            },
-            itemStyle:{
-                normal: {
-                    color:series_color_1
-                }
-            },
-            data: [0,0,0,0]
-        },
-        {
-            name: '女',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight',
-                    textStyle:{
-                        fontSize:20
-                    }
-                }
-            },
-            itemStyle:{
-                normal: {
-                    color:series_color_2
-                }
-            },
-            data: [0,0,0,0]
-        }
-    ];
-    //var rzzxOldman_option_jg_2_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
-    //rzzxOldman_jg_2_age.setOption(rzzxOldman_option_jg_2_age);
-    rzzxOldman_jg_2_age.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
+    });
+    rzzxOldman_jg_2_age.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_2_age.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
 
-    title_text='年龄';
-    legend_data=[
-        {
-            name:'男',
-            textStyle:{
-                color:'#fff',
-                fontSize:8
-            }
-        },
-        {
-            name:'女',
-            textStyle:{
-                color:'#fff',
-                fontSize:8
-            }}
-    ];
-    yAxis_data=['90-   ','80-90','70-80','60-70'];
-    series=[
-        {
-            name: '男',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideLeft',
-                    textStyle:{
-                        fontSize:8
-                    }
-                }
-            },
-            itemStyle:{
-                normal: {
-                    color:series_color_1
-                }
-            },
-            data: [0,0,0,0]
-        },
-        {
-            name: '女',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight',
-                    textStyle:{
-                        fontSize:8
-                    }
-                }
-            },
-            itemStyle:{
-                normal: {
-                    color:series_color_2
-                }
-            },
-            data: [0,0,0,0]
-        }
-    ];
-    var rzzxOldman_option_jg_3_age=chartBarForOrgOld(title_text,legend_data,yAxis_data,series);
-    rzzxOldman_jg_3_age.setOption(rzzxOldman_option_jg_3_age);
-    rzzxOldman_jg_3_age.on('legendselectchanged',function (params){
-        var name = params.name;
-        if(name=="男"){
-            sex=2;
-        }else if(name=="女"){
-            sex=1;
-        }
-        table.fnFilter();
-        getNumOfJw();
-        //getAgeAndSex();
-        
-    } );
+    });
+    rzzxOldman_jg_2_wl.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_2_wl.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    //line4
+    rzzxOldman_jg_3_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_3_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    rzzxOldman_jg_3_sex.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_3_sex.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    rzzxOldman_jg_3_age.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_3_age.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    rzzxOldman_jg_3_wl.on('legendselectchanged', function (params) {
+        var name=params.name;
+        rzzxOldman_jg_3_wl.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
 
 </script>

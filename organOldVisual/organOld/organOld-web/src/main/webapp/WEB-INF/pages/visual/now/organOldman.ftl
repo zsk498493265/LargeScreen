@@ -671,4 +671,140 @@
     // var organOldman_option_jg_3_age=chartBar(title_text,legend_data,yAxis_data,series);
     // organOldman_jg_3_age.setOption(organOldman_option_jg_3_age);
 
+    //line1
+    organOldman_jg_sub_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_sub_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+
+    organOldman_jg_sex_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_sex_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+
+    organOldman_jg_age_bar.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_age_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+
+    organOldman_jg_sub_wl.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_sub_wl.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    //line2
+    organOldman_jg_1_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_1_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_1_sex.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_1_sex.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_1_age.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_1_age.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_1_wl.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_1_wl.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    //line3
+    organOldman_jg_2_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_2_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_2_sex.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_2_sex.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_2_age.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_2_age.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_2_wl.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_2_wl.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    //line4
+    organOldman_jg_3_pie.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_3_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_3_sex.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_3_sex.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_3_age.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_3_age.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+    organOldman_jg_3_wl.on('legendselectchanged', function (params) {
+        var name=params.name;
+        organOldman_jg_3_wl.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+
+    });
+
 </script>

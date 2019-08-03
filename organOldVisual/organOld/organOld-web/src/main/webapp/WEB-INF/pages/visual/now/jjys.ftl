@@ -205,5 +205,13 @@
     var jjys_option_jt_ys_pq_bar = chartPie(title_text,legend_data,series);
     jjys_jt_ys_pq_bar.setOption(jjys_option_jt_ys_pq_bar);
 
+    //取消灰化
+    jjys_jt_ys_num_pie.on('legendselectchanged', function (params) {
+        var name = params.name;
+        jjys_jt_ys_num_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
+    });
 
 </script>

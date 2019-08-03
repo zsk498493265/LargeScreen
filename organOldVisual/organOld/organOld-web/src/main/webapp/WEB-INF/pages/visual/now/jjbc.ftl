@@ -78,7 +78,7 @@
 
 
     jjbc_jt_ys_num_pie.on('legendselectchanged', function (params) {
-        // var name = params.name;
+        var name = params.name;
         // if(name=="未参加"){
         //     zhujie = 1;
         // }else if(name=="已参加"){
@@ -87,6 +87,10 @@
         // table.fnFilter();
         // getNumOfJw();
         //getAgeAndSex();
+        jjbc_jt_ys_num_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
         
     });
 
@@ -131,6 +135,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        jjbc_jt_ys_sex_pie.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
         
     });
 
@@ -206,6 +214,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        jjbc_jt_ys_age_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
         
     });
 
@@ -252,6 +264,10 @@
         table.fnFilter();
         getNumOfJw();
         //getAgeAndSex();
+        jjbc_jt_ys_pq_bar.dispatchAction({
+            type: 'legendSelect',
+            name: name
+        });
         
     });
 
