@@ -7,9 +7,7 @@ import com.organOld.visualService.service.model.Result;
 import com.organOld.visualService.util.Tool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Calendar;
@@ -89,6 +87,15 @@ public class OrganInfoController {
         Result result =new Result(true,jsonObject);
         return result;
 
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/updateOrgAndNews",method = RequestMethod.GET)
+    public Result updateOrgAndNews( String name, String content){
+        oldmanService.updateOrganAndNews(name,content);
+        JSONObject jsonObject = new JSONObject();
+        Result result =new Result(true,jsonObject);
+        return result;
     }
 
 

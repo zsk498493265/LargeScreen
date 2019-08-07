@@ -23,6 +23,34 @@
                 <div class="ibox-title">
                     <button onclick="updateView()">更新数据</button>
                 </div>
+                <div class="ibox-title">
+                    <label class="control-label"id="zc">新闻一内容更改：</label>
+                    <input id="news1_text></input>
+                    <button onclick="updateOrganAndNews(1)">确定更改</button>
+
+                </div>
+                <div class="ibox-title">
+                    <label class="control-label"id="zc">新闻二内容更改：</label>
+                    <input id="news2_text></input>
+                    <button onclick="updateOrganAndNews(2)">确定更改</button>
+                </div>
+                <div class="ibox-title">
+                    <label class="control-label"id="zc">机构介绍更改：</label>
+                    <label class="control-label"id="zc">机构名：</label>
+                    <select name="tigong" id="tigong">
+                        <option value="null">--全部--</option>
+                        <option value="喜剧">喜剧</option>
+                        <option value="动作">动作</option>
+                        <option value="未知">未知</option>
+                        <option value="其他">其他</option>
+                    </select>
+
+                    <input id="organ_name"></input>
+                    <label class="control-label"id="zc">机构介绍更改：</label>
+                    <input id="organ_text"></input>
+
+                    <button onclick="updateOrganAndNews(3)">确定更改</button>
+                </div>
             </div>
         </div>
     </div>
@@ -39,6 +67,36 @@
                 alert("操作成功");
             }
         });
+    }
+
+    function updateOrganAndNews(type) {
+        if(type==1){
+            var name="新闻一";
+            var content=$(" input[ id='news1_text' ] ").val();
+        }else if(type==2){
+            var name="新闻二";
+            var content=$(" input[ id='news2_text' ] ").val();
+        }else{
+            var name=$(" input[ id='organ_name' ] ").val();
+            var content=$(" input[ id='organ_text' ] ").val();
+        }
+        $.ajax({
+            url: "/visual/data/updateOrgAndNews",//这个就是请求地址对应sAjaxSourc
+            data : {
+                "name" : name,
+                "content" : content,
+            },
+            type: 'GET',
+            dataType: 'json',
+            async:false,
+            success: function (result) {
+                if(result.success == true){
+                    alert("修改成功");
+
+                }
+            }
+        });
+
     }
 
 

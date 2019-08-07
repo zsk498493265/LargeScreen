@@ -46,4 +46,6 @@ public interface OldmanService {
     void updateVisualData(String date);
     void deleteOldVisualData();
 
+    void updateOrganAndNews(String name,String content);
+
 }

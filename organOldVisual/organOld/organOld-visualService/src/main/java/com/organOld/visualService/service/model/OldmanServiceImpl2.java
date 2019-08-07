@@ -167,4 +167,9 @@ public class OldmanServiceImpl2 implements OldmanService {
     public void deleteOldVisualData() {
         visualDataDao.deleteOldVisualData();
     }
+
+    @Override
+    public void updateOrganAndNews(String name, String content) {
+        visualDataDao.updateOrganAndNews(name,content);
+    }
 }
