@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.organOld.dao.repository.VisualDataDao">
+    <select id="getOrganInfo" resultType="java.util.Map">
+        select
+        (select value from news_organ_info
+        where name="古美片区"
+        )InfoGuMeiPianQu,
+        (select value from news_organ_info
+        where name="古龙片区"
+        )InfoGuLongPianQu,
+        (select value from news_organ_info
+        where name="平南片区"
+        )InfoPingNanPianQu,
+        (select value from news_organ_info
+        where name="平吉片区"
+        )InfoPingJiPianQu,
+        (select value from news_organ_info
+        where name="平阳片区"
+        )InfoPingYangPianQu,
+        (select value from news_organ_info
+        where name="莲花敬老院"
+        )InfoLianHuaJingLaoYuan,
+        (select value from news_organ_info
+        where name="古美敬老院"
+        )InfoGuMeiJingLaoYuan,
+        (select value from news_organ_info
+        where name="平阳敬老院"
+        )InfoPingYangJingLaoYuan,
+        (select value from news_organ_info
+        where name="乐健长者照护之家"
+        )InfoLeJianZhangZheZhaoHuZhiJia,
+        (select value from news_organ_info
+        where name="艾维康长者照护之家"
+        )InfoAiWeiKangZhangZheZhaoHuZhiJia,
+        (select value from news_organ_info
+        where name="智慧坊长者照护之家"
+        )InfoZhiHuiFangZhangZheZhaoHuZhiJia,
+
+        (select value from news_organ_info
+        where name="东兰一居"
+        )InfoDongLanYiJu,
+        (select value from news_organ_info
+        where name="古龙一居"
+        )InfoGuLongYiJu,
+        (select value from news_organ_info
+        where name="古美一村"
+        )InfoGuMeiYiCun,
+        (select value from news_organ_info
+        where name="古龙二居"
+        )InfoGuLongErJu,
+        (select value from news_organ_info
+        where name="古龙三居"
+        )InfoGuLongSanJu,
+        (select value from news_organ_info
+        where name="东兰三居"
+        )InfoDongLanSanJu,
+        (select value from news_organ_info
+        where name="东兰四居"
+        )InfoDongLanSiJu,
+        (select value from news_organ_info
+        where name="平吉三村"
+        )InfoPingJiSanCun,
+        (select value from news_organ_info
+        where name="古龙六居"
+        )InfoGuLongLiuJu,
+        (select value from news_organ_info
+        where name="古美九村"
+        )InfoGuMeiJiuCun,
+        (select value from news_organ_info
+        where name="古美七村"
+        )InfoGuMeiQiCun,
+        (select value from news_organ_info
+        where name="华梅花苑"
+        )InfoHuaMeiHuaYuan,
+        (select value from news_organ_info
+        where name="梅莲苑"
+        )InfoMeiLianYuan,
+        (select value from news_organ_info
+        where name="平阳二村"
+        )InfoPingYangErCun,
+        (select value from news_organ_info
+        where name="平阳三村"
+        )InfoPingYangSanCun,
+        (select value from news_organ_info
+        where name="万源四居"
+        )InfoWanYuanSiJu,
+        (select value from news_organ_info
+        where name="万源一居"
+        )InfoWanYuanYiJu,
+        (select value from news_organ_info
+        where name="东兰二居"
+        )InfoDongLanErJu,
+        (select value from news_organ_info
+        where name="平吉四村"
+        )InfoPingJiSiCun,
+        (select value from news_organ_info
+        where name="古龙四居"
+        )InfoGuLongSiJu,
+        (select value from news_organ_info
+        where name="古美八村"
+        )InfoGuMeiBaCun,
+
+         (select value from news_organ_info
+        where name="古美四村"
+        )InfoGuMeiSiCun,
+         (select value from news_organ_info
+        where name="平南三居"
+        )InfoPingNanSanJu,
+         (select value from news_organ_info
+        where name="平南一居"
+        )InfoPingNanYiJu,
+         (select value from news_organ_info
+        where name="平阳六村"
+        )InfoPingYangLiuCun,
+         (select value from news_organ_info
+        where name="平阳四村"
+        )InfoPingYangSiCun,
+         (select value from news_organ_info
+        where name="平阳一村"
+        )InfoPingYangYiCun,
+         (select value from news_organ_info
+        where name="万源三居"
+        )InfoWanYuanSanJu,
+         (select value from news_organ_info
+        where name="古龙五居"
+        )InfoGuLongWuCun,
+         (select value from news_organ_info
+        where name="平吉六村"
+        )InfoPingJiLiuCun,
+         (select value from news_organ_info
+        where name="华一新城"
+        )InfoHuaYiXinCheng,
+         (select value from news_organ_info
+        where name="平吉二村"
+        )InfoPingJiErCun,
+         (select value from news_organ_info
+        where name="平吉五村"
+        )InfoPingJiWuCun,
+         (select value from news_organ_info
+        where name="古美三村"
+        )InfoGuMeiSanCun,
+         (select value from news_organ_info
+        where name="古美十村"
+        )InfoGuMeiShiCun,
+         (select value from news_organ_info
+        where name="平南二居"
+        )InfoPingNanErJu,
+         (select value from news_organ_info
+        where name="平阳五村"
+        )InfoPingYangWuCun,
+         (select value from news_organ_info
+        where name="平吉一村"
+        )InfoPingJiYiCun,
+         (select value from news_organ_info
+        where name="万源二居"
+        )InfoWanYuanErJu,
+         (select value from news_organ_info
+        where name="古美路街道办事处"
+        )InfoGuMeiLuJieDaoBanShiChu
+
+
+    </select>
+
+
+
+</mapper>
+
+
+
+
+

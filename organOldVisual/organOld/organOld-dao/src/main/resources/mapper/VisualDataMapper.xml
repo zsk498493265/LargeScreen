@@ -5538,7 +5538,9 @@ and ob.id=ho.oldman_id
         (select count(1) from view_backup
         where sex=1
         and #{param4}>=birthday and (is_mb!=0 or is_sn!=0 or is_exzl!=0 or is_gz!=0 or (intelligence!=null and(intelligence!=29 and intelligence!=30)) or chx_id!=null)
-        )NumAllAnd90AboveFHeal
+        )NumAllAnd90AboveFHeal,
+        (select value from news_organ_info where name='新闻一')News1,
+        (select value from news_organ_info where name='新闻二')News2
 
 
 

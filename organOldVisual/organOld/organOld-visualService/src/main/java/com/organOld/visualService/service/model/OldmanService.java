@@ -16,6 +16,8 @@ public interface OldmanService {
     List<Map<String,Long>> getVisualData4(Date date1, Date date2,Date date3,Date date4,String preMonth);
     List<Map<String,Integer>> getVisualData5(Date date1, Date date2,Date date3,Date date4,Date date5,Date date6,Date date7,Date date8,Date date9,String preMonth);
 
+    List<Map<String,String>> getOrganInfo();
+
 
     List<Map<String,Long>> getVisualDataApartFinish(Date date1, Date date2,Date date3,Date date4);
     List<Map<String,Long>> getVisualDataApartOldman(Date date1, Date date2,Date date3,Date date4);

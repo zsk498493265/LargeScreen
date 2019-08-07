@@ -881,6 +881,9 @@ public class VisualData5Controller {
         jsonObject.put("NumPingJi",dataMap.get(0).get("NumPingJi"));
         jsonObject.put("NumPingYang",dataMap.get(0).get("NumPingYang"));
 
+        jsonObject.put("News1",dataMap.get(0).get("News1"));
+        jsonObject.put("News2",dataMap.get(0).get("News2"));
+
         Result result =new Result(true,jsonObject);
         return result;
 

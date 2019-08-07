@@ -84,6 +84,7 @@
                     var month=now.getMonth();
                     var date=now.getDate();
                     document.getElementById("date").innerHTML=year+"年"+(month+1)+"月"+date+"日";
+                    var dataOrgan=null;
                 </script>
                 <script type="text/javascript">
                     function clear_select(){
@@ -183,6 +184,9 @@
                         }
 
                         //地图控件添加函数：
+                        function  copyOrganInfo(data) {
+                            dataOrgan=data;
+                        }
                         function addMapControl(){
                             //向地图中添加缩放控件
                             var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,type:BMAP_NAVIGATION_CONTROL_SMALL});
@@ -197,43 +201,52 @@
 
                         //标注点数组
 
+
+
+                        $.ajax({
+                            url: "/visual/data/getOrganInfo",
+                            type: "get",
+                            async: false,
+                            success: function (result) {
+                                if (result.success == true) {
+                                    dataOrgan=result.data;
+                                }
+                            }
+                        });
+                        console.log(dataOrgan);
                         markerArr = [
 
-                            {title:"古美片区",content:"古美片区",point:"121.412299|31.148708",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-1},type:-1,text:"古美片区"}
-                            ,{title:"古龙片区",content:"古龙片区",point:"121.410071|31.154518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-2},type:-2,text:"古龙片区"}
-                            ,{title:"平南片区",content:"平南片区",point:"121.39965|31.157237",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-3},type:-3,text:"平南片区"}
-                            ,{title:"东兰片区",content:"东兰片区",point:"121.389302|31.158659",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-4},type:-4,text:"东兰片区"}
-                            ,{title:"平吉片区",content:"平吉片区",point:"121.391242|31.150871",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-5},type:-5,text:"平吉片区"}
-                            ,{title:"平阳片区",content:"平阳片区",point:"121.394333|31.140857",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-6},type:-6,text:"平阳片区"}
+                            {title:"古美片区",content:dataOrgan.InfoGuMeiPianQu,point:"121.412299|31.148708",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-1},type:-1,text:dataOrgan.InfoGuMeiPianQu}
+                            ,{title:"古龙片区",content:"古龙片区",point:"121.410071|31.154518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-2},type:-2,text:dataOrgan.InfoGuLongPianQu}
+                            ,{title:"平南片区",content:"平南片区",point:"121.39965|31.157237",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-3},type:-3,text:dataOrgan.InfoPingNanPianQu}
+                            ,{title:"东兰片区",content:"东兰片区",point:"121.389302|31.158659",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-4},type:-4,text:dataOrgan.InfoDongLanPianQu}
+                            ,{title:"平吉片区",content:"平吉片区",point:"121.391242|31.150871",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-5},type:-5,text:dataOrgan.InfoPingJiPianQu}
+                            ,{title:"平阳片区",content:"平阳片区",point:"121.394333|31.140857",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-6},type:-6,text:dataOrgan.InfoPingYangPianQu}
                             //老有所养
                             ,{title:"莲花敬老院",content:"<div style='width:720px;height: 1200px'>"+"上海市闵行区莲花敬老院，位于闵行区莲花路1115号，东近中环线，是目前市内难得的地处黄金地段，生活环境理想的老年公寓。我院占地面积4900平方米，建筑面积7480平方米，绿化面积1800平方米，拥有养老床位187张，是一所重点投资建设的集休养、医疗、康复、娱乐为一体的综合型宾馆式养老机构。"+
                                 "<div style='width:720px;height: 500px'>"+
                                 "<img  style='width:100%;height: 100%;'id='LianHua' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.jpeg'>"+
                                 "</div>"+
                                 "</div>",point:"121.402695|31.160113",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},
-                                type:4,img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.png",text:"莲花敬老院"}//莲花敬老院
+                                type:4,img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.png",text:dataOrgan.InfoLianHuaJingLaoYuan}//莲花敬老院
                             ,{title:"古美敬老院",content:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。" +
                                 "  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。" +
                                "已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。"+
                                 "<div style='width:720px;height: 500px'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMei' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png'>"+
                                 "</div>",type:5,point:"121.39056|31.148028",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},type:5,
-                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png",text:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。" +
-                                    "收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。" +
-                                    "已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。"}
+                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png",text:dataOrgan.InfoGuMeiJingLaoYuan}
                             ,{title:"平阳敬老院",content:"上海市闵行区平阳敬老院创建于2008年12月，占地面积824平方米，总建筑面积为4997平方米，绿化面积1018平方米，" +
                                     "总投资1000多万元。院内拥有双人房（或夫妻房）、三人房和七人房共64间，共有床位200张，并有良好的设备、整洁的环境、" +
                                     "严格的管理、周到的服务、医养的融合，是上海市社会福利行业协会会员单位。\n"+
                                 "<div style='width:720px;height: 500px'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingYang' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangGerocomium.png'>"+
                                 "</div>",point:"121.395161|31.140954",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},type:6,
-                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangGerocomium.png",text:"上海市闵行区平阳敬老院创建于2008年12月，" +
-                                    "占地面积824平方米，总建筑面积为4997平方米，绿化面积1018平方米，总投资1000多万元。院内拥有双人房（或夫妻房）、" +
-                                    "三人房和七人房共64间，共有床位200张，并有良好的设备、整洁的环境、严格的管理、周到的服务、医养的融合，是上海市社会福利行业协会会员单位。"}
+                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangGerocomium.png",text:dataOrgan.InfoPingYangJingLaoYuan}
                             ,{title:"乐健长者照护之家",content:"乐健长者照护之家",point:"121.407448|31.148538",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:1,
-                                text:"乐健长者照护之家"}
+                                text:dataOrgan.InfoLeJianZhangZheZhaoHuZhiJia}
                             ,{title:"艾维康长者照护之家",content:"艾维康长者照护之家",point:"121.399399|31.158473",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:2,
-                            text:"艾维康长者照护之家"}
+                            text:dataOrgan.InfoAiWeiKangZhangZheZhaoHuZhiJia}
                             ,{title:"智慧坊长者照护之家",content:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。" +
                                 "长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；" +
                                 "短期照护——对处于慢性病康复期的长者进行专业护理；" +
@@ -242,11 +255,7 @@
                                 "<div style='width:445px;height: 335px;margin-left:20%'>"+
                                 "<img  style='width:100%;height: 100%;id='ZhihuiFang' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/ZhiHuiFang.jpg'>"+
                                 "</div>",point:"121.407592|31.150917",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:3,
-                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/ZhiHuiFang.jpg",text:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。" +
-                                    "                                长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；" +
-                                    "                                短期照护——对处于慢性病康复期的长者进行专业护理；" +
-                                    "                                喘息照护——为长者提供超短期护理，缓解家属护理压力；" +
-                                    "                                日托服务——日托单天护理。"}//unknown
+                            img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/ZhiHuiFang.jpg",text:dataOrgan.InfoZhiHuiFangZhangZheZhaoHuZhiJia}//unknown
                             // ,{title:"平南长者照护之家",content:"艾为养老服务（上海）有限公司注册于上海市，注册资金500万元。公司专注于打造以日间照料、居家养老、社区机构养老三位一体的现代 社区养老模式。经营管理团队具有丰富的执业经验，与北京、重庆、成都、浙江等市区政府构建了良好的业务合作关系。 \n" +
                             //     "              公司致力于传承光大“行孝天下、大爱无疆”的孝道文化，遵循“尊老、敬老、助老、爱老”的服务宗旨，着力尊重客户需求和体验，以专业护理为基础，医养结合为核心，智能养老为方向，为广大健康、空巢、独居、失能、半失能、失智的老年人及术后病人提供一系列的养老综合服务，提供全面解决方案，帮助老人愉悦身心，益智增能，延伸生命尺度和价值。\n",type:5,point:"121.389133|31.158804",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}//0
                             // ,{title:"平阳长者照护之家",content:"在建",type:5,point:"121.411903|31.152524",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}//

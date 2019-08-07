@@ -226,6 +226,10 @@
                                                                     //document.getElementById("pNumAll").innerHTML = 200000;
                                                                     document.getElementById("pNum60").innerHTML = dataR.NumOld;
                                                                     document.getElementById("pNum80").innerHTML = dataR.NumOld80;
+                                                                    //新闻内容
+                                                                    document.getElementById("news1").innerHTML = dataR.News1;
+                                                                    document.getElementById("news2").innerHTML = dataR.News2;
+
                                                                     pieOldNum = dataR.NumOld;
                                                                     pieAllNum = dataR.NumAll;
                                                                     pieOldNum80 = dataR.NumOld80;

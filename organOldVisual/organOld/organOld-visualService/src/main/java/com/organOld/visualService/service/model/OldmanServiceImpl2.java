@@ -65,6 +65,10 @@ public class OldmanServiceImpl2 implements OldmanService {
     }
 
     @Override
+    public List<Map<String,String>> getOrganInfo() {
+        return visualDataDao.getOrganInfo();
+    }
+    @Override
     public List<Map<String,Long>> getVisualDataApartFinish(Date date1, Date date2,Date date3,Date date4) {
         return visualDataDao.getVisualDataApartFinish(date1,date2,date3,date4);
     }
