@@ -37,6 +37,7 @@ public class OrganInfoController {
         jsonObject.put("InfoPingNanPianQu",dataMap.get(0).get("InfoPingNanPianQu"));
         jsonObject.put("InfoPingJiPianQu",dataMap.get(0).get("InfoPingJiPianQu"));
         jsonObject.put("InfoPingYangPianQu",dataMap.get(0).get("InfoPingYangPianQu"));
+        jsonObject.put("InfoDongLanPianQu",dataMap.get(0).get("InfoDongLanPianQu"));
         jsonObject.put("InfoLianHuaJingLaoYuan",dataMap.get(0).get("InfoLianHuaJingLaoYuan"));
         jsonObject.put("InfoGuMeiJingLaoYuan",dataMap.get(0).get("InfoGuMeiJingLaoYuan"));
         jsonObject.put("InfoPingYangJingLaoYuan",dataMap.get(0).get("InfoPingYangJingLaoYuan"));
@@ -71,7 +72,7 @@ public class OrganInfoController {
         jsonObject.put("InfoPingYangSiCun",dataMap.get(0).get("InfoPingYangSiCun"));
         jsonObject.put("InfoPingYangYiCun",dataMap.get(0).get("InfoPingYangYiCun"));
         jsonObject.put("InfoWanYuanSanJu",dataMap.get(0).get("InfoWanYuanSanJu"));
-        jsonObject.put("InfoGuLongWuCun",dataMap.get(0).get("InfoGuLongWuCun"));
+        jsonObject.put("InfoGuLongWuJu",dataMap.get(0).get("InfoGuLongWuJu"));
         jsonObject.put("InfoPingJiLiuCun",dataMap.get(0).get("InfoPingJiLiuCun"));
         jsonObject.put("InfoHuaYiXinCheng",dataMap.get(0).get("InfoHuaYiXinCheng"));
         jsonObject.put("InfoPingJiErCun",dataMap.get(0).get("InfoPingJiErCun"));

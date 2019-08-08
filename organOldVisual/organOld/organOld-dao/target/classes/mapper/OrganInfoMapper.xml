@@ -19,6 +19,9 @@
         where name="平阳片区"
         )InfoPingYangPianQu,
         (select value from news_organ_info
+        where name="东兰片区"
+        )InfoDongLanPianQu,
+        (select value from news_organ_info
         where name="莲花敬老院"
         )InfoLianHuaJingLaoYuan,
         (select value from news_organ_info
@@ -124,7 +127,7 @@
         )InfoWanYuanSanJu,
          (select value from news_organ_info
         where name="古龙五居"
-        )InfoGuLongWuCun,
+        )InfoGuLongWuJu,
          (select value from news_organ_info
         where name="平吉六村"
         )InfoPingJiLiuCun,

@@ -25,26 +25,77 @@
                 </div>
                 <div class="ibox-title">
                     <label class="control-label"id="zc">新闻一内容更改：</label>
-                    <input id="news1_text></input>
+                    <input id="news1_text"></input>
                     <button onclick="updateOrganAndNews(1)">确定更改</button>
 
                 </div>
                 <div class="ibox-title">
                     <label class="control-label"id="zc">新闻二内容更改：</label>
-                    <input id="news2_text></input>
-                    <button onclick="updateOrganAndNews(2)">确定更改</button>
+                    <input id="news2_text"></input>
+                     <button onclick="updateOrganAndNews(2)">确定更改</button>
                 </div>
                 <div class="ibox-title">
                     <label class="control-label"id="zc">机构介绍更改：</label>
                     <label class="control-label"id="zc">机构名：</label>
-                    <select name="tigong" id="tigong">
-                        <option value="喜剧">喜剧</option>
-                        <option value="动作">动作</option>
-                        <option value="未知">未知</option>
-                        <option value="其他">其他</option>
-                    </select>
+                    <select name="" id="jigou">
+                        <option value="古美片区">古美片区</option>
+                        <option value="古龙片区">古龙片区</option>
+                        <option value="平南片区">平南片区</option>
+                        <option value="东兰片区">东兰片区</option>
+                        <option value="平吉片区">平吉片区</option>
+                        <option value="平阳片区">平阳片区</option>
+                        <option value="莲花敬老院">莲花敬老院</option>
+                        <option value="古美敬老院">古美敬老院</option>
+                        <option value="平阳敬老院">平阳敬老院</option>
+                        <option value="乐健长者照护之家">乐健长者照护之家</option>
+                        <option value="艾维康长者照护之家">艾维康长者照护之家</option>
+                        <option value="智慧坊长者照护之家">智慧坊长者照护之家</option>
+                        <option value="东兰一居">东兰一居</option>
+                        <option value="东兰一居">东兰一居</option>
+                        <option value="古龙一居">古龙一居</option>
+                        <option value="古美一村">古美一村</option>
+                        <option value="古龙二居">古龙二居</option>
+                        <option value="古龙三居">古龙三居</option>
+                        <option value="东兰三居">东兰三居</option>
+                        <option value="东兰四居">东兰四居</option>
+                        <option value="平吉三村">平吉三村</option>
+                        <option value="古龙六居">古龙六居</option>
+                        <option value="古美九村">古美九村</option>
+                        <option value="古美七村">古美七村</option>
+                        <option value="华梅花苑">华梅花苑</option>
+                        <option value="梅莲苑">梅莲苑</option>
+                        <option value="平阳二村">平阳二村</option>
+                        <option value="平阳三村">平阳三村</option>
+                        <option value="万源四居">万源四居</option>
 
-                    <input id="organ_name"></input>
+                        <option value="万源一居">万源一居</option>
+                        <option value="东兰二居">东兰二居</option>
+                        <option value="平吉四村">平吉四村</option>
+                        <option value="古龙四居">古龙四居</option>
+                        <option value="古美八村">古美八村</option>
+                        <option value="古美四村">古美四村</option>
+                        <option value="平南三居">平南三居</option>
+                        <option value="平南一居">平南一居</option>
+                        <option value="平阳六村">平阳六村</option>
+                        <option value="平阳四村">平阳四村</option>
+                        <option value="平阳一村">平阳一村</option>
+                        <option value="万源三居">万源三居</option>
+                        <option value="古龙五居">古龙五居</option>
+                        <option value="平吉六村">平吉六村</option>
+                        <option value="华一新城">华一新城</option>
+                        <option value="平吉二村">平吉二村</option>
+                        <option value="平吉五村">平吉五村</option>
+                        <option value="古美三村">古美三村</option>
+                        <option value="古美十村">古美十村</option>
+                        <option value="平南二居">平南二居</option>
+
+                        <option value="平阳五村">平阳五村</option>
+                        <option value="平吉一村">平吉一村</option>
+                        <option value="万源二居">万源二居</option>
+                        <option value="古美路街道办事处">古美路街道办事处</option>
+
+
+                    </select>
                     <label class="control-label"id="zc">机构介绍更改：</label>
                     <input id="organ_text"></input>
 
@@ -76,7 +127,7 @@
             var name="新闻二";
             var content=$(" input[ id='news2_text' ] ").val();
         }else{
-            var name=$(" input[ id='organ_name' ] ").val();
+            var name=document.getElementById("jigou").value
             var content=$(" input[ id='organ_text' ] ").val();
         }
         $.ajax({
