@@ -5,7 +5,7 @@
     }
 </style>
 
-<div class="wrapper wrapper-content animated fadeInRight box" id="table1" >
+<div class="wrapper wrapper-content animated fadeInRight box" id="table1" style="position: relative;">
     <div class="zz"></div>
     <div class="row">
         <div class="col-lg-12">
@@ -32,6 +32,10 @@
             </div>
         </div>
     </div>
+</div>
+<div style="position: absolute;bottom: 30px">
+<#--<button style="position: relative;bottom: 30px">button</button>-->
+    <input type="text"  name="old_name" value="cccc"/>
 </div>
 
 <#include "table_info.ftl" />
@@ -170,6 +174,25 @@
                         $(row).css("background-color", "#607B8B");
                     }
                 },
+                //分页
+                fnDrawCallback: function(table) {
+                    $("#dt_paginate").append("  到第 <input style='height:28px;line-height:28px;width:40px;' class='margin text-center' id='changePage' type='text'> 页  <a class='btn btn-default shiny' style='margin-bottom:5px' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
+                    var oTable = $("#dt").dataTable();
+                    $('#dataTable-btn').click(function(e) {
+                        if($("#changePage").val() && $("#changePage").val() > 0) {
+                            var redirectpage = $("#changePage").val() - 1;
+                        } else {
+                            var redirectpage = 0;
+                        }
+                        //oTable.columns( 2 ).search("卢世声",true,false).draw();//对第二列进行模糊非智能搜索
+                        sex = 2;
+                        oTable.fnFilter();
+
+                        oTable.fnPageChange(redirectpage);
+                    });
+                },
+
+                //
                 "sAjaxSource": "/VTabel/getOld",//这个是请求的地址
                 "fnServerData": retrieveData
             });
