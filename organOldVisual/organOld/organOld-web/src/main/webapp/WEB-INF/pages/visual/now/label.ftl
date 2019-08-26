@@ -599,7 +599,8 @@
         var div = document.createElement("div");
         div.setAttribute("id", "org_text");
 
-        div.innerHTML = json.text;
+        var text="名称："+json.name+"<br>"+"简介："+json.intro+"<br>"+"电话："+json.phone+"<br>"+"地址："+json.address;
+        div.innerHTML = text;
         parent.appendChild(div);
 
         //添加div
@@ -2719,6 +2720,7 @@
         $("#label"+index).show();
 
     }
+    var name;
     var dataLabel;
     var jwData;
     var heatPoints=[];
@@ -2864,6 +2866,23 @@
                         $(row).css("background-color", "#607B8B");
                     }
                 },
+                fnDrawCallback: function(table) {
+                    $("#dt_paginate").append("  到第 <input style='height:25px;line-height:20px;width:40px;position:relative;top:2px' class='margin text-center' id='changePage' type='text'> 页  <a class='btn btn-default shiny' style='margin-bottom:5px;padding:0px 0px;position:absolute;left:600px;bottom:3px' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
+                    var oTable = $("#dt").dataTable();
+                    $('#dataTable-btn').click(function(e) {
+                        if($("#changePage").val() && $("#changePage").val() > 0) {
+                            var redirectpage = $("#changePage").val() - 1;
+                        } else {
+                            var redirectpage = 0;
+                        }
+                        var t=document.getElementById("old_name");
+                        name=t.value;
+                        oTable.fnFilter();
+
+                        document.getElementById("old_name").value="";
+                        oTable.fnPageChange(redirectpage);
+                    });
+                },
                 "sAjaxSource": "/VTabel/getOld",//这个是请求的地址
                 "fnServerData": retrieveData
             });
@@ -2912,7 +2931,8 @@
                     "oldStatus_array":oldStatus,
                     "isVolunteer":isVolunteer,
                     "isService":isService,
-                    "district_array":mapDistrict
+                    "district_array":mapDistrict,
+                    "name":name
                     //"jw_array":jw
 
                 },
@@ -2929,6 +2949,18 @@
             });
         }
 
+        //document.getElementById("dataTable-btn").style.padding=0+'px '+12+'px';
+        //表格确认按钮样式修改动态保持
+        document.getElementById("dataTable-btn").style.padding=0+'px '+0+'px';
+        document.getElementById("dataTable-btn").style.position='absolute';
+        document.getElementById("dataTable-btn").style.left=600+'px';
+        document.getElementById("dataTable-btn").style.bottom=3+'px';
+
+        //changePage样式修改动态保持
+        document.getElementById("changePage").style.position='relative';
+        document.getElementById("changePage").style.top=1+'px';
+        document.getElementById("changePage").style.height=25+'px';
+        //
         document.getElementById("dt_paginate").style.width=600+'px';
         //document.getElementById("dt_info").style.display="none";
         document.getElementById("dt_paginate").style.position='relative';
@@ -3200,6 +3232,7 @@
     }
     function clearLabels(){
         $('#selectLabel').html('');
+        name="";
         sex = 0;
         census = [];
         ageStart = 0;

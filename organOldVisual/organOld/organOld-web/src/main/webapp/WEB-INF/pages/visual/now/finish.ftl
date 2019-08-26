@@ -5596,7 +5596,7 @@
                                                                             sn_all=dataR.NumPingJiZCAndShiNeng+dataR.NumPingNanZCAndShiNeng+dataR.NumGuMeiZCAndShiNeng,
                                                                             sz_all=dataR.NumPingJiZCAndShiZhi+dataR.NumPingNanZCAndShiZhi+dataR.NumGuMeiZCAndShiZhi,
                                                                             zl_all=dataR.NumPingJiZCAndZiLi+dataR.NumPingNanZCAndZiLi+dataR.NumGuMeiZCAndZiLi;
-                                                                    title_text = "床位数";
+                                                                    title_text = "餐位数";
                                                                     legend_data = [{name: '已入住', textStyle: {color: legend_color, fontSize: 8}}, {
                                                                         name: '剩余',
                                                                         textStyle: {color: legend_color, fontSize: 8}
@@ -5673,7 +5673,7 @@
                                                                     }];
                                                                     var zcdOldman_option_sub_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
-                                                                    title_text="床位数";
+                                                                    title_text="餐位数";
                                                                     legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
                                                                     series=[{
                                                                         name: '老人户籍',
@@ -5747,7 +5747,7 @@
                                                                     }];
                                                                     var zcdOldman_option_1_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
-                                                                    title_text="床位数";
+                                                                    title_text="餐位数";
                                                                     legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
                                                                     series=[{
                                                                         name: '老人户籍',
@@ -5821,7 +5821,7 @@
                                                                     }];
                                                                     var zcdOldman_option_2_wl =chartPieForOrgOldHealth(title_text, legend_data, series);
 
-                                                                    title_text="床位数";
+                                                                    title_text="餐位数";
                                                                     legend_data=[{name:'已入住',textStyle:{color:legend_color,fontSize:8}},{name:'剩余',textStyle:{color:legend_color,fontSize:8}}];
                                                                     series=[{
                                                                         name: '老人户籍',
@@ -8295,8 +8295,8 @@
                                                                             ageEnd=120;
 
                                                                         }else if(name=="非老人"){
-                                                                            ageStart=0;
-                                                                            ageEnd=59;
+                                                                            //ageStart=0;
+                                                                            //ageEnd=59;
 
                                                                         }
                                                                         table.fnFilter();

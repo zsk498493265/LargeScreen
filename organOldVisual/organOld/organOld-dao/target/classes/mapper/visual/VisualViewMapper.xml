@@ -416,6 +416,9 @@
                 ${item}
             </foreach>
         </if>
+        <if test="entity!=null and entity.name!=null and entity.name != ''">
+            and o.name like concat('%',#{entity.name},'%')
+        </if>
         limit #{start},#{length}
     </select>
 
@@ -626,6 +629,9 @@
             <foreach collection="entity.politicalStatusArray" index="index" item="item" open="(" separator="," close=")">
                 ${item}
             </foreach>
+        </if>
+        <if test="entity!=null and entity.name!=null and entity.name != ''">
+            and o.name like concat('%',#{entity.name},'%')
         </if>
 
 

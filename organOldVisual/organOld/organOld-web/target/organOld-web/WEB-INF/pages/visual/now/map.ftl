@@ -75,7 +75,9 @@
                 <div style="width: 300px; height: 200px;right: 1.5%;top: -20px;position: absolute;z-index: 2;">
                     <#--<img src="/static/img/map/btn.jpg" onclick="clear_select()">-->
                     <p id="date" style="font-size: 30px" onclick="clear_select()"></p>
+                    <img src="/static/img/news/clear3.png" onclick="clearLabels()" style="position: relative;top:610px;right:-160px;height:18px">$</img>
                 </div>
+
 
                 <script type="text/javascript">
                     //js获取日期
@@ -213,41 +215,43 @@
                                 }
                             }
                         });
-                        console.log(dataOrgan);
+
+                        //console.log(dataOrgan);
+                        var testInfo="https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.jpeg";
                         markerArr = [
 
-                            {title:"古美片区",content:dataOrgan.InfoGuMeiPianQu,point:"121.412299|31.148708",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-1},type:-1,text:dataOrgan.InfoGuMeiPianQu}
-                            ,{title:"古龙片区",content:"古龙片区",point:"121.410071|31.154518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-2},type:-2,text:dataOrgan.InfoGuLongPianQu}
-                            ,{title:"平南片区",content:"平南片区",point:"121.39965|31.157237",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-3},type:-3,text:dataOrgan.InfoPingNanPianQu}
-                            ,{title:"东兰片区",content:"东兰片区",point:"121.389302|31.158659",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-4},type:-4,text:dataOrgan.InfoDongLanPianQu}
-                            ,{title:"平吉片区",content:"平吉片区",point:"121.391242|31.150871",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-5},type:-5,text:dataOrgan.InfoPingJiPianQu}
-                            ,{title:"平阳片区",content:"平阳片区",point:"121.394333|31.140857",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-6},type:-6,text:dataOrgan.InfoPingYangPianQu}
+                            {title:"古美片区",id:62,content:dataOrgan.InfoGuMeiPianQu,point:"121.412299|31.148708",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-1},type:-1,text:dataOrgan.InfoGuMeiPianQu}
+                            ,{title:"古龙片区",id:11,content:"古龙片区",point:"121.410071|31.154518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-2},type:-2,text:dataOrgan.InfoGuLongPianQu}
+                            ,{title:"平南片区",id:83,content:"平南片区",point:"121.39965|31.157237",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-3},type:-3,text:dataOrgan.InfoPingNanPianQu}
+                            ,{title:"东兰片区",id:12,content:"东兰片区",point:"121.389302|31.158659",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-4},type:-4,text:dataOrgan.InfoDongLanPianQu}
+                            ,{title:"平吉片区",id:96,content:"平吉片区",point:"121.391242|31.150871",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-5},type:-5,text:dataOrgan.InfoPingJiPianQu}
+                            ,{title:"平阳片区",id:86,content:"平阳片区",point:"121.394333|31.140857",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-6},type:-6,text:dataOrgan.InfoPingYangPianQu}
                             //老有所养
-                            ,{title:"莲花敬老院",content:"<div style='width:720px;height: 1200px'>"+"上海市闵行区莲花敬老院，位于闵行区莲花路1115号，东近中环线，是目前市内难得的地处黄金地段，生活环境理想的老年公寓。我院占地面积4900平方米，建筑面积7480平方米，绿化面积1800平方米，拥有养老床位187张，是一所重点投资建设的集休养、医疗、康复、娱乐为一体的综合型宾馆式养老机构。"+
+                            ,{title:"莲花敬老院",id:79,content:"<div style='width:720px;height: 1200px'>"+"上海市闵行区莲花敬老院，位于闵行区莲花路1115号，东近中环线，是目前市内难得的地处黄金地段，生活环境理想的老年公寓。我院占地面积4900平方米，建筑面积7480平方米，绿化面积1800平方米，拥有养老床位187张，是一所重点投资建设的集休养、医疗、康复、娱乐为一体的综合型宾馆式养老机构。"+
                                 "<div style='width:720px;height: 500px'>"+
-                                "<img  style='width:100%;height: 100%;'id='LianHua' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.jpeg'>"+
+                                "<img  style='width:100%;height: 100%;'id='LianHua' src=''>"+
                                 "</div>"+
                                 "</div>",point:"121.402695|31.160113",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},
                                 type:4,img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/LianHua.png",text:dataOrgan.InfoLianHuaJingLaoYuan}//莲花敬老院
-                            ,{title:"古美敬老院",content:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。" +
-                                "  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有  各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。" +
+                            ,{title:"古美敬老院",id:115,content:"上海闵行区古美敬老院，位于闵行区虹莘路2288弄135号（平吉二村内）交通便利。房间设施设备齐全、有线电视、电扇、卫生设备、空调、呼叫装置一应齐全，院内还设有餐厅、健身房、棋牌室、阅览室等。" +
+                                "  收养对象为身体健康为能自理、有困难或完全不能自理的老人，包括患有各类老年疾病的、患有老年痴呆症及需要临终关怀的老人，为他们提供长期的 养老和日托服务，是一所集养老、康复、护理、娱乐为一体的综合型养老机构。" +
                                "已成为地区老年人不可多得的“养老福地”，入住率始终保持95%以上。"+
                                 "<div style='width:720px;height: 500px'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMei' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png'>"+
                                 "</div>",type:5,point:"121.39056|31.148028",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},type:5,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiGericomium.png",text:dataOrgan.InfoGuMeiJingLaoYuan}
-                            ,{title:"平阳敬老院",content:"上海市闵行区平阳敬老院创建于2008年12月，占地面积824平方米，总建筑面积为4997平方米，绿化面积1018平方米，" +
+                            ,{title:"平阳敬老院",id:114,content:"上海市闵行区平阳敬老院创建于2008年12月，占地面积824平方米，总建筑面积为4997平方米，绿化面积1018平方米，" +
                                     "总投资1000多万元。院内拥有双人房（或夫妻房）、三人房和七人房共64间，共有床位200张，并有良好的设备、整洁的环境、" +
                                     "严格的管理、周到的服务、医养的融合，是上海市社会福利行业协会会员单位。\n"+
                                 "<div style='width:720px;height: 500px'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingYang' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangGerocomium.png'>"+
                                 "</div>",point:"121.395161|31.140954",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:1},type:6,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangGerocomium.png",text:dataOrgan.InfoPingYangJingLaoYuan}
-                            ,{title:"乐健长者照护之家",content:"乐健长者照护之家",point:"121.407448|31.148538",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:1,
+                            ,{title:"乐健长者照护之家",id:9,content:"乐健长者照护之家",point:"121.407448|31.148538",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:1,
                                 text:dataOrgan.InfoLeJianZhangZheZhaoHuZhiJia}
-                            ,{title:"艾维康长者照护之家",content:"艾维康长者照护之家",point:"121.399399|31.158473",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:2,
+                            ,{title:"艾维康长者照护之家",id:14,content:"艾维康长者照护之家",point:"121.399399|31.158473",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:2},type:2,
                             text:dataOrgan.InfoAiWeiKangZhangZheZhaoHuZhiJia}
-                            ,{title:"智慧坊长者照护之家",content:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。" +
+                            ,{title:"智慧坊长者照护之家",id:118,content:"古美智汇坊——平阳为老服务中心位于闵行区平阳路1526号（近虹莘路）， 2016年7月开业，建筑面积420㎡，包括18张照护床位，若干个日托服务。为面向半护理、全护理长者提供托付、照护的智慧养老场所。包含长期照护、短期照护、日托照护服务、健康管理、营养餐饮等多种为老服务，更有亲情式24小时贴心专业护理，让长者享受食、住、娱、医、养、护的一站式养老服务。" +
                                 "长期照护——为中轻度失能长者进行健康生活管理，提供心理上的亲情服务，使他们拥有更有尊严的生活；" +
                                 "短期照护——对处于慢性病康复期的长者进行专业护理；" +
                                 "喘息照护——为长者提供超短期护理，缓解家属护理压力；" +
@@ -261,174 +265,174 @@
                             // ,{title:"平阳长者照护之家",content:"在建",type:5,point:"121.411903|31.152524",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}//
 
                             //老有所乐?
-                            ,{title:"东兰一居",content:"东兰一居"+
+                            ,{title:"东兰一居",id:1,content:"东兰一居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='DongLanFir' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanFir.jpg'>"+
                                 "</div>",point:"121.389133|31.158804",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:10,img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanFir.jpg",text:dataOrgan.InfoDongLanYiJu}
-                            ,{title:"古龙一居",content:"古龙一居"+
+                            ,{title:"古龙一居",id:2,content:"古龙一居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:50%;height: 100%;'id='GuLongFir' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongFir.png'>"+
                                 "</div>",point:"121.410277|31.151814",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:8,img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongFir.png",
                             text:dataOrgan.InfoGuLongYiJu}
-                            ,{title:"古美一村",content:"古美一村"+
+                            ,{title:"古美一村",id:3,content:"古美一村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMeiFir' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiFir.png'>"+
                                 "</div>",point:"121.409142|31.148518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:7,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiFir.png",text:dataOrgan.InfoGuMeiYiCun}
-                            ,{title:"古龙二居",content:"古龙二居"+
+                            ,{title:"古龙二居",id:13,content:"古龙二居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuLongSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongSec.png'>"+
                                 "</div>",point:"121.411089|31.152975",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:8,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongSec.png",text:dataOrgan.InfoGuLongErJu}
-                            ,{title:"古龙三居",content:"古龙三居"+
+                            ,{title:"古龙三居",id:45,content:"古龙三居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuLongThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongThird.png'>"+
                                 "</div>",point:"121.406289|31.155351",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:8,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongThird.png",text:dataOrgan.InfoGuLongSanJu}
-                            ,{title:"东兰三居",content:"东兰三居"+
+                            ,{title:"东兰三居",id:59,content:"东兰三居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='DongLanThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanThird.png'>"+
                                 "</div>",point:"121.387235|31.157819",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:10,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanThird.png",text:dataOrgan.InfoDongLanSanJu}
-                            ,{title:"东兰四居",content:"东兰四居"+
+                            ,{title:"东兰四居",id:60,content:"东兰四居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='DongLanForth' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanForth.jpg'>"+
                                 "</div>",point:"121.388044|31.161102",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:10,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanForth.jpg",text:dataOrgan.InfoDongLanSiJu}
-                            ,{title:"平吉三村",content:"平吉三村"+
+                            ,{title:"平吉三村",id:113,content:"平吉三村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingJiThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiThird.png'>"+
                                 "</div>",point:"121.392393|31.145568",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiThird.png",text:dataOrgan.InfoPingJiSanCun}
-                            ,{title:"古龙六居",content:"古龙六居"+
+                            ,{title:"古龙六居",id:63,content:"古龙六居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuLongSix' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongSix.png'>"+
                                 "</div>",point:"121.411512|31.159194",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:8,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongSix.png",text:dataOrgan.InfoGuLongLiuJu}
-                            ,{title:"古美九村",content:"古美九村"+
+                            ,{title:"古美九村",id:66,content:"古美九村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMeiNine' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiNine.jpg'>"+
                                 "</div>",point:"121.411598|31.146782",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:7,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiNine.jpg",text:dataOrgan.InfoGuMeiJiuCun}
-                            ,{title:"古美七村",content:"古美七村"+
+                            ,{title:"古美七村",id:67,content:"古美七村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMeiSeven' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiSeven.png'>"+
                                 "</div>",point:"121.41470|31.151291",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:7,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiSeven.png",text:dataOrgan.InfoGuMeiQiCun}
-                            ,{title:"华梅花苑",content:"华梅花苑"+
+                            ,{title:"华梅花苑",id:84,content:"华梅花苑"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='HuaMeiHuaGarden' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/HuaMeiGarden.png'>"+
                                 "</div>",point:"121.410200|31.162142",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/HuaMeiGarden.png",text:dataOrgan.InfoHuaMeiHuaYuan}
-                            ,{title:"梅莲苑",content:"梅莲苑"+
+                            ,{title:"梅莲苑",id:85,content:"梅莲苑"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='HuaMeiHuaGarden' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/MeiLianGarden.png'>"+
                                 "</div>",point:"121.407256|31.166000",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/MeiLianGarden.png",text:dataOrgan.InfoMeiLianYuan}
 
-                            ,{title:"平阳二村   ",content:"平阳二村"+
+                            ,{title:"平阳二村",id:87,content:"平阳二村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingYangSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangSec.png'>"+
                                 "</div>",point:"121.396912|31.143988",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangSec.png",text:dataOrgan.InfoPingYangErCun}
-                            ,{title:"平阳三村",content:"平阳三村"+
+                            ,{title:"平阳三村",id:88,content:"平阳三村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingYangThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangThird.png'>"+
                                 "</div>",point:"121.39388|31.139939",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangThird.png",text:dataOrgan.InfoPingYangSanCun}
-                            ,{title:"万源四居",content:"万源四居"+
+                            ,{title:"万源四居",id:89,content:"万源四居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='WanYuanForth' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangThird.png'>"+
                                 "</div>",point:"121.404052|31.151059",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangThird.png",text:dataOrgan.InfoWanYuanSiJu}
-                            ,{title:"万源一居",content:"万源一居"+
+                            ,{title:"万源一居",id:90,content:"万源一居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='WanYuanFir' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanFir.jpg'>"+
                                 "</div>",point:"121.399151|31.153805",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanFir.jpg",text:dataOrgan.InfoWanYuanYiJu}
-                            ,{title:"东兰二居",content:"东兰二居"+
+                            ,{title:"东兰二居",id:135,content:"东兰二居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='DongLanSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanSec.JPG'>"+
                                 "</div>",point:"121.393436|31.157818",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:10,text:dataOrgan.InfoDongLanErJu}
-                            ,{title:"平吉四村",content:"平吉四村",type:5,point:"121.391183|31.153482",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,
+                            ,{title:"平吉四村",id:212,content:"平吉四村",type:5,point:"121.391183|31.153482",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/DongLanSec.JPG",text:dataOrgan.InfoPingJiSiCun}
-                            ,{title:"古龙四居",content:"古龙四居"+
+                            ,{title:"古龙四居",id:98,content:"古龙四居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuLongForth' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongForth.png'>"+
                                 "</div>",point:"121.412186|31.155164",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuLongForth.png",text:dataOrgan.InfoGuLongSiJu}
-                            ,{title:"古美八村",content:"古美八村",point:"121.409878|31.145572",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:7},text:dataOrgan.InfoGuMeiBaCun}
-                            ,{title:"古美四村",content:"古美四村",point:"121.410402|31.148453",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:7},text:dataOrgan.InfoGuMeiSiCun}
-                            ,{title:"平南三居",content:"平南三居"+
+                            ,{title:"古美八村",id:99,content:"古美八村",point:"121.409878|31.145572",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:7},text:dataOrgan.InfoGuMeiBaCun}
+                            ,{title:"古美四村",id:100,content:"古美四村",point:"121.410402|31.148453",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:7},text:dataOrgan.InfoGuMeiSiCun}
+                            ,{title:"平南三居",id:101,content:"平南三居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingNanThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingNanThird.png'>"+
                                 "</div>",point:"121.397204|31.159934",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingNanThird.png",text:dataOrgan.InfoPingNanSanJu}
-                            ,{title:"平南一居",content:"平南一居"+
+                            ,{title:"平南一居",id:102,content:"平南一居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingNanFir' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingNanFir.png'>"+
                                 "</div>",point:"121.400571|31.160467",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingNanFir.png",text:dataOrgan.InfoPingNanYiJu}
-                            ,{title:"平阳六村",content:"平阳六村"+
+                            ,{title:"平阳六村",id:103,content:"平阳六村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingYangSix' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangSix.png'>"+
                                 "</div>",point:"121.397188|31.136772",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangSix.png",text:dataOrgan.InfoPingYangLiuCun}
-                            ,{title:"平阳四村",content:"平阳四村"+
+                            ,{title:"平阳四村",id:104,content:"平阳四村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingYangForth' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangForth.png'>"+
                                 "</div>",point:"121.396699|31.138846",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangForth.png",text:dataOrgan.InfoPingYangSiCun}
 
-                            ,{title:"平阳一村",content:"平阳一村",point:"121.389500|31.141276",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,text:dataOrgan.InfoPingYangYiCun}
-                            ,{title:"万源三居",content:"万源三居"+
+                            ,{title:"平阳一村",id:105,content:"平阳一村",point:"121.389500|31.141276",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,text:dataOrgan.InfoPingYangYiCun}
+                            ,{title:"万源三居",id:106,content:"万源三居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='WanYuanThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanThird.jpg'>"+
                                 "</div>",point:"121.403865|31.152716",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanThird.jpg",text:dataOrgan.InfoWanYuanSanJu}
-                            ,{title:"古龙五居",content:"古龙五居",point:"121.405819|31.155885",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:8,text:dataOrgan.InfoGuLongWuJu}
-                            ,{title:"平吉六村",content:"平吉六村"+
+                            ,{title:"古龙五居",id:107,content:"古龙五居",point:"121.405819|31.155885",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:8,text:dataOrgan.InfoGuLongWuJu}
+                            ,{title:"平吉六村",id:108,content:"平吉六村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingJiSix' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiSix.png'>"+
                                 "</div>",point:"121.395925|31.148518",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiSix.png",text:dataOrgan.InfoPingJiLiuCun}
-                            ,{title:"华一新城",content:"华一新城"+
+                            ,{title:"华一新城",id:119,content:"华一新城"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='HuaYi' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/HuaYiNewCity.png'>"+
                                 "</div>",point:"121.405043|31.162622",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/HuaYiNewCity.png",text:dataOrgan.InfoHuaYiXinCheng}
-                            ,{title:"平吉二村",content:"平吉二村"+
+                            ,{title:"平吉二村",id:120,content:"平吉二村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingJiSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiSec.png'>"+
                                 "</div>",point:"121.388900|31.14893",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiSec.png",text:dataOrgan.InfoPingJiErCun}
-                            ,{title:"平吉五村",content:"平吉五村",point:"121.3945|31.151394",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,text:dataOrgan.InfoPingJiWuCun}
-                            ,{title:"古美三村",content:"古美三村"+
+                            ,{title:"平吉五村",id:121,content:"平吉五村",point:"121.3945|31.151394",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,text:dataOrgan.InfoPingJiWuCun}
+                            ,{title:"古美三村",id:122,content:"古美三村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMeiThird' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiThird.png'>"+
                                 "</div>",point:"121.408875|31.147336",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:7,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiThird.png",text:dataOrgan.InfoGuMeiSanCun}
-                            ,{title:"古美十村",content:"古美十村"+
+                            ,{title:"古美十村",id:123,content:"古美十村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='GuMeiTenth' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiTenth.png'>"+
                                 "</div>",point:"121.414226|31.1478032",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:7,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/GuMeiTenth.png",text:dataOrgan.InfoGuMeiShiCun}
-                            ,{title:"平南二居",content:"平南二居"+
+                            ,{title:"平南二居",id:124,content:"平南二居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingNanSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingNanSec.png'>"+
                                 "</div>",point:"121.397218|31.158308",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingNanSec.png",text:dataOrgan.InfoPingNanErJu}
-                            ,{title:"平阳五村",content:"平阳五村"+
+                            ,{title:"平阳五村",id:125,content:"平阳五村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingYangFifth' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangFifth.jpg'>"+
                                 "</div>",point:"121.393407|31.13485",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:12,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingYangFifth.jpg",text:dataOrgan.InfoPingYangWuCun}
-                            ,{title:"平吉一村",content:"平吉一村"+
+                            ,{title:"平吉一村",id:126,content:"平吉一村"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:100%;height: 100%;'id='PingJiFir' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiFir.jpg'>"+
                                 "</div>",point:"121.388900|31.151069",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:11,
                             img:"https://organold.oss-cn-shanghai.aliyuncs.com/img/PingJiFir.jpg",text:dataOrgan.InfoPingJiYiCun}
-                            ,{title:"万源二居",content:"万源二居"+
+                            ,{title:"万源二居",id:134,content:"万源二居"+
                                 "<div style='width:720px;height: 500px;'>"+
                                 "<img  style='width:50%;height: 100%;'id='WanYuanSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanSec.png'>"+
                                 "</div>",point:"121.401069|31.155103",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:0},type:9,
@@ -440,7 +444,7 @@
                             // ,{title:"东兰片区",content:"东兰片区",point:"121.389302|31.158659",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-4},type:-4}
                             // ,{title:"平吉片区",content:"平吉片区",point:"121.391242|31.150871",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-5},type:-5}
                             // ,{title:"平阳片区",content:"平阳片区",point:"121.394333|31.140857",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:-6},type:-6}
-                            ,{title:"古美路街道办事处",content:"古美街道"+
+                            ,{title:"古美路街道办事处",id:232,content:"古美街道"+
                         "<div style='width:720px;height: 500px;'>"+
                         "<img  style='width:50%;height: 100%;'id='WanYuanSec' src='https://organold.oss-cn-shanghai.aliyuncs.com/img/WanYuanSec.png'>"+
                         "</div>",point:"121.400746|31.152942",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5,type:100},type:100,text:dataOrgan.InfoGuMeiLuJieDaoBanShiChu}
@@ -450,6 +454,33 @@
                             //老有所为 0
 
                         ];
+                        //test
+                        var OrganArray=new Array();
+                        for(var i=0;i<markerArr.length;i++)
+                        {
+                            $.ajax({
+                                url: "http://47.101.138.13:83/map/getDetails",
+                                type: "get",
+                                data: {
+                                    organId:markerArr[i].id
+                                },
+                                async: false,
+                                success: function (result) {
+                                    if (result.success == true) {
+                                        //dataOrgan=result.data;
+                                        markerArr[i].intro=result.data.intro;
+                                        markerArr[i].img=result.data.imgUrl;
+                                        markerArr[i].phone=result.data.phone;
+                                        markerArr[i].name=result.data.name;
+                                        markerArr[i].address=result.data.address;
+
+                                    }
+                                }
+                            });
+                        }
+
+                        //alert("1111:"+markerArr[0].intro);
+                        //
                         //创建marker
                         function addMarker(){
                             for(var i=0;i<markerArr.length;i++){

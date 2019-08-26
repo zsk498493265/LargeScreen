@@ -33,9 +33,9 @@
         </div>
     </div>
 </div>
-<div style="position: absolute;bottom: 30px">
-<#--<button style="position: relative;bottom: 30px">button</button>-->
-    <input type="text"  name="old_name" value="cccc"/>
+<div style="position:absolute;bottom: 29px;left:700px;z-index: 100">
+<#--<button style="position: relative;bottom: 30px">button</butt世声on>-->
+    <input type="text"  id ="old_name"name="old_name" style="height: 25px" value=""/>
 </div>
 
 <#include "table_info.ftl" />
@@ -176,7 +176,9 @@
                 },
                 //分页
                 fnDrawCallback: function(table) {
-                    $("#dt_paginate").append("  到第 <input style='height:28px;line-height:28px;width:40px;' class='margin text-center' id='changePage' type='text'> 页  <a class='btn btn-default shiny' style='margin-bottom:5px' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
+                    $("#dt_paginate").append("  到第 <input class='margin text-center' style='height:25px;line-height:20px;width:40px;position:relative;top:2px' id='changePage' type='text'> 页  <a class='btn btn-default shiny' style='margin-bottom:5px;padding:0px 0px;position:absolute;left:600px;bottom:3px' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
+                   // $("#dt_paginate").append("  到第 <input style='height:30px;line-height:28px;width:40px;' class='margin text-center' id='changePage' type='text'> 页  <a class='btn btn-default shiny' style='margin-bottom:5px;padding:0px 12px' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
+
                     var oTable = $("#dt").dataTable();
                     $('#dataTable-btn').click(function(e) {
                         if($("#changePage").val() && $("#changePage").val() > 0) {
@@ -185,8 +187,12 @@
                             var redirectpage = 0;
                         }
                         //oTable.columns( 2 ).search("卢世声",true,false).draw();//对第二列进行模糊非智能搜索
-                        sex = 2;
+                        var t=document.getElementById("old_name");
+                       name=t.value;
+                        //alert(name);
                         oTable.fnFilter();
+                        //clearLabels();
+                        document.getElementById("old_name").value="";
 
                         oTable.fnPageChange(redirectpage);
                     });
@@ -241,7 +247,8 @@
                     "oldStatus_array":oldStatus,
                     "isVolunteer":isVolunteer,
                     "isService":isService,
-                    "district_array":mapDistrict
+                    "district_array":mapDistrict,
+                    "name":name
 
                 },
 
@@ -264,6 +271,19 @@
         //$('#table1').bootstrapTable('selectPage',7);
         //表格不分行
         //alert(document.getElementById("dt_paginate").style.width);
+        //表格确认按钮样式修改动态保持
+        document.getElementById("dataTable-btn").style.padding=0+'px '+0+'px';
+        document.getElementById("dataTable-btn").style.position='absolute';
+        document.getElementById("dataTable-btn").style.left=600+'px';
+        document.getElementById("dataTable-btn").style.bottom=3+'px';
+
+        //changePage样式修改动态保持
+        document.getElementById("changePage").style.position='relative';
+        document.getElementById("changePage").style.top=1+'px';
+        document.getElementById("changePage").style.height=25+'px';
+
+        //
+        //
         document.getElementById("dt_paginate").style.width=600+'px';
         //document.getElementById("dt_info").style.display="none";
 

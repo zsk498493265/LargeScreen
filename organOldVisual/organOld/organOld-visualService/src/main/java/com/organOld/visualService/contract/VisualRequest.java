@@ -41,6 +41,7 @@ public class VisualRequest implements NeiboRequest {
     private Integer shenghuo ;
     private Integer isVolunteer;
     private Integer isService;
+    private String name;
 
     public String[] getThirdTypeArray() {
         return thirdTypeArray;
@@ -362,5 +363,13 @@ public class VisualRequest implements NeiboRequest {
 
     public void setIsService(Integer isService) {
         this.isService = isService;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
