@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
 
@@ -24,16 +24,52 @@
                     <button onclick="updateView()">更新数据</button>
                 </div>
                 <div class="ibox-title">
-                    <label class="control-label"id="zc">新闻一内容更改：</label>
-                    <input id="news1_text"></input>
-                    <button onclick="updateOrganAndNews(1)">确定更改</button>
+                    <form method="post" action="/visual/data/updateOrgAndNews" class="form-horizontal"  enctype="multipart/form-data">
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">机构信息</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" value="" name="name"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">简介</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" value="" name="content"/>
+                            </div>
+                        </div>
+                        <#--<div class="hr-line-dashed"></div>-->
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">照片</label>
+                            <div class="col-sm-8">
+                                <input type="file" class="form-control" value="" name="pic"/>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <#--<label class="control-label"id="zc">新闻一内容更改：</label>-->
+                    <#--<input id="news1_text"></input>-->
+                    <#--<br>-->
+                    <#--<label class="control-label"id="zc">新闻一图片更改：</label>-->
+                    <#--<input type="file" id="news1_pic"></input>-->
+                    <#--<button onclick="updateOrganAndNews(1)">确定更改</button>-->
 
                 </div>
-                <div class="ibox-title">
-                    <label class="control-label"id="zc">新闻二内容更改：</label>
-                    <input id="news2_text"></input>
-                     <button onclick="updateOrganAndNews(2)">确定更改</button>
-                </div>
+                <#--<div class="ibox-title">-->
+                    <#--<label class="control-label"id="zc">新闻二内容更改：</label>-->
+                    <#--<input id="news2_text"></input>-->
+                    <#--<button onclick="updateOrganAndNews(2)">确定更改</button>-->
+                <#--</div>-->
                 <div class="ibox-title">
                     <label class="control-label"id="zc">机构介绍更改：</label>
                     <label class="control-label"id="zc">机构名：</label>

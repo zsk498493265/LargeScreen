@@ -50,10 +50,10 @@
                 <!-- 轮播（Carousel）项目 -->
                 <div class="carousel-inner"  style="height: 215px">
                     <div class="item active">
-                        <img src="/static/img/news/22.png" alt="First slide" >
+                        <img id="newsPic2" alt="First slide" >
                     </div>
                     <div class="item">
-                        <img src="/static/img/news/11.png" alt="Second slide" >
+                        <img id="newsPic1" alt="Second slide" >
                     </div>
                     <#--<div class="item">-->
                         <#--<img src="/static/img/news/3.jpg" alt="Third slide" >-->

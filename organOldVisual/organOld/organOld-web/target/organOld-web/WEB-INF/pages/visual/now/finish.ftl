@@ -229,6 +229,9 @@
                                                                     //新闻内容
                                                                     document.getElementById("news1").innerHTML = dataR.News1;
                                                                     document.getElementById("news2").innerHTML = dataR.News2;
+                                                                    document.getElementById("newsPic1").src = dataR.NewsPic1;
+                                                                    document.getElementById("newsPic2").src = dataR.NewsPic2;
+                                                                    alert(dataR.NewsPic1);
 
                                                                     pieOldNum = dataR.NumOld;
                                                                     pieAllNum = dataR.NumAll;

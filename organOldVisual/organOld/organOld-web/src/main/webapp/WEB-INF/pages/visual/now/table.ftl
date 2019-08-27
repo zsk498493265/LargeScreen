@@ -33,9 +33,9 @@
         </div>
     </div>
 </div>
-<div style="position:absolute;bottom: 29px;left:700px;z-index: 100">
+<div style="position:absolute;bottom: 26px;left:821px;z-index: 100">
 <#--<button style="position: relative;bottom: 30px">button</butt世声on>-->
-    <input type="text"  id ="old_name"name="old_name" style="height: 25px" value=""/>
+    <input type="text"  id ="old_name"name="old_name" style="height: 28px;width: 60px;border: 1px;border-radius: 4px" value=""/>
 </div>
 
 <#include "table_info.ftl" />
@@ -43,7 +43,8 @@
     $("#table1").css("margin-top",(winHeight/1.5+125)+"px");
     $("#table1").css("height",156.5+"px");
     var tableWidth=document.getElementById('dt');
-    tableWidth.style.width='105%';
+    // tableWidth.style.width='105%';
+    tableWidth.style.width=820+'px';
     tableWidth.style.height='80%';
     var label=[];//用于标签页面
     // var sex;
@@ -122,7 +123,7 @@
                     {
                         "targets": [7], // 目标列位置，下标从0开始
                         "data": "name", // 数据列名
-                        sWidth:"20%",
+                        sWidth:"144px",
                         "render": function(data, type, full) { // 返回自定义内容
                             //alert(data);
                             return data.substring(0,14)+"****";
@@ -163,6 +164,13 @@
                         sWidth:"10%",
 
 
+                    },
+                    {
+                        "targets": [5], // 目标列位置，下标从0开始
+                        "data": "census", // 数据列名
+                        sWidth:"80px",
+
+
                     }
 
                 ],
@@ -176,7 +184,20 @@
                 },
                 //分页
                 fnDrawCallback: function(table) {
-                    $("#dt_paginate").append("  到第 <input class='margin text-center' style='height:25px;line-height:20px;width:40px;position:relative;top:2px' id='changePage' type='text'> 页  <a class='btn btn-default shiny' style='margin-bottom:5px;padding:0px 0px;position:absolute;left:600px;bottom:3px' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
+                    //获取表格总行数
+                    var modelTable = $('#dt').DataTable();
+
+                    var info = modelTable.page.info();
+
+                    var dataRows = info.recordsTotal;
+                    console.log(info);
+                    if(dataRows<2){
+                        document.getElementById("old_name").style.display='none';
+                    }else{
+                        document.getElementById("old_name").style.display='';
+                    }
+                    //
+                    $("#dt_paginate").append("<p style='position:relative;top:6px;left:-15px'>页数</p><input class='margin text-center' style='height:28px;line-height:20px;width:40px;position:absolute;top:2px;border:1px;border-radius:4px' id='changePage' type='text'><a class='btn btn-default shiny' style='margin-bottom:5px;padding:2px 1px;position:absolute;left:715px;height:28px;bottom:-3px;' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
                    // $("#dt_paginate").append("  到第 <input style='height:30px;line-height:28px;width:40px;' class='margin text-center' id='changePage' type='text'> 页  <a class='btn btn-default shiny' style='margin-bottom:5px;padding:0px 12px' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
 
                     var oTable = $("#dt").dataTable();
@@ -204,6 +225,7 @@
             });
         function retrieveData(url, aoData, fnCallback) {
             $.ajax({
+                
                 url: url,//这个就是请求地址对应sAjaxSource
                 data : {
                     "iDisplayStart" : aoData.iDisplayStart,
@@ -271,24 +293,41 @@
         //$('#table1').bootstrapTable('selectPage',7);
         //表格不分行
         //alert(document.getElementById("dt_paginate").style.width);
+
+        //获取表格总行数
+        var modelTable = $('#dt').DataTable();
+
+        var info = modelTable.page.info();
+
+        var dataRows = info.recordsTotal;
+        console.log(info);
+        if(dataRows<2){
+            document.getElementById("old_name").style.display='none';
+        }else{
+            document.getElementById("old_name").style.display='';
+        }
+
+
+        //
         //表格确认按钮样式修改动态保持
-        document.getElementById("dataTable-btn").style.padding=0+'px '+0+'px';
+        document.getElementById("dataTable-btn").style.padding=2+'px '+1+'px';
         document.getElementById("dataTable-btn").style.position='absolute';
-        document.getElementById("dataTable-btn").style.left=600+'px';
-        document.getElementById("dataTable-btn").style.bottom=3+'px';
+        document.getElementById("dataTable-btn").style.left=715+'px';
+        document.getElementById("dataTable-btn").style.bottom=-3+'px';
+        document.getElementById("dataTable-btn").style.height=28+'px';
 
         //changePage样式修改动态保持
-        document.getElementById("changePage").style.position='relative';
-        document.getElementById("changePage").style.top=1+'px';
-        document.getElementById("changePage").style.height=25+'px';
+        document.getElementById("changePage").style.position='absolute';
+        document.getElementById("changePage").style.top=2+'px';
+        document.getElementById("changePage").style.height=28+'px';
 
         //
         //
-        document.getElementById("dt_paginate").style.width=600+'px';
+        document.getElementById("dt_paginate").style.width=700+'px';
         //document.getElementById("dt_info").style.display="none";
 
         document.getElementById("dt_paginate").style.position='relative';
-        document.getElementById("dt_paginate").style.left=-230+'px';
+        document.getElementById("dt_paginate").style.left=-125+'px';
 
         document.getElementById("dt_info").style.position="relative";
         document.getElementById("dt_info").style.top=30+"px";

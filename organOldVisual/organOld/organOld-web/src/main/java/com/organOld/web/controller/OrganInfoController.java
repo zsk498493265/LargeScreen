@@ -2,14 +2,20 @@ package com.organOld.web.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.organOld.outService.contract.OrganRegRequest;
 import com.organOld.visualService.service.model.OldmanService;
 import com.organOld.visualService.service.model.Result;
 import com.organOld.visualService.util.Tool;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import com.organOld.outService.tool.ImgUpload;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -91,11 +97,10 @@ public class OrganInfoController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/updateOrgAndNews",method = RequestMethod.GET)
-    public Result updateOrgAndNews( String name, String content){
-        oldmanService.updateOrganAndNews(name,content);
-        JSONObject jsonObject = new JSONObject();
-        Result result =new Result(true,jsonObject);
+    @RequestMapping(value = "/updateOrgAndNews",method = RequestMethod.POST)
+    public Result updateOrgAndNews(String name,String content,MultipartFile pic ,HttpServletRequest request) {
+        oldmanService.updateOrganAndNews(name,content,pic,request);
+        Result result =new Result(true);
         return result;
     }
 

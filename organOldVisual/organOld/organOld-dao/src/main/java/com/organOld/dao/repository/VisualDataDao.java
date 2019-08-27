@@ -45,5 +45,5 @@ public interface VisualDataDao{
 
     void updateVisualData(String date);
     void deleteOldVisualData();
-    void updateOrganAndNews(String name,String content);
+    void updateOrganAndNews(String name,String content,String picUrl);
 }

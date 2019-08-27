@@ -1,5 +1,8 @@
 package com.organOld.visualService.service.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -46,6 +49,6 @@ public interface OldmanService {
     void updateVisualData(String date);
     void deleteOldVisualData();
 
-    void updateOrganAndNews(String name,String content);
+    void updateOrganAndNews(String name, String content, MultipartFile pic, HttpServletRequest request);
 
 }

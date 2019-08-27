@@ -883,6 +883,8 @@ public class VisualData5Controller {
 
         jsonObject.put("News1",dataMap.get(0).get("News1"));
         jsonObject.put("News2",dataMap.get(0).get("News2"));
+        jsonObject.put("NewsPic1","https://organold.oss-cn-shanghai.aliyuncs.com/"+dataMap.get(0).get("NewsPic1"));
+        jsonObject.put("NewsPic2","https://organold.oss-cn-shanghai.aliyuncs.com/"+dataMap.get(0).get("NewsPic2"));
 
         Result result =new Result(true,jsonObject);
         return result;
