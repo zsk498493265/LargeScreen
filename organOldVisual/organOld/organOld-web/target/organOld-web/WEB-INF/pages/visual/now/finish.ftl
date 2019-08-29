@@ -231,7 +231,6 @@
                                                                     document.getElementById("news2").innerHTML = dataR.News2;
                                                                     document.getElementById("newsPic1").src = dataR.NewsPic1;
                                                                     document.getElementById("newsPic2").src = dataR.NewsPic2;
-                                                                    alert(dataR.NewsPic1);
 
                                                                     pieOldNum = dataR.NumOld;
                                                                     pieAllNum = dataR.NumAll;

@@ -32,7 +32,11 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">名称</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" value="" name="name"/>
+                                <#--<input type="text" class="form-control" value="" name="name"/>-->
+                                <select name="name" class="form-control" >
+                                    <option value="新闻一">新闻一</option>
+                                    <option value="新闻二">新闻二</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
@@ -70,7 +74,7 @@
                     <#--<input id="news2_text"></input>-->
                     <#--<button onclick="updateOrganAndNews(2)">确定更改</button>-->
                 <#--</div>-->
-                <div class="ibox-title">
+                <div class="ibox-title" style="display: none;">
                     <label class="control-label"id="zc">机构介绍更改：</label>
                     <label class="control-label"id="zc">机构名：</label>
                     <select name="" id="jigou">

@@ -2887,7 +2887,7 @@
                         document.getElementById("old_name").style.display='';
                     }//
 
-                    $("#dt_paginate").append("<p style='position:relative;top:6px;left:-15px'>页数</p><input class='margin text-center' style='height:28px;line-height:20px;width:40px;position:absolute;top:2px;border:1px;border-radius:4px' id='changePage' type='text'><a class='btn btn-default shiny' style='margin-bottom:5px;padding:2px 1px;position:absolute;left:715px;height:28px;bottom:-3px;' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
+                    $("#dt_paginate").append("<p style='position:relative;top:6px;left:-15px;clear:both;display: inline'>页数</p><input class='margin text-center' style='height:28px;line-height:20px;width:40px;position:absolute;top:2px;border:1px;border-radius:4px' id='changePage' type='text'><a class='btn btn-default shiny' style='margin-bottom:5px;padding:2px 1px;position:absolute;left:715px;height:28px;bottom:-3px;' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
                     var oTable = $("#dt").dataTable();
                     $('#dataTable-btn').click(function(e) {
                         if($("#changePage").val() && $("#changePage").val() > 0) {
@@ -2907,6 +2907,186 @@
                 "fnServerData": retrieveData
             });
         function retrieveData(url,aoData,fnCallback) {
+            for (var index = 0; index < la.length; index++) {
+                if (la[index] == "男")
+                    sex = 2;
+                else if (la[index] == "女")
+                    sex = 1;
+                else if (la[index] == "60-70岁") {
+                    ageStart = 60;
+                    ageEnd = 70;
+                } else if (la[index] == "70-80岁") {
+                    ageStart = 70;
+                    ageEnd = 80;
+                }
+                else if (la[index] == "80-90岁") {
+                    ageStart = 80;
+                    ageEnd = 90;}
+                else if (la[index] == "90岁以上") {
+                    ageStart = 90;
+                    ageEnd = 200;
+                } else if (la[index] == "东兰")
+                {
+                    mapDistrict.push(3);
+                }
+
+                else if (la[index] == "平阳")
+                    mapDistrict.push(5);
+                else if (la[index] == "古美")
+                    mapDistrict.push(1);
+                else if (la[index] == "平吉")
+                    mapDistrict.push(4);
+                else if (la[index] == "平南")
+                    mapDistrict.push(6);
+                else if (la[index] == "古龙")
+                    mapDistrict.push(2);
+                else if (la[index] == "户籍")
+                    census.push(12);
+                else if (la[index] == "非户籍"){
+                    census.push(13);
+                }
+                else if (la[index] == "人户分离")
+                    census.push(14);
+                else if (la[index] == "群众")
+                    politicalStatusArray.push(10);
+                else if (la[index] == "党员")
+                    politicalStatusArray.push(11);
+                else if (la[index] == "智力正常")
+                    intelligenceArray.push(28);
+                else if (la[index] == "痴呆")
+                    intelligenceArray.push(29);
+                else if (la[index] == "智障")
+                    intelligenceArray.push(30);
+                else if (la[index] == "视力正常")
+                    eyesightArray.push(31);
+                else if (la[index] == "失明")
+                    eyesightArray.push(32);
+                else if (la[index] == "有光感")
+                    eyesightArray.push(33);
+                else if (la[index] == "一般障碍")
+                    eyesightArray.push(34);
+                else if(la[index] == "严重障碍")
+                    eyesightArray.push(35);
+                else if (la[index] == "有慢病"){
+                    health.push(1);
+                    isMb = 1;
+                }
+                else if (la[index] == "有失能情况"){
+                    health.push(2);
+                }
+                else if (la[index] == "有药物反应"){
+                    health.push(3);
+                }
+                else if (la[index] == "有恶性肿瘤史"){
+                    health.push(4);
+                }
+                else if (la[index] == "有骨折史"){
+                    health.push(5);
+                }
+                else if (la[index] == "有残疾史"){
+                    health.push(6);
+                }
+                else if (la[index] == "帮困人员")
+                    economic.push(22);
+                else if (la[index] == "低保")
+                    economic.push(23);
+                else if (la[index] == "城乡居民养老保障")
+                    economic.push(24);
+                else if (la[index] == "医疗救助金")
+                    economic.push(25);
+                else if (la[index] == "城镇居民基本医疗保险")
+                    economic.push(26);
+                else if (la[index] == "其他")
+                    economic.push(27);
+                else if (la[index] == "纯老")
+                    family.push(15);
+                else if (la[index] == "独居")
+                    family.push(16);
+                else if (la[index] == "孤老")
+                    family.push(19);
+                else if (la[index] == "一老养一老")
+                    family.push(17);
+                else if (la[index] == "失独家庭")
+                    family.push(18);
+                else if (la[index] == "三支人员")
+                    family.push(20);
+                else if (la[index] == "独生子女家庭")
+                    familyType.push(21);
+                else if (la[index] == "军属")
+                    familyType.push(74);
+                else if (la[index] == "烈士家属")
+                    familyType.push(75);
+                else if (la[index] == "离休干部")
+                    familyType.push(76);
+                else if (la[index] == "侨属")
+                    familyType.push(77);
+                else if (la[index] == "莲花老年公寓")
+                    organIdArray.push(79);
+                else if (la[index] == "平阳养老院")
+                    organIdArray.push(114);
+                else if (la[index] == "古美养老院")
+                    organIdArray.push(115);
+                else if (la[index] == "平南艾为")
+                    organIdArray.push(14);
+                else if (la[index] == "平阳智汇坊")
+                    organIdArray.push(118);
+                else if (la[index] == "平阳乐健")
+                    organIdArray.push(145);
+                else if (la[index] == "平南日间照料中心")
+                    organIdArray.push(15);
+                else if (la[index] == "平吉助餐点")
+                    organIdArray.push(16);
+                else if (la[index] == "古美助餐点")
+                    organIdArray.push(117);
+                else if (la[index] == "平南助餐点")
+                    organIdArray.push(17);
+                else if (la[index] == "古龙助餐点")
+                    organIdArray.push(116);
+                else if (la[index] == "2-3级"){
+                    secTypeArray.push(1);
+                    secTypeArray.push(2);
+                }
+                else if (la[index] == "4级")
+                    secTypeArray.push(3);
+                else if (la[index] == "5级")
+                    secTypeArray.push(4);
+                else if (la[index] == "6级")
+                    secTypeArray.push(5);
+                else if (la[index] == "7级")
+                    secTypeArray.push(6);
+                else if (la[index] == "助餐")
+                {
+                    thirdTypeArray.push(7);
+                }
+                else if (la[index] == "助洁"){
+                    thirdTypeArray.push(8);
+                }
+                else if (la[index] == "助急"){
+                    thirdTypeArray.push(9);
+                }
+                else if (la[index] == "助浴"){
+                    thirdTypeArray.push(10);
+                }
+                else if (la[index] == "助行"){
+                    thirdTypeArray.push(11);
+                }
+                else if (la[index] == "康复辅助"){
+                    thirdTypeArray.push(13);
+                }
+                else if (la[index] == "助医"){
+                    thirdTypeArray.push(12);
+                }
+                else if (la[index] == "相谈"){
+                    thirdTypeArray.push(14);
+                }
+                else if (la[index] == "洗涤"){
+                    thirdTypeArray.push(15);
+                }
+                else if (la[index] == "生活护理"){
+                    thirdTypeArray.push(16);
+                }
+            }
+
             $.ajax({
                 url: url,//"/map/jwAndNum",//这个就是请求地址对应sAjaxSource
                 data : {
@@ -2960,6 +3140,7 @@
                 dataType: 'json',
                 async: false,
                 success: function (result) {
+
 
                     fnCallback(result);//把返回的数据传给这个方法就可以了,datatable会自动绑定数据的
                 },

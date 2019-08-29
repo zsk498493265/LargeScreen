@@ -196,8 +196,10 @@
                     }else{
                         document.getElementById("old_name").style.display='';
                     }
+                    // document.getElementById("page").style.clear='both';
+                    // document.getElementById("page").style.display='inline';
                     //
-                    $("#dt_paginate").append("<p style='position:relative;top:6px;left:-15px'>页数</p><input class='margin text-center' style='height:28px;line-height:20px;width:40px;position:absolute;top:2px;border:1px;border-radius:4px' id='changePage' type='text'><a class='btn btn-default shiny' style='margin-bottom:5px;padding:2px 1px;position:absolute;left:715px;height:28px;bottom:-3px;' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
+                    $("#dt_paginate").append("<p style='position:relative;top:6px;left:-15px;clear:both;display: inline'>页数</p><input class='margin text-center' style='height:28px;line-height:20px;width:40px;position:absolute;top:2px;border:1px;border-radius:4px' id='changePage' type='text'><a class='btn btn-default shiny' style='margin-bottom:5px;padding:2px 1px;position:absolute;left:715px;height:28px;bottom:-3px;' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
                    // $("#dt_paginate").append("  到第 <input style='height:30px;line-height:28px;width:40px;' class='margin text-center' id='changePage' type='text'> 页  <a class='btn btn-default shiny' style='margin-bottom:5px;padding:0px 12px' href='javascript:void(0);' id='dataTable-btn'>确认</a>");
 
                     var oTable = $("#dt").dataTable();
@@ -225,7 +227,7 @@
             });
         function retrieveData(url, aoData, fnCallback) {
             $.ajax({
-                
+
                 url: url,//这个就是请求地址对应sAjaxSource
                 data : {
                     "iDisplayStart" : aoData.iDisplayStart,
@@ -328,6 +330,11 @@
 
         document.getElementById("dt_paginate").style.position='relative';
         document.getElementById("dt_paginate").style.left=-125+'px';
+
+        // //分页栏最上层
+        // document.getElementById("dt_paginate").style.clear='both';
+        // document.getElementById("dt_paginate").style.display='inline';
+
 
         document.getElementById("dt_info").style.position="relative";
         document.getElementById("dt_info").style.top=30+"px";
