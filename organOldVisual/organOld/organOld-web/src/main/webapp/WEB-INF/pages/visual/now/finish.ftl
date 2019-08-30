@@ -687,6 +687,9 @@
                                                                     };
 
 
+                                                                    function test(num){
+                                                                        alert(num+2);
+                                                                    }
                                                                     var labelOption = {
                                                                         normal: {
                                                                             show: true,
@@ -713,8 +716,11 @@
                                                                                 fontSize:title_fontSize,
                                                                                 fontWeight:'normal'
                                                                             },
+                                                                            //link:"javascript:recover_pq()",
                                                                             x:'0%',
                                                                             y:'0%',
+                                                                            //target: "self"// 保证不会在新的窗口弹出
+
                                                                         },
                                                                         color: ['#ffd289'],
                                                                         legend: {
@@ -778,6 +784,7 @@
 
                                                                         ]
                                                                     };
+
                                                                     //pqBar.setOption(option);
                                                                     total_pqBar.setOption(option);
                                                                     base_zbPie.on('legendselectchanged', function (params) {
@@ -11241,6 +11248,177 @@
                                                                         health_hjPie.setOption(health_option_area_pie);
                                                                         health_sexPie.setOption(health_option_sex_pie);
                                                                         health_ageBar.setOption(health_option_age_bar);
+                                                                    }
+
+                                                                    function test(num){
+                                                                        alert(num);
+                                                                    }
+                                                                    function recover_pq(num){
+                                                                        alert(num);
+                                                                        var posList = [
+                                                                            'left', 'right', 'top', 'bottom',
+                                                                            'inside',
+                                                                            'insideTop', 'insideLeft', 'insideRight', 'insideBottom',
+                                                                            'insideTopLeft', 'insideTopRight', 'insideBottomLeft', 'insideBottomRight'
+                                                                        ];
+
+                                                                        total_pqBar.configParameters = {
+                                                                            rotate: {
+                                                                                min: -90,
+                                                                                max: 90
+                                                                            },
+                                                                            align: {
+                                                                                options: {
+                                                                                    left: 'left',
+                                                                                    center: 'center',
+                                                                                    right: 'right'
+                                                                                }
+                                                                            },
+                                                                            verticalAlign: {
+                                                                                options: {
+                                                                                    top: 'top',
+                                                                                    middle: 'middle',
+                                                                                    bottom: 'bottom'
+                                                                                }
+                                                                            },
+                                                                            position: {
+                                                                                options: echarts.util.reduce(posList, function (map, pos) {
+                                                                                    map[pos] = pos;
+                                                                                    return map;
+                                                                                }, {})
+                                                                            },
+                                                                            distance: {
+                                                                                min: 0,
+                                                                                max: 100
+                                                                            }
+                                                                        };
+
+                                                                        total_pqBar.config = {
+                                                                            rotate: 90,
+                                                                            align: 'left',
+                                                                            verticalAlign: 'middle',
+                                                                            position: 'insideBottom',
+                                                                            distance: 15,
+                                                                            onChange: function () {
+                                                                                var labelOption = {
+                                                                                    normal: {
+                                                                                        rotate: total_pqBar.config.rotate,
+                                                                                        align: total_pqBar.config.align,
+                                                                                        verticalAlign: total_pqBar.config.verticalAlign,
+                                                                                        position: total_pqBar.config.position,
+                                                                                        distance: total_pqBar.config.distance
+                                                                                    }
+                                                                                };
+                                                                                total_pqBar.setOption({
+                                                                                    series: [{
+                                                                                        label: labelOption
+                                                                                    }, {
+                                                                                        label: labelOption
+                                                                                    }, {
+                                                                                        label: labelOption
+                                                                                    }, {
+                                                                                        label: labelOption
+                                                                                    }]
+                                                                                });
+                                                                            }
+                                                                        };
+
+
+                                                                        var labelOption = {
+                                                                            normal: {
+                                                                                show: true,
+                                                                                position: total_pqBar.config.position,
+                                                                                distance: total_pqBar.config.distance,
+                                                                                align: total_pqBar.config.align,
+                                                                                verticalAlign: total_pqBar.config.verticalAlign,
+                                                                                rotate: total_pqBar.config.rotate,
+                                                                                formatter: '{c}',
+                                                                                fontSize: 16,
+                                                                                rich: {
+                                                                                    name: {
+                                                                                        textBorderColor: '#fff'
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        };
+
+                                                                        option = {
+                                                                            title: {
+                                                                                text:'片区老年人口分布',
+                                                                                textStyle:{
+                                                                                    color:'#fff',
+                                                                                    fontSize:title_fontSize,
+                                                                                    fontWeight:'normal'
+                                                                                },
+                                                                                //link: "javascript: recover_pq(1)",
+                                                                                //target: "self",// 保证不会在新的窗口弹出,
+                                                                                x:'0%',
+                                                                                y:'0%',
+                                                                            },
+                                                                            color: ['#ffd289'],
+                                                                            legend: {
+                                                                                data: ['']
+                                                                            },
+                                                                            calculable: true,
+                                                                            grid:  {
+                                                                                top:'30%',
+                                                                                bottom: '0%',
+                                                                                containLabel: true
+                                                                            },
+                                                                            xAxis: [
+                                                                                {
+                                                                                    type: 'category',
+                                                                                    axisTick: {show: false},
+                                                                                    data: ['东兰','古龙','平南','平阳','平吉','古美'],
+                                                                                    axisLine:{
+                                                                                        lineStyle:{
+                                                                                            color:'white',
+                                                                                            fontSize: 20,
+                                                                                            fontWeight:'normal',
+                                                                                        }
+                                                                                    },
+                                                                                }
+                                                                            ],
+                                                                            yAxis: [
+                                                                                {
+                                                                                    type: 'value',
+                                                                                    axisLine:{
+                                                                                        lineStyle:{
+                                                                                            color:'white',
+                                                                                            fontSize: 20
+                                                                                        }
+                                                                                    },
+                                                                                }
+                                                                            ],
+                                                                            series: [
+                                                                                {
+                                                                                    type: 'bar',
+                                                                                    barGap: 0,
+                                                                                    label: labelOption,
+                                                                                    data: [dataR.NumDongLan, dataR.NumGuMei, dataR.NumPingNan, dataR.NumPingYang, dataR.NumPingJi,dataR.NumGuMei],
+                                                                                    itemStyle: {
+                                                                                        normal: {
+                                                                                            barBorderRadius: 20,
+                                                                                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                                                                                offset: 0,
+                                                                                                color: '#99d9ea'
+                                                                                            }, {
+                                                                                                offset: 1,
+                                                                                                color: 'rgba(0,188,226, 0.5)'
+                                                                                            }]),
+                                                                                            shadowColor: 'rgba(0, 0, 0, 0.4)',
+                                                                                            shadowBlur: 20
+                                                                                        }
+                                                                                    },
+                                                                                    barWidth:55,
+                                                                                    center:['50%','65%'],
+
+                                                                                }
+
+                                                                            ]
+                                                                        };
+                                                                        //pqBar.setOption(option);
+                                                                        total_pqBar.setOption(option);
                                                                     }
                                                                     function changeFheAll(numChunLao,numDuJu,numShiDu,numYiLao,numGuLao,numSanZhi,numQiTa,
                                                                                           numShiNeng,numManBing,numZhongLiu,numGuZhe,numShiZhi,numChangHu,

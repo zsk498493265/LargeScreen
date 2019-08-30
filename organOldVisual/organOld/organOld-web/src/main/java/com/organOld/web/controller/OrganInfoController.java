@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.organOld.visualService.util.Tool.*;
+import static java.lang.System.out;
 
 /**
  * 可视化 数据
@@ -101,6 +102,7 @@ public class OrganInfoController {
     public Result updateOrgAndNews(String name,String content,MultipartFile pic ,HttpServletRequest request) {
         oldmanService.updateOrganAndNews(name,content,pic,request);
         Result result =new Result(true);
+
         return result;
     }
 

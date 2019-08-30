@@ -24,7 +24,7 @@
                     <button onclick="updateView()">更新数据</button>
                 </div>
                 <div class="ibox-title">
-                    <form method="post" action="/visual/data/updateOrgAndNews" class="form-horizontal"  enctype="multipart/form-data">
+                    <form id='news_change' method="post" action="/visual/data/updateOrgAndNews" class="form-horizontal"  enctype="multipart/form-data">
                         <div class="hr-line-dashed"></div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">机构信息</label>
@@ -147,6 +147,22 @@
 
 </div>
 <script>
+    $("#news_change").submit(function () {
+        $.ajax({
+            url: "/visual/data/updateOrgAndNews",
+            type: 'POST',
+            cache: false,
+            data: new FormData($("#news_change")[0]),
+            processData: false,
+            contentType: false,
+            success: function (result) {
+                alert("成功");
+            },
+            error: function (err) {
+            }
+        });
+        return false;
+    });
     function updateView(){
         $.ajax({
             type: "GET",

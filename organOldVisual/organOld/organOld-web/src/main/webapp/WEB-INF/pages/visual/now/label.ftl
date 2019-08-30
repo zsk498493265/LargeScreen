@@ -3474,6 +3474,7 @@
         xidi = 0;
         shenghuo = 0;
         isService = null ;
+        mapDistrict=[];
         getAgeAndSex();
         getNumOfJw();
         $('.select').each(function() {
@@ -3481,6 +3482,7 @@
             $(this).attr('class','label '+cl);
         });
         //butt(0);
+        //recover_pq();
         table.fnFilter();
 
     }
